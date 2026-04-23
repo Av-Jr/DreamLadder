@@ -1,0 +1,22 @@
+
+@mixin InitialSetup{
+  *, *::before, *::after{
+	margin : 0;
+	padding : 0;
+	box-sizing : border-box;
+	user-select : none;
+	-webkit-tap-highlight-color: transparent;
+  }
+  
+  img, picture{
+	max-width : 100%;
+	display : block;
+  }
+  
+  button, input, textarea, select{
+	font : inherit;
+	line-height : 1.5;
+  }
+}
+
+html{overflow-x : hidden;}

@@ -1,0 +1,9 @@
+@use "./mixins" as  *;
+
+@include InitialSetup;
+
+#AppMC{
+  @include flex-center;
+  position : relative;
+  z-index : 0
+}

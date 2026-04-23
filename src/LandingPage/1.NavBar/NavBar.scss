@@ -1,0 +1,153 @@
+@use "../../mixins" as *;
+
+
+@include CustomFont("Genos", "/Fonts/Genos.ttf") ;
+
+#NavBarMC {
+  height: 100px;
+  width: 100%;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+
+  -webkit-font-smoothing: antialiased;
+  font-family: Genos;
+  font-size: fontSize(3);
+
+  padding: 20px;
+}
+
+.IL1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+
+  height: 100%;
+  width: auto;
+
+  gap: 30px;
+}
+
+.navBtn{
+    border-radius : 10px;
+    padding : 10px;
+    color : black;
+    background : transparent;
+    border : none;
+    cursor : pointer;
+    transition : 0.3s ease;
+    
+    
+    svg{
+        width : 16px;
+        height : 16px;
+        transition : 0.3s ease;
+    }
+    
+    &:hover{
+        color : #E53935;
+        & svg{transform : rotate(180deg)}
+    }
+    
+    &.s{
+        background : #E53935;
+        color : white;
+        &:hover{
+            background: grey;
+        }
+    }
+    
+    
+}
+
+.logo{
+    object-fit : contain;
+    object-position : center;
+    height : 100%;
+}
+
+
+.HamBtn {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+    background : transparent;
+    border : none;
+
+  width: 24px;
+  height: 20px;
+
+  span {
+    width: 100%;
+    height: 2px;
+    background: black;
+    transition: 0.3s ease;
+  }
+
+  &.HamActive {
+      span{
+          background: #E53935;}
+    span:nth-of-type(1) {
+      transform: translateY(7px) rotate(45deg);
+    }
+
+    span:nth-of-type(2) {
+      opacity: 0;
+    }
+
+    span:nth-of-type(3) {
+      transform: translateY(-7px) rotate(-45deg);
+    }
+  }
+}
+
+.backdrop{
+    width : 100%;
+    height : 100%;
+    position : absolute;
+    z-index : 1;
+    background: rgba(0, 0, 0, 0.3);
+    display : none;
+    
+    &.A{
+        display : block;
+    }
+}
+
+@include mediaDevice(mobile) {
+
+  .IL1.toBeInvis {
+        position: absolute;
+        z-index : 2;
+        top: 100px;
+        left: 0;
+        width: 100%;
+    
+        display: none;
+    
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+    
+        gap: 10px;
+        background: transparent;
+        padding: 15px;
+  }
+
+  .IL1.toBeInvis.open {
+    display: flex;
+  }
+
+  .IL1.toBeInvis .navBtn {
+    width: 100%;
+    text-align: left;
+  }
+
+  .HamBtn {
+    display: flex; // only visible on mobile
+  }
+}

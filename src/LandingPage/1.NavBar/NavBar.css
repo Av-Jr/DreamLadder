@@ -1,0 +1,137 @@
+html {
+  overflow-x: hidden;
+}
+
+@font-face {
+  font-family: "Genos";
+  src: url("/Fonts/Genos.ttf") format("truetype"), url("/Fonts/Genos.ttf") format("opentype"), url("/Fonts/Genos.ttf.woff") format("woff");
+  font-display: swap;
+  font-weight: 400;
+  font-style: normal;
+}
+#NavBarMC {
+  height: 100px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  -webkit-font-smoothing: antialiased;
+  font-family: Genos;
+  font-size: 24px;
+  padding: 20px;
+}
+
+.IL1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  height: 100%;
+  width: auto;
+  gap: 30px;
+}
+
+.navBtn {
+  border-radius: 10px;
+  padding: 10px;
+  color: black;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+.navBtn svg {
+  width: 16px;
+  height: 16px;
+  transition: 0.3s ease;
+}
+.navBtn:hover {
+  color: #E53935;
+}
+.navBtn:hover svg {
+  transform: rotate(180deg);
+}
+.navBtn.s {
+  background: #E53935;
+  color: white;
+}
+.navBtn.s:hover {
+  background: grey;
+}
+
+.logo {
+  object-fit: contain;
+  object-position: center;
+  height: 100%;
+}
+
+.HamBtn {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  background: transparent;
+  border: none;
+  width: 24px;
+  height: 20px;
+}
+.HamBtn span {
+  width: 100%;
+  height: 2px;
+  background: black;
+  transition: 0.3s ease;
+}
+.HamBtn.HamActive span {
+  background: #E53935;
+}
+.HamBtn.HamActive span:nth-of-type(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+.HamBtn.HamActive span:nth-of-type(2) {
+  opacity: 0;
+}
+.HamBtn.HamActive span:nth-of-type(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+.backdrop {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.3);
+  display: none;
+}
+.backdrop.A {
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .IL1.toBeInvis {
+    position: absolute;
+    z-index: 2;
+    top: 100px;
+    left: 0;
+    width: 100%;
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 10px;
+    background: transparent;
+    padding: 15px;
+  }
+  .IL1.toBeInvis.open {
+    display: flex;
+  }
+  .IL1.toBeInvis .navBtn {
+    width: 100%;
+    text-align: left;
+  }
+  .HamBtn {
+    display: flex;
+  }
+}
+
+/*# sourceMappingURL=NavBar.css.map */

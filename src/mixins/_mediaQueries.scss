@@ -1,0 +1,28 @@
+
+$maxW : (
+  mobile: 768px,
+  tablet: 1024px,
+		laptop : 1440px,
+);
+
+$minW : (
+	  tablet: 769px,
+		laptop : 1025px,
+	  desktop: 1441px
+);
+
+@mixin mediaDevice($dev) {
+  @if $dev == mobile {
+    @media (max-width: map-get($maxW, mobile)) {
+      @content;
+    }
+  } @else if $dev == desktop {
+    @media (min-width: map-get($minW, desktop)) {
+      @content;
+    }
+  } @else {
+    @media (min-width: map-get($minW, $dev)) and (max-width: map-get($maxW, $dev)) {
+      @content;
+    }
+  }
+}

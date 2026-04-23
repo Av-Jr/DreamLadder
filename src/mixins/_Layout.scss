@@ -1,0 +1,8 @@
+
+@mixin flex-center($js : center, $dir : column){
+  display : flex;
+  flex-direction : $dir;
+  justify-content : $js;
+  align-items : center;
+  position : relative;
+}
