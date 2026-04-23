@@ -45,4 +45,9 @@ button, input, textarea, select {
   z-index: 0;
 }
 
+body {
+  height: 100vh;
+  overflow: visible;
+}
+
 /*# sourceMappingURL=App.css.map */
