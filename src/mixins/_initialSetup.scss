@@ -13,6 +13,21 @@
 	display : block;
   }
   
+  /* Chrome, Edge, Safari */
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* Firefox */
+html {
+  scrollbar-width: none;
+}
+
+/* IE / old Edge */
+html {
+  -ms-overflow-style: none;
+}
+  
   button, input, textarea, select{
 	font : inherit;
 	line-height : 1.5;

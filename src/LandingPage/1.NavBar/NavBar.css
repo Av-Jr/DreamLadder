@@ -11,7 +11,8 @@ html {
 }
 #NavBarMC {
   height: 100px;
-  width: 100%;
+  width: 100vw;
+  position: absolute;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -20,6 +21,8 @@ html {
   font-family: Genos;
   font-size: 24px;
   padding: 20px;
+  z-index: 1;
+  background: transparent;
 }
 
 .IL1 {
@@ -96,9 +99,9 @@ html {
 }
 
 .backdrop {
-  width: 100%;
-  height: 100%;
-  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
   z-index: 1;
   background: rgba(0, 0, 0, 0.3);
   display: none;
@@ -114,12 +117,13 @@ html {
     top: 100px;
     left: 0;
     width: 100%;
+    height: auto;
     display: none;
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
     gap: 10px;
-    background: transparent;
+    background: white;
     padding: 15px;
   }
   .IL1.toBeInvis.open {
@@ -127,7 +131,7 @@ html {
   }
   .IL1.toBeInvis .navBtn {
     width: 100%;
-    text-align: left;
+    text-align: center;
   }
   .HamBtn {
     display: flex;

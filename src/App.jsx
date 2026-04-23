@@ -5,11 +5,13 @@ import "./App.css"
 
 const App = () => {
   return(
-      <div id = "AppMC">
-        <NavBar></NavBar>
-        <SlideShow></SlideShow>
-        <About></About>
-      </div>
+      <>
+          <NavBar></NavBar>
+          <div id = "AppMC">
+                <SlideShow></SlideShow>
+                <About></About>
+          </div>
+      </>
   )
 }
 
