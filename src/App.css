@@ -48,6 +48,7 @@ button, input, textarea, select {
 body {
   height: 100vh;
   overflow: visible;
+  background: white;
 }
 
 /*# sourceMappingURL=App.css.map */

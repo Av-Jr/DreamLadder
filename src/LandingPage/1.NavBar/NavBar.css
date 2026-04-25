@@ -110,7 +110,7 @@ html {
   display: block;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .IL1.toBeInvis {
     position: absolute;
     z-index: 2;

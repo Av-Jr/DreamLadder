@@ -1,7 +1,35 @@
+#AboutMC {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  background: pink;
+}
 
-#AboutMC{
-  position : relative;
-  min-height : 100vh;
-  width : 100%;
-  background : blue;
+.slidSh {
+  width: 50%;
+  height: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+  background: green;
+
+  .track {
+    display: flex;
+    height: 100%;
+  }
+
+  .slideCon {
+    min-width: 100%;
+    height: 100%;
+    background: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 3rem;
+    flex-shrink: 0;
+  }
 }

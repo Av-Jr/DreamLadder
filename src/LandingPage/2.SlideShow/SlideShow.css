@@ -1,8 +1,125 @@
+html {
+  overflow-x: hidden;
+}
+
+@font-face {
+  font-family: "SyneMono";
+  src: url("/Fonts/SyneMono.ttf") format("truetype"), url("/Fonts/SyneMono.ttf") format("opentype"), url("/Fonts/SyneMono.ttf.woff") format("woff");
+  font-display: swap;
+  font-weight: 400;
+  font-style: normal;
+}
 #SlideShowMC {
-  min-height: 100vh;
   position: relative;
+  height: 100vh;
   width: 100%;
-  background: transparent;
+  padding-top: 100px;
+}
+#SlideShowMC .SlideTwo {
+  display: none;
+}
+#SlideShowMC .SlideOne {
+  display: grid;
+  width: 100%;
+  height: 100%;
+  grid-template-columns: 0.8fr 1.2fr;
+  grid-template-rows: 1fr;
+  padding: 10px;
+  background: url("/HP4.png") center/cover no-repeat;
+}
+#SlideShowMC .SlideOne .heroCon {
+  display: grid;
+  align-content: center;
+  justify-items: start;
+  gap: clamp(1rem, 2vw, 2rem);
+  padding: 20%;
+}
+#SlideShowMC .SlideOne .heroCon h1, #SlideShowMC .SlideOne .heroCon h2 {
+  font-family: SyneMono;
+  width: 100%;
+  font-size: 4vh;
+  text-align: left;
+  overflow: visible;
+  white-space: nowrap;
+}
+#SlideShowMC .SlideOne .heroCon h2 {
+  font-size: 3vh;
+}
+#SlideShowMC .SlideOne .heroCon .heroActions {
+  font-family: Genos;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+#SlideShowMC .SlideOne .heroCon .heroActions button {
+  flex: 1 1 0;
+}
+#SlideShowMC .SlideOne .heroCon .infoDis {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  line-height: 2;
+  font-family: Genos;
+  font-size: 3vh;
+  background: rgba(255, 255, 255, 0.3);
+  border: 2px solid #E53935;
+  border-radius: 20px;
+}
+#SlideShowMC .SlideOne .heroCon .infoDis .conInfo {
+  flex: 1 1 0;
+  padding: 10px;
+  border: 0.3px solid grey;
+}
+#SlideShowMC .SlideOne .heroImg {
+  display: grid;
+  justify-items: center;
+  align-content: center;
+}
+#SlideShowMC .SlideOne .heroImg img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+@media (max-width: 1024px) {
+  #SlideShowMC .SlideOne {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
+    padding: 0;
+  }
+  #SlideShowMC .SlideOne .heroCon {
+    justify-items: center;
+    gap: 14px;
+    padding: 22px 24px 10px;
+  }
+  #SlideShowMC .SlideOne .heroCon h1 {
+    text-align: center;
+    font-size: clamp(0px, 9vw, 35px);
+    white-space: normal;
+  }
+  #SlideShowMC .SlideOne .heroCon h2 {
+    font-size: clamp(0px, 5vw, 20px);
+    text-align: center;
+  }
+  #SlideShowMC .SlideOne .heroCon .heroActions {
+    padding: 5px;
+  }
+  #SlideShowMC .SlideOne .heroCon .infoDis {
+    font-size: clamp(0px, 5vw, 20px);
+    flex-wrap: wrap;
+    height: auto;
+  }
+  #SlideShowMC .SlideOne .heroCon .infoDis .conInfo {
+    padding: 0;
+    text-align: center;
+  }
+  #SlideShowMC .SlideOne .heroImg {
+    place-items: end center;
+  }
+  #SlideShowMC .SlideOne .heroImg img {
+    object-fit: cover;
+  }
 }
 
 /*# sourceMappingURL=SlideShow.css.map */

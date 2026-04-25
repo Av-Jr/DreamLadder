@@ -9,7 +9,7 @@ const App = () => {
           <NavBar></NavBar>
           <div id = "AppMC">
                 <SlideShow></SlideShow>
-                <About></About>
+              <About></About>
           </div>
       </>
   )
