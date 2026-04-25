@@ -1,5 +1,5 @@
 html {
-  overflow-x: hidden;
+  overflow-x: scroll;
 }
 
 @font-face {
@@ -14,11 +14,21 @@ html {
   height: 100vh;
   width: 100%;
   padding-top: 100px;
+  overflow: hidden;
 }
-#SlideShowMC .SlideTwo {
-  display: none;
+#SlideShowMC .SlideTrack {
+  position: relative;
+  display: flex;
+  width: 300vw;
+  height: 100%;
+  transition: transform 0.8s ease;
 }
-#SlideShowMC .SlideOne {
+#SlideShowMC .SlideItem {
+  width: 100vw;
+  flex-shrink: 0;
+  height: 100%;
+}
+#SlideShowMC .SlideOne, #SlideShowMC .SlideTwo {
   display: grid;
   width: 100%;
   height: 100%;
@@ -27,14 +37,14 @@ html {
   padding: 10px;
   background: url("/HP4.png") center/cover no-repeat;
 }
-#SlideShowMC .SlideOne .heroCon {
+#SlideShowMC .SlideOne .heroCon, #SlideShowMC .SlideTwo .heroCon {
   display: grid;
   align-content: center;
   justify-items: start;
   gap: clamp(1rem, 2vw, 2rem);
   padding: 20%;
 }
-#SlideShowMC .SlideOne .heroCon h1, #SlideShowMC .SlideOne .heroCon h2 {
+#SlideShowMC .SlideOne .heroCon h1, #SlideShowMC .SlideOne .heroCon h2, #SlideShowMC .SlideTwo .heroCon h1, #SlideShowMC .SlideTwo .heroCon h2 {
   font-family: SyneMono;
   width: 100%;
   font-size: 4vh;
@@ -42,20 +52,20 @@ html {
   overflow: visible;
   white-space: nowrap;
 }
-#SlideShowMC .SlideOne .heroCon h2 {
+#SlideShowMC .SlideOne .heroCon h2, #SlideShowMC .SlideTwo .heroCon h2 {
   font-size: 3vh;
 }
-#SlideShowMC .SlideOne .heroCon .heroActions {
+#SlideShowMC .SlideOne .heroCon .heroActions, #SlideShowMC .SlideTwo .heroCon .heroActions {
   font-family: Genos;
   width: 100%;
   display: flex;
   justify-content: space-between;
   gap: 10px;
 }
-#SlideShowMC .SlideOne .heroCon .heroActions button {
+#SlideShowMC .SlideOne .heroCon .heroActions button, #SlideShowMC .SlideTwo .heroCon .heroActions button {
   flex: 1 1 0;
 }
-#SlideShowMC .SlideOne .heroCon .infoDis {
+#SlideShowMC .SlideOne .heroCon .infoDis, #SlideShowMC .SlideTwo .heroCon .infoDis {
   display: flex;
   width: 100%;
   align-items: center;
@@ -66,58 +76,57 @@ html {
   border: 2px solid #E53935;
   border-radius: 20px;
 }
-#SlideShowMC .SlideOne .heroCon .infoDis .conInfo {
+#SlideShowMC .SlideOne .heroCon .infoDis .conInfo, #SlideShowMC .SlideTwo .heroCon .infoDis .conInfo {
   flex: 1 1 0;
   padding: 10px;
   border: 0.3px solid grey;
 }
-#SlideShowMC .SlideOne .heroImg {
+#SlideShowMC .SlideOne .heroImg, #SlideShowMC .SlideTwo .heroImg {
   display: grid;
   justify-items: center;
   align-content: center;
 }
-#SlideShowMC .SlideOne .heroImg img {
-  object-fit: cover;
-  width: 100%;
-  height: 100%;
+#SlideShowMC .SlideOne .heroImg img, #SlideShowMC .SlideTwo .heroImg img {
+  object-fit: contain;
+  object-position: right center;
 }
 
 @media (max-width: 1024px) {
-  #SlideShowMC .SlideOne {
+  #SlideShowMC .SlideOne, #SlideShowMC .SlideTwo {
     grid-template-columns: 1fr;
     grid-template-rows: auto 1fr;
     padding: 0;
   }
-  #SlideShowMC .SlideOne .heroCon {
+  #SlideShowMC .SlideOne .heroCon, #SlideShowMC .SlideTwo .heroCon {
     justify-items: center;
     gap: 14px;
     padding: 22px 24px 10px;
   }
-  #SlideShowMC .SlideOne .heroCon h1 {
+  #SlideShowMC .SlideOne .heroCon h1, #SlideShowMC .SlideTwo .heroCon h1 {
     text-align: center;
     font-size: clamp(0px, 9vw, 35px);
     white-space: normal;
   }
-  #SlideShowMC .SlideOne .heroCon h2 {
+  #SlideShowMC .SlideOne .heroCon h2, #SlideShowMC .SlideTwo .heroCon h2 {
     font-size: clamp(0px, 5vw, 20px);
     text-align: center;
   }
-  #SlideShowMC .SlideOne .heroCon .heroActions {
+  #SlideShowMC .SlideOne .heroCon .heroActions, #SlideShowMC .SlideTwo .heroCon .heroActions {
     padding: 5px;
   }
-  #SlideShowMC .SlideOne .heroCon .infoDis {
+  #SlideShowMC .SlideOne .heroCon .infoDis, #SlideShowMC .SlideTwo .heroCon .infoDis {
     font-size: clamp(0px, 5vw, 20px);
     flex-wrap: wrap;
     height: auto;
   }
-  #SlideShowMC .SlideOne .heroCon .infoDis .conInfo {
+  #SlideShowMC .SlideOne .heroCon .infoDis .conInfo, #SlideShowMC .SlideTwo .heroCon .infoDis .conInfo {
     padding: 0;
     text-align: center;
   }
-  #SlideShowMC .SlideOne .heroImg {
+  #SlideShowMC .SlideOne .heroImg, #SlideShowMC .SlideTwo .heroImg {
     place-items: end center;
   }
-  #SlideShowMC .SlideOne .heroImg img {
+  #SlideShowMC .SlideOne .heroImg img, #SlideShowMC .SlideTwo .heroImg img {
     object-fit: cover;
   }
 }
