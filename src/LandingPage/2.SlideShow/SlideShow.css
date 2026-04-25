@@ -42,8 +42,8 @@ html {
   background: url("/HP56.jpg") center/cover no-repeat;
 }
 #SlideShowMC .SlideTwo img {
-  width: 100%;
-  height: 100%;
+  width: 70%;
+  height: 70%;
   object-fit: contain;
   object-position: center;
 }
@@ -90,7 +90,7 @@ html {
   line-height: 2;
   font-family: Genos;
   font-size: 3vh;
-  background: rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.7);
   border: 2px solid #E53935;
   border-radius: 20px;
 }
@@ -98,6 +98,10 @@ html {
   flex: 1 1 0;
   padding: 10px;
   border: 0.3px solid grey;
+}
+#SlideShowMC .SlideOne .heroImg, #SlideShowMC .SlideTwo .heroImg {
+  display: grid;
+  place-items: center;
 }
 
 @media (max-width: 1024px) {

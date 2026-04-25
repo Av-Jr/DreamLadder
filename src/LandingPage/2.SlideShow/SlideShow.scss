@@ -38,9 +38,9 @@
   .SlideTwo{
     background : url("/HP56.jpg") center / cover no-repeat;
     
-    img{;
-      width : 100%;
-      height : 100%;
+    img{
+      width : 70%;
+      height : 70%;
       object-fit : contain;
       object-position :center;
     }
@@ -97,7 +97,7 @@
         line-height: 2;
         font-family: Genos;
         font-size: 3vh;
-        background: rgba(255, 255, 255, 0.3);
+        background: rgba(255, 255, 255, 0.7);
         border: 2px solid #E53935;
         border-radius: 20px;
         
@@ -109,8 +109,10 @@
       }
       
     }
-    
-      
+    .heroImg{
+      display : grid;
+      place-items : center;
+    }
     
   }
 }
