@@ -7,7 +7,8 @@
   height: 100vh;
   width: 100%;
   padding-top: 100px;
-  overflow : hidden;
+  overflow-x : hidden;
+  overflow-y : hidden;
   
   .SlideTrack{
     position : relative;
@@ -23,16 +24,38 @@
     height:100%;
   }
   
+  .SlideOne{
+    background :url("/HP4.png") center / cover no-repeat;
+    
+    img{
+      width : 100%;
+      height : 100%;
+      object-fit : contain;
+      object-position : center;
+    }
+  }
+  
+  .SlideTwo{
+    background : url("/HP56.jpg") center / cover no-repeat;
+    
+    img{;
+      width : 100%;
+      height : 100%;
+      object-fit : contain;
+      object-position :center;
+    }
+  }
   
   
-  .SlideOne, .SlideTwo{
+  
+  .SlideOne, .SlideTwo {
     display: grid;
     width: 100%;
     height: 100%;
-    grid-template-columns: 0.8fr 1.2fr;
+    grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
     padding: 10px;
-    background: url("/HP4.png") center / cover no-repeat;
+    
     
     
     .heroCon {
@@ -40,112 +63,99 @@
       align-content: center;
       justify-items: start;
       gap: clamp(1rem, 2vw, 2rem);
-      padding: 20%;
+      padding: clamp(40px, 8vw, 120px);
       
-      h1, h2{
-        font-family : SyneMono;
-        width : 100%;
-        font-size : 4vh;
-        text-align : left;
-        overflow : visible;
-        white-space : nowrap
+      h1, h2 {
+        font-family: SyneMono;
+        width: 100%;
+        font-size: 4vh;
+        text-align: left;
+        overflow: visible;
+        white-space: nowrap
       }
       
-      h2{font-size : 3vh}
+      h2 {
+        font-size: 3vh
+      }
       
       .heroActions {
         font-family: Genos;
         width: 100%;
         display: flex;
         justify-content: space-between;
-        gap : 10px;
+        gap: 10px;
         
         button {
           flex: 1 1 0;
         }
       }
-
-      .infoDis{
-        display : flex;
-        width : 100%;
-        align-items : center;
-        line-height : 2;
-        font-family : Genos;
-        font-size : 3vh;
-        background : rgba(255, 255, 255, 0.3);
-        border : 2px solid #E53935;
-        border-radius : 20px;
+      
+      .infoDis {
+        display: flex;
+        width: 100%;
+        align-items: center;
+        line-height: 2;
+        font-family: Genos;
+        font-size: 3vh;
+        background: rgba(255, 255, 255, 0.3);
+        border: 2px solid #E53935;
+        border-radius: 20px;
         
-        .conInfo{
-          flex : 1 1 0;
-          padding : 10px;
-          border : 0.3px solid grey;
+        .conInfo {
+          flex: 1 1 0;
+          padding: 10px;
+          border: 0.3px solid grey;
         }
       }
       
     }
     
-    .heroImg{
-      display : grid;
-      justify-items : center;
-      align-content : center;
       
-      img{
-        object-fit:contain;
-        object-position:right center;
-      }
-    }
     
   }
 }
 
 
+
 @include mediaDevice(mobile) {
   #SlideShowMC {
-    .SlideOne, .SlideTwo{
+    .SlideOne, .SlideTwo {
       grid-template-columns: 1fr;
-      grid-template-rows: auto 1fr;
+      grid-template-rows: 1fr 1fr;
       padding: 0;
       
       .heroCon {
-        justify-items : center;
-        gap : 14px;
+        justify-items: center;
+        gap: 14px;
         padding: 22px 24px 10px;
         
-        h1{
-          text-align : center;
-          font-size : clamp(0px, 9vw, 35px);
-          white-space : normal;
+        h1 {
+          text-align: center;
+          font-size: clamp(0px, 9vw, 35px);
+          white-space: normal;
         }
         
-        h2{
-          font-size : clamp(0px, 5vw, 20px);
-          text-align : center;
+        h2 {
+          font-size: clamp(0px, 5vw, 20px);
+          text-align: center;
         }
         
-        .heroActions{
-          padding : 5px;
+        .heroActions {
+          padding: 5px;
         }
         
-        .infoDis{
-          font-size : clamp(0px, 5vw, 20px);
-          flex-wrap : wrap;
-          height : auto;
+        .infoDis {
+          font-size: clamp(0px, 5vw, 20px);
+          flex-wrap: wrap;
+          height: auto;
           
-          .conInfo{
-            padding : 0;
-            text-align : center;
+          .conInfo {
+            padding: 0;
+            text-align: center;
           }
         }
       }
       
-      .heroImg{
-        place-items:end center;
-        
-        img{
-          object-fit : cover;
-        }
-      }
     }
   }
 }

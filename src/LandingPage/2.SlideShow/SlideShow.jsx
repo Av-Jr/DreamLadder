@@ -91,7 +91,7 @@ const SlideShow = () => {
             </div>
 
             <div className="heroImg">
-              <img src="/HP3.png" alt="Wealth advisory hero visual" />
+              <img src="/Slide2.png" alt="Wealth advisory hero visual" />
             </div>
           </div>
         </div>
