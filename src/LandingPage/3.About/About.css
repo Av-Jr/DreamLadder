@@ -1,33 +1,81 @@
-#AboutMC {
-  position: relative;
-  min-height: 100vh;
-  width: 100%;
-  background: pink;
+html {
+  overflow-x: scroll;
 }
 
-.slidSh {
-  width: 50%;
-  height: 50%;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  overflow: hidden;
-  background: green;
-}
-.slidSh .track {
-  display: flex;
-  height: 100%;
-}
-.slidSh .slideCon {
-  min-width: 100%;
-  height: 100%;
+#AboutMC {
+  position: relative;
+  height: 100vh;
+  width: 100%;
   background: white;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: 3rem;
-  flex-shrink: 0;
+}
+#AboutMC h1 {
+  font-family: Genos;
+  text-align: center;
+  font-size: 4vh;
+  padding-bottom: 20px;
+}
+#AboutMC .GridCon {
+  position: relative;
+  height: auto;
+  width: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  place-items: center;
+}
+#AboutMC .GridCon .Con {
+  position: relative;
+  width: clamp(100px, 40vw, 500px);
+  height: auto;
+  padding: 40px;
+  display: grid;
+  gap: 20px;
+  justify-content: start;
+  align-items: start;
+}
+#AboutMC .GridCon .Con img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+#AboutMC .GridCon .Con h2 {
+  font-family: SyneMono;
+  text-align: center;
+}
+#AboutMC .GridCon .Con h3 {
+  font-family: Genos;
+  white-space: normal;
+  color: rgba(0, 0, 0, 0.4);
+  text-align: center;
+}
+#AboutMC .GridCon .Con.ACtwo {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+#AboutMC .GridCon .Con.ACtwo .ContwoEles {
+  position: relative;
+  width: 100%;
+  background: url("/flexBack.png") center/cover no-repeat;
+  padding: 10px;
+  border-radius: 20px;
+}
+@media (max-width: 1024px) {
+  #AboutMC {
+    padding: 20px;
+  }
+  #AboutMC .GridCon {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+  #AboutMC .GridCon .Con {
+    width: 100%;
+    height: auto;
+    aspect-ratio: auto;
+  }
 }
 
 /*# sourceMappingURL=About.css.map */

@@ -1,35 +1,91 @@
+@use "../../mixins" as *;
+
 #AboutMC {
   position: relative;
-  min-height: 100vh;
+  height: 100vh;
   width: 100%;
-  background: pink;
+  background: white;
+  display : flex;
+  flex-direction : column;
+  align-items : center;
+
+  h1{
+    font-family : Genos;
+    text-align : center;
+    font-size : 4vh;
+    padding-bottom : 20px;
+  }
+  .GridCon{
+    position : relative;
+    height : auto;
+    width : auto;
+    display : grid;
+    grid-template-columns : 1fr 1fr;
+    grid-template-rows : auto;
+    place-items : center;
+    
+    
+    .Con{
+      position : relative;
+      width : clamp(100px, 40vw, 500px);
+      height : auto;
+      padding : 40px;
+      display : grid;
+      gap : 20px;
+      justify-content : start;
+      align-items : start;
+       img{
+         width : 100%;
+         height : auto;
+         object-fit : contain;
+       }
+      
+      h2{
+        font-family : SyneMono;
+        text-align : center;
+      }
+      h3{
+        font-family : Genos;
+        white-space : normal;
+        color : rgba(0, 0, 0, 0.4);
+        text-align : center;
+      }
+      
+      &.ACtwo{
+        position : relative;
+        display : flex;
+        flex-direction : column;
+        
+        .ContwoEles{
+          position : relative;
+          width : 100%;
+          background: url("/flexBack.png") center / cover no-repeat;
+          padding : 10px;
+          border-radius : 20px;
+        }
+      }
+      
+      &.ACthree{
+      }
+      
+    }
+  }
 }
 
-.slidSh {
-  width: 50%;
-  height: 50%;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  overflow: hidden;
-  background: green;
 
-  .track {
-    display: flex;
-    height: 100%;
-  }
 
-  .slideCon {
-    min-width: 100%;
-    height: 100%;
-    background: white;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    font-size: 3rem;
-    flex-shrink: 0;
+@include mediaDevice(mobile){
+  #AboutMC{
+    padding : 20px;
+    
+    .GridCon{
+      grid-template-columns : 1fr;
+      grid-template-rows : auto;
+      .Con{
+        width : 100%;
+        height : auto;
+        aspect-ratio : auto;
+      }
+    }
   }
 }
