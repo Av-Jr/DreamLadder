@@ -1,7 +1,72 @@
+@use "../../mixins" as *;
 
 #CalculatorMC{
   min-height : 100vh;
   width : 100%;
   position : relative;
-  background: black;
+  
+  display : flex;
+  flex-direction : column;
+  align-items : center;
+  justify-content : stretch;
+  padding : 100px;
+  gap : 50px;
+  background: url("./flexBack.png") center / cover no-repeat;
+  
+  h2{
+    font-family : SyneMono;
+    font-size : clamp(0px, 4vh, 50px);
+  }
+  
+  .CalcEleCon{
+    flex : 1 1 0;
+    display : grid;
+    grid-template-columns : 1fr 1fr 1fr 1fr;
+    place-items : center;
+    text-align : center;
+    gap : 50px;
+    height : auto;
+    width : 100%;
+    
+    .CalcEle{
+      aspect-ratio : 1;
+      transition : 0.2s ease;
+      &:hover{
+        box-shadow: 0 8px 14px -8px rgba(0,0,0,0.28);
+        transform : translateY(-12px);
+        img{transform : scale(1.1)};
+        
+      }
+      display : grid;
+      place-items : center;
+      gap : 30px;
+      padding: 3vh;
+      background: #f1f2f4;
+      border-radius : 30px;
+      img{
+        object-fit : contain;
+        transition : 0.2s ease;
+      }
+      
+      h3{
+        font-family : Genos;
+        font-weight : 700;
+        font-size : clamp(0px, 3vh, 30px);
+      }
+    }
+  }
+}
+
+@include mediaDevice(mobile){
+  #CalculatorMC{
+    padding : 10px;
+    .CalcEleCon{
+      grid-template-columns : 1fr 1fr;
+      
+      .CalcEle:active {
+        transform: scale(0.97);
+        box-shadow: 0 8px 16px rgba(0,0,0,0.25);
+      }
+    }
+  }
 }

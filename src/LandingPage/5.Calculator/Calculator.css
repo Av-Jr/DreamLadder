@@ -1,8 +1,73 @@
+html {
+  overflow-x: scroll;
+}
+
 #CalculatorMC {
   min-height: 100vh;
   width: 100%;
   position: relative;
-  background: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: stretch;
+  padding: 100px;
+  gap: 50px;
+  background: url("./flexBack.png") center/cover no-repeat;
+}
+#CalculatorMC h2 {
+  font-family: SyneMono;
+  font-size: clamp(0px, 4vh, 50px);
+}
+#CalculatorMC .CalcEleCon {
+  flex: 1 1 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  place-items: center;
+  text-align: center;
+  gap: 50px;
+  height: auto;
+  width: 100%;
+}
+#CalculatorMC .CalcEleCon .CalcEle {
+  aspect-ratio: 1;
+  transition: 0.2s ease;
+}
+#CalculatorMC .CalcEleCon .CalcEle:hover {
+  box-shadow: 0 8px 14px -8px rgba(0, 0, 0, 0.28);
+  transform: translateY(-12px);
+}
+#CalculatorMC .CalcEleCon .CalcEle:hover img {
+  transform: scale(1.1);
+}
+#CalculatorMC .CalcEleCon .CalcEle {
+  display: grid;
+  place-items: center;
+  gap: 30px;
+  padding: 3vh;
+  background: #f1f2f4;
+  border-radius: 30px;
+}
+#CalculatorMC .CalcEleCon .CalcEle img {
+  object-fit: contain;
+  transition: 0.2s ease;
+}
+#CalculatorMC .CalcEleCon .CalcEle h3 {
+  font-family: Genos;
+  font-weight: 700;
+  font-size: clamp(0px, 3vh, 30px);
+}
+
+@media (max-width: 1024px) {
+  #CalculatorMC {
+    padding: 10px;
+  }
+  #CalculatorMC .CalcEleCon {
+    grid-template-columns: 1fr 1fr;
+  }
+  #CalculatorMC .CalcEleCon .CalcEle:active {
+    transform: scale(0.97);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
+  }
 }
 
 /*# sourceMappingURL=Calculator.css.map */

@@ -6,6 +6,7 @@
   gap : 20px;
   flex-direction: column;
   background : url("/flexBack.png") center /cover no-repeat;
+  padding : 0 100px 100px 100px;
 
   h1 {
     font-family: Genos;
@@ -251,6 +252,7 @@
 /* MOBILE */
 @media (max-width: 768px) {
   #ReturnSliderMC {
+    padding : 10px;
     .childsR{
       &.one{
         .SliderCon {
