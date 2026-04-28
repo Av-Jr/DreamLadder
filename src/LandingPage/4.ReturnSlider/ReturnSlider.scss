@@ -2,11 +2,10 @@
   min-height: 100vh;
   width: 100%;
   position: relative;
-  background: white;
-  border: 2px solid pink;
   display: flex;
+  gap : 20px;
   flex-direction: column;
-  gap: 20px;
+  background : url("/flexBack.png") center /cover no-repeat;
 
   h1 {
     font-family: Genos;
@@ -27,14 +26,72 @@
     color: rgba(0, 0, 0, 0.4);
     text-align: center;
   }
+.childsR {
+  &.two {
+    h2{
+      font-size : clamp(0px, 2vh, 20px);
+    }
+    
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 
-  .childsR {
-    display: grid;
-    place-items: center;
-    background: url("/flexBack.png") center / cover no-repeat;
-    flex: 1 1 0;
+    .retElesCon {
+      display: flex;
+      justify-content : space-around;
+      flex-wrap: wrap;
+      background : transparent;
+      padding : 20px;
+      gap : 20px;
+
+      .retEle {
+        flex: 1 1 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        background: transparent;
+        
+        &:hover img{
+          transform : scale(1.2);
+        }
+        
+        .retBadge{
+          font-family : Genos;
+          background: #f1f2f4;
+          width : auto;
+          height : auto;
+          padding : 8px;
+          border-radius : 20px;
+        }
+        
+
+        .retCircle {
+          display : grid;
+          place-items : center;
+          aspect-ratio: 1 / 1;
+          width: 100%;
+          border-radius: 50%;
+          border: 3px solid #f9f9fa;
+          background: #f1f2f4;
+          overflow : hidden;
+
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            transition : 0.4s ease;
+          }
+        }
+      }
+    }
+  }
+
 
     &.one {
+      display: grid;
+      place-items: center;
+      flex: 1 1 0;
       .SliderCon {
         font-family: Genos;
         position: relative;
@@ -194,23 +251,31 @@
 /* MOBILE */
 @media (max-width: 768px) {
   #ReturnSliderMC {
-    .childsR.one {
-      .SliderCon {
-        width: 92%;
-        padding: 18px;
-        gap: 16px;
-
-        .stateBtns {
-          gap: 8px;
+    .childsR{
+      &.one{
+        .SliderCon {
+          width: 92%;
+          padding: 18px;
+          gap: 16px;
+  
+          .stateBtns {
+            gap: 8px;
+          }
+  
+          .StateBtnC {
+            font-size: 14px;
+            padding: 8px 12px;
+          }
+  
+          span {
+            font-size: 14px;
+          }
         }
-
-        .StateBtnC {
-          font-size: 14px;
-          padding: 8px 12px;
-        }
-
-        span {
-          font-size: 14px;
+      }
+      
+      &.two{
+        .retElesCon{
+          flex-direction : column;
         }
       }
     }
