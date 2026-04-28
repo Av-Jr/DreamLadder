@@ -2,7 +2,7 @@
 
 #AboutMC {
   position: relative;
-  height: 100vh;
+  min-height: 100vh;
   width: 100%;
   background: white;
   display : flex;
@@ -23,6 +23,7 @@
     grid-template-columns : 1fr 1fr;
     grid-template-rows : auto;
     place-items : center;
+    gap : 20px;
     
     
     .Con{
@@ -34,6 +35,12 @@
       gap : 20px;
       justify-content : start;
       align-items : start;
+      border-radius : 20px;
+      
+      button{
+        flex : 1 1 0;
+      }
+      
        img{
          width : 100%;
          height : auto;
@@ -63,9 +70,6 @@
           padding : 10px;
           border-radius : 20px;
         }
-      }
-      
-      &.ACthree{
       }
       
     }

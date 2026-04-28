@@ -54,6 +54,7 @@ html {
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr;
   padding: 10px;
+  place-items: center;
 }
 #SlideShowMC .SlideOne .heroCon, #SlideShowMC .SlideTwo .heroCon {
   display: grid;
@@ -93,6 +94,7 @@ html {
   background: rgba(255, 255, 255, 0.7);
   border: 2px solid #E53935;
   border-radius: 20px;
+  overflow: hidden;
 }
 #SlideShowMC .SlideOne .heroCon .infoDis .conInfo, #SlideShowMC .SlideTwo .heroCon .infoDis .conInfo {
   flex: 1 1 0;
@@ -102,6 +104,11 @@ html {
 #SlideShowMC .SlideOne .heroImg, #SlideShowMC .SlideTwo .heroImg {
   display: grid;
   place-items: center;
+}
+#SlideShowMC .SlideOne .heroImg img, #SlideShowMC .SlideTwo .heroImg img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 @media (max-width: 1024px) {
