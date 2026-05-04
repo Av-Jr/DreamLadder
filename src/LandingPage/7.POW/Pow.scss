@@ -1,116 +1,109 @@
 @use "../../mixins" as *;
 
-#PowMC{
-  min-height : 100vh;
+#PowMC {
+  min-height: 100vh;
   width : 100%;
-  position : relative;
-  display : grid;
-  grid-template-columns : 1fr 1fr;
-  place-items : center;
-  padding : 20px;
-  
-  h1{
-    grid-column : span 2;
-  }
-  
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-  .CommentCon{
-    height : 100%;
-    width : 100%;
-    overflow : hidden;
-    display : flex;
-    flex-direction : row;
-    overflow-x : auto;
-    align-items : center;
-    scroll-snap-type: x mandatory;
-    scroll-behavior: smooth;
+  .containingCon {
+    width: 100%;
+    max-width: 1400px;
+    padding: 20px;
+
+    h1 {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .contentRow {
+      display: flex;
+      align-items: center;
+      gap: 40px;
+    }
+
+    .sideImg {
+      width: 250px;
+      flex-shrink: 0;
+    }
     
-    .CommentEles{
-      width : 100%;
-      min-height : 60%;
-      padding : 50px;
-      border-radius : 20px;
-      box-shadow: 0 8px 10px rgba(0,0,0,0.2);
-      border : 0.5px rgba(0, 0, 0, 0.2) solid;
-      display : flex;
-      gap : 20px;
+    .slider {
+      flex: 1;
+      overflow: hidden;
+    }
+
+    .track {
+      display: flex;
+      flex-direction : column;
+      transition: transform 0.4s ease;
+      gap : 10px;
+    }
+
+    .card {
       flex: 0 0 100%;
-      scroll-snap-align: start;
-      
-      .LeftCon{
-        display : flex;
-        flex-direction : column;
-        justify-content : center;
-        align-items : start;
-        gap : 20px;
-      }
-      
-      .RightCon{
-        display : flex;
-        height : 100%;
-        width : 100%;
-        justify-content : center;
-        align-items : center;
-        
-        img{
-          width : 100%;
-          aspect-ratio : 1;
-          object-fit : cover;
-          padding : 5px;
-          border : 3px rgba(201, 182, 255, 1) solid;
-          border-radius : 20px;
-        }
-      }
-      
-      h2, h3, svg{
-        text-align : center;
-        width : 100%;
-        font-size : clamp(25px, 3vh, 35px);
-      }
-      
-      svg{
-        width : auto;
-        color : rgba(138, 43, 226, 1);
-      }
-      
-      h2{
+      display: flex;
+      flex-direction : row;
+      gap: 30px;
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 8px 10px rgba(0, 0, 0, 0.15);
+      background: white;
+      border : 1px solid rgba(201, 182, 255, 1);
+      place-items : center;
+    }
+
+    .text {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      font-size : clamp(20px, 2vh, 30px);
+
+      span {
         font-family : Genos;
-        font-weight : bold;
-        font-size : clamp(25px, 3vh, 35px);
+        font-style: italic;
+        font-size : inherit;
       }
-      
-      h3{
-        color : rgba(138, 43, 226, 1);
-      }
-      
-      span{
+
+      h2 {
         font-family : Genos;
-        font-style : italic;
-        font-size : clamp(20px, 2vh, 30px);
-        text-align : left;
+        font-weight: bold;
+      }
+
+      h3 {
+        color: purple;
+         font-size : inherit;
+      }
+    }
+
+    .image {
+      width: 250px;
+      flex-shrink: 0;
+
+      img {
+        width: 100%;
+        aspect-ratio: 1;
+        object-fit: cover;
+        border-radius: 15px;
+        border: 2px solid rgba(201, 182, 255, 1);
       }
     }
   }
-  
 }
 
 @include mediaDevice(mobile){
+  .sideImg{display : none}
   #PowMC{
-    padding : 10px;
-    grid-template-columns : 1fr;
-    gap : 20px;
-    
-    h1{
-      grid-column : auto;
-    }
-    
-    .tobeHiddenImg{display : none}
-    
-    .CommentCon{
-      .CommentEles{
-        display : flex;
+    .containingCon{
+      padding : 5px;
+      
+      h1{
+        padding-top : 40px;
+      }
+      
+      .card{
         flex-direction : column;
-        padding : 10px;
       }
     }
   }

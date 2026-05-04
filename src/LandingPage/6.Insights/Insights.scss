@@ -6,7 +6,7 @@
   background: white;
   display : flex;
   flex-direction : column;
-  justify-content : flex-start;
+  justify-content : center;
   align-items : center;
   padding : 50px;
   gap : 10px;
@@ -43,7 +43,7 @@ h3{
 .ifEle{
   border : none;
   width : 100%;
-  height : auto;
+  aspect-ratio : 16/9;
   border-radius : 20px;
   cursor : pointer;
 }
@@ -51,15 +51,16 @@ h3{
 .blogs{
   display : grid;
   width : 100%;
+  height : auto;
   place-items : start;
   white-space : normal;
-  gap : 5px;
+  gap : 15px;
   font-family : Genos;
   font-size : 15px;
-  padding : 10px;
   color : grey;
   grid-template-columns : 1fr 1fr;
   border: 3px solid #f9f9fa;
+  aspect-ratio : auto;
   
   &:hover{
     img{
@@ -74,6 +75,7 @@ h3{
     color : black;
     transition : 0.3s ease;
     overflow : hidden;
+
   };
   
 }
