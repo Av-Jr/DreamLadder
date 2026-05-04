@@ -4,10 +4,10 @@ html {
 
 @font-face {
   font-family: "Genos";
-  src: url("/Fonts/Genos.ttf") format("truetype"), url("/Fonts/Genos.ttf") format("opentype"), url("/Fonts/Genos.ttf.woff") format("woff");
-  font-display: swap;
-  font-weight: 400;
+  src: url("/Fonts/Genos.ttf") format("woff2"), url("/Fonts/Genos.ttf") format("woff"), url("/Fonts/Genos.ttf") format("truetype"), url("/Fonts/Genos.ttf") format("opentype");
+  font-weight: normal;
   font-style: normal;
+  font-display: swap;
 }
 #NavBarMC {
   height: 100px;
@@ -19,7 +19,7 @@ html {
   align-items: center;
   -webkit-font-smoothing: antialiased;
   font-family: Genos;
-  font-size: 24px;
+  font-size: fontSize(3);
   padding: 20px;
   z-index: 1;
   background: transparent;

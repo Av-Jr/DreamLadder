@@ -4,10 +4,10 @@ html {
 
 @font-face {
   font-family: "SyneMono";
-  src: url("/Fonts/SyneMono.ttf") format("truetype"), url("/Fonts/SyneMono.ttf") format("opentype"), url("/Fonts/SyneMono.ttf.woff") format("woff");
-  font-display: swap;
-  font-weight: 400;
+  src: url("/Fonts/SyneMono.ttf") format("woff2"), url("/Fonts/SyneMono.ttf") format("woff"), url("/Fonts/SyneMono.ttf") format("truetype"), url("/Fonts/SyneMono.ttf") format("opentype");
+  font-weight: normal;
   font-style: normal;
+  font-display: swap;
 }
 #SlideShowMC {
   position: relative;
