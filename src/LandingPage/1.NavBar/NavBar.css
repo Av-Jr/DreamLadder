@@ -23,6 +23,7 @@ html {
   padding: 20px;
   z-index: 1;
   background: transparent;
+  cursor: pointer;
 }
 
 .IL1 {

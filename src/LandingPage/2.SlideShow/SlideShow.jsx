@@ -43,7 +43,7 @@ const SlideShow = () => {
 
               <div className="heroActions">
                 <button className="navBtn s">Learning</button>
-                <button className="navBtn s">Book my Appointment</button>
+                <button className="navBtn s" onClick={() => {window.open("https://calendly.com/dreamladdercapital/portfolio-discussion-meeting", "_blank")}}>Book my Appointment</button>
               </div>
             </div>
 
@@ -64,9 +64,13 @@ const SlideShow = () => {
 
               <h2>Download the App right now.</h2>
 
-              <div className="heroActions">
-                <button className="navBtn s">Play-Store</button>
-                <button className="navBtn s">App-Store</button>
+              <div className="heroActions pas">
+                <button className="navBtn s ps" onClick={() => window.open("https://play.google.com/store/search?q=dreamladder+capital&c=apps&hl=en_IN", "_blank")}>
+                  <img src="/gplay.png" alt=""/>
+                </button>
+                <button className="navBtn s as" onClick={() => window.open("https://apps.apple.com/in/app/dreamladder-capital/id1527793478", "_blank")}>
+                  <img src="/appStore.png" alt=""/>
+                </button>
               </div>
 
               <div className="infoDis">

@@ -1,5 +1,6 @@
 import "./NavBar.scss"
 import { useState, useEffect } from 'react';
+import {useNavigate} from "react-router-dom";
 
 const NavBar = () => {
     const [hamAct, setHam] = useState(false);
@@ -8,6 +9,8 @@ const NavBar = () => {
         document.body.style.overflow = hamAct ? "hidden" : "auto";
       }, [hamAct]);
 
+      const navigate = useNavigate();
+
     return (
         <>
           <div
@@ -15,7 +18,7 @@ const NavBar = () => {
             onClick={() => setHam(false)}
           />
             <div id="NavBarMC">
-                <div className="IL1">
+                <div className="IL1" onClick={() => {navigate('/')}}>
                     <img src="/logo.png" alt="" className="logo" />
                 </div>
 
@@ -51,8 +54,8 @@ const NavBar = () => {
                     </button>
 
                     <button className="navBtn">Connect</button>
-                    <button className="navBtn s">Log-In</button>
-                    <button className="navBtn s">Sign-Up</button>
+                    <button className="navBtn s" onClick={() => window.open("https://dreamladdercapital.my-portfolio.co.in/app/#/login", "_blank")}>Log-In</button>
+                    <button className="navBtn s" onClick={() => window.open("https://dreamladdercapital.my-portfolio.co.in/app/#/kycOnBoarding/mobileSignUp", "_blank")}>Sign-Up</button>
                 </div>
             </div>
         </>

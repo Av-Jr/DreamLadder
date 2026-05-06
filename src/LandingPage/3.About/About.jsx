@@ -48,14 +48,14 @@ const About = () => {
         <div className="Con ACfour">
           <h2>All Your Family Investments, One Simple App</h2>
           <h3>Easily view portfolio performance, transactions and reports for every family member - anytime, anywhere</h3>
-          <button className="navBtn s">Start now</button>
+          <button className="navBtn s" onClick={() => window.open("https://dreamladdercapital.my-portfolio.co.in/app/#/login", "_blank")}>Start now</button>
         </div>
 
         <div className="Con ACfive">
           <h2>Setup SIP in 2 Minutes</h2>
           <h3>Setup SIP in Mutual Funds and diversify your portfolio to grow your net worth</h3>
           <div className="IL1">
-            <button className="navBtn s">Setup SIP</button>
+            <button className="navBtn s" onClick={() => window.open("https://dreamladdercapital.my-portfolio.co.in/app/#/login", "_blank")}>Setup SIP</button>
             <button className="navBtn s">SIP Calculator</button>
           </div>
         </div>
