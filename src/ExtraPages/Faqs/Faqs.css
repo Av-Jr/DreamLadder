@@ -1,0 +1,110 @@
+html {
+  overflow-x: scroll;
+}
+
+#FaqsMC {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+  padding: 80px 20px;
+  background: #f5f5f5;
+}
+#FaqsMC .QuestCon {
+  width: min(1100px, 100%);
+  display: flex;
+  flex-direction: column;
+  background: white;
+  border: 1px solid #e7e7e7;
+  border-radius: 18px;
+  overflow: hidden;
+}
+#FaqsMC .QuestCon h2 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  font-family: SyneMono;
+  color: #1d2433;
+  padding: 28px 30px;
+  border-bottom: 1px solid #ececec;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+#FaqsMC .QuestCon .QuestEle {
+  display: flex;
+  flex-direction: column;
+  padding: 28px 30px;
+  border-bottom: 1px solid #ececec;
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+#FaqsMC .QuestCon .QuestEle:last-child {
+  border-bottom: none;
+}
+#FaqsMC .QuestCon .QuestEle:hover {
+  background: #fafafa;
+}
+#FaqsMC .QuestCon .QuestEle .QuestTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+}
+#FaqsMC .QuestCon .QuestEle .qq {
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 1.5;
+  color: #20293a;
+  font-family: Genos;
+}
+#FaqsMC .QuestCon .QuestEle .plus {
+  font-size: 2rem;
+  font-weight: 300;
+  color: #d62828;
+  transition: 0.3s ease;
+  flex-shrink: 0;
+}
+#FaqsMC .QuestCon .QuestEle .AnswerWrap {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.45s ease, margin-top 0.3s ease;
+}
+#FaqsMC .QuestCon .QuestEle .aa {
+  display: block;
+  padding-top: 18px;
+  font-size: 1.15rem;
+  line-height: 1.9;
+  color: #5b6472;
+  max-width: 95%;
+  font-family: Genos;
+}
+#FaqsMC .QuestCon .QuestEle.open .plus {
+  transform: rotate(45deg);
+}
+#FaqsMC .QuestCon .QuestEle.open .AnswerWrap {
+  max-height: 500px;
+  margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+  #FaqsMC {
+    padding: 50px 15px;
+  }
+  #FaqsMC .QuestCon h2 {
+    font-size: 1.35rem;
+    padding: 22px 20px;
+  }
+  #FaqsMC .QuestCon .QuestEle {
+    padding: 22px 20px;
+  }
+  #FaqsMC .QuestCon .QuestEle .qq {
+    font-size: 1.05rem;
+  }
+  #FaqsMC .QuestCon .QuestEle .aa {
+    font-size: 0.97rem;
+    max-width: 100%;
+  }
+}
+
+/*# sourceMappingURL=Faqs.css.map */

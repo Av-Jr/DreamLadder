@@ -1,1 +1,1 @@
-{"version":3,"sourceRoot":"","sources":["Footer.scss"],"names":[],"mappings":"AACA;EACE;EACA;EACA;EACA","file":"Footer.css"}
+{"version":3,"sourceRoot":"","sources":["../../mixins/_initialSetup.scss","Footer.scss","../../mixins/_mediaQueries.scss"],"names":[],"mappings":"AAoCA;EAAK;;;ACnCL;EACE;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;;AAEA;EACE;EACA;EACA;;AACA;EACE;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;;AAEA;EACE;;;ACjBJ;EDwBF;IACE;;EAEA;IACE","file":"Footer.css"}

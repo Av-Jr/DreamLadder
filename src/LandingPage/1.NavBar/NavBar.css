@@ -12,7 +12,7 @@ html {
 #NavBarMC {
   height: 100px;
   width: 100vw;
-  position: absolute;
+  position: relative;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
