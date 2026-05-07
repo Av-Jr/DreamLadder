@@ -15,6 +15,21 @@ export default function About() {
                  </span>
                 <img src="/AboutSaday.png" alt=""/>
             </div>
+
+            <div className="secondPage">
+                <div className="text">
+                    <h1>Our Story</h1><br/><br/>
+                    <span>
+                        Every great journey begins with a simple belief. Ours began in 2018 with the conviction that investing should be transparent, straightforward, and built on trust.<br/><br/>
+                        What started as a focused effort in Mutual Funds has expanded into a comprehensive wealth management suite, including Corporate FDs, Protection Solutions, and Structured Products.<br/><br/>
+                        Today, we serve over 500+ families across 12 countries, achieving milestones driven by the same purpose: helping people grow their wealth with clarity.<br/><br/>
+                    </span>
+                    <div className="toShow">
+                        <span><span className={"changeC"}>25+</span><br/>YEARS EXPERTISE</span>
+                        <span><span className={"changeC"}>500+</span><br/>FAMILIES SERVED</span>
+                    </div>
+                </div>
+                <img src="/AboutTwo.png" alt=""/></div>
         </div>
     )
 }

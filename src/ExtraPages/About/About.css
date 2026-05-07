@@ -6,8 +6,43 @@ html {
   width: 100%;
   min-height: 100vh;
 }
+#AboutMC .secondPage {
+  min-height: 100vh;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  place-items: center;
+  padding: 40px;
+}
+#AboutMC .secondPage .text {
+  width: 90%;
+  min-height: 60%;
+  padding: 20px;
+  display: grid;
+  font-family: Genos;
+  font-size: clamp(0px, 2.5vh, 30px);
+}
+#AboutMC .secondPage .text .toShow {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  margin-top: 20px;
+  color: grey;
+}
+#AboutMC .secondPage .text .toShow .changeC {
+  font-size: 4vh;
+  color: #E53935;
+  font-weight: bold;
+}
+#AboutMC .secondPage img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+}
 #AboutMC .firstPage {
-  height: calc(100vh - 100px);
+  min-height: 100vh;
   width: 100%;
   background: url("/AboutFirstbg.png") center/cover no-repeat;
   display: flex;
@@ -55,6 +90,19 @@ html {
     width: 100%;
     padding: 0;
   }
+  #AboutMC .secondPage {
+    grid-template-columns: auto;
+    grid-template-rows: 1fr 1fr;
+    padding: 0;
+  }
+  #AboutMC .secondPage .text {
+    min-height: 0;
+    width: 100%;
+    grid-row: 2;
+  }
+  #AboutMC .secondPage img {
+    grid-row: 1;
+  }
   #AboutMC .firstPage {
     padding: 20px;
     display: grid;
@@ -70,6 +118,7 @@ html {
   }
   #AboutMC .firstPage .Intro {
     font-size: inherit;
+    line-height: inherit;
   }
 }
 
