@@ -21,7 +21,6 @@ const Pow = () => {
   return (
     <div id="PowMC">
       <div className="containingCon">
-
         <h1>What Clients say about us</h1>
 
         <div className="contentRow">

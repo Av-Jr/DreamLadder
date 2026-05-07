@@ -1,6 +1,6 @@
 @use "../../mixins" as *;
 #FooterMC{
-  min-height : 100vh;
+  height : auto;
   width : 100%;
   position : relative;
   background: yellow;

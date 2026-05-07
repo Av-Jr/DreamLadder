@@ -1,0 +1,150 @@
+html {
+  overflow-x: scroll;
+}
+
+#QlMC {
+  width: 100%;
+  height: auto;
+  background: #ffffff;
+  padding: 60px 80px;
+  box-sizing: border-box;
+  display: grid;
+  place-items: center;
+}
+#QlMC .links {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  gap: 50px;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+#QlMC .socials {
+  width: 280px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+}
+#QlMC .socials .logo {
+  width: 180px;
+  object-fit: contain;
+}
+#QlMC .socialsEles {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+#QlMC .socialsEles .socialBtn {
+  width: 42px;
+  height: 42px;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  padding: 0;
+  transition: transform 0.25s ease;
+}
+#QlMC .socialsEles .socialBtn:hover {
+  transform: scale(0.9);
+}
+#QlMC .socialsEles .youtube {
+  background-image: url("/youtubeL.png");
+}
+#QlMC .socialsEles .linkedin {
+  background-image: url("/linkedinL.png");
+}
+#QlMC .socialsEles .facebook {
+  background-image: url("/facebookL.png");
+}
+#QlMC .socialsEles .instagram {
+  background-image: url("/instagramL.png");
+}
+#QlMC .socialsEles .x {
+  background-image: url("/xL.png");
+}
+#QlMC .downloadsSec {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+#QlMC .downloadsSec .downloadBtn {
+  width: 180px;
+  height: 55px;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  padding: 0;
+  transition: transform 0.25s ease;
+}
+#QlMC .downloadsSec .downloadBtn:hover {
+  transform: scale(0.95);
+}
+#QlMC .downloadsSec .appStore {
+  background-image: url("/appStore.png");
+}
+#QlMC .downloadsSec .gplay {
+  background-image: url("/gplay.png");
+}
+#QlMC .QLeles {
+  min-width: 180px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+#QlMC .QLeles h2 {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 700;
+  color: #111111;
+  font-family: Genos;
+  text-align: center;
+}
+#QlMC .QLeles .items {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  font-family: Genos;
+}
+#QlMC .QLeles .linkBtn {
+  border: none;
+  background: transparent;
+  padding: 0;
+  text-align: left;
+  font-size: 15px;
+  color: #555555;
+  cursor: pointer;
+  transition: color 0.2s ease, transform 0.2s ease;
+  text-align: center;
+}
+#QlMC .QLeles .linkBtn:hover {
+  color: #000000;
+  transform: translateX(4px);
+}
+
+@media (max-width: 1024px) {
+  #QlMC .links {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 0;
+  }
+  #QlMC .socials {
+    grid-column: span 2;
+  }
+  #QlMC .QLeles {
+    min-width: 0;
+  }
+}
+
+/*# sourceMappingURL=Ql.css.map */

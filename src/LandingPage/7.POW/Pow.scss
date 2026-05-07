@@ -1,109 +1,145 @@
-@use "../../mixins" as *;
+* {
+  box-sizing: border-box;
+}
 
 #PowMC {
   min-height: 100vh;
-  width : 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  width: 100%;
+  display : grid;
+  padding : 50px;
+  place-items : center;
+  background: #f8f8f8;
 
   .containingCon {
     width: 100%;
     max-width: 1400px;
-    padding: 20px;
-
+    gap : 50px;
+    display: flex;
+    flex-direction: column;
     h1 {
       text-align: center;
-      margin-bottom: 40px;
+      font-size: clamp(36px, 3vw, 60px);
+      font-weight: 700;
     }
 
     .contentRow {
+      width: 100%;
+      height : 100%;
       display: flex;
-      align-items: center;
+      align-items: flex-start;
       gap: 40px;
-    }
 
-    .sideImg {
-      width: 250px;
-      flex-shrink: 0;
-    }
-    
-    .slider {
-      flex: 1;
-      overflow: hidden;
-    }
-
-    .track {
-      display: flex;
-      flex-direction : column;
-      transition: transform 0.4s ease;
-      gap : 10px;
-    }
-
-    .card {
-      flex: 0 0 100%;
-      display: flex;
-      flex-direction : row;
-      gap: 30px;
-      padding: 30px;
-      border-radius: 20px;
-      box-shadow: 0 8px 10px rgba(0, 0, 0, 0.15);
-      background: white;
-      border : 1px solid rgba(201, 182, 255, 1);
-      place-items : center;
-    }
-
-    .text {
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
-      font-size : clamp(20px, 2vh, 30px);
-
-      span {
-        font-family : Genos;
-        font-style: italic;
-        font-size : inherit;
+      .sideImg {
+        width: 260px;
+        flex-shrink: 0;
+        object-fit: contain;
       }
 
-      h2 {
-        font-family : Genos;
-        font-weight: bold;
-      }
+      .slider {
+        flex: 1;
+        width : 100%;
+        height : 100%;
 
-      h3 {
-        color: purple;
-         font-size : inherit;
-      }
-    }
+        .track {
+          display: flex;
+          flex-direction: column;
+          gap: 24px;
+          height : 100%;
+          width : 100%;
+        }
 
-    .image {
-      width: 250px;
-      flex-shrink: 0;
+        .card {
+          width: 100%;
+          padding : 20px;
+          font-family : Genos;
+          display: flex;
+          align-items: center;
+          gap: 30px;
 
-      img {
-        width: 100%;
-        aspect-ratio: 1;
-        object-fit: cover;
-        border-radius: 15px;
-        border: 2px solid rgba(201, 182, 255, 1);
+          background: white;
+
+          border-radius: 24px;
+
+          border: 1px solid rgba(201, 182, 255, 1);
+
+          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+
+          .text {
+            flex: 1;
+
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+
+            span {
+              font-size : clamp(0px, 2vh, 22px);
+              line-height: 1.8;
+              color: #444;
+            }
+
+            h2 {
+              font-size: clamp(28px, 2vw, 42px);
+              font-weight: 700;
+              margin: 0;
+            }
+
+            h3 {
+              font-size: clamp(18px, 1.1vw, 24px);
+              color: purple;
+              margin: 0;
+              font-weight: 500;
+            }
+          }
+
+          .image {
+            width: 220px;
+            flex-shrink: 0;
+
+            img {
+              width: 100%;
+              aspect-ratio: 1;
+              object-fit: cover;
+
+              display: block;
+
+              border-radius: 20px;
+
+              border: 2px solid rgba(201, 182, 255, 1);
+            }
+          }
+        }
       }
     }
   }
 }
 
-@include mediaDevice(mobile){
-  .sideImg{display : none}
-  #PowMC{
-    .containingCon{
-      padding : 5px;
-      
-      h1{
-        padding-top : 40px;
-      }
-      
-      .card{
-        flex-direction : column;
+@media (max-width: 900px) {
+  #PowMC {
+    padding: 40px 16px;
+
+    .containingCon {
+      gap: 32px;
+
+      .contentRow {
+        flex-direction: column;
+
+        .sideImg {
+          display: none;
+        }
+
+        .slider {
+          width: 100%;
+
+          .card {
+            flex-direction: column-reverse;
+            text-align: center;
+            padding: 24px;
+
+            .image {
+              width: 180px;
+            }
+          }
+        }
       }
     }
   }

@@ -1,4 +1,7 @@
 import "./Calculator.scss";
+import {useNavigate} from "react-router-dom";
+
+
 
 const Calculator = () => {
     const retData = [
@@ -11,13 +14,14 @@ const Calculator = () => {
         {i : "seven", t : "Education"},
         {i : "eight", t : "EMI / Loan"}
     ]
+    const nt = useNavigate();
 
     return(
         <div id={"CalculatorMC"}>
             <h2>Calculators</h2>
             <div className="CalcEleCon">
                 {retData.map((item, index) => (
-                    <div className="CalcEle">
+                    <div className="CalcEle" onClick={() => {nt("/calc")}}>
                         <img src={`/Calc${item.i}.png`} alt={item.i}/>
                         <h3>{item.t}</h3>
                     </div>

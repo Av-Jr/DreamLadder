@@ -6,8 +6,10 @@ import Pow from "./LandingPage/7.POW/Pow.jsx";
 import Footer from "./LandingPage/8.Footers/Footer.jsx";
 import ReturnSlider from "./LandingPage/4.ReturnSlider/ReturnSlider.jsx";
 import Insights from "./LandingPage/6.Insights/Insights.jsx";
+import Ql from "./LandingPage/9.QuickLinks/Ql.jsx";
 
 import "./App.scss"
+
 
 
 import React from 'react'
@@ -24,6 +26,7 @@ export default function Home() {
               <Insights></Insights>
               <Pow></Pow>
               <Footer></Footer>
+              <Ql></Ql>
           </div>
         </>
     )

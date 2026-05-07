@@ -1,0 +1,159 @@
+@use "../../mixins" as *;
+
+#QlMC {
+  width: 100%;
+  height : auto;
+  background: #ffffff;
+  padding: 60px 80px;
+  box-sizing: border-box;
+  display :grid;
+  place-items : center;
+
+  .links {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    gap: 50px;
+    flex-wrap: wrap;
+    justify-content : center;
+    align-items : center;
+  }
+
+  .socials {
+    width: 280px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    justify-content : center;
+    align-items : center;
+
+    .logo {
+      width: 180px;
+      object-fit: contain;
+    }
+  }
+
+  .socialsEles {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    flex-wrap: wrap;
+
+    .socialBtn {
+      width: 42px;
+      height: 42px;
+      border: none;
+      outline: none;
+      background-color: transparent;
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat;
+      cursor: pointer;
+      padding: 0;
+      transition: transform 0.25s ease;
+
+      &:hover {
+        transform: scale(0.9);
+      }
+    }
+
+    $icons: youtube, linkedin, facebook, instagram, x;
+
+    @each $icon in $icons {
+      .#{$icon} {
+        background-image: url("/#{$icon}L.png");
+      }
+    }
+  }
+
+  .downloadsSec {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+
+    .downloadBtn {
+      width: 180px;
+      height: 55px;
+      border: none;
+      outline: none;
+      background-color: transparent;
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat;
+      cursor: pointer;
+      padding: 0;
+      transition: transform 0.25s ease;
+
+      &:hover {
+        transform: scale(0.95);
+      }
+    }
+
+    $apps: appStore, gplay;
+
+    @each $app in $apps {
+      .#{$app} {
+        background-image: url("/#{$app}.png");
+      }
+    }
+  }
+
+  .QLeles {
+    min-width: 180px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    
+    h2 {
+      margin: 0;
+      font-size: 22px;
+      font-weight: 700;
+      color: #111111;
+      font-family : Genos;
+      text-align : center;
+    }
+
+    .items {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      font-family : Genos;
+    }
+
+    .linkBtn {
+      border: none;
+      background: transparent;
+      padding: 0;
+      text-align: left;
+      font-size: 15px;
+      color: #555555;
+      cursor: pointer;
+      transition: color 0.2s ease, transform 0.2s ease;
+      text-align : center;
+
+      &:hover {
+        color: #000000;
+        transform: translateX(4px);
+      }
+    }
+  }
+}
+
+@include mediaDevice(mobile){
+  #QlMC{
+    .links{
+      width : 100%;
+      display : grid;
+      grid-template-columns : 1fr 1fr;
+      padding : 0;
+    }
+    .socials{
+      grid-column : span 2;
+    }
+    
+    .QLeles{
+      min-width : 0;
+    }
+  }
+
+}
