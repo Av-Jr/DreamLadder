@@ -111,6 +111,7 @@
       color: #111111;
       font-family : Genos;
       text-align : center;
+      white-space : nowrap;
     }
 
     .items {
@@ -140,20 +141,27 @@
 }
 
 @include mediaDevice(mobile){
+
   #QlMC{
+
     .links{
-      width : 100%;
-      display : grid;
-      grid-template-columns : 1fr 1fr;
-      padding : 0;
+      width: 100%;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      justify-items: center;
+      align-items: start;
+      padding: 0;
     }
+
     .socials{
-      grid-column : span 2;
+      grid-column: span 2;
     }
-    
+
     .QLeles{
-      min-width : 0;
+      min-width: 0;
+      width: fit-content;
     }
+
   }
 
 }

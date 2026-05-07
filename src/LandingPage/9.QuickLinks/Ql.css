@@ -109,6 +109,7 @@ html {
   color: #111111;
   font-family: Genos;
   text-align: center;
+  white-space: nowrap;
 }
 #QlMC .QLeles .items {
   display: flex;
@@ -137,6 +138,8 @@ html {
     width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    align-items: start;
     padding: 0;
   }
   #QlMC .socials {
@@ -144,6 +147,7 @@ html {
   }
   #QlMC .QLeles {
     min-width: 0;
+    width: fit-content;
   }
 }
 
