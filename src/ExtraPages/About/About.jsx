@@ -29,7 +29,13 @@ export default function About() {
                         <span><span className={"changeC"}>500+</span><br/>FAMILIES SERVED</span>
                     </div>
                 </div>
-                <img src="/AboutTwo.png" alt=""/></div>
+                <img src="/AboutTwo.png" alt=""/>
+            </div>
+
+            <div className="thirdPage">
+                <div className={"textLeft"}>“Our mission is to be one of India’s most trusted partners in building long-term wealth. Every solution we create is designed to be simple, transparent, and effective.”</div>
+                <div className={"Intro"}>- Mr. Saday Sinha<br/><span className={'title'}>Founder & CEO, DreamLadder Capital</span></div>
+            </div>
         </div>
     )
 }
