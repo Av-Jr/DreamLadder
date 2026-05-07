@@ -116,6 +116,11 @@ html {
   flex-direction: column;
   gap: 14px;
   font-family: Genos;
+  justify-content: center;
+  align-items: center;
+}
+#QlMC .QLeles .items button {
+  flex: 1 1 0;
 }
 #QlMC .QLeles .linkBtn {
   border: none;
@@ -134,20 +139,27 @@ html {
 }
 
 @media (max-width: 1024px) {
+  #QlMC {
+    display: grid;
+    place-items: center;
+    padding: 10px;
+  }
   #QlMC .links {
     width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    justify-items: center;
-    align-items: start;
+    place-items: center;
     padding: 0;
   }
   #QlMC .socials {
     grid-column: span 2;
+    padding: 0;
   }
   #QlMC .QLeles {
     min-width: 0;
-    width: fit-content;
+    display: grid;
+    place-items: center;
+    padding: 0;
   }
 }
 
