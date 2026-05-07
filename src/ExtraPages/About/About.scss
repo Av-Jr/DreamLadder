@@ -1,0 +1,81 @@
+@use "../../mixins" as *;
+
+#AboutMC{
+  width : 100%;
+  min-height : 100vh;
+  
+  .firstPage{
+	height : calc(100vh - 100px);
+	width : 100%;
+	background : url("/AboutFirstbg.png") center/cover no-repeat;
+	display : flex;
+	padding : 100px;
+	justify-content : center;
+	align-items : center;
+	
+	img{
+	  border : 1px white solid;
+	  object-fit : contain;
+	  width : 80%;
+	  height : 80%;
+	  object-position : center;
+	}
+	
+	.main{
+	  display : flex;
+	  flex-direction : column;
+	}
+	
+	.Intro{
+	  font-family : Genos;
+	  text-align : right;
+	  line-height : 1;
+	  font-weight : bold;
+	  font-size : clamp(0px, 2vh, 20px);
+	  
+	  
+	  .title{
+		color : grey;
+		font-family : inherit;
+		line-height : inherit;
+	  }
+	}
+	
+	span{
+	  font-family : SyneMono;
+	  font-size : clamp(0px, 3vh, 40px);
+	  line-height : 2;
+	  text-align : center;
+	}
+	
+	.toEdit{
+	  font-style : italic;
+	  color : red;
+	  font-size : inherit;
+	}
+  }
+}
+
+@include mediaDevice(mobile){
+  #AboutMC{
+	width : 100%;
+	padding : 0;
+	.firstPage{
+	  padding : 20px;
+	  display : grid;
+	  grid-template-rows : 1fr 1fr;
+	  place-items : center;
+	  width : 100%;
+	  justify-items : center;
+	  span{
+		font-size : clamp(0px, 3vw, 30px);
+		width : 100%;
+		white-space : normal;
+	  }
+	  
+	  .Intro{
+		font-size : inherit;
+	  }
+	}
+  }
+}

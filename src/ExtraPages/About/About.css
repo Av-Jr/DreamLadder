@@ -1,0 +1,76 @@
+html {
+  overflow-x: scroll;
+}
+
+#AboutMC {
+  width: 100%;
+  min-height: 100vh;
+}
+#AboutMC .firstPage {
+  height: calc(100vh - 100px);
+  width: 100%;
+  background: url("/AboutFirstbg.png") center/cover no-repeat;
+  display: flex;
+  padding: 100px;
+  justify-content: center;
+  align-items: center;
+}
+#AboutMC .firstPage img {
+  border: 1px white solid;
+  object-fit: contain;
+  width: 80%;
+  height: 80%;
+  object-position: center;
+}
+#AboutMC .firstPage .main {
+  display: flex;
+  flex-direction: column;
+}
+#AboutMC .firstPage .Intro {
+  font-family: Genos;
+  text-align: right;
+  line-height: 1;
+  font-weight: bold;
+  font-size: clamp(0px, 2vh, 20px);
+}
+#AboutMC .firstPage .Intro .title {
+  color: grey;
+  font-family: inherit;
+  line-height: inherit;
+}
+#AboutMC .firstPage span {
+  font-family: SyneMono;
+  font-size: clamp(0px, 3vh, 40px);
+  line-height: 2;
+  text-align: center;
+}
+#AboutMC .firstPage .toEdit {
+  font-style: italic;
+  color: red;
+  font-size: inherit;
+}
+
+@media (max-width: 1024px) {
+  #AboutMC {
+    width: 100%;
+    padding: 0;
+  }
+  #AboutMC .firstPage {
+    padding: 20px;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    place-items: center;
+    width: 100%;
+    justify-items: center;
+  }
+  #AboutMC .firstPage span {
+    font-size: clamp(0px, 3vw, 30px);
+    width: 100%;
+    white-space: normal;
+  }
+  #AboutMC .firstPage .Intro {
+    font-size: inherit;
+  }
+}
+
+/*# sourceMappingURL=About.css.map */

@@ -12,9 +12,8 @@
   .links {
     width: 100%;
     display: flex;
-    align-items: flex-start;
     gap: 50px;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     justify-content : center;
     align-items : center;
   }
@@ -121,7 +120,7 @@
       font-family : Genos;
       justify-content : center;
       align-items : center;
-      
+      white-space : wrap;
       button{flex : 1 1 0}
     }
 
@@ -134,7 +133,8 @@
       color: #555555;
       cursor: pointer;
       transition: color 0.2s ease, transform 0.2s ease;
-      text-align : center;
+      white-space : normal;
+      overflow-wrap : break-word;
 
       &:hover {
         color: #000000;

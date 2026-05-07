@@ -14,9 +14,8 @@ html {
 #QlMC .links {
   width: 100%;
   display: flex;
-  align-items: flex-start;
   gap: 50px;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   justify-content: center;
   align-items: center;
 }
@@ -118,6 +117,7 @@ html {
   font-family: Genos;
   justify-content: center;
   align-items: center;
+  white-space: wrap;
 }
 #QlMC .QLeles .items button {
   flex: 1 1 0;
@@ -131,7 +131,8 @@ html {
   color: #555555;
   cursor: pointer;
   transition: color 0.2s ease, transform 0.2s ease;
-  text-align: center;
+  white-space: normal;
+  overflow-wrap: break-word;
 }
 #QlMC .QLeles .linkBtn:hover {
   color: #000000;

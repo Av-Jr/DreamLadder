@@ -74,9 +74,9 @@ const dataQL = [
     title: "Reach Us",
     className: "RU",
     eles: [
-      ["Phone", "RUp", "/contact"],
-      ["Email", "RUe", "/contact"],
-      ["Location", "RUl", "/contact"]
+        ["+91 89-0808-2222", "RUp", "/contact"],
+        ["info@dreamladdercapital.com", "RUe", "/contact"],
+        ["DreamLadder Capital #20, 10th Floor, R. City Offices, Ghatkopar (W), Mumbai – 86", "RUl", "/contact"]
     ]
   }
 ];

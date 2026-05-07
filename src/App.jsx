@@ -2,6 +2,7 @@ import {BrowserRouter, Routes, Route} from "react-router-dom";
 import Faqs from "./ExtraPages/Faqs/Faqs.jsx";
 import CalcGraph from "./ExtraPages/CalcGraph/CalcGraph.jsx";
 import Home from "./Home.jsx";
+import About from "./ExtraPages/About/About.jsx";
 
 
 
@@ -13,6 +14,7 @@ const App = () => {
                   <Route path={"/"} element={<Home />}></Route>
                   <Route path={'/faqs'} element={<Faqs />}></Route>
                   <Route path={'/calc'} element={<CalcGraph></CalcGraph>}></Route>
+                  <Route path={"/about"} element={<About></About>}></Route>
               </Routes>
           </BrowserRouter>
       </>
