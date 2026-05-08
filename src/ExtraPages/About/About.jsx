@@ -10,7 +10,7 @@ export default function About() {
             <div className="firstPage">
                 <span className={"main"}>
                     <span>"Wealth is not built overnight, its crafted through : </span>
-                    <span className={'toEdit'}> Clarity,<br/>Courage and <br/>Consistency."</span>
+                    <span className={'toEdit'}> Clarity, Courage and Consistency."</span>
                     <span className={"Intro"}>Mr. Saday Sinha<br/><span className={'title'}>CEO & Founder</span></span>
                  </span>
                 <img src="/AboutSaday.png" alt=""/>
@@ -36,6 +36,8 @@ export default function About() {
                 <div className={"textLeft"}>“Our mission is to be one of India’s most trusted partners in building long-term wealth. Every solution we create is designed to be simple, transparent, and effective.”</div>
                 <div className={"Intro"}>- Mr. Saday Sinha<br/><span className={'title'}>Founder & CEO, DreamLadder Capital</span></div>
             </div>
+
+
         </div>
     )
 }

@@ -16,6 +16,7 @@ html {
   align-items: end;
   padding: 5%;
   gap: 50px;
+  overflow: hidden;
 }
 #AboutMC .thirdPage .textLeft {
   width: 60%;
@@ -60,9 +61,10 @@ html {
 }
 #AboutMC .secondPage .text {
   width: 90%;
-  min-height: 60%;
+  height: 100%;
   padding: 20px;
   display: grid;
+  place-items: center;
   font-family: Genos;
   font-size: clamp(0px, 2.5vh, 30px);
 }
@@ -132,6 +134,7 @@ html {
     align-items: center;
     gap: 20px;
     padding: 7px;
+    background-position: left;
   }
   #AboutMC .thirdPage .textLeft {
     padding: 0;
@@ -150,31 +153,38 @@ html {
     border-radius: 10px;
   }
   #AboutMC .secondPage {
-    grid-template-columns: auto;
-    grid-template-rows: 1fr 1fr;
-    padding: 0;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    padding: 10px;
   }
   #AboutMC .secondPage .text {
-    min-height: 0;
+    min-height: auto;
+    height: auto;
     width: 100%;
+    padding: 0;
     grid-row: 2;
+    text-align: center;
   }
   #AboutMC .secondPage img {
+    height: auto;
     grid-row: 1;
   }
   #AboutMC .firstPage {
     padding: 20px;
     display: grid;
-    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
     place-items: center;
     width: 100%;
     justify-items: center;
   }
   #AboutMC .firstPage img {
-    width: 60%;
+    width: 100%;
+    height: auto;
+    padding: 20px;
   }
   #AboutMC .firstPage span {
-    font-size: clamp(0px, 5vw, 22px);
+    font-size: clamp(0px, 6vw, 50px);
     width: 100%;
     white-space: normal;
   }
