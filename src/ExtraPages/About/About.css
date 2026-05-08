@@ -2,11 +2,11 @@ html {
   overflow-x: scroll;
 }
 
-#AboutMC {
+#About2MC {
   width: 100%;
   height: 100vh;
 }
-#AboutMC .thirdPage {
+#About2MC .thirdPage {
   min-height: 100vh;
   width: 100%;
   background: url("/AboutThreebg.png") center/cover no-repeat;
@@ -18,7 +18,7 @@ html {
   gap: 50px;
   overflow: hidden;
 }
-#AboutMC .thirdPage .textLeft {
+#About2MC .thirdPage .textLeft {
   width: 60%;
   height: auto;
   font-family: SyneMono;
@@ -30,7 +30,7 @@ html {
   font-style: italic;
   padding: 0 10%;
 }
-#AboutMC .thirdPage .Intro {
+#About2MC .thirdPage .Intro {
   width: 60%;
   height: auto;
   font-family: Genos;
@@ -40,12 +40,12 @@ html {
   font-size: clamp(0px, 2vw, 35px);
   padding: 0 10%;
 }
-#AboutMC .thirdPage .Intro .title {
+#About2MC .thirdPage .Intro .title {
   color: #E53935;
   font-family: inherit;
   line-height: inherit;
 }
-#AboutMC .secondPage {
+#About2MC .secondPage {
   min-height: 100vh;
   width: 100%;
   display: grid;
@@ -53,13 +53,13 @@ html {
   place-items: center;
   padding: 40px;
 }
-#AboutMC .secondPage img {
+#About2MC .secondPage img {
   width: 100%;
   height: 100%;
   object-fit: contain;
   object-position: center;
 }
-#AboutMC .secondPage .text {
+#About2MC .secondPage .text {
   width: 90%;
   height: 100%;
   padding: 20px;
@@ -68,7 +68,7 @@ html {
   font-family: Genos;
   font-size: clamp(0px, 2.5vh, 30px);
 }
-#AboutMC .secondPage .text .toShow {
+#About2MC .secondPage .text .toShow {
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -76,12 +76,12 @@ html {
   margin-top: 20px;
   color: grey;
 }
-#AboutMC .secondPage .text .toShow .changeC {
+#About2MC .secondPage .text .toShow .changeC {
   font-size: 4vh;
   color: #E53935;
   font-weight: bold;
 }
-#AboutMC .firstPage {
+#About2MC .firstPage {
   min-height: 100vh;
   width: 100%;
   background: url("/AboutFirstbg.png") center/cover no-repeat;
@@ -90,61 +90,62 @@ html {
   justify-content: center;
   align-items: center;
 }
-#AboutMC .firstPage img {
+#About2MC .firstPage img {
   border: 1px white solid;
   object-fit: contain;
   width: 30%;
   object-position: center;
 }
-#AboutMC .firstPage .main {
+#About2MC .firstPage .main {
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
-#AboutMC .firstPage .Intro {
+#About2MC .firstPage .Intro {
   font-family: Genos;
   text-align: center;
   line-height: 1;
   font-weight: bold;
   font-size: clamp(0px, 2vh, 20px);
 }
-#AboutMC .firstPage .Intro .title {
+#About2MC .firstPage .Intro .title {
   color: grey;
   font-family: inherit;
   line-height: inherit;
 }
-#AboutMC .firstPage span {
+#About2MC .firstPage span {
   font-family: SyneMono;
   font-size: clamp(0px, 3vh, 40px);
   line-height: 2;
   text-align: center;
 }
-#AboutMC .firstPage .toEdit {
+#About2MC .firstPage .toEdit {
   font-style: italic;
   color: red;
   font-size: inherit;
 }
 
 @media (max-width: 1024px) {
-  #AboutMC {
+  #About2MC {
     width: 100%;
     padding: 0;
   }
-  #AboutMC .thirdPage {
+  #About2MC .thirdPage {
     align-items: center;
     gap: 20px;
     padding: 7px;
     background-position: left;
   }
-  #AboutMC .thirdPage .textLeft {
+  #About2MC .thirdPage .textLeft {
     padding: 0;
     width: 100%;
+    height: 100%;
     font-size: clamp(0px, 3vh, 30px);
     background: rgba(255, 255, 255, 0.5);
     border-radius: 10px;
     text-align: center;
   }
-  #AboutMC .thirdPage .Intro {
+  #About2MC .thirdPage .Intro {
     padding: 5px;
     width: auto;
     font-size: clamp(0px, 3vh, 30px);
@@ -152,12 +153,12 @@ html {
     text-align: center;
     border-radius: 10px;
   }
-  #AboutMC .secondPage {
+  #About2MC .secondPage {
     grid-template-columns: 1fr;
     grid-template-rows: auto auto;
     padding: 10px;
   }
-  #AboutMC .secondPage .text {
+  #About2MC .secondPage .text {
     min-height: auto;
     height: auto;
     width: 100%;
@@ -165,11 +166,11 @@ html {
     grid-row: 2;
     text-align: center;
   }
-  #AboutMC .secondPage img {
+  #About2MC .secondPage img {
     height: auto;
     grid-row: 1;
   }
-  #AboutMC .firstPage {
+  #About2MC .firstPage {
     padding: 20px;
     display: grid;
     grid-template-columns: 1fr;
@@ -178,17 +179,17 @@ html {
     width: 100%;
     justify-items: center;
   }
-  #AboutMC .firstPage img {
+  #About2MC .firstPage img {
     width: 100%;
     height: auto;
     padding: 20px;
   }
-  #AboutMC .firstPage span {
+  #About2MC .firstPage span {
     font-size: clamp(0px, 6vw, 50px);
     width: 100%;
     white-space: normal;
   }
-  #AboutMC .firstPage .Intro {
+  #About2MC .firstPage .Intro {
     font-size: inherit;
   }
 }

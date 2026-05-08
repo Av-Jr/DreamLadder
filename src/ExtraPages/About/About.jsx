@@ -5,7 +5,7 @@ import React from 'react'
 
 export default function About() {
     return (
-        <div id={"AboutMC"}>
+        <div id={"About2MC"}>
             <NavBar></NavBar>
             <div className="firstPage">
                 <span className={"main"}>
