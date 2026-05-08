@@ -31,6 +31,32 @@ export default function About() {
         icon: Handshake
       }
     ]
+
+    const teamIntro = {
+      title: "Our Team",
+
+      description:
+        "A collective of experienced professionals driven by integrity, discipline, and long-term perspective — dedicated to facilitating structured wealth creation and continuity for families.",
+    };
+
+    const teamData = [
+      {
+        role: "FOUNDER & CEO",
+        name: "Saday Sinha",
+        description:
+          "Saday Sinha is the Founder and CEO of DreamLadder Capital, a wealth management firm dedicated to helping clients achieve financial independence through tailored investment solutions. His approach is rooted in transparency and goal-oriented growth.",
+        image: "AboutFifthPgSaday.png"
+      },
+
+      {
+        role: "DIRECTOR",
+        name: "Priyanka Mishra",
+        description:
+          "Priyanka Mishra serves as a Director at DreamLadder Capital, where she leads Financial Products, Operations, and New Initiatives divisions. She plays a pivotal role in driving innovation and ensuring operational excellence.",
+        image: "AboutFifthPgPriyanka.png"
+      },
+    ];
+
     return (
         <div id={"About2MC"}>
             <NavBar></NavBar>
@@ -79,11 +105,29 @@ export default function About() {
                                     <h2>{Tit}</h2>
                                     <span>{Txt}</span>
                                 </div>
-
                             )
                         })
                     }
                 </div>
+            </div>
+
+            <div className={"fifthPage"}>
+                <div className="teamIntro">
+                    <h1>{teamIntro.title}</h1>
+                    <span>{teamIntro.description}</span>
+                </div>
+                {
+                    teamData.map((item, index) => (
+                        <div className={"MemberCard"}>
+                            <img src={`/${item.image}`} alt="" className={"heroImg"}/>
+                            <div className="heroText">
+                                <h3>{item.role}</h3>
+                                <h1>{item.name}</h1>
+                                <span>{item.description}</span>
+                            </div>
+                        </div>
+                    ))
+                }
             </div>
 
         </div>
