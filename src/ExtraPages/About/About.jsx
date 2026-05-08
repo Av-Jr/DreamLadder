@@ -1,9 +1,36 @@
 import NavBar from "../../LandingPage/1.NavBar/NavBar.jsx";
 import "./About.scss"
+import { Shield, Search, Briefcase, Handshake } from "lucide-react";
 
 import React from 'react'
 
 export default function About() {
+
+    const cardElesData = [
+      {
+        title: "Trusted Integrity",
+        ts: "Upholding the highest ethical standards in every financial decision we make for you.",
+        icon: Shield
+      },
+
+      {
+        title: "Complete Transparency",
+        ts: "Total clarity in our processes, direct investments, and clear reporting structures.",
+        icon: Search
+      },
+
+      {
+        title: "Professional Experience",
+        ts: "Decades of institutional expertise applied to managing individual and family wealth.",
+        icon: Briefcase
+      },
+
+      {
+        title: "Collaborative Relationships",
+        ts: "Partnering with families across generations to ensure a lasting financial legacy.",
+        icon: Handshake
+      }
+    ]
     return (
         <div id={"About2MC"}>
             <NavBar></NavBar>
@@ -37,6 +64,27 @@ export default function About() {
                 <div className={"Intro"}>- Mr. Saday Sinha<br/><span className={'title'}>Founder & CEO, DreamLadder Capital</span></div>
             </div>
 
+            <div className="fourthPage">
+                <h1>Our Core Values</h1>
+                <div className="cardElesfP">
+                    {
+                        cardElesData.map((item, index) => {
+                            const Icon = item.icon;
+                            const Tit = item.title;
+                            const Txt = item.ts;
+
+                            return(
+                                <div className={"cardEle"}>
+                                    <Icon color={"#E53935"} size={40} className={"cardIcon"}></Icon>
+                                    <h2>{Tit}</h2>
+                                    <span>{Txt}</span>
+                                </div>
+
+                            )
+                        })
+                    }
+                </div>
+            </div>
 
         </div>
     )
