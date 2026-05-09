@@ -1,10 +1,27 @@
 import NavBar from "../../LandingPage/1.NavBar/NavBar.jsx";
 import "./About.scss"
-import { Shield, Search, Briefcase, Handshake } from "lucide-react";
+import { Shield, Search, Briefcase, Handshake, TrendingUp} from "lucide-react";
 
 import React from 'react'
 
 export default function About() {
+    
+    const whyChooseData = [
+      {
+        icon: Search,
+        text: "With a senior team of 20+ years in equity research, we provide expert insights and personalized investment strategies tailored for you."
+      },
+
+      {
+        icon: Shield,
+        text: "Trusted. Analysis-Driven: We use advanced financial tools to enhance performance, offering guidance that is simple and focused on your success."
+      },
+
+      {
+        icon: TrendingUp,
+        text: "Trust us to deliver the expertise and technology that empowers your financial success."
+      }
+    ];
 
     const cardElesData = [
       {
@@ -130,6 +147,25 @@ export default function About() {
                 }
             </div>
 
+            <div className="sixthPage">
+                <div className="heroImg">
+                    <h1>What helps us do well</h1>
+                    <img src="/sixthPG.png" alt=""/>
+                </div>
+                <div className="heroText">
+                    {
+                        whyChooseData.map((item, index) => {
+                            const Icon = item.icon;
+                            const txt = item.text;
+                            return(
+                            <div className={'sixthPgCard'}>
+                                <Icon className="PgCardSixth" size={40}></Icon>
+                                <span>{txt}</span>
+                            </div>
+                        )})
+                    }
+                </div>
+            </div>
         </div>
     )
 }
