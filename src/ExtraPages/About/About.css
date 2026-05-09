@@ -6,8 +6,74 @@ html {
   width: 100%;
   height: 100vh;
 }
+#About2MC .seventhPage {
+  padding: 100px;
+  height: auto;
+  width: 100%;
+  background: url("/seventhBg.png") center/cover no-repeat;
+  display: grid;
+  grid-template-rows: auto auto;
+  place-items: center;
+  gap: 50px;
+}
+#About2MC .seventhPage .seventhCardCon {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  place-items: center;
+  padding: 20px;
+  gap: 30px;
+}
+#About2MC .seventhPage .seventhCardCon .seventhCard {
+  position: relative;
+  min-width: 250px;
+  background: transparent;
+  font-family: SyneMono;
+  font-weight: normal;
+  place-items: center;
+  gap: 0;
+  aspect-ratio: 16/9;
+  display: grid;
+  border-radius: 20px;
+  border: 1px solid white;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  transition: 0.8s ease;
+  transform-style: preserve-3d;
+}
+#About2MC .seventhPage .seventhCardCon .seventhCard:hover {
+  transform: rotateY(180deg);
+}
+#About2MC .seventhPage .seventhCardCon .seventhCard:hover .desc {
+  opacity: 1;
+  transform: rotateY(180deg);
+}
+#About2MC .seventhPage .seventhCardCon .seventhCard .desc {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: white;
+  transition: 0.3s ease;
+  opacity: 0;
+  color: black;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  padding: 10px;
+}
+#About2MC .seventhPage .seventhCardCon .seventhCard .cardIcon {
+  padding: 10px;
+  border-radius: 50%;
+  background: #E53935;
+  color: white;
+}
+#About2MC .seventhPage h1 {
+  font-family: SyneMono;
+  text-align: center;
+  font-weight: 800;
+}
 #About2MC .sixthPage {
-  min-height: 100vh;
+  height: auto;
   width: 100%;
   padding: 100px;
   display: grid;
@@ -41,7 +107,7 @@ html {
   font-size: 2vh;
 }
 #About2MC .sixthPage .heroText .sixthPgCard {
-  border: 1px solid black;
+  border: 1px solid white;
   min-height: 100px;
   border-radius: 10px;
   padding: 10px;
@@ -50,6 +116,7 @@ html {
   grid-template-rows: auto;
   place-items: center;
   gap: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
 }
 #About2MC .sixthPage .heroText .sixthPgCard .PgCardSixth {
   background: pink;
@@ -58,6 +125,7 @@ html {
   padding: 5px;
   border-radius: 10px;
   color: #E53935;
+  font-family: Genos;
 }
 #About2MC .fifthPage {
   min-height: 100vh;
@@ -280,23 +348,35 @@ html {
     width: 100%;
     padding: 0;
   }
+  #About2MC .seventhPage {
+    padding: 50px 0;
+  }
+  #About2MC .seventhPage .seventhCardCon {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, 1fr);
+  }
   #About2MC .sixthPage {
     grid-template-columns: auto;
     grid-template-rows: auto auto;
     padding: 50px 10px;
   }
+  #About2MC .sixthPage .heroText {
+    gap: 50px;
+  }
   #About2MC .sixthPage .heroText .sixthPgCard {
-    min-height: 300px;
-    max-width: 250px;
+    width: auto;
+    max-width: 60%;
+    height: auto;
     grid-template-columns: auto;
     grid-template-rows: auto auto;
     padding: 10px;
-    gap: 0;
+    gap: 10px;
     font-size: 15px;
     font-weight: normal;
   }
   #About2MC .sixthPage .heroText .sixthPgCard span {
     padding: 10px;
+    text-align: center;
   }
   #About2MC .fifthPage {
     width: 100%;

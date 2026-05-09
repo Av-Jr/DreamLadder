@@ -1,10 +1,45 @@
 import NavBar from "../../LandingPage/1.NavBar/NavBar.jsx";
 import "./About.scss"
-import { Shield, Search, Briefcase, Handshake, TrendingUp} from "lucide-react";
+import { Shield, Search, Briefcase, Handshake, TrendingUp, LayoutGrid, ChartColumn, MonitorSmartphone, Zap, Lock, Smartphone} from "lucide-react";
+import Ql from "../../LandingPage/9.QuickLinks/Ql.jsx";
 
 import React from 'react'
 
 export default function About() {
+
+    const WhyUsData =
+        [
+          {
+            title: "Single View Portfolio",
+            description: "Personal/family’s consolidated investment portfolio at one place to help easy tracking.",
+            icon: LayoutGrid
+          },
+          {
+            title: "Focus On Analysis",
+            description: "Sound investment strategies through in-depth market analyses and algorithm-based assessments.",
+            icon: ChartColumn
+          },
+          {
+            title: "Portfolio Monitoring",
+            description: "Regular review and monitoring of portfolio performance to enable informed decision making.",
+            icon: MonitorSmartphone
+          },
+          {
+            title: "Quick & Convenient",
+            description: "Digital client onboarding, ease of transactions and faster execution within efficient timelines.",
+            icon: Zap
+          },
+          {
+            title: "Safety & Security",
+            description: "State-of-the-art bank-grade security with multi-level verification of investments and transactions.",
+            icon: Lock
+          },
+          {
+            title: "Investments at Fingertip",
+            description: "Access your wealth management tools and investment data anytime, anywhere through our mobile platform.",
+            icon: Smartphone
+          }
+        ]
     
     const whyChooseData = [
       {
@@ -166,6 +201,27 @@ export default function About() {
                     }
                 </div>
             </div>
+
+            <div className="seventhPage">
+                <h1>Why Us</h1>
+                <div className="seventhCardCon">
+                    {
+                        WhyUsData.map((item, index) => {
+                            const Icon = item.icon;
+
+                            return(
+                                <div className={"seventhCard"} key={index}>
+                                    <div className={"desc"}>{item.description}</div>
+                                    <Icon className={"cardIcon"} size={45}></Icon>
+                                    <span>{item.title}</span>
+                                </div>
+                            )
+                        })
+                    }
+                </div>
+            </div>
+
+            <Ql></Ql>
         </div>
     )
 }
