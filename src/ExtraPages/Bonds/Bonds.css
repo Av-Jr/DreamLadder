@@ -1,0 +1,340 @@
+html {
+  overflow-x: scroll;
+}
+
+#BondsMC {
+  min-height: 100vh;
+  width: 100%;
+  overflow-x: hidden;
+  background: #f7f7f7;
+}
+#BondsMC * {
+  box-sizing: border-box;
+}
+#BondsMC h1, #BondsMC h2, #BondsMC h3 {
+  margin: 0;
+}
+#BondsMC p {
+  margin: 0;
+}
+#BondsMC span, #BondsMC p {
+  font-family: Genos;
+}
+#BondsMC h1, #BondsMC h2, #BondsMC h3 {
+  font-family: SyneMono;
+}
+#BondsMC .quoteEle {
+  border-left: 4px #ef3b3b solid;
+  padding-left: 25px;
+  color: #778196;
+  font-style: italic;
+  line-height: 1.8;
+  font-weight: 700;
+}
+#BondsMC .headTit {
+  width: 100%;
+  height: 25vh;
+  background: url("/HP56.jpg") center/cover no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#BondsMC .headTit h1 {
+  font-size: clamp(0px, 7vh, 70px);
+}
+#BondsMC .Bondsone,
+#BondsMC .Bondstwo,
+#BondsMC .Bondsfour,
+#BondsMC .Bondssix {
+  width: 100%;
+  min-height: 100vh;
+  padding: 100px 200px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 60px;
+  place-items: center;
+}
+#BondsMC .Bondsone .heroText {
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+}
+#BondsMC .Bondsone .heroText span {
+  font-size: clamp(0px, 2.7vh, 28px);
+  line-height: 1.7;
+  font-weight: 700;
+  color: black;
+}
+#BondsMC .Bondsone .heroText .quoteEle {
+  max-width: 90%;
+  color: #5e687b;
+}
+#BondsMC .Bondsone .heroImg img {
+  width: 100%;
+}
+#BondsMC .Bondstwo .left {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+#BondsMC .Bondstwo .left h1 {
+  font-size: clamp(0px, 6vh, 60px);
+  font-family: Genos;
+  font-weight: bold;
+}
+#BondsMC .Bondstwo .left .timelineCard {
+  border-left: 2px #c9d0db solid;
+  padding-left: 30px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+#BondsMC .Bondstwo .left .timelineCard::before {
+  content: "";
+  position: absolute;
+  left: -8px;
+  top: 0;
+  width: 12px;
+  height: 12px;
+  border: 3px #ef3b3b solid;
+  background: white;
+  transform: rotate(45deg);
+}
+#BondsMC .Bondstwo .left .timelineCard h2 {
+  font-size: clamp(0px, 3vh, 30px);
+}
+#BondsMC .Bondstwo .left .timelineCard span {
+  font-size: clamp(0px, 2.3vh, 24px);
+  color: #5f697d;
+  line-height: 1.7;
+  font-weight: 700;
+}
+#BondsMC .Bondstwo .right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+}
+#BondsMC .Bondstwo .right .quoteEle {
+  max-width: 80%;
+  font-size: clamp(0px, 2.5vh, 25px);
+}
+#BondsMC .Bondstwo .right img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+}
+#BondsMC .Bondsthree {
+  width: 100%;
+  min-height: 30vh;
+  background: url("/flexBack.png") center/cover no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 40px;
+  text-align: center;
+}
+#BondsMC .Bondsthree h1 {
+  font-size: clamp(0px, 6vh, 60px);
+}
+#BondsMC .Bondsthree span {
+  max-width: 60%;
+  font-size: clamp(0px, 2.5vh, 25px);
+  color: #5f697d;
+  line-height: 1.7;
+  font-weight: 700;
+}
+#BondsMC .Bondsfour .heroImg img {
+  width: 85%;
+}
+#BondsMC .Bondsfour .heroText {
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+}
+#BondsMC .Bondsfour .heroText h1 {
+  font-size: clamp(0px, 6vh, 60px);
+  font-family: Genos;
+}
+#BondsMC .Bondsfour .heroText span {
+  font-size: clamp(0px, 2.6vh, 26px);
+  line-height: 1.7;
+  font-weight: 700;
+  color: black;
+}
+#BondsMC .Bondsfour .heroText .quoteEle {
+  max-width: 90%;
+  color: #5e687b;
+}
+#BondsMC .Bondsfive {
+  width: 100%;
+  min-height: 130vh;
+  background: url("/flexBack.png") center/cover no-repeat;
+  padding: 80px 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+#BondsMC .Bondsfive h1 {
+  font-size: clamp(0px, 4vh, 40px);
+  text-align: center;
+}
+#BondsMC .Bondsfive > span {
+  font-size: clamp(0px, 2.5vh, 25px);
+  color: #5f697d;
+  font-weight: 700;
+  text-align: center;
+}
+#BondsMC .Bondsfive .middleSection {
+  width: 100%;
+  flex: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  gap: 20px;
+}
+#BondsMC .Bondsfive .middleSection .left,
+#BondsMC .Bondsfive .middleSection .right {
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+}
+#BondsMC .Bondsfive .middleSection .left {
+  align-items: flex-start;
+}
+#BondsMC .Bondsfive .middleSection .right {
+  align-items: flex-end;
+}
+#BondsMC .Bondsfive .middleSection .centerImg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#BondsMC .Bondsfive .middleSection .centerImg img {
+  width: 100%;
+}
+#BondsMC .Bondsfive .middleSection .typeCard {
+  width: 70%;
+  background: #17233d;
+  padding: 25px;
+  border-radius: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  position: relative;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1), 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+#BondsMC .Bondsfive .middleSection .typeCard::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  background: #17233d;
+}
+#BondsMC .Bondsfive .middleSection .typeCard h2 {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  color: white;
+  font-size: clamp(0px, 2.5vh, 25px);
+}
+#BondsMC .Bondsfive .middleSection .typeCard h2 span {
+  color: #ef3b3b;
+  font-family: Genos;
+  font-weight: 700;
+}
+#BondsMC .Bondsfive .middleSection .typeCard p {
+  color: #d6deed;
+  font-size: clamp(0px, 2.1vh, 22px);
+  line-height: 1.7;
+  font-weight: 700;
+}
+#BondsMC .Bondsfive .middleSection .left .typeCard::before {
+  right: -10px;
+  clip-path: polygon(0 0, 100% 50%, 0 100%);
+}
+#BondsMC .Bondsfive .middleSection .right .typeCard::before {
+  left: -10px;
+  clip-path: polygon(100% 0, 0 50%, 100% 100%);
+}
+#BondsMC .Bondssix .left {
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+}
+#BondsMC .Bondssix .left img {
+  width: 90%;
+}
+#BondsMC .Bondssix .left .quoteEle {
+  max-width: 80%;
+  font-size: clamp(0px, 2.5vh, 25px);
+}
+#BondsMC .Bondssix .right {
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+}
+#BondsMC .Bondssix .right h1 {
+  font-size: clamp(0px, 6vh, 60px);
+  font-family: Genos;
+}
+#BondsMC .Bondssix .right .line {
+  width: 80px;
+  height: 4px;
+  background: #ef3b3b;
+}
+#BondsMC .Bondssix .right span {
+  font-size: clamp(0px, 2.6vh, 26px);
+  font-weight: 700;
+  color: black;
+}
+
+@media (max-width: 1024px) {
+  #BondsMC .Bondsone,
+  #BondsMC .Bondstwo,
+  #BondsMC .Bondsfour,
+  #BondsMC .Bondssix {
+    grid-template-columns: 1fr;
+    padding: 50px 20px;
+  }
+  #BondsMC .Bondsthree span {
+    max-width: 100%;
+  }
+  #BondsMC .Bondsfive {
+    min-height: auto;
+    padding: 50px 20px;
+  }
+  #BondsMC .Bondsfive .middleSection {
+    grid-template-columns: 1fr;
+  }
+  #BondsMC .Bondsfive .middleSection .left,
+  #BondsMC .Bondsfive .middleSection .right {
+    align-items: center;
+    gap: 30px;
+  }
+  #BondsMC .Bondsfive .middleSection .typeCard {
+    width: 100%;
+  }
+  #BondsMC .Bondsfive .middleSection .typeCard::before {
+    display: none;
+  }
+  #BondsMC .Bondsfive .middleSection .centerImg img {
+    width: 80%;
+  }
+  #BondsMC .Bondssix .left img {
+    width: 100%;
+  }
+  #BondsMC .Bondssix .left .quoteEle {
+    max-width: 100%;
+  }
+}
+
+/*# sourceMappingURL=Bonds.css.map */

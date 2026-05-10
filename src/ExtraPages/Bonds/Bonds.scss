@@ -1,0 +1,475 @@
+@use "../../mixins" as *;
+
+$colorRed : #ef3b3b;
+$darkBlue : #17233d;
+
+#BondsMC{
+
+  min-height : 100vh;
+  width : 100%;
+  overflow-x : hidden;
+  background : #f7f7f7;
+
+  *{
+    box-sizing : border-box;
+  }
+
+  h1,h2,h3{
+    margin : 0;
+  }
+
+  p{
+    margin : 0;
+  }
+
+  span,p{
+    font-family : Genos;
+  }
+
+  h1,h2,h3{
+    font-family : SyneMono;
+  }
+
+  .quoteEle{
+    border-left : 4px $colorRed solid;
+    padding-left : 25px;
+    color : #778196;
+    font-style : italic;
+    line-height : 1.8;
+    font-weight : 700;
+  }
+
+  .headTit{
+    width : 100%;
+    height : 25vh;
+
+    background : url("/HP56.jpg") center/cover no-repeat;
+
+    display : flex;
+    justify-content : center;
+    align-items : center;
+
+    h1{
+      font-size : clamp(0px, 7vh, 70px);
+    }
+  }
+
+  .Bondsone,
+  .Bondstwo,
+  .Bondsfour,
+  .Bondssix{
+    width : 100%;
+    min-height : 100vh;
+
+    padding : 100px 200px;
+
+    display : grid;
+    grid-template-columns : repeat(2,1fr);
+    gap : 60px;
+    place-items : center;
+  }
+
+  .Bondsone{
+
+    .heroText{
+      display : flex;
+      flex-direction : column;
+      gap : 35px;
+
+      span{
+        font-size : clamp(0px, 2.7vh, 28px);
+        
+        line-height : 1.7;
+        font-weight : 700;
+        color : black;
+      }
+
+      .quoteEle{
+        max-width : 90%;
+        color : #5e687b;
+      }
+    }
+
+    .heroImg{
+
+      img{
+        width : 100%;
+      }
+    }
+  }
+
+  .Bondstwo{
+
+    .left{
+      display : flex;
+      flex-direction : column;
+      gap : 50px;
+
+      h1{
+        font-size : clamp(0px, 6vh, 60px);
+        font-family : Genos;
+        font-weight : bold;
+      }
+
+      .timelineCard{
+        border-left : 2px #c9d0db solid;
+        padding-left : 30px;
+        position : relative;
+
+        display : flex;
+        flex-direction : column;
+        gap : 12px;
+
+        &::before{
+          content : "";
+          position : absolute;
+          left : -8px;
+          top : 0;
+
+          width : 12px;
+          height : 12px;
+
+          border : 3px $colorRed solid;
+          background : white;
+
+          transform : rotate(45deg);
+        }
+
+        h2{
+          font-size : clamp(0px, 3vh, 30px);
+        }
+
+        span{
+          font-size : clamp(0px, 2.3vh, 24px);
+          color : #5f697d;
+          line-height : 1.7;
+          font-weight : 700;
+        }
+      }
+    }
+
+    .right{
+      display : flex;
+      flex-direction : column;
+      justify-content : center;
+      align-items : center;
+      gap : 60px;
+
+      .quoteEle{
+        max-width : 80%;
+        font-size : clamp(0px, 2.5vh, 25px);
+      }
+
+      img{
+        width : 100%;
+        height : 100%;
+        object-fit : contain;
+        object-position : center;
+      }
+    }
+  }
+
+  .Bondsthree{
+    width : 100%;
+    min-height : 30vh;
+
+    background : url("/flexBack.png") center/cover no-repeat;
+
+    display : flex;
+    flex-direction : column;
+    justify-content : center;
+    align-items : center;
+    gap : 20px;
+
+    padding : 40px;
+
+    text-align : center;
+
+    h1{
+      font-size : clamp(0px, 6vh, 60px);
+    }
+
+    span{
+      max-width : 60%;
+      font-size : clamp(0px, 2.5vh, 25px);
+      color : #5f697d;
+      line-height : 1.7;
+      font-weight : 700;
+    }
+  }
+
+  .Bondsfour{
+
+    .heroImg{
+
+      img{
+        width : 85%;
+      }
+    }
+
+    .heroText{
+      display : flex;
+      flex-direction : column;
+      gap : 35px;
+
+      h1{
+        font-size : clamp(0px, 6vh, 60px);
+        font-family : Genos;
+      }
+
+      span{
+        font-size : clamp(0px, 2.6vh, 26px);
+        line-height : 1.7;
+        font-weight : 700;
+        color : black;
+      }
+
+      .quoteEle{
+        max-width : 90%;
+        color : #5e687b;
+      }
+    }
+  }
+
+  .Bondsfive{
+    width : 100%;
+    min-height : 130vh;
+
+    background : url("/flexBack.png") center/cover no-repeat;
+
+    padding : 80px 60px;
+
+    display : flex;
+    flex-direction : column;
+    align-items : center;
+    gap : 30px;
+
+    h1{
+      font-size : clamp(0px, 4vh, 40px);
+      text-align : center;
+    }
+
+    > span{
+      font-size : clamp(0px, 2.5vh, 25px);
+      color : #5f697d;
+      font-weight : 700;
+      text-align : center;
+    }
+
+    .middleSection{
+      width : 100%;
+      flex : 1;
+
+      display : grid;
+      grid-template-columns : 1fr 1fr 1fr;
+      align-items : center;
+      gap : 20px;
+
+      .left,
+      .right{
+        display : flex;
+        flex-direction : column;
+        gap : 100px;
+      }
+
+      .left{
+        align-items : flex-start;
+      }
+
+      .right{
+        align-items : flex-end;
+      }
+
+      .centerImg{
+        display : flex;
+        justify-content : center;
+        align-items : center;
+
+        img{
+          width : 100%;
+        }
+      }
+
+      .typeCard{
+        width : 70%;
+        background : $darkBlue;
+        padding : 25px;
+        border-radius : 18px;
+
+        display : flex;
+        flex-direction : column;
+        gap : 20px;
+
+        position : relative;
+
+        box-shadow :
+        0 5px 10px rgba(0,0,0,0.1),
+        0 15px 40px rgba(0,0,0,0.15);
+
+        &::before{
+          content : "";
+          position : absolute;
+
+          top : 50%;
+          transform : translateY(-50%);
+
+          width : 20px;
+          height : 20px;
+
+          background : $darkBlue;
+        }
+
+        h2{
+          display : flex;
+          gap : 10px;
+          align-items : center;
+
+          color : white;
+          font-size : clamp(0px, 2.5vh, 25px);
+
+          span{
+            color : $colorRed;
+            font-family : Genos;
+            font-weight : 700;
+          }
+        }
+
+        p{
+          color : #d6deed;
+          font-size : clamp(0px, 2.1vh, 22px);
+          line-height : 1.7;
+          font-weight : 700;
+        }
+      }
+
+      .left{
+
+        .typeCard{
+
+          &::before{
+            right : -10px;
+            clip-path : polygon(0 0, 100% 50%, 0 100%);
+          }
+        }
+      }
+
+      .right{
+
+        .typeCard{
+
+          &::before{
+            left : -10px;
+            clip-path : polygon(100% 0, 0 50%, 100% 100%);
+          }
+        }
+      }
+    }
+  }
+
+  .Bondssix{
+
+    .left{
+      display : flex;
+      flex-direction : column;
+      gap : 35px;
+
+      img{
+        width : 90%;
+      }
+
+      .quoteEle{
+        max-width : 80%;
+        font-size : clamp(0px, 2.5vh, 25px);
+      }
+    }
+
+    .right{
+      display : flex;
+      flex-direction : column;
+      gap : 35px;
+
+      h1{
+        font-size : clamp(0px, 6vh, 60px);
+        font-family : Genos;
+      }
+
+      .line{
+        width : 80px;
+        height : 4px;
+        background : $colorRed;
+      }
+
+      span{
+        font-size : clamp(0px, 2.6vh, 26px);
+        font-weight : 700;
+        color : black;
+      }
+    }
+  }
+}
+
+@include mediaDevice(mobile){
+
+  #BondsMC{
+
+    .Bondsone,
+    .Bondstwo,
+    .Bondsfour,
+    .Bondssix{
+      grid-template-columns : 1fr;
+      padding : 50px 20px;
+    }
+
+    .Bondsthree{
+
+      span{
+        max-width : 100%;
+      }
+    }
+
+    .Bondsfive{
+
+      min-height : auto;
+      padding : 50px 20px;
+
+      .middleSection{
+        grid-template-columns : 1fr;
+
+        .left,
+        .right{
+          align-items : center;
+          gap : 30px;
+        }
+
+        .typeCard{
+          width : 100%;
+
+          &::before{
+            display : none;
+          }
+        }
+
+        .centerImg{
+
+          img{
+            width : 80%;
+          }
+        }
+      }
+    }
+
+    .Bondssix{
+
+      .left{
+
+        img{
+          width : 100%;
+        }
+
+        .quoteEle{
+          max-width : 100%;
+        }
+      }
+    }
+  }
+}
