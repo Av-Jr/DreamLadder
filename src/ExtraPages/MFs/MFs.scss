@@ -6,6 +6,28 @@ $colorRed : #E53935;
   min-height : 100vh;
   width : 100%;
   
+  .endingStatement{
+	min-height : 30vh;
+	background : url("/flexBack.png") center/cover no-repeat;
+	display : flex;
+	flex-direction : column;
+	justify-content : center;
+	align-items : center;
+	gap : 20px;
+	
+	h1{
+	  font-family : SyneMono;
+	  font-size : clamp(0px, 5vh, 50px);
+	}
+	
+	span{
+	  font-family : Genos;
+	  max-width : 50%;
+	  text-align : center;
+	  font-size : clamp(0px, 2vh, 20px);
+	}
+  }
+  
   .MFfour{
 	display : grid;
 	grid-template-columns : repeat(2, auto);
@@ -31,6 +53,7 @@ $colorRed : #E53935;
 		align-items : center;
 		.ADC{
 		  height : 100%;
+		  width : 100%;
 		  display : flex;
 		  justify-content : center;
 		  max-width : 70%;
@@ -68,7 +91,6 @@ $colorRed : #E53935;
 	  display : flex;
 	  flex-direction : column;
 	  justify-content : center;
-	  align-items : center;
 	  gap : 30px;
 	  h1{
 		font-size : clamp(0px, 2.5vh, 30px);
@@ -220,8 +242,14 @@ $colorRed : #E53935;
 @include mediaDevice(mobile){
   #MFsMC{
 	
+	.endingStatement{
+	  span{
+		max-width : 80%;
+	  }
+	}
+	
 	.MFfour{
-	  padding : 40px 5px;
+	  padding : 40px 10px;
 	  grid-template-columns : 1fr;
 	  grid-template-rows : repeat(2, auto);
 	  gap : 40px;
@@ -237,8 +265,10 @@ $colorRed : #E53935;
 		grid-column : 1;
 		max-width : 100%;
 		
-		.ADC{
-		  max-width : 100%;
+		.AssistDataCardCon{
+		  .ADC{
+			max-width : 100%;
+		  }
 		}
 	  }
 	}
@@ -252,7 +282,6 @@ $colorRed : #E53935;
 		
 		h1{
 		  max-width : 100%;
-		  text-align : center;
 		  padding-left : 5px;
 		}
 	  }

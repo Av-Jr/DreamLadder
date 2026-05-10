@@ -233,6 +233,11 @@ const MFAssistData = {
                 </div>
                 <img src="/MFpg7.jpg" alt=""/>
             </div>
+
+            <div className={"endingStatement"}>
+                <h1>Why Through Us ?</h1>
+                <span>Investing is made easy with our automated digital platform, while our expert fund selection, personalized advice, and active monitoring keep your portfolio smarter, safer, and goal-driven.</span>
+            </div>
             <Ql></Ql>
         </div>
     )
