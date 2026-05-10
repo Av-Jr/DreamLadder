@@ -5,6 +5,7 @@ import Home from "./Home.jsx";
 import About from "./ExtraPages/About/About.jsx";
 import Wws from "./ExtraPages/WhoWeServe/Wws.jsx"
 import MFs from "./ExtraPages/MFs/MFs.jsx";
+import PMSAIF from "./ExtraPages/PMSAIF/PMSAIF.jsx"
 
 
 
@@ -19,6 +20,7 @@ const App = () => {
                   <Route path={"/about"} element={<About></About>}></Route>
                   <Route path={"/who-we-serve"} element={<Wws />}></Route>
                   <Route path={"/mutual-funds"} element={<MFs></MFs>}></Route>
+                  <Route path={"/pms"} element={<PMSAIF/>}></Route>
               </Routes>
           </BrowserRouter>
       </>

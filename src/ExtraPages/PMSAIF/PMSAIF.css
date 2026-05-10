@@ -1,0 +1,383 @@
+html {
+  overflow-x: scroll;
+}
+
+#PMSAIFMC {
+  min-height: 100vh;
+  width: 100%;
+}
+#PMSAIFMC * {
+  box-sizing: border-box;
+}
+#PMSAIFMC .headTit {
+  width: 100%;
+  height: 20vh;
+  background: url("/HP56.jpg") center/cover no-repeat;
+  display: grid;
+  place-items: center;
+}
+#PMSAIFMC .headTit h1 {
+  font-family: SyneMono;
+  font-size: clamp(0px, 5vh, 50px);
+  font-weight: normal;
+}
+#PMSAIFMC .quoteEle {
+  border-left: 3px #E53935 solid;
+  padding-left: 20px;
+  font-style: italic;
+  color: grey;
+}
+#PMSAIFMC h1 {
+  font-family: SyneMono;
+}
+#PMSAIFMC span, #PMSAIFMC p {
+  font-family: Genos;
+}
+#PMSAIFMC .PMSone,
+#PMSAIFMC .PMStwo,
+#PMSAIFMC .PMSthree,
+#PMSAIFMC .PMSfour,
+#PMSAIFMC .PMSfive,
+#PMSAIFMC .PMSsix,
+#PMSAIFMC .PMSseven {
+  padding: 80px;
+}
+#PMSAIFMC .PMSone {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  place-items: center;
+  gap: 40px;
+}
+#PMSAIFMC .PMSone .heroText {
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+}
+#PMSAIFMC .PMSone .heroText span {
+  font-size: 2.3vh;
+}
+#PMSAIFMC .PMStwo {
+  background: url("/flexBack.png") center/cover no-repeat;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 50px;
+}
+#PMSAIFMC .PMStwo .left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+#PMSAIFMC .PMStwo .left h1 {
+  font-size: 6vh;
+  font-family: Genos;
+}
+#PMSAIFMC .PMStwo .left span {
+  font-size: 2.2vh;
+  color: grey;
+  max-width: 70%;
+}
+#PMSAIFMC .PMStwo .right {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+#PMSAIFMC .PMStwo .right .featureCard {
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+#PMSAIFMC .PMStwo .right .featureCard h1 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: Genos;
+  font-size: clamp(0px, 3vh, 30px);
+  font-weight: bold;
+}
+#PMSAIFMC .PMStwo .right .featureCard .cardIcon {
+  color: #E53935;
+  padding: 5px;
+  background: pink;
+  border-radius: 5px;
+}
+#PMSAIFMC .PMSthree {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 60px;
+  place-items: center;
+}
+#PMSAIFMC .PMSthree .left {
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  gap: 30px;
+}
+#PMSAIFMC .PMSthree .left h1 {
+  font-family: Genos;
+}
+#PMSAIFMC .PMSthree .left .timelineCard {
+  font-family: SyneMono;
+  padding: 25px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+#PMSAIFMC .PMSthree .left .timelineCard h2 {
+  font-family: SyneMono;
+  font-size: clamp(0px, 3vh, 30px);
+}
+#PMSAIFMC .PMSthree .left .timelineCard span {
+  font-family: Genos;
+  font-size: clamp(0px, 2vh, 20px);
+}
+#PMSAIFMC .PMSthree .right {
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  justify-content: center;
+  align-items: center;
+}
+#PMSAIFMC .PMSthree .right img {
+  width: 70%;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+  border-radius: 40px;
+  overflow: hidden;
+  height: auto;
+  object-fit: contain;
+}
+#PMSAIFMC .PMSfour {
+  min-height: 30vh;
+  background: url("/flexBack.png") center/cover no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  text-align: center;
+}
+#PMSAIFMC .PMSfour h1 {
+  font-size: clamp(0px, 6vh, 60px);
+}
+#PMSAIFMC .PMSfour span {
+  font-size: clamp(0px, 2.3vh, 24px);
+  max-width: 60%;
+  color: #5d6778;
+  font-weight: 600;
+  line-height: 1.7;
+}
+#PMSAIFMC .PMSfive {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  place-items: center;
+}
+#PMSAIFMC .PMSfive .heroImg {
+  display: grid;
+  place-items: center;
+}
+#PMSAIFMC .PMSfive .heroImg img {
+  width: 80%;
+}
+#PMSAIFMC .PMSfive .heroText {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 35px;
+}
+#PMSAIFMC .PMSfive .heroText h1 {
+  font-size: clamp(0px, 5vh, 50px);
+  font-family: Genos;
+  font-weight: bold;
+  text-align: center;
+}
+#PMSAIFMC .PMSfive .heroText span {
+  font-size: clamp(0px, 2.5vh, 25px);
+  color: #5d6778;
+  line-height: 1.3;
+  font-weight: 700;
+  max-width: 70%;
+}
+#PMSAIFMC .PMSfive .heroText .quoteEle {
+  max-width: 80%;
+  font-weight: 600;
+}
+#PMSAIFMC .PMSsix {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 50px;
+}
+#PMSAIFMC .PMSsix .left {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+#PMSAIFMC .PMSsix .aifCard {
+  transition: 0.3s ease;
+}
+#PMSAIFMC .PMSsix .aifCard:hover {
+  background: rgba(255, 192, 203, 0.2);
+}
+#PMSAIFMC .PMSsix .aifCard {
+  background: white;
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+#PMSAIFMC .PMSsix .aifCard h1 {
+  display: flex;
+  align-items: center;
+  gap: 35px;
+  font-size: clamp(0px, 3vh, 30px);
+}
+#PMSAIFMC .PMSsix .aifCard h1 span {
+  color: #E53935;
+  font-family: Genos;
+  font-size: clamp(0px, 3vh, 40px);
+  padding: 10px;
+  border-radius: 10px;
+  background: pink;
+  height: auto;
+  aspect-ratio: 1;
+}
+#PMSAIFMC .PMSsix .aifCard p {
+  font-size: clamp(0px, 2.2vh, 22px);
+  color: #5d6778;
+}
+#PMSAIFMC .PMSsix .aifCard .bottom {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+}
+#PMSAIFMC .PMSsix .aifCard .bottom span {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+#PMSAIFMC .PMSsix .aifCard .bottom h3 {
+  font-family: SyneMono;
+}
+#PMSAIFMC .PMSsix .right {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+}
+#PMSAIFMC .PMSsix .right h1 {
+  font-size: clamp(0px, 6vh, 60px);
+  font-family: Genos;
+  text-align: center;
+}
+#PMSAIFMC .PMSsix .right span {
+  font-size: clamp(0px, 2.5vh, 24px);
+  color: #5d6778;
+  line-height: 1.7;
+  max-width: 60%;
+}
+#PMSAIFMC .PMSsix .right img {
+  width: 90%;
+}
+#PMSAIFMC .PMSseven {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 60px;
+}
+#PMSAIFMC .PMSseven .left {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+}
+#PMSAIFMC .PMSseven .left h1 {
+  font-size: clamp(0px, 6vh, 60px);
+  font-family: Genos;
+  padding: 30px 0;
+  border-bottom: 2px #E53935 solid;
+  text-align: center;
+}
+#PMSAIFMC .PMSseven .left span {
+  font-size: clamp(0px, 2.5vh, 24px);
+  color: #5d6778;
+  line-height: 1.7;
+  max-width: 80%;
+}
+#PMSAIFMC .PMSseven .left img {
+  width: 80%;
+}
+#PMSAIFMC .PMSseven .right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+#PMSAIFMC .PMSseven .regCard {
+  display: flex;
+  gap: 20px;
+  font-weight: bold;
+}
+#PMSAIFMC .PMSseven .regCard h1 {
+  color: #bcc5d3;
+  font-size: clamp(0px, 4vh, 40px);
+}
+#PMSAIFMC .PMSseven .regCard span {
+  font-size: clamp(0px, 2.5vh, 24px);
+  color: #4f596b;
+  line-height: 1.7;
+  font-weight: 600;
+}
+#PMSAIFMC .endingStatement {
+  min-height: 30vh;
+  background: url("/flexBack.png") center/cover no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 40px;
+}
+#PMSAIFMC .endingStatement h1 {
+  font-size: 5vh;
+}
+#PMSAIFMC .endingStatement span {
+  max-width: 60%;
+  text-align: center;
+  font-size: 2.3vh;
+}
+
+@media (max-width: 1024px) {
+  #PMSAIFMC .PMSone,
+  #PMSAIFMC .PMStwo,
+  #PMSAIFMC .PMSthree,
+  #PMSAIFMC .PMSfour,
+  #PMSAIFMC .PMSfive,
+  #PMSAIFMC .PMSsix,
+  #PMSAIFMC .PMSseven {
+    grid-template-columns: 1fr;
+    padding: 40px 15px;
+  }
+  #PMSAIFMC .endingStatement span {
+    max-width: 90%;
+  }
+  #PMSAIFMC .PMSfive .aifCard .bottom {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+/*# sourceMappingURL=PMSAIF.css.map */
