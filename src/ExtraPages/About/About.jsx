@@ -7,6 +7,7 @@ import React from 'react'
 
 export default function About() {
 
+
     const WhyUsData =
         [
           {
@@ -114,7 +115,7 @@ export default function About() {
             <NavBar></NavBar>
             <div className="firstPage">
                 <span className={"main"}>
-                    <span>"Wealth is not built overnight, its crafted through : </span>
+                    <span>"Wealth is not built overnight, its crafted through</span>
                     <span className={'toEdit'}> Clarity, Courage and Consistency."</span>
                     <span className={"Intro"}>Mr. Saday Sinha<br/><span className={'title'}>CEO & Founder</span></span>
                  </span>

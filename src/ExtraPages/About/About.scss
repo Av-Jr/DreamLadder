@@ -347,12 +347,14 @@ $redCol : #E53935;
 	padding : 100px;
 	justify-content : center;
 	align-items : center;
+	gap : 20px;
 	
 	img{
 	  border : 1px white solid;
 	  object-fit : contain;
 	  width : 30%;
 	  object-position : center;
+	  max-width : 385px;
 	}
 	
 	.main{

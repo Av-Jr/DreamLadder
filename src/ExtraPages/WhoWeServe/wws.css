@@ -1,0 +1,100 @@
+html {
+  overflow-x: scroll;
+}
+
+#WwsMC {
+  min-height: 100vh;
+  width: 100%;
+}
+#WwsMC .connectMe {
+  background: url("/flexBack.png") center/cover no-repeat;
+  min-height: 40vh;
+  width: 100%;
+  text-align: center;
+  display: grid;
+  place-items: center;
+  gap: 20px;
+  padding: 50px;
+}
+#WwsMC .connectMe h1 {
+  font-family: SyneMono;
+}
+#WwsMC .connectMe span {
+  font-family: Genos;
+  font-size: clamp(0px, 2vh, 20px);
+}
+#WwsMC .titleHead {
+  min-height: 20vh;
+  width: 100%;
+  background: url("/HP56.jpg") center/cover no-repeat;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  font-family: SyneMono;
+  font-size: clamp(32px, 6vh, 60px);
+  padding: 40px 20px;
+}
+#WwsMC .WwsCardsCon {
+  padding: 100px;
+  display: grid;
+  grid-template-rows: repeat(5, 1fr);
+  grid-template-columns: 1fr;
+  gap: 50px;
+}
+#WwsMC .WwsCardsCon .WwsCards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr;
+  place-items: center;
+}
+#WwsMC .WwsCardsCon .WwsCards .heroText {
+  display: grid;
+  place-items: center;
+  padding: 100px;
+  gap: 20px;
+}
+#WwsMC .WwsCardsCon .WwsCards .heroText h1 {
+  font-family: SyneMono;
+}
+#WwsMC .WwsCardsCon .WwsCards .heroText span {
+  font-family: Genos;
+  font-size: clamp(0px, 2vh, 30px);
+}
+#WwsMC .WwsCardsCon .WwsCards.rev img {
+  grid-column: 2;
+  grid-row: 1;
+}
+#WwsMC .WwsCardsCon .WwsCards.rev .heroText {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+@media (max-width: 1024px) {
+  #WwsMC .WwsCardsCon {
+    padding: 10px;
+    gap: 100px;
+  }
+  #WwsMC .WwsCardsCon .WwsCards {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    gap: 30px;
+    border: 1px grey solid;
+    border-radius: 10px;
+  }
+  #WwsMC .WwsCardsCon .WwsCards .heroText {
+    padding: 10px;
+  }
+  #WwsMC .WwsCardsCon .WwsCards .heroText span {
+    font-size: clamp(0px, 2vh, 20px);
+  }
+  #WwsMC .WwsCardsCon .WwsCards.rev img {
+    grid-column: 1;
+    grid-row: 1;
+  }
+  #WwsMC .WwsCardsCon .WwsCards.rev .heroText {
+    grid-column: 1;
+    grid-row: 2;
+  }
+}
+
+/*# sourceMappingURL=wws.css.map */

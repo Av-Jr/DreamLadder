@@ -307,12 +307,14 @@ html {
   padding: 100px;
   justify-content: center;
   align-items: center;
+  gap: 20px;
 }
 #About2MC .firstPage img {
   border: 1px white solid;
   object-fit: contain;
   width: 30%;
   object-position: center;
+  max-width: 385px;
 }
 #About2MC .firstPage .main {
   display: flex;
