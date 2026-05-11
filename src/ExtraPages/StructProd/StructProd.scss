@@ -126,7 +126,9 @@ $darkBlue : #17233d;
       width : 100%;
       margin-top : 30px;
       display : grid;
-      grid-template-columns : repeat(2,1fr);
+      grid-template-columns : repeat(2, auto);
+      align-items : center;
+      justify-content : center;
       gap : 30px;
 
       .cardEle{
@@ -138,7 +140,7 @@ $darkBlue : #17233d;
         gap : 25px;
 		height : auto;
 		padding : 40px;
-
+        max-width : 700px;
         box-shadow :
         0 5px 10px rgba(0,0,0,0.06),
         0 20px 40px rgba(0,0,0,0.08);

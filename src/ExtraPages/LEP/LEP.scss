@@ -1,0 +1,247 @@
+@use "../../mixins" as *;
+
+$colorRed : #ef3b3b;
+$darkBlue : #17233d;
+
+#LegacyEstatePlanningMC{
+
+  min-height : 100vh;
+  width : 100%;
+  overflow-x : hidden;
+  background : #f5f5f5;
+
+  *{
+    box-sizing : border-box;
+  }
+
+  h1,h2,h3,h4{
+    margin : 0;
+  }
+
+  p{
+    margin : 0;
+  }
+
+  span,p{
+    font-family : Genos;
+  }
+
+  h1,h2,h3,h4{
+    font-family : Genos;
+  }
+
+  .quoteEle{
+    border-left : 4px $colorRed solid;
+    padding-left : 20px;
+    color : #778196;
+    font-style : italic;
+    line-height : 1.8;
+    font-weight : 700;
+  }
+
+  .headTit{
+    width : 100%;
+    height : 25vh;
+
+    background : url("/HP56.jpg") center/cover no-repeat;
+
+    display : flex;
+    justify-content : center;
+    align-items : center;
+
+    h1{
+      font-size : clamp(0px, 7vh, 70px);
+      text-align : center;
+	  font-family : SyneMono;
+    }
+  }
+
+  .LEPone,
+  .LEPtwo{
+    padding : 80px 200px;
+  }
+
+  .LEPone{
+    width : 100%;
+    min-height : 100vh;
+
+    display : grid;
+    grid-template-columns : repeat(2,1fr);
+    gap : 60px;
+
+    align-items : center;
+
+    .left{
+      display : flex;
+      flex-direction : column;
+      gap : 20px;
+
+      h1{
+        font-size : clamp(0px, 6vh, 60px);
+        line-height : 1.3;
+      }
+
+      .pointsCont{
+        display : flex;
+        flex-direction : column;
+
+        .pointEle{
+          padding : 22px 0;
+          border-bottom : 1px #dde2ea solid;
+
+          span{
+            font-size : clamp(0px, 2.5vh, 25px);
+            font-weight : 700;
+            color : #4f5a70;
+            line-height : 1.6;
+          }
+        }
+      }
+
+      .quoteEle{
+        margin-top : 10px;
+        max-width : 90%;
+        font-size : clamp(0px, 2.5vh, 24px);
+      }
+    }
+
+    .right{
+
+      img{
+        width : 100%;
+      }
+    }
+  }
+
+  .LEPtwo{
+    width : 100%;
+
+    display : flex;
+    flex-direction : column;
+    gap : 120px;
+
+    .expertiseRow{
+      width : 100%;
+
+      display : grid;
+      grid-template-columns : repeat(2,1fr);
+      gap : 80px;
+
+      align-items : center;
+
+      .imgCont{
+
+        img{
+          width : 100%;
+        }
+      }
+
+      .textCont{
+        display : flex;
+        flex-direction : column;
+        gap : 30px;
+
+        h3{
+          font-size : clamp(0px, 1.6vh, 16px);
+          letter-spacing : 2px;
+          color : #9ba7ba;
+        }
+
+        h1{
+          font-size : clamp(0px, 6vh, 60px);
+          line-height : 1.2;
+        }
+
+        p{
+          font-size : clamp(0px, 2.6vh, 26px);
+          color : #4f5a70;
+          line-height : 1.8;
+          font-weight : 700;
+        }
+
+        .quoteBox{
+          width : 100%;
+
+          background : rgba(255,255,255,0.5);
+
+          border-left : 4px $colorRed solid;
+
+          padding : 25px;
+
+          border-radius : 10px;
+
+          display : flex;
+          flex-direction : column;
+          gap : 15px;
+
+          h4{
+            font-size : clamp(0px, 1.5vh, 15px);
+            letter-spacing : 2px;
+            color : #9ba7ba;
+          }
+
+          span{
+            font-size : clamp(0px, 2.4vh, 24px);
+            color : #5f697d;
+            line-height : 1.7;
+            font-style : italic;
+            font-weight : 700;
+          }
+        }
+      }
+    }
+
+    .reverse{
+
+      .imgCont{
+        order : 2;
+      }
+
+      .textCont{
+        order : 1;
+      }
+    }
+  }
+}
+
+@include mediaDevice(mobile){
+
+  #LegacyEstatePlanningMC{
+
+    .LEPone,
+    .LEPtwo{
+      padding : 50px 20px;
+    }
+
+    .LEPone{
+      grid-template-columns : 1fr;
+
+      .left{
+
+        .quoteEle{
+          max-width : 100%;
+        }
+      }
+    }
+
+    .LEPtwo{
+      gap : 80px;
+
+      .expertiseRow{
+        grid-template-columns : 1fr;
+        gap : 40px;
+      }
+
+      .reverse{
+
+        .imgCont{
+          order : 1;
+        }
+
+        .textCont{
+          order : 2;
+        }
+      }
+    }
+  }
+}
