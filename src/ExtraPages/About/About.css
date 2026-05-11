@@ -10,7 +10,7 @@ html {
   padding: 100px;
   height: auto;
   width: 100%;
-  background: url("/seventhBg.png") center/cover no-repeat;
+  background: url("/seventhBg.webp") center/cover no-repeat;
   display: grid;
   grid-template-rows: auto auto;
   place-items: center;
@@ -187,7 +187,7 @@ html {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: url("/flexBack.png") center/cover no-repeat;
+  background: url("/flexBack.webp") center/cover no-repeat;
   gap: 100px;
 }
 #About2MC .fourthPage h1 {
@@ -229,7 +229,7 @@ html {
 #About2MC .thirdPage {
   min-height: 100vh;
   width: 100%;
-  background: url("/AboutThreebg.png") center/cover no-repeat;
+  background: url("/AboutThreebg.webp") center/cover no-repeat;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -304,7 +304,7 @@ html {
 #About2MC .firstPage {
   min-height: 100vh;
   width: 100%;
-  background: url("/AboutFirstbg.png") center/cover no-repeat;
+  background: url("/AboutFirstbg.webp") center/cover no-repeat;
   display: flex;
   padding: 100px;
   justify-content: center;

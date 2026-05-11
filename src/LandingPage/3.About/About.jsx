@@ -9,11 +9,11 @@ const About = () => {
       <div className="GridCon">
 
         <div className="Con ACone">
-          <img src="/InvestInsight.png" alt=""/>
+          <img loading="lazy" src="/InvestInsight.webp" loading="lazy" alt=""/>
 
           <h3>Your legacy deserves a solid foundation. DreamLadder Capital helps you build lasting wealth through smart,
             diversified strategies.</h3>
-          <img src="/tele.png" alt=""/>
+          <img loading="lazy" src="/tele.webp" loading="lazy" alt=""/>
         </div>
 
         <div className="Con ACtwo">
@@ -43,7 +43,7 @@ const About = () => {
           </div>
         </div>
 
-        <div className="Con ACthree"><img src="/profileDashboard.png" alt=""/></div>
+        <div className="Con ACthree"><img loading="lazy" src="/profileDashboard.webp" loading="lazy" alt=""/></div>
 
         <div className="Con ACfour">
           <h2>All Your Family Investments, One Simple App</h2>
@@ -61,7 +61,7 @@ const About = () => {
         </div>
 
         <div className="Con ACsix">
-          <img src="/sipAmount.png" alt=""/>
+          <img loading="lazy" src="/sipAmount.webp" loading="lazy" alt=""/>
         </div>
 
       </div>

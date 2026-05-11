@@ -48,7 +48,7 @@ const SlideShow = () => {
             </div>
 
             <div className="heroImg">
-              <img src="/HP3.png" alt="Wealth advisory hero visual" />
+              <img src="/HP3.webp" alt="Wealth advisory hero visual" />
             </div>
           </div>
         </div>
@@ -66,10 +66,10 @@ const SlideShow = () => {
 
               <div className="heroActions pas">
                 <button className="navBtn s ps" onClick={() => window.open("https://play.google.com/store/search?q=dreamladder+capital&c=apps&hl=en_IN", "_blank")}>
-                  <img src="/gplay.png" alt=""/>
+                  <img src="/gplay.webp" alt=""/>
                 </button>
                 <button className="navBtn s as" onClick={() => window.open("https://apps.apple.com/in/app/dreamladder-capital/id1527793478", "_blank")}>
-                  <img src="/appStore.png" alt=""/>
+                  <img  src="/appStore.webp" alt=""/>
                 </button>
               </div>
 
@@ -95,7 +95,7 @@ const SlideShow = () => {
             </div>
 
             <div className="heroImg">
-              <img src="/Slide2.png" alt="Wealth advisory hero visual" />
+              <img fetchPriority="high" src="/Slide2.webp" alt="Wealth advisory hero visual" />
             </div>
           </div>
         </div>
@@ -116,7 +116,7 @@ const SlideShow = () => {
             </div>
 
             <div className="heroImg">
-              <img src="/HP3.png" alt="Wealth advisory hero visual" />
+              <img fetchPriority="high" src="/HP3.webp" alt="Wealth advisory hero visual" />
             </div>
           </div>
         </div>

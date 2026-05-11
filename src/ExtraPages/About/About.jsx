@@ -98,7 +98,7 @@ export default function About() {
         name: "Saday Sinha",
         description:
           "Saday Sinha is the Founder and CEO of DreamLadder Capital, a wealth management firm dedicated to helping clients achieve financial independence through tailored investment solutions. His approach is rooted in transparency and goal-oriented growth.",
-        image: "AboutFifthPgSaday.png"
+        image: "AboutFifthPgSaday.webp"
       },
 
       {
@@ -106,7 +106,7 @@ export default function About() {
         name: "Priyanka Mishra",
         description:
           "Priyanka Mishra serves as a Director at DreamLadder Capital, where she leads Financial Products, Operations, and New Initiatives divisions. She plays a pivotal role in driving innovation and ensuring operational excellence.",
-        image: "AboutFifthPgPriyanka.png"
+        image: "AboutFifthPgPriyanka.webp"
       },
     ];
 
@@ -119,7 +119,7 @@ export default function About() {
                     <span className={'toEdit'}> Clarity, Courage and Consistency."</span>
                     <span className={"Intro"}>Mr. Saday Sinha<br/><span className={'title'}>CEO & Founder</span></span>
                  </span>
-                <img src="/AboutSaday.png" alt=""/>
+                <img loading="lazy" src="/AboutSaday.webp" alt=""/>
             </div>
 
             <div className="secondPage">
@@ -135,7 +135,7 @@ export default function About() {
                         <span><span className={"changeC"}>500+</span><br/>FAMILIES SERVED</span>
                     </div>
                 </div>
-                <img src="/AboutTwo.png" alt=""/>
+                <img loading="lazy" src="/AboutTwo.webp" alt=""/>
             </div>
 
             <div className="thirdPage">
@@ -172,7 +172,7 @@ export default function About() {
                 {
                     teamData.map((item, index) => (
                         <div className={"MemberCard"}>
-                            <img src={`/${item.image}`} alt="" className={"heroImg"}/>
+                            <img loading="lazy" src={`/${item.image}`} alt="" className={"heroImg"}/>
                             <div className="heroText">
                                 <h3>{item.role}</h3>
                                 <h1>{item.name}</h1>
@@ -186,7 +186,7 @@ export default function About() {
             <div className="sixthPage">
                 <div className="heroImg">
                     <h1>What helps us do well</h1>
-                    <img src="/sixthPG.png" alt=""/>
+                    <img loading="lazy" src="/sixthPG.webp" alt=""/>
                 </div>
                 <div className="heroText">
                     {

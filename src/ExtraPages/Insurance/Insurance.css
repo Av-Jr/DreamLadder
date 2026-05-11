@@ -1,0 +1,304 @@
+html {
+  overflow-x: scroll;
+}
+
+#InsuranceMC {
+  min-height: 100vh;
+  width: 100%;
+  overflow-x: hidden;
+  background: #f7f7f7;
+}
+#InsuranceMC * {
+  box-sizing: border-box;
+}
+#InsuranceMC h1, #InsuranceMC h2, #InsuranceMC h3 {
+  margin: 0;
+  text-align: center;
+}
+#InsuranceMC p {
+  margin: 0;
+}
+#InsuranceMC span, #InsuranceMC p {
+  font-family: Genos;
+}
+#InsuranceMC h1, #InsuranceMC h2, #InsuranceMC h3 {
+  font-family: SyneMono;
+}
+#InsuranceMC .quoteEle {
+  border-left: 4px #ef3b3b solid;
+  padding-left: 25px;
+  color: #778196;
+  font-style: italic;
+  line-height: 1.8;
+  font-weight: 700;
+}
+#InsuranceMC .headTit {
+  width: 100%;
+  height: 25vh;
+  background: url("/HP56.jpg") center/cover no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#InsuranceMC .headTit h1 {
+  font-size: clamp(0px, 7vh, 70px);
+}
+#InsuranceMC .INSone,
+#InsuranceMC .INStwo,
+#InsuranceMC .INSthree,
+#InsuranceMC .INSfour {
+  padding: 80px 200px;
+}
+#InsuranceMC .INSone,
+#InsuranceMC .INSthree {
+  width: 100%;
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 60px;
+  place-items: center;
+}
+#InsuranceMC .INSone .heroText {
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+  justify-content: center;
+}
+#InsuranceMC .INSone .heroText span {
+  font-size: clamp(0px, 2.7vh, 28px);
+  line-height: 1.7;
+  font-weight: 700;
+  color: black;
+}
+#InsuranceMC .INSone .heroText .quoteEle {
+  color: #5e687b;
+  max-width: 90%;
+  font-size: clamp(0px, 2.5vh, 28px);
+}
+#InsuranceMC .INSone .heroImg img {
+  width: 100%;
+}
+#InsuranceMC .INStwo {
+  width: 100%;
+  min-height: 100vh;
+  background: url("/flexBack.webp") center/cover no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+}
+#InsuranceMC .INStwo h1 {
+  font-size: clamp(0px, 6vh, 60px);
+  font-family: Genos;
+}
+#InsuranceMC .INStwo > span {
+  max-width: 70%;
+  font-size: clamp(0px, 2.5vh, 25px);
+  color: #5f697d;
+  line-height: 1.7;
+  font-weight: 700;
+  text-align: center;
+}
+#InsuranceMC .INStwo .cardsCont {
+  width: 100%;
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+#InsuranceMC .INStwo .cardsCont .cardEle {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(8px);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  height: auto;
+  padding: 40px;
+  max-width: 700px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.06), 0 20px 40px rgba(0, 0, 0, 0.08);
+}
+#InsuranceMC .INStwo .cardsCont .cardEle .cardTop {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+#InsuranceMC .INStwo .cardsCont .cardEle .cardTop svg {
+  width: 32px;
+  height: 32px;
+  padding: 5px;
+  background: rgb(255, 225, 225);
+  border-radius: 10px;
+  color: #ef3b3b;
+}
+#InsuranceMC .INStwo .cardsCont .cardEle .cardTop h2 {
+  font-size: clamp(0px, 3vh, 38px);
+}
+#InsuranceMC .INStwo .cardsCont .cardEle p {
+  font-size: clamp(0px, 2.4vh, 24px);
+  color: #5f697d;
+  line-height: 1.7;
+  font-weight: 700;
+}
+#InsuranceMC .INSthree .left {
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+}
+#InsuranceMC .INSthree .left h1 {
+  font-size: clamp(0px, 6vh, 60px);
+  font-family: Genos;
+  text-align: left;
+}
+#InsuranceMC .INSthree .left .line {
+  width: 80px;
+  height: 4px;
+  background: #ef3b3b;
+}
+#InsuranceMC .INSthree .left span {
+  font-size: clamp(0px, 2.6vh, 26px);
+  color: #5f697d;
+  line-height: 1.7;
+  font-weight: 700;
+}
+#InsuranceMC .INSthree .left img {
+  width: 90%;
+}
+#InsuranceMC .INSthree .right {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+#InsuranceMC .INSthree .right .pointEle {
+  display: flex;
+  align-items: flex-start;
+  gap: 25px;
+}
+#InsuranceMC .INSthree .right .pointEle h2 {
+  color: #9ba7ba;
+  font-size: clamp(0px, 4vh, 38px);
+}
+#InsuranceMC .INSthree .right .pointEle p {
+  font-size: clamp(0px, 2.5vh, 25px);
+  color: #5f697d;
+  line-height: 1.8;
+  font-weight: 700;
+  text-align: left;
+}
+#InsuranceMC .INSfour {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+#InsuranceMC .INSfour h1 {
+  font-size: clamp(0px, 6vh, 60px);
+  margin-bottom: 80px;
+}
+#InsuranceMC .INSfour > img {
+  width: 100%;
+}
+#InsuranceMC .INSfour .whyGrid {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+#InsuranceMC .INSfour .whyGrid .whyEle {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  width: 280px;
+  text-align: center;
+}
+#InsuranceMC .INSfour .whyGrid .whyEle .num {
+  width: 55px;
+  height: 55px;
+  border: 3px #5f697d solid;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: clamp(0px, 2.4vh, 24px);
+  font-family: SyneMono;
+  font-weight: 700;
+  color: #5f697d;
+  background: white;
+}
+#InsuranceMC .INSfour .whyGrid .whyEle span {
+  font-size: clamp(0px, 2.2vh, 22px);
+  color: #5f697d;
+  line-height: 1.7;
+  font-weight: 700;
+}
+#InsuranceMC .INSfour .whyGrid .whyEle1 {
+  top: 18%;
+  left: 2%;
+}
+#InsuranceMC .INSfour .whyGrid .whyEle2 {
+  bottom: 10%;
+  left: 22%;
+}
+#InsuranceMC .INSfour .whyGrid .whyEle3 {
+  top: 18%;
+  left: 42%;
+}
+#InsuranceMC .INSfour .whyGrid .whyEle4 {
+  bottom: 10%;
+  right: 18%;
+}
+#InsuranceMC .INSfour .whyGrid .whyEle5 {
+  top: 18%;
+  right: 0%;
+}
+
+@media (max-width: 1024px) {
+  #InsuranceMC .INSone,
+  #InsuranceMC .INSthree {
+    grid-template-columns: 1fr;
+    padding: 50px 20px;
+  }
+  #InsuranceMC .INStwo,
+  #InsuranceMC .INSfour {
+    padding: 50px 20px;
+  }
+  #InsuranceMC .INStwo > span {
+    max-width: 100%;
+  }
+  #InsuranceMC .INStwo .cardsCont {
+    grid-template-columns: 1fr;
+  }
+  #InsuranceMC .INSthree .left img {
+    width: 100%;
+  }
+  #InsuranceMC .INSfour {
+    min-height: auto;
+    gap: 50px;
+  }
+  #InsuranceMC .INSfour h1 {
+    margin-bottom: 0;
+  }
+  #InsuranceMC .INSfour > img {
+    position: static;
+  }
+  #InsuranceMC .INSfour .whyGrid {
+    position: static;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 35px;
+  }
+  #InsuranceMC .INSfour .whyGrid .whyEle {
+    position: static;
+    width: 100%;
+  }
+}
+
+/*# sourceMappingURL=Insurance.css.map */

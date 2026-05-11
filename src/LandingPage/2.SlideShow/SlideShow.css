@@ -48,7 +48,7 @@ html {
   height: 100%;
 }
 #SlideShowMC .SlideOne {
-  background: url("/HP4.png") center/cover no-repeat;
+  background: url("/HP4.webp") center/cover no-repeat;
 }
 #SlideShowMC .SlideOne img {
   width: 100%;
@@ -57,7 +57,7 @@ html {
   object-position: center;
 }
 #SlideShowMC .SlideTwo {
-  background: url("/HP56.jpg") center/cover no-repeat;
+  background: url("/HP56.webp") center/cover no-repeat;
 }
 #SlideShowMC .SlideTwo img {
   width: 70%;

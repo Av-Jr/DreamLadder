@@ -19,7 +19,7 @@ const NavBar = () => {
           />
             <div id="NavBarMC">
                 <div className="IL1" onClick={() => {navigate('/')}}>
-                    <img src="/logo.png" alt="" className="logo" />
+                    <img loading="lazy" loading="lazy" src="/logo.webp" alt="" className="logo" />
                 </div>
 
                 <button

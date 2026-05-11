@@ -60,7 +60,7 @@
 
     @each $icon in $icons {
       .#{$icon} {
-        background-image: url("/#{$icon}L.png");
+        background-image: url("/#{$icon}L.webp");
       }
     }
   }
@@ -92,7 +92,7 @@
 
     @each $app in $apps {
       .#{$app} {
-        background-image: url("/#{$app}.png");
+        background-image: url("/#{$app}.webp");
       }
     }
   }

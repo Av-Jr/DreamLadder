@@ -55,7 +55,7 @@ const Insights = () => {
                 {
                     blogData.map((item, index) => (
                         <div className={"ifEle blogs"}>
-                            <img src={`/${item.image}.png`} alt=""/>
+                            <img loading="lazy" src={`/${item.image}.webp`} alt=""/>
                              <span>{item.date}</span>
                              <span>{item.type}</span>
                              <span>{item.title}</span>

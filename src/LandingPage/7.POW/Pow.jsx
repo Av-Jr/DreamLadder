@@ -24,7 +24,7 @@ const Pow = () => {
         <h1>What Clients say about us</h1>
 
         <div className="contentRow">
-          <img className="sideImg" src="/POWwomen.png" alt="" />
+          <img loading="lazy" className="sideImg" src="/POWwomen.webp" alt="" />
 
           <div className="slider">
             <div className="track">
@@ -38,7 +38,7 @@ const Pow = () => {
                   </div>
 
                   <div className="image">
-                    <img src={`/${item.image}.jpeg`} alt="" />
+                    <img loading="lazy" src={`/${item.image}.jpeg`} alt="" />
                   </div>
 
                 </div>

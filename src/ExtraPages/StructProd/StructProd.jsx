@@ -133,8 +133,8 @@ const StructProd = () => {
         </div>
 
         <div className={"heroImg"}>
-          <img
-            src={`/${StructuredProductsHeroData.image}.png`}
+          <img loading="lazy"
+            src={`/${StructuredProductsHeroData.image}.webp`}
             alt=""
           />
         </div>
@@ -188,8 +188,8 @@ const StructProd = () => {
             {StructuredProductsRegulationData.description}
           </span>
 
-          <img
-            src={`/${StructuredProductsRegulationData.image}.png`}
+          <img loading="lazy"
+            src={`/${StructuredProductsRegulationData.image}.webp`}
             alt=""
           />
 

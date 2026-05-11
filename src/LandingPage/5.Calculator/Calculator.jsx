@@ -22,7 +22,7 @@ const Calculator = () => {
             <div className="CalcEleCon">
                 {retData.map((item, index) => (
                     <div className="CalcEle" onClick={() => {nt("/calc")}}>
-                        <img src={`/Calc${item.i}.png`} alt={item.i}/>
+                        <img loading="lazy" src={`/Calc${item.i}.webp`} alt={item.i}/>
                         <h3>{item.t}</h3>
                     </div>
                 ))}

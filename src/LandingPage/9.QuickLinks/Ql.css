@@ -54,19 +54,19 @@ html {
   transform: scale(0.9);
 }
 #QlMC .socialsEles .youtube {
-  background-image: url("/youtubeL.png");
+  background-image: url("/youtubeL.webp");
 }
 #QlMC .socialsEles .linkedin {
-  background-image: url("/linkedinL.png");
+  background-image: url("/linkedinL.webp");
 }
 #QlMC .socialsEles .facebook {
-  background-image: url("/facebookL.png");
+  background-image: url("/facebookL.webp");
 }
 #QlMC .socialsEles .instagram {
-  background-image: url("/instagramL.png");
+  background-image: url("/instagramL.webp");
 }
 #QlMC .socialsEles .x {
-  background-image: url("/xL.png");
+  background-image: url("/xL.webp");
 }
 #QlMC .downloadsSec {
   display: flex;
@@ -90,10 +90,10 @@ html {
   transform: scale(0.95);
 }
 #QlMC .downloadsSec .appStore {
-  background-image: url("/appStore.png");
+  background-image: url("/appStore.webp");
 }
 #QlMC .downloadsSec .gplay {
-  background-image: url("/gplay.png");
+  background-image: url("/gplay.webp");
 }
 #QlMC .QLeles {
   min-width: 180px;

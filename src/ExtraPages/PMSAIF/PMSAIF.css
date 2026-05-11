@@ -57,7 +57,7 @@ html {
   font-size: 2.3vh;
 }
 #PMSAIFMC .PMStwo {
-  background: url("/flexBack.png") center/cover no-repeat;
+  background: url("/flexBack.webp") center/cover no-repeat;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 50px;
@@ -159,7 +159,7 @@ html {
 }
 #PMSAIFMC .PMSfour {
   min-height: 30vh;
-  background: url("/flexBack.png") center/cover no-repeat;
+  background: url("/flexBack.webp") center/cover no-repeat;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -349,7 +349,7 @@ html {
 }
 #PMSAIFMC .endingStatement {
   min-height: 30vh;
-  background: url("/flexBack.png") center/cover no-repeat;
+  background: url("/flexBack.webp") center/cover no-repeat;
   display: flex;
   flex-direction: column;
   justify-content: center;

@@ -9,6 +9,7 @@ import PMSAIF from "./ExtraPages/PMSAIF/PMSAIF.jsx"
 import Bonds from "./ExtraPages/Bonds/Bonds.jsx";
 import StructProd from "./ExtraPages/StructProd/StructProd.jsx";
 import LEP from "./ExtraPages/LEP/LEP.jsx";
+import Insurance from "./ExtraPages/Insurance/Insurance.jsx";
 
 
 
@@ -27,6 +28,7 @@ const App = () => {
                   <Route path={"/bonds"} element={<Bonds />}></Route>
                   <Route path={"/structured-products"} element={<StructProd />}></Route>
                   <Route path={"/legacy-estate-planning"} element={<LEP />}></Route>
+                  <Route path={"/Insurance"} element={<Insurance />}></Route>
               </Routes>
           </BrowserRouter>
       </>

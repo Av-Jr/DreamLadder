@@ -64,7 +64,7 @@ html {
 #AboutMC .GridCon .Con.ACtwo .ContwoEles {
   position: relative;
   width: 100%;
-  background: url("/flexBack.png") center/cover no-repeat;
+  background: url("/flexBack.webp") center/cover no-repeat;
   padding: 10px;
   border-radius: 20px;
 }

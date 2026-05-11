@@ -162,7 +162,7 @@ const MFAssistData = {
             <div className="headTit"><h1>Mutual-Funds</h1></div>
 
             <div className="MFone">
-                <img className={"heroImg"} src={`/${MFHeroData.image}.png`} alt=""/>
+                <img loading="lazy" className={"heroImg"} src={`/${MFHeroData.image}.webp`} alt=""/>
                 <div className="heroText">
                     {MFHeroData.description.map((item, index) => (
                         <span className="descEles" key={index}>{item.text}</span>
@@ -178,7 +178,7 @@ const MFAssistData = {
                 <h1 className="titleHead">{MFBenefitsData.title}</h1>
                 <span className="titleDesc">{MFBenefitsData.description}</span>
                 <div className="twoMC">
-                    <img src={`/${MFBenefitsData.image}.png`} alt=""/>
+                    <img loading="lazy" src={`/${MFBenefitsData.image}.webp`} alt=""/>
                     <div className="heroText">
                         {
                             MFBenefitsData.cards.map((item, index) =>{
@@ -196,7 +196,7 @@ const MFAssistData = {
 
             <div className="MFthree">
                 <div className="heroImg">
-                    <img src={`/${MFInvestorData.image}.png`} alt=""/>
+                    <img loading="lazy" src={`/${MFInvestorData.image}.webp`} alt=""/>
                     <h1>{MFInvestorData.quote}</h1>
                 </div>
 
@@ -231,7 +231,7 @@ const MFAssistData = {
                         }
                     </div>
                 </div>
-                <img src="/MFpg7.jpg" alt=""/>
+                <img loading="lazy" src="/MFpg7.jpg" alt=""/>
             </div>
 
             <div className={"endingStatement"}>

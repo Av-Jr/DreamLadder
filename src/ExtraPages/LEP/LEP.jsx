@@ -145,8 +145,8 @@ const LEP = () => {
 
         <div className={"right"}>
 
-          <img
-            src={`/${LegacyEstateHeroData.image}.png`}
+          <img loading="lazy"
+            src={`/${LegacyEstateHeroData.image}.webp`}
             alt=""
           />
 
@@ -166,8 +166,8 @@ const LEP = () => {
 
               <div className={"imgCont"}>
 
-                <img
-                  src={`/${item.image}.png`}
+                <img loading="lazy"
+                  src={`/${item.image}.webp`}
                   alt=""
                 />
 

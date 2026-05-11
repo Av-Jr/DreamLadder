@@ -89,7 +89,7 @@ export default function Ql() {
       <div className="links">
 
         <div className="socials">
-          <img src="/logo.png" alt="DreamLadder Logo" className="logo" />
+          <img loading="lazy" src="/logo.webp" alt="DreamLadder Logo" className="logo" />
 
           <div className="socialsEles">
             {SocialL.map((item, index) => (

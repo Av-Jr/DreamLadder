@@ -5,7 +5,7 @@
   display: flex;
   gap: 20px;
   flex-direction: column;
-  background: url("/flexBack.png") center/cover no-repeat;
+  background: url("/flexBack.webp") center/cover no-repeat;
   padding: 0 100px 100px 100px;
 }
 #ReturnSliderMC h1 {

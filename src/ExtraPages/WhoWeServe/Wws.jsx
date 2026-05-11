@@ -49,7 +49,7 @@ const wwsData = [
             <div className="WwsCardsCon">
                 {wwsData.map((item, index) => (
                     <div className={`WwsCards ${index % 2 === 0 ? "rev" : ""}`} key={index}>
-                        <img src={`/${item.image}.png`} alt=""/>
+                        <img loading="lazy" src={`/${item.image}.webp`} alt=""/>
                         <div className={"heroText"}>
                             <h1>{item.title}</h1>
                             <span>{item.description}</span>

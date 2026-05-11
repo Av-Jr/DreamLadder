@@ -207,7 +207,7 @@ return (
         </div>
 
         <div className="heroImg">
-            <img src={`/${BondsHeroData.image}.png`} alt=""/>
+            <img loading="lazy" src={`/${BondsHeroData.image}.webp`} alt=""/>
         </div>
 
     </div>
@@ -238,7 +238,7 @@ return (
                 {BondsRegulationData.quote}
             </span>
 
-            <img src={`/${BondsRegulationData.image}.png`} alt=""/>
+            <img loading="lazy" src={`/${BondsRegulationData.image}.webp`} alt=""/>
 
         </div>
 
@@ -255,7 +255,7 @@ return (
     <div className="Bondsfour">
 
         <div className="heroImg">
-            <img src={`/${FixedIncomeIntroData.image}.png`} alt=""/>
+            <img loading="lazy" src={`/${FixedIncomeIntroData.image}.webp`} alt=""/>
         </div>
 
         <div className="heroText">
@@ -306,7 +306,7 @@ return (
             </div>
 
             <div className="centerImg">
-                <img src={`/${FixedIncomeTypesData.image}.png`} alt=""/>
+                <img loading="lazy" src={`/${FixedIncomeTypesData.image}.webp`} alt=""/>
             </div>
 
             <div className="right">
@@ -336,7 +336,7 @@ return (
 
         <div className="left">
 
-            <img src={`/${WhyFixedIncomeData.image}.png`} alt=""/>
+            <img loading="lazy" src={`/${WhyFixedIncomeData.image}.webp`} alt=""/>
 
             <span className={"quoteEle"}>
                 {WhyFixedIncomeData.quote}

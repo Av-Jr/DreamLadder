@@ -241,9 +241,9 @@ const WhyAIFData = {
       </div>
 
       <div className="PMSone">
-        <img
+        <img loading="lazy"
           className={"heroImg"}
-          src={`/${PMSHeroData.image}.png`}
+          src={`/${PMSHeroData.image}.webp`}
           alt=""
         />
 
@@ -266,7 +266,7 @@ const WhyAIFData = {
 
           <span>{PMSFeatureData.description}</span>
 
-          <img src={`/${PMSFeatureData.image}.png`} alt="" />
+          <img loading="lazy" src={`/${PMSFeatureData.image}.webp`} alt="" />
         </div>
 
         <div className="right">
@@ -309,7 +309,7 @@ const WhyAIFData = {
             {PMSRegulationData.quote}
           </span>
 
-          <img src={`/${PMSRegulationData.image}.png`} alt="" />
+          <img loading="lazy" src={`/${PMSRegulationData.image}.webp`} alt="" />
         </div>
       </div>
 
@@ -326,7 +326,7 @@ const WhyAIFData = {
       <div className="PMSfive">
 
         <div className="heroImg">
-          <img src={`/${AIFIntroData.image}.png`} alt="" />
+          <img loading="lazy" src={`/${AIFIntroData.image}.webp`} alt="" />
         </div>
 
         <div className="heroText">
@@ -389,7 +389,7 @@ const WhyAIFData = {
             SEBI classifies Alternative Investment Funds into three distinct categories based on investment objectives and asset classes.
           </span>
 
-          <img src={`/${AIFTypesData.image}.png`} alt="" />
+          <img loading="lazy" src={`/${AIFTypesData.image}.webp`} alt="" />
         </div>
 
       </div>
@@ -403,7 +403,7 @@ const WhyAIFData = {
             {AIFRegulationData.description}
           </span>
 
-          <img src={`/${AIFRegulationData.image}.png`} alt="" />
+          <img loading="lazy" src={`/${AIFRegulationData.image}.webp`} alt="" />
         </div>
 
         <div className="right">

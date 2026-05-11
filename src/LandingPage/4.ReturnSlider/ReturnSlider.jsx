@@ -56,8 +56,8 @@ const ReturnSlider = () => {
                     <div className="retCircle">
                       <h2>{`₹${item.amt} CR`}</h2>
                       <div className="imgPart">
-                        <img
-                          src={`/imgPart${item.img}.png`}
+                        <img loading="lazy"
+                          src={`/imgPart${item.img}.webp`}
                           alt={item.tag}
                         />
                       </div>
