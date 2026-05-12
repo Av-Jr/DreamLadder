@@ -207,7 +207,10 @@ const MFAssistData = {
                             const Icon = MFInvestorData.icon;
 
                             return(
-                                <span key={index}><Icon className={"threeIcon"}/>  {item}</span>
+                                <div className={"thirdCardEles"}>
+                                    <Icon className={"threeIcon"}/>
+                                    <span key={index}>{item}</span>
+                                </div>
                             )
                         })
                     }
@@ -231,7 +234,7 @@ const MFAssistData = {
                         }
                     </div>
                 </div>
-                <img loading="lazy" src="/MFpg7.jpg" alt=""/>
+                <img loading="lazy" src="/MFpg7.webp" alt=""/>
             </div>
 
             <div className={"endingStatement"}>

@@ -12,7 +12,7 @@ html {
 #PMSAIFMC .headTit {
   width: 100%;
   height: 20vh;
-  background: url("/HP56.jpg") center/cover no-repeat;
+  background: url("/HP56.webp") center/cover no-repeat;
   display: grid;
   place-items: center;
 }

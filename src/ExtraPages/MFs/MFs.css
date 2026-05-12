@@ -98,7 +98,11 @@ html {
   justify-content: center;
   max-width: 70%;
 }
-#MFsMC .MFthree .heroText span {
+#MFsMC .MFthree .heroText .thirdCardEles {
+  display: flex;
+  gap: 10px;
+}
+#MFsMC .MFthree .heroText .thirdCardEles span {
   font-size: 2vh;
 }
 #MFsMC .MFtwo {
@@ -149,7 +153,6 @@ html {
   justify-content: center;
   font-size: 3vh;
   font-weight: 1200;
-  text-decoration: underline;
 }
 #MFsMC .MFtwo .twoMC .heroText .MFtwoCards h1 .cardIconMF {
   color: #E53935;
@@ -166,7 +169,7 @@ html {
   text-align: center;
   display: grid;
   place-items: center;
-  background: url("/HP56.jpg") center/cover no-repeat;
+  background: url("/HP56.webp") center/cover no-repeat;
 }
 #MFsMC .headTit h1 {
   font-size: clamp(0px, 5vh, 40px);
@@ -243,7 +246,10 @@ html {
     padding-left: 5px;
   }
   #MFsMC .MFtwo {
-    padding: 40px 10px;
+    padding: 0;
+  }
+  #MFsMC .MFtwo .titleDesc, #MFsMC .MFtwo .titleHead {
+    padding: 0 40px;
   }
   #MFsMC .MFtwo span {
     max-width: 100%;

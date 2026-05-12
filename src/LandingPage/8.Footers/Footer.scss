@@ -1,6 +1,6 @@
 @use "../../mixins" as *;
 #FooterMC{
-  height : auto;
+  min-height :100vh;
   width : 100%;
   position : relative;
   background: yellow;
@@ -16,6 +16,8 @@
     display : grid;
     grid-template-columns : 1fr 1fr 1fr 1fr;
     gap : 20px;
+    justify-content : center;
+    align-items : center;
     div{
       height : auto;
       width : auto;
@@ -36,8 +38,6 @@
 
 @include mediaDevice(mobile){
   #FooterMC{
-    padding : 10px;
-    
     .topicEles{
       grid-template-columns : 1fr 1fr;
     }

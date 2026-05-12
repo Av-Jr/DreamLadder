@@ -9,10 +9,11 @@ html {
 #WwsMC .connectMe {
   background: url("/flexBack.webp") center/cover no-repeat;
   min-height: 40vh;
-  width: 100%;
   text-align: center;
-  display: grid;
-  place-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   gap: 20px;
   padding: 50px;
 }
@@ -26,7 +27,7 @@ html {
 #WwsMC .titleHead {
   min-height: 20vh;
   width: 100%;
-  background: url("/HP56.jpg") center/cover no-repeat;
+  background: url("/HP56.webp") center/cover no-repeat;
   display: grid;
   place-items: center;
   text-align: center;
@@ -71,15 +72,16 @@ html {
 
 @media (max-width: 1024px) {
   #WwsMC .WwsCardsCon {
-    padding: 10px;
+    padding: 20px;
     gap: 100px;
   }
   #WwsMC .WwsCardsCon .WwsCards {
     grid-template-columns: 1fr;
     grid-template-rows: repeat(2, 1fr);
-    gap: 30px;
-    border: 1px grey solid;
-    border-radius: 10px;
+    gap: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    padding: 10px;
   }
   #WwsMC .WwsCardsCon .WwsCards .heroText {
     padding: 10px;

@@ -1,157 +1,278 @@
 import "./Ql.scss";
 import React from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
-const SocialL = [
+const socialLinks = [
   {
-    title: "youtube",
+    id: "youtube",
+    ariaLabel: "Open YouTube",
     link: "https://www.youtube.com/@DreamLadderCapital"
   },
   {
-    title: "linkedin",
-    link: "https://www.linkedin.com/company/dreamladder-capital"
+    id: "linkedin",
+    ariaLabel: "Open LinkedIn",
+    link: "https://www.linkedin.com/company/dreamladdercapital/"
   },
   {
-    title: "facebook",
+    id: "facebook",
+    ariaLabel: "Open Facebook",
     link: "https://www.facebook.com/DreamLadderCapital"
   },
   {
-    title: "instagram",
+    id: "instagram",
+    ariaLabel: "Open Instagram",
     link: "https://www.instagram.com/dreamladdercapital"
   },
   {
-    title: "x",
+    id: "x",
+    ariaLabel: "Open X",
     link: "https://x.com/SadaySinha15"
   }
 ];
 
-const downloadsL = [
+const downloadLinks = [
   {
-    title: "gplay",
+    id: "gplay",
+    ariaLabel: "Download from Google Play",
     link: "https://play.google.com/store/search?q=dreamladder+capital&c=apps&hl=en_IN&pli=1"
   },
   {
-    title: "appStore",
+    id: "appStore",
+    ariaLabel: "Download from App Store",
     link: "https://apps.apple.com/in/app/dreamladder-capital/id1527793478"
   }
 ];
 
-const dataQL = [
+const footerSections = [
   {
     title: "Quick Links",
     className: "QL",
-    eles: [
-      ["Client Login", "QLcl", "/login"],
-      ["Download", "QLd", "/download"],
-      ["Blogs", "QLb", "/blogs"],
-      ["Financial Calculator", "QLfc", "/calc"]
+    items: [
+      {
+        label: "Client Login",
+        className: "QLcl",
+        type: "external",
+        path: "https://dreamladdercapital.my-portfolio.co.in/app/#/login"
+      },
+      {
+        label: "Download",
+        className: "QLd",
+        type: "internal",
+        path: "/download"
+      },
+      {
+        label: "Blogs",
+        className: "QLb",
+        type: "internal",
+        path: "/blogs"
+      },
+      {
+        label: "Financial Calculator",
+        className: "QLfc",
+        type: "internal",
+        path: "/calc"
+      }
     ]
   },
 
   {
     title: "Our Products",
     className: "OP",
-    eles: [
-      ["Mutual Fund", "OPmf", "/mutual-fund"],
-      ["PMS / AIF", "OPpa", "/pa"],
-      ["Insurance", "OPi", "/insurance"],
-      ["Structured Products", "OPsp", "/structured-products"]
+    items: [
+      {
+        label: "Mutual Funds",
+        className: "OPmf",
+        type: "internal",
+        path: "/mutual-funds"
+      },
+      {
+        label: "PMS / AIF",
+        className: "OPpa",
+        type: "internal",
+        path: "/pms"
+      },
+      {
+        label: "Insurance",
+        className: "OPi",
+        type: "internal",
+        path: "/insurance"
+      },
+      {
+        label: "Structured Products",
+        className: "OPsp",
+        type: "internal",
+        path: "/structured-products"
+      }
     ]
   },
 
   {
-    title: "Financial Goal",
+    title: "Financial Goals",
     className: "FG",
-    eles: [
-      ["Education", "FGe", "/calc"],
-      ["Marriage", "FGm", "/calc"],
-      ["Retirement", "FGr", "/calc"],
-      ["SIP", "FGs", "/calc"]
+    items: [
+      {
+        label: "Education",
+        className: "FGe",
+        type: "internal",
+        path: "/calc"
+      },
+      {
+        label: "Marriage",
+        className: "FGm",
+        type: "internal",
+        path: "/calc"
+      },
+      {
+        label: "Retirement",
+        className: "FGr",
+        type: "internal",
+        path: "/calc"
+      },
+      {
+        label: "SIP",
+        className: "FGs",
+        type: "internal",
+        path: "/calc"
+      }
     ]
   },
 
   {
     title: "Reach Us",
     className: "RU",
-    eles: [
-        ["+91 89-0808-2222", "RUp", "/contact"],
-        ["info@dreamladdercapital.com", "RUe", "/contact"],
-        ["DreamLadder Capital #20, 10th Floor, R. City Offices, Ghatkopar (W), Mumbai – 86", "RUl", "/contact"]
+    items: [
+      {
+        label: "+91 89-0808-2222",
+        className: "RUp",
+        type: "internal",
+        path: "/about"
+      },
+      {
+        label: "info@dreamladdercapital.com",
+        className: "RUe",
+        type: "internal",
+        path: "/about"
+      },
+      {
+        label:
+          "DreamLadder Capital #20, 10th Floor, R. City Offices, Ghatkopar (W), Mumbai – 86",
+        className: "RUl",
+        type: "internal",
+        path: "/about"
+      }
     ]
   }
 ];
 
 export default function Ql() {
+
   const navigate = useNavigate();
 
+  const handleNavigation = (type, path) => {
+
+    if (type === "external") {
+      window.open(path, "_blank", "noopener,noreferrer");
+      return;
+    }
+
+    navigate(path);
+  };
+
   return (
-    <div id="QlMC">
+    <footer id="QlMC">
+
       <div className="links">
 
         <div className="socials">
-          <img loading="lazy" src="/logo.webp" alt="DreamLadder Logo" className="logo" />
+
+          <Link to="/">
+            <img
+              loading="lazy"
+              src="/logo.webp"
+              alt="DreamLadder Capital Logo"
+              className="logo"
+            />
+          </Link>
 
           <div className="socialsEles">
-            {SocialL.map((item, index) => (
-              <button
-                key={index}
-                className={`socialBtn ${item.title}`}
-                onClick={() => window.open(item.link, "_blank")}
+
+            {socialLinks.map((item) => (
+              <a
+                key={item.id}
+                href={item.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={item.ariaLabel}
+                className={`socialBtn ${item.id}`}
               />
             ))}
+
           </div>
 
           <div className="downloadsSec">
-            {downloadsL.map((item, index) => (
-              <button
-                key={index}
-                className={`downloadBtn ${item.title}`}
-                onClick={() => window.open(item.link, "_blank")}
+
+            {downloadLinks.map((item) => (
+              <a
+                key={item.id}
+                href={item.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={item.ariaLabel}
+                className={`downloadBtn ${item.id}`}
               />
             ))}
+
           </div>
+
         </div>
 
-        {
-          dataQL.map((item, index) => (
-            <div key={index} className={`QLeles ${item.className}`}>
-              <h2>{item.title}</h2>
+        {footerSections.map((section) => (
 
-              <div className="items">
-{
-  item.eles.map(([name, cl, pg], i) => (
-    <button
-      key={i}
-      className={`linkBtn ${cl}`}
-      onClick={() => {
-        if (item.title === "Quick Links") {
+          <div
+            key={section.title}
+            className={`QLeles ${section.className}`}
+          >
 
-          if (name === "Client Login") {
-            window.open(
-              "https://dreamladdercapital.my-portfolio.co.in/app/#/login",
-              "_blank"
-            );
-          }
+            <h2>{section.title}</h2>
 
-          else if (name === "Financial Calculator") {
-            navigate("/calc");
-          }
+            <div className="items">
 
-        } else {
-          navigate(pg);
-        }
-      }}
-    >
-      {name}
-    </button>
-  ))
-}
-              </div>
+              {section.items.map((item) => (
+
+                item.type === "internal" ? (
+
+                  <Link
+                    key={item.label}
+                    to={item.path}
+                    className={`linkItem ${item.className}`}
+                  >
+                    {item.label}
+                  </Link>
+
+                ) : (
+
+                  <button
+                    key={item.label}
+                    className={`linkItem ${item.className}`}
+                    onClick={() =>
+                      handleNavigation(item.type, item.path)
+                    }
+                  >
+                    {item.label}
+                  </button>
+
+                )
+
+              ))}
+
             </div>
-          ))
-        }
+
+          </div>
+
+        ))}
 
       </div>
-    </div>
+
+    </footer>
   );
 }

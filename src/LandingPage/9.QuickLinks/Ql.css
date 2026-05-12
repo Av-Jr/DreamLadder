@@ -4,54 +4,54 @@ html {
 
 #QlMC {
   width: 100%;
-  height: auto;
   background: #ffffff;
-  padding: 60px 80px;
+  padding: 70px 80px;
   box-sizing: border-box;
   display: grid;
   place-items: center;
+  border-top: 1px solid #ececec;
 }
 #QlMC .links {
   width: 100%;
+  max-width: 1440px;
   display: flex;
-  gap: 50px;
-  flex-wrap: nowrap;
-  justify-content: center;
-  align-items: center;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 60px;
 }
 #QlMC .socials {
   width: 280px;
   display: flex;
   flex-direction: column;
-  gap: 30px;
-  justify-content: center;
-  align-items: center;
+  align-items: flex-start;
+  gap: 28px;
+  flex-shrink: 0;
 }
 #QlMC .socials .logo {
-  width: 180px;
+  width: 190px;
   object-fit: contain;
+  display: block;
 }
 #QlMC .socialsEles {
   display: flex;
   align-items: center;
-  gap: 14px;
   flex-wrap: wrap;
+  gap: 14px;
 }
 #QlMC .socialsEles .socialBtn {
   width: 42px;
   height: 42px;
-  border: none;
-  outline: none;
-  background-color: transparent;
+  border-radius: 12px;
+  background-color: #f7f7f7;
   background-position: center;
-  background-size: contain;
+  background-size: 20px;
   background-repeat: no-repeat;
+  transition: transform 0.25s ease, background-color 0.25s ease;
   cursor: pointer;
-  padding: 0;
-  transition: transform 0.25s ease;
 }
 #QlMC .socialsEles .socialBtn:hover {
-  transform: scale(0.9);
+  transform: translateY(-3px);
+  background-color: #efefef;
 }
 #QlMC .socialsEles .youtube {
   background-image: url("/youtubeL.webp");
@@ -75,19 +75,15 @@ html {
 }
 #QlMC .downloadsSec .downloadBtn {
   width: 180px;
-  height: 55px;
-  border: none;
-  outline: none;
-  background-color: transparent;
+  height: 54px;
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
-  cursor: pointer;
-  padding: 0;
   transition: transform 0.25s ease;
+  cursor: pointer;
 }
 #QlMC .downloadsSec .downloadBtn:hover {
-  transform: scale(0.95);
+  transform: scale(0.96);
 }
 #QlMC .downloadsSec .appStore {
   background-image: url("/appStore.webp");
@@ -96,71 +92,101 @@ html {
   background-image: url("/gplay.webp");
 }
 #QlMC .QLeles {
-  min-width: 180px;
+  min-width: 170px;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 22px;
 }
 #QlMC .QLeles h2 {
   margin: 0;
-  font-size: 22px;
+  font-size: 24px;
   font-weight: 700;
+  line-height: 1;
   color: #111111;
   font-family: Genos;
-  text-align: center;
   white-space: nowrap;
 }
 #QlMC .QLeles .items {
   display: flex;
   flex-direction: column;
   gap: 14px;
-  font-family: Genos;
-  justify-content: center;
-  align-items: center;
-  white-space: wrap;
 }
-#QlMC .QLeles .items button {
-  flex: 1 1 0;
-}
-#QlMC .QLeles .linkBtn {
+#QlMC .QLeles .linkItem {
+  text-decoration: none;
   border: none;
   background: transparent;
   padding: 0;
+  margin: 0;
   text-align: left;
-  font-size: 15px;
-  color: #555555;
   cursor: pointer;
+  font-family: Genos;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.4;
+  color: #666666;
   transition: color 0.2s ease, transform 0.2s ease;
   white-space: normal;
   overflow-wrap: break-word;
 }
-#QlMC .QLeles .linkBtn:hover {
-  color: #000000;
+#QlMC .QLeles .linkItem:hover {
+  color: #111111;
   transform: translateX(4px);
+}
+#QlMC .RU {
+  max-width: 260px;
+}
+#QlMC .RU .items {
+  gap: 18px;
+}
+#QlMC .RU .linkItem {
+  line-height: 1.5;
 }
 
 @media (max-width: 1024px) {
   #QlMC {
-    display: grid;
-    place-items: center;
-    padding: 10px;
+    padding: 50px 20px;
   }
   #QlMC .links {
-    width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    place-items: center;
-    padding: 0;
+    gap: 40px 20px;
+    align-items: flex-start;
   }
   #QlMC .socials {
+    width: 100%;
     grid-column: span 2;
-    padding: 0;
+    align-items: center;
+    text-align: center;
+  }
+  #QlMC .socials .logo {
+    width: 170px;
+  }
+  #QlMC .socialsEles {
+    justify-content: center;
+  }
+  #QlMC .downloadsSec {
+    align-items: center;
+  }
+  #QlMC .downloadsSec .downloadBtn {
+    width: 170px;
   }
   #QlMC .QLeles {
+    width: 100%;
     min-width: 0;
-    display: grid;
-    place-items: center;
-    padding: 0;
+    gap: 18px;
+  }
+  #QlMC .QLeles h2 {
+    font-size: 22px;
+  }
+  #QlMC .QLeles .items {
+    gap: 12px;
+  }
+  #QlMC .QLeles .linkItem {
+    font-size: 17px;
+  }
+  #QlMC .RU {
+    grid-column: span 2;
+    max-width: 100%;
   }
 }
 

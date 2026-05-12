@@ -2,57 +2,59 @@
 
 #QlMC {
   width: 100%;
-  height : auto;
   background: #ffffff;
-  padding: 60px 80px;
+  padding: 70px 80px;
   box-sizing: border-box;
-  display :grid;
-  place-items : center;
+  display: grid;
+  place-items: center;
+  border-top: 1px solid #ececec;
 
   .links {
     width: 100%;
+    max-width: 1440px;
     display: flex;
-    gap: 50px;
-    flex-wrap: nowrap;
-    justify-content : center;
-    align-items : center;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 60px;
   }
 
   .socials {
     width: 280px;
     display: flex;
     flex-direction: column;
-    gap: 30px;
-    justify-content : center;
-    align-items : center;
+    align-items: flex-start;
+    gap: 28px;
+    flex-shrink: 0;
 
     .logo {
-      width: 180px;
+      width: 190px;
       object-fit: contain;
+      display: block;
     }
   }
 
   .socialsEles {
     display: flex;
     align-items: center;
-    gap: 14px;
     flex-wrap: wrap;
+    gap: 14px;
 
     .socialBtn {
       width: 42px;
       height: 42px;
-      border: none;
-      outline: none;
-      background-color: transparent;
+      border-radius: 12px;
+      background-color: #f7f7f7;
       background-position: center;
-      background-size: contain;
+      background-size: 20px;
       background-repeat: no-repeat;
+      transition:
+        transform 0.25s ease,
+        background-color 0.25s ease;
       cursor: pointer;
-      padding: 0;
-      transition: transform 0.25s ease;
 
       &:hover {
-        transform: scale(0.9);
+        transform: translateY(-3px);
+        background-color: #efefef;
       }
     }
 
@@ -72,19 +74,15 @@
 
     .downloadBtn {
       width: 180px;
-      height: 55px;
-      border: none;
-      outline: none;
-      background-color: transparent;
+      height: 54px;
       background-position: center;
       background-size: contain;
       background-repeat: no-repeat;
-      cursor: pointer;
-      padding: 0;
       transition: transform 0.25s ease;
+      cursor: pointer;
 
       &:hover {
-        transform: scale(0.95);
+        transform: scale(0.96);
       }
     }
 
@@ -98,78 +96,128 @@
   }
 
   .QLeles {
-    min-width: 180px;
+    min-width: 170px;
     display: flex;
     flex-direction: column;
-    gap: 20px;
-    
+    gap: 22px;
+
     h2 {
       margin: 0;
-      font-size: 22px;
+      font-size: 24px;
       font-weight: 700;
+      line-height: 1;
       color: #111111;
-      font-family : Genos;
-      text-align : center;
-      white-space : nowrap;
+      font-family: Genos;
+      white-space: nowrap;
     }
 
     .items {
       display: flex;
       flex-direction: column;
       gap: 14px;
-      font-family : Genos;
-      justify-content : center;
-      align-items : center;
-      white-space : wrap;
-      button{flex : 1 1 0}
     }
 
-    .linkBtn {
+    .linkItem {
+      text-decoration: none;
       border: none;
       background: transparent;
       padding: 0;
+      margin: 0;
       text-align: left;
-      font-size: 15px;
-      color: #555555;
       cursor: pointer;
-      transition: color 0.2s ease, transform 0.2s ease;
-      white-space : normal;
-      overflow-wrap : break-word;
+
+      font-family: Genos;
+      font-size: 18px;
+      font-weight: 500;
+      line-height: 1.4;
+
+      color: #666666;
+
+      transition:
+        color 0.2s ease,
+        transform 0.2s ease;
+
+      white-space: normal;
+      overflow-wrap: break-word;
 
       &:hover {
-        color: #000000;
+        color: #111111;
         transform: translateX(4px);
       }
     }
   }
+
+  .RU {
+    max-width: 260px;
+
+    .items {
+      gap: 18px;
+    }
+
+    .linkItem {
+      line-height: 1.5;
+    }
+  }
 }
 
-@include mediaDevice(mobile){
 
-  #QlMC{
-    display : grid;
-    place-items : center;
-    padding : 10px;
-    .links{
-      width: 100%;
+@include mediaDevice(mobile) {
+
+  #QlMC {
+
+    padding: 50px 20px;
+
+    .links {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      place-items : center;
-      padding: 0;
+      gap: 40px 20px;
+      align-items: flex-start;
     }
 
-    .socials{
+    .socials {
+      width: 100%;
       grid-column: span 2;
-      padding : 0;
+      align-items: center;
+      text-align: center;
+
+      .logo {
+        width: 170px;
+      }
     }
 
-    .QLeles{
+    .socialsEles {
+      justify-content: center;
+    }
+
+    .downloadsSec {
+      align-items: center;
+
+      .downloadBtn {
+        width: 170px;
+      }
+    }
+
+    .QLeles {
+      width: 100%;
       min-width: 0;
-      display : grid;
-      place-items : center;
-      padding : 0;
+      gap: 18px;
+
+      h2 {
+        font-size: 22px;
+      }
+
+      .items {
+        gap: 12px;
+      }
+
+      .linkItem {
+        font-size: 17px;
+      }
     }
 
+    .RU {
+      grid-column: span 2;
+      max-width: 100%;
+    }
   }
-
 }

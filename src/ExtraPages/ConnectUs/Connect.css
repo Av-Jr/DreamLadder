@@ -1,0 +1,244 @@
+html {
+  overflow-x: scroll;
+}
+
+.connectPage {
+  width: 100%;
+  background: #f7f7f7;
+  overflow: hidden;
+}
+.connectPage .connectHero {
+  width: 100%;
+  height: auto;
+  position: relative;
+  background: url("/HP56.webp") center/cover no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.connectPage .connectHero .overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.2);
+}
+.connectPage .connectHero .heroContent {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  padding: 80px;
+}
+.connectPage .connectHero .heroContent h1 {
+  font-family: Genos;
+  font-size: 50px;
+  font-weight: bold;
+  color: #111;
+  text-align: center;
+}
+.connectPage .connectContainer {
+  width: 100%;
+  max-width: 1400px;
+  margin: auto;
+  padding: 120px 80px;
+}
+.connectPage .connectContainer .topSection {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 80px;
+  margin-bottom: 120px;
+}
+.connectPage .connectContainer .topSection .left {
+  flex: 1;
+}
+.connectPage .connectContainer .topSection .left img {
+  width: 100%;
+  max-width: 650px;
+  object-fit: cover;
+  display: block;
+}
+.connectPage .connectContainer .topSection .right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.connectPage .connectContainer .topSection .right .contactCard {
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+}
+.connectPage .connectContainer .topSection .right .contactCard .iconBox {
+  padding: 10px;
+  background: pink;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
+.connectPage .connectContainer .topSection .right .contactCard .iconBox svg {
+  color: #ef2b2d;
+}
+.connectPage .connectContainer .topSection .right .contactCard .text {
+  width: 100%;
+}
+.connectPage .connectContainer .topSection .right .contactCard .text p {
+  font-family: Genos;
+  font-size: clamp(0px, 2.5vh, 30px);
+  line-height: 1.5;
+  font-weight: 500;
+  color: #1d1d1d;
+}
+.connectPage .connectContainer .meetingBtnWrap {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 100px;
+}
+.connectPage .connectContainer .meetingBtnWrap .navBtn.s {
+  padding: 18px 42px;
+}
+.connectPage .connectContainer .formSection {
+  width: 100%;
+  margin-bottom: 100px;
+  padding: 50px;
+}
+.connectPage .connectContainer .formSection h2 {
+  text-align: center;
+  font-family: Genos;
+  font-size: clamp(0px, 6vh, 60px);
+  font-weight: bold;
+  color: #111;
+  margin-bottom: 60px;
+}
+.connectPage .connectContainer .formSection form {
+  font-family: Genos;
+  width: 100%;
+  display: flex;
+  gap: 40px;
+}
+.connectPage .connectContainer .formSection form .leftInputs,
+.connectPage .connectContainer .formSection form .rightInputs {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+.connectPage .connectContainer .formSection form input,
+.connectPage .connectContainer .formSection form textarea {
+  width: 100%;
+  border: 2px solid #d9dfe7;
+  border-radius: 18px;
+  padding: 24px 26px;
+  background: transparent;
+  font-size: 20px;
+  font-weight: 500;
+  color: #111;
+  outline: none;
+  transition: 0.3s;
+}
+.connectPage .connectContainer .formSection form input::placeholder,
+.connectPage .connectContainer .formSection form textarea::placeholder {
+  color: #8e99ab;
+}
+.connectPage .connectContainer .formSection form input:focus,
+.connectPage .connectContainer .formSection form textarea:focus {
+  border-color: #ef2b2d;
+}
+.connectPage .connectContainer .formSection form textarea {
+  height: 220px;
+  resize: none;
+}
+.connectPage .connectContainer .formSection form .navBtn.s {
+  width: fit-content;
+  padding: 16px 48px;
+}
+.connectPage .connectContainer .mapSection {
+  width: 100%;
+}
+.connectPage .connectContainer .mapSection iframe {
+  width: 100%;
+  height: 500px;
+  border-radius: 24px;
+  overflow: hidden;
+}
+@media (max-width: 1024px) {
+  .connectPage .connectHero .heroContent {
+    padding: 60px 20px;
+  }
+  .connectPage .connectHero .heroContent h1 {
+    font-size: 34px;
+    text-align: center;
+  }
+  .connectPage .connectContainer {
+    padding: 70px 20px;
+  }
+  .connectPage .connectContainer .topSection {
+    flex-direction: column;
+    gap: 50px;
+    margin-bottom: 80px;
+  }
+  .connectPage .connectContainer .topSection .left img {
+    max-width: 100%;
+  }
+  .connectPage .connectContainer .topSection .right {
+    width: 100%;
+    gap: 30px;
+  }
+  .connectPage .connectContainer .topSection .right .contactCard {
+    gap: 18px;
+  }
+  .connectPage .connectContainer .topSection .right .contactCard .iconBox {
+    min-width: 58px;
+    min-height: 58px;
+    border-radius: 14px;
+  }
+  .connectPage .connectContainer .topSection .right .contactCard .iconBox svg {
+    width: 24px;
+    height: 24px;
+  }
+  .connectPage .connectContainer .topSection .right .contactCard .text p {
+    font-size: 22px;
+    line-height: 1.4;
+  }
+  .connectPage .connectContainer .meetingBtnWrap {
+    margin-bottom: 70px;
+  }
+  .connectPage .connectContainer .meetingBtnWrap .navBtn.s {
+    width: 100%;
+    justify-content: center;
+  }
+  .connectPage .connectContainer .formSection {
+    margin-bottom: 70px;
+  }
+  .connectPage .connectContainer .formSection h2 {
+    font-size: 34px;
+    margin-bottom: 40px;
+  }
+  .connectPage .connectContainer .formSection form {
+    flex-direction: column;
+    gap: 28px;
+  }
+  .connectPage .connectContainer .formSection form .leftInputs,
+  .connectPage .connectContainer .formSection form .rightInputs {
+    gap: 20px;
+  }
+  .connectPage .connectContainer .formSection form input,
+  .connectPage .connectContainer .formSection form textarea {
+    font-size: 16px;
+    padding: 18px;
+  }
+  .connectPage .connectContainer .formSection form textarea {
+    height: 180px;
+  }
+  .connectPage .connectContainer .formSection form .navBtn.s {
+    width: 100%;
+    justify-content: center;
+  }
+  .connectPage .connectContainer .mapSection iframe {
+    height: 350px;
+    border-radius: 18px;
+  }
+}
+
+/*# sourceMappingURL=Connect.css.map */

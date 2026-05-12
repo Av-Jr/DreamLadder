@@ -1,0 +1,536 @@
+@use "../../mixins" as *;
+
+.bespokePage {
+  width: 100%;
+  min-height: 100vh;
+
+  background: #f7f7f7;
+
+  .heroSection {
+    width: 100%;
+
+    position: relative;
+
+    background: url("/HP56.webp") center/cover no-repeat;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .overlay {
+      position: absolute;
+      inset: 0;
+
+      background: rgba(255, 255, 255, 0.2);
+    }
+
+    .heroContent {
+      width: 100%;
+
+      position: relative;
+      z-index: 2;
+
+      padding: 80px;
+
+      h1 {
+        font-family: Genos;
+        font-size: clamp(0px, 5vh, 50px);
+        font-weight: bold;
+
+        text-align: center;
+
+        color: #111;
+      }
+    }
+  }
+
+  .mainContainer {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 80px;
+
+    padding: 60px 100px;
+  }
+
+  .heroContainer,
+  .philosophyContainer {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 60px;
+  }
+
+  .heroText,
+  .philosophyText {
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 32px;
+
+    h2 {
+      font-family: Genos;
+      font-size: clamp(0px, 5vh, 50px);
+      font-weight: bold;
+
+      color: #111;
+    }
+
+    p {
+      font-family: Genos;
+      font-size: clamp(0px, 2.5vh, 30px);
+      line-height: 1.6;
+      font-weight: 500;
+
+      color: #000;
+    }
+
+    .quoteBox {
+      display: flex;
+      align-items: center;
+
+      gap: 20px;
+
+      span {
+        width: 6px;
+        height: 90px;
+
+        border-radius: 20px;
+
+        background: #ef2b2d;
+      }
+
+      p {
+        font-size: clamp(0px, 2.5vh, 28px);
+        font-style: italic;
+
+        color: grey;
+      }
+    }
+  }
+
+  .heroImage,
+  .philosophyImage {
+    flex: 1;
+
+    display: flex;
+    justify-content: center;
+
+    img {
+      width: 100%;
+      max-width: 550px;
+
+      object-fit: contain;
+    }
+  }
+
+  .approachSection {
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 60px;
+
+    .approachLeft {
+      flex: 1;
+
+      display: flex;
+      flex-direction: column;
+
+      gap: 30px;
+
+      h2 {
+        font-family: Genos;
+        font-size: clamp(0px, 5vh, 50px);
+        font-weight: bold;
+
+        color: #111;
+      }
+
+      p {
+        font-family: Genos;
+        font-size: clamp(0px, 2.5vh, 30px);
+        line-height: 1.6;
+        font-weight: 500;
+
+        color: #5f6d85;
+      }
+
+      .miniQuote {
+        width: fit-content;
+
+        padding: 30px;
+
+        border-radius: 14px;
+
+        background: #fff;
+
+        font-family: Genos;
+        font-size: clamp(0px, 2.5vh, 28px);
+        font-style: italic;
+        font-weight: 600;
+
+        color: #5f6d85;
+      }
+    }
+
+    .approachRight {
+      flex: 1.5;
+
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+
+      gap: 30px;
+
+      .approachCard {
+        background: #fff;
+
+        border-radius: 24px;
+
+        padding: 30px;
+
+        border: 1px solid #ececec;
+
+        display: flex;
+        flex-direction: column;
+
+        gap: 24px;
+
+        .line {
+          width: 6px;
+          height: 42px;
+
+          border-radius: 20px;
+
+          background: #ef2b2d;
+        }
+
+        h3 {
+          font-family: Genos;
+          font-size: clamp(0px, 2.5vh, 32px);
+          font-weight: bold;
+
+          line-height: 1.4;
+
+          color: #111;
+        }
+
+        p {
+          font-family: Genos;
+          font-size: clamp(0px, 2vh, 26px);
+          line-height: 1.7;
+          font-weight: 500;
+
+          color: #5f6d85;
+        }
+      }
+    }
+  }
+
+  .ctaSection {
+    width: 100%;
+
+    border-radius: 30px;
+
+    padding: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 50px;
+
+    .ctaImage {
+      flex: 1;
+
+      display: flex;
+      justify-content: center;
+
+      img {
+        width: 100%;
+        max-width: 280px;
+      }
+    }
+
+    .ctaContent {
+      flex: 1;
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      gap: 30px;
+
+      h2 {
+        font-family: Genos;
+        font-size: clamp(0px, 4vh, 50px);
+        line-height: 1.3;
+        font-weight: bold;
+
+        color: #111;
+      }
+
+      .navBtn.s {
+        width: fit-content;
+      }
+    }
+
+    .ctaPoints {
+      flex: 1;
+
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+
+      gap: 24px;
+
+      .point {
+        display: flex;
+        align-items: flex-start;
+
+        gap: 14px;
+
+        svg {
+          color: #ef2b2d;
+
+          min-width: 22px;
+
+          margin-top: 6px;
+        }
+
+        p {
+          font-family: Genos;
+          font-size: clamp(0px, 2.5vh, 28px);
+          line-height: 1.5;
+          font-weight: 600;
+
+          color: #5f6d85;
+        }
+      }
+    }
+  }
+
+  .bottomBar {
+    width: 100%;
+
+    padding: 40px;
+
+    margin: 40px 0;
+
+    border-radius: 24px;
+
+    background: #2b2b2b;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    gap: 20px;
+
+    h3 {
+      font-family: Genos;
+      font-size: 34px;
+      font-weight: bold;
+
+      color: #fff;
+    }
+
+    .btns {
+      display: flex;
+      align-items: center;
+
+      gap: 20px;
+    }
+  }
+
+  @include mediaDevice(mobile) {
+
+    .heroSection {
+
+      .heroContent {
+        padding: 40px 0;
+
+        h1 {
+          font-size: 34px;
+        }
+      }
+    }
+
+    .mainContainer {
+      padding: 0;
+
+      gap: 60px;
+    }
+
+    .heroContainer,
+    .philosophyContainer {
+      flex-direction: column;
+
+      padding: 0;
+
+      gap: 30px;
+    }
+
+    .heroText,
+    .philosophyText {
+      width: 100%;
+      padding: 20px;
+
+      gap: 24px;
+
+      h2 {
+
+        text-align: center;
+      }
+
+      p {
+
+        text-align: left;
+      }
+
+      .quoteBox {
+        padding: 0 10px;
+
+        p {
+          font-size: 18px;
+          text-align: left;
+        }
+
+        span {
+          height: 70px;
+        }
+      }
+    }
+
+    .heroImage,
+    .philosophyImage {
+      width: 100%;
+
+      padding: 0;
+
+      img {
+        max-width: 100%;
+      }
+    }
+
+    .approachSection {
+      flex-direction: column;
+      padding: 20px;
+
+      gap: 40px;
+
+      .approachLeft {
+        width: 100%;
+
+        padding: 0;
+
+        h2 {
+          text-align: center;
+        }
+
+        p {
+          text-align: center;
+        }
+
+        .miniQuote {
+          width: 100%;
+
+          padding: 20px;
+		  
+          text-align: center;
+        }
+      }
+
+      .approachRight {
+        width: 100%;
+
+        padding: 0;
+
+        grid-template-columns: 1fr;
+
+        .approachCard {
+          padding: 20px;
+        }
+      }
+    }
+
+    .ctaSection {
+      flex-direction: column;
+
+      width: 100%;
+
+      padding: 0;
+
+      gap: 30px;
+
+      .ctaImage,
+      .ctaContent,
+      .ctaPoints {
+        width: 100%;
+
+        padding: 20px;
+      }
+
+      .ctaContent {
+
+        h2 {
+          text-align: center;
+        }
+
+        .navBtn.s {
+          width: 100%;
+          justify-content: center;
+        }
+      }
+
+      .ctaPoints {
+        grid-template-columns: 1fr;
+
+        .point {
+		  
+        }
+      }
+    }
+
+    .bottomBar {
+      width: 100%;
+
+      padding: 20px;
+
+      margin: 0;
+
+      border-radius: 0;
+
+      flex-direction: column;
+
+      gap: 30px;
+
+      h3 {
+        font-size: 24px;
+        text-align: center;
+      }
+
+      .btns {
+        width: 100%;
+
+        flex-direction: column;
+
+        padding: 0;
+
+        .navBtn.s {
+          width: 100%;
+          justify-content: center;
+        }
+      }
+    }
+  }
+}

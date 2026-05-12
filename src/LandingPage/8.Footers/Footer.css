@@ -3,7 +3,7 @@ html {
 }
 
 #FooterMC {
-  height: auto;
+  min-height: 100vh;
   width: 100%;
   position: relative;
   background: yellow;
@@ -19,6 +19,8 @@ html {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 20px;
+  justify-content: center;
+  align-items: center;
 }
 #FooterMC .topicEles div {
   height: auto;
@@ -36,9 +38,6 @@ html {
 }
 
 @media (max-width: 1024px) {
-  #FooterMC {
-    padding: 10px;
-  }
   #FooterMC .topicEles {
     grid-template-columns: 1fr 1fr;
   }

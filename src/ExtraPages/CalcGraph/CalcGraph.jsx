@@ -1,5 +1,6 @@
 import { useState, useCallback } from "react";
 import NavBar from "../../LandingPage/1.NavBar/NavBar.jsx"
+import Ql from "../../LandingPage/9.QuickLinks/Ql.jsx";
 import {
   AreaChart,
   Area,
@@ -1429,6 +1430,7 @@ export default function CalcGraph() {
         <ActiveComponent />
       </div>
     </div>
+        <Ql></Ql>
         </>
   );
 }

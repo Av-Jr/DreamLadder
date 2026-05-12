@@ -35,7 +35,7 @@ html {
 #StructuredProductsMC .headTit {
   width: 100%;
   height: 25vh;
-  background: url("/HP56.jpg") center/cover no-repeat;
+  background: url("/HP56.webp") center/cover no-repeat;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -214,10 +214,10 @@ html {
   #StructuredProductsMC .SPone,
   #StructuredProductsMC .SPthree {
     grid-template-columns: 1fr;
-    padding: 50px 20px;
+    padding: 30px 30px;
   }
   #StructuredProductsMC .SPtwo {
-    padding: 50px 20px;
+    padding: 30px 30px;
   }
   #StructuredProductsMC .SPtwo .cardsCont {
     grid-template-columns: 1fr;
@@ -226,7 +226,7 @@ html {
     width: 100%;
   }
   #StructuredProductsMC .SPfour {
-    padding: 20px;
+    padding: 30px 30px;
   }
   #StructuredProductsMC .SPfour span {
     max-width: 100%;

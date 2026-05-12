@@ -175,7 +175,6 @@ html {
   font-size: 2vh;
 }
 #About2MC .fifthPage .MemberCard img {
-  border: 1px solid #E53935;
   border-radius: 10px;
   object-fit: contain;
   width: 100%;
@@ -312,7 +311,6 @@ html {
   gap: 20px;
 }
 #About2MC .firstPage img {
-  border: 1px white solid;
   object-fit: contain;
   width: 30%;
   object-position: center;
@@ -352,6 +350,9 @@ html {
     width: 100%;
     padding: 0;
   }
+  #About2MC .seventhPage, #About2MC .sixthPage, #About2MC .fifthPage, #About2MC .fourthPage, #About2MC .thirdPage, #About2MC .secondPage, #About2MC .firstPage {
+    padding: 20px;
+  }
   #About2MC .seventhPage {
     padding: 50px 0;
   }
@@ -388,7 +389,6 @@ html {
     display: grid;
     grid-template-columns: 1fr;
     gap: 40px;
-    padding: 20px 15px;
     place-items: center;
   }
   #About2MC .fifthPage .teamIntro {
@@ -403,7 +403,6 @@ html {
     grid-column: auto;
   }
   #About2MC .fifthPage .teamIntro h1 {
-    text-decoration: underline 3px #E53935;
     text-underline-offset: 8px;
   }
   #About2MC .fifthPage .teamIntro span {
@@ -425,7 +424,6 @@ html {
     width: 100%;
     max-width: 300px;
     height: auto;
-    border: 1px solid #E53935;
     border-radius: 10px;
     object-fit: cover;
   }
@@ -452,7 +450,6 @@ html {
     line-height: 1.5;
   }
   #About2MC .fourthPage {
-    padding: 0;
     justify-content: flex-start;
     gap: 30px;
   }
@@ -470,7 +467,6 @@ html {
   #About2MC .thirdPage {
     align-items: center;
     gap: 20px;
-    padding: 7px;
     background-position: left;
   }
   #About2MC .thirdPage .textLeft {
@@ -493,7 +489,6 @@ html {
   #About2MC .secondPage {
     grid-template-columns: 1fr;
     grid-template-rows: auto auto;
-    padding: 10px;
   }
   #About2MC .secondPage .text {
     min-height: auto;
@@ -501,14 +496,13 @@ html {
     width: 100%;
     padding: 0;
     grid-row: 2;
-    text-align: center;
+    text-align: left;
   }
   #About2MC .secondPage img {
     height: auto;
     grid-row: 1;
   }
   #About2MC .firstPage {
-    padding: 20px;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto auto;

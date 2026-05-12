@@ -8,7 +8,7 @@
 
 .calc-root {
   width: 100%;
-  height: calc(100vh - 100px);
+  min-height: 100vh;
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -76,6 +76,7 @@
 }
 .calc-tabs__btn--active:hover {
   background: #1a1a1a;
+  color: white;
 }
 
 .calc-body {
@@ -100,7 +101,6 @@
 .input-panel,
 .right-panel {
   min-height: 0;
-  max-height: 700px;
 }
 
 .input-panel {
@@ -293,7 +293,6 @@
   border: 1px solid #e8e8e5;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08), 0 1px 3px rgba(0, 0, 0, 0.04);
   padding: 22px;
-  max-height: 700px;
 }
 .chart-card__header {
   display: flex;

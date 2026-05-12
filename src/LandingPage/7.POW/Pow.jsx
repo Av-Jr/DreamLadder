@@ -38,7 +38,7 @@ const Pow = () => {
                   </div>
 
                   <div className="image">
-                    <img loading="lazy" src={`/${item.image}.jpeg`} alt="" />
+                    <img loading="lazy" src={`/${item.image}.webp`} alt="" />
                   </div>
 
                 </div>

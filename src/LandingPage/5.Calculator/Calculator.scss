@@ -58,14 +58,39 @@
 }
 
 @include mediaDevice(mobile){
+
   #CalculatorMC{
-    padding : 10px;
+    min-height: 100dvh;
+    padding: 30px 16px;
+    gap: 30px;
+
     .CalcEleCon{
-      grid-template-columns : 1fr 1fr;
-      
-      .CalcEle:active {
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+      width: 100%;
+    }
+
+    .CalcEle{
+      width: 100%;
+      min-width: 0;
+      box-sizing: border-box;
+      gap: 18px;
+      border-radius: 22px;
+      padding: 20px 14px;
+
+      img{
+        width: 100%;
+        max-width: 80px;
+        height: auto;
+      }
+
+      h3{
+        font-size: 20px;
+        text-align: center;
+      }
+
+      &:active {
         transform: scale(0.97);
-        box-shadow: 0 8px 16px rgba(0,0,0,0.25);
       }
     }
   }

@@ -33,7 +33,7 @@ $shadow-lg: 0 8px 32px rgba(0,0,0,0.10);
 
 .calc-root{
   width: 100%;
-  height: calc(100vh - 100px);
+  min-height: 100vh;
 
   overflow: hidden;
 
@@ -131,6 +131,7 @@ $shadow-lg: 0 8px 32px rgba(0,0,0,0.10);
 
       &:hover{
         background: $dark-card;
+        color : white;
       }
     }
   }
@@ -164,7 +165,7 @@ $shadow-lg: 0 8px 32px rgba(0,0,0,0.10);
 .input-panel,
 .right-panel{
   min-height: 0;
-  max-height: 700px;
+  
 }
 
 .input-panel{
@@ -443,7 +444,6 @@ $shadow-lg: 0 8px 32px rgba(0,0,0,0.10);
   box-shadow: $shadow-md;
 
   padding: 22px;
-  max-height: 700px;
 
   &__header{
     display: flex;

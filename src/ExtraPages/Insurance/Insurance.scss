@@ -44,14 +44,14 @@ $darkBlue : #17233d;
     width : 100%;
     height : 25vh;
 
-    background : url("/HP56.jpg") center/cover no-repeat;
+    background : url("/HP56.webp") center/cover no-repeat;
 
     display : flex;
     justify-content : center;
     align-items : center;
 
     h1{
-      font-size : clamp(0px, 7vh, 70px);
+      font-size : clamp(0px, 4vh, 40px);
     }
   }
 
@@ -365,13 +365,12 @@ $darkBlue : #17233d;
     .INSone,
     .INSthree{
       grid-template-columns : 1fr;
-
-      padding : 50px 20px;
+      padding : 30px 30px;
     }
 
     .INStwo,
     .INSfour{
-      padding : 50px 20px;
+      padding : 30px 30px;
     }
 
     .INStwo{

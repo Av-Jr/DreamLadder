@@ -10,6 +10,8 @@ import Bonds from "./ExtraPages/Bonds/Bonds.jsx";
 import StructProd from "./ExtraPages/StructProd/StructProd.jsx";
 import LEP from "./ExtraPages/LEP/LEP.jsx";
 import Insurance from "./ExtraPages/Insurance/Insurance.jsx";
+import Connect from "./ExtraPages/ConnectUs/Connect.jsx";
+import Bp from "./ExtraPages/Bp/Bp.jsx";
 
 
 
@@ -29,6 +31,8 @@ const App = () => {
                   <Route path={"/structured-products"} element={<StructProd />}></Route>
                   <Route path={"/legacy-estate-planning"} element={<LEP />}></Route>
                   <Route path={"/Insurance"} element={<Insurance />}></Route>
+                  <Route path={"/connect"} element={<Connect></Connect>}></Route>
+                  <Route path={"/bespoke-portfolio"} element={<Bp />}></Route>
               </Routes>
           </BrowserRouter>
       </>

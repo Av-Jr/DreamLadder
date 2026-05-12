@@ -44,7 +44,7 @@ $darkBlue : #17233d;
     width : 100%;
     height : 25vh;
 
-    background : url("/HP56.jpg") center/cover no-repeat;
+    background : url("/HP56.webp") center/cover no-repeat;
 
     display : flex;
     justify-content : center;
@@ -283,11 +283,11 @@ $darkBlue : #17233d;
     .SPthree{
       grid-template-columns : 1fr;
 
-      padding : 50px 20px;
+      padding : 30px 30px;
     }
 
     .SPtwo{
-      padding : 50px 20px;
+      padding : 30px 30px;
 
       .cardsCont{
         grid-template-columns : 1fr;
@@ -305,7 +305,7 @@ $darkBlue : #17233d;
     }
 
     .SPfour{
-	  padding : 20px;
+	  padding : 30px 30px;
       span{
         max-width : 100%;
       }
