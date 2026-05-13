@@ -1,4 +1,5 @@
 import "./Insights.scss";
+import {img} from "../../utils/image.js"
 
 const Insights = () => {
     const ytUrls = ["https://www.youtube.com/embed/JGNfq2gg-vo?si=DlTmoRpLe17VLdym", "https://www.youtube.com/embed/nuj8ZoFbGEM?si=U9V1bGo1H6BimFYx", "https://www.youtube.com/embed/xEqbYSU3F_I?si=6vO8e0Y_IuFKXzJS", "https://www.youtube.com/embed/22glfK-1098?si=CVdnCESr-mZn5Znm"];
@@ -55,7 +56,7 @@ const Insights = () => {
                 {
                     blogData.map((item, index) => (
                         <div className={"ifEle blogs"} key={index}>
-                            <img loading="lazy" src={`https://dreamladder-assets.s3.ap-south-1.amazonaws.com/public/${item.image}.webp`} alt=""/>
+                            <img loading="lazy" src={img(item.image)} alt=""/>
                              <span>{item.date}</span>
                              <span>{item.type}</span>
                              <span>{item.title}</span>

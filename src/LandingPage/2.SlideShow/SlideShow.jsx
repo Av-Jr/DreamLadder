@@ -1,6 +1,7 @@
 import "./SlideShow.scss";
 import {useState, useEffect} from "react";
 import {useNavigate} from "react-router-dom";
+import {img} from "../../utils/image.js";
 
 const SlideShow = () => {
     const [activeSlide, setActiveSlide] = useState(0);
@@ -51,7 +52,7 @@ const SlideShow = () => {
             </div>
 
             <div className="heroImg">
-              <img src="https://dreamladder-assets.s3.ap-south-1.amazonaws.com/public/HP3.webp" alt="Wealth advisory hero visual" />
+              <img fetchPriority="high" src={img("HP3")} alt="Wealth advisory hero visual" />
             </div>
           </div>
         </div>
@@ -69,10 +70,10 @@ const SlideShow = () => {
 
               <div className="heroActions pas">
                 <button className="navBtn s ps" onClick={() => window.open("https://play.google.com/store/search?q=dreamladder+capital&c=apps&hl=en_IN", "_blank")}>
-                  <img src="https://dreamladder-assets.s3.ap-south-1.amazonaws.com/public/gplay.webp" alt=""/>
+                  <img src={img("gplay")} alt=""/>
                 </button>
                 <button className="navBtn s as" onClick={() => window.open("https://apps.apple.com/in/app/dreamladder-capital/id1527793478", "_blank")}>
-                  <img  src="https://dreamladder-assets.s3.ap-south-1.amazonaws.com/public/appStore.webp" alt=""/>
+                  <img  src={img("appStore")} alt=""/>
                 </button>
               </div>
 
@@ -98,7 +99,7 @@ const SlideShow = () => {
             </div>
 
             <div className="heroImg">
-              <img fetchPriority="high" src="https://dreamladder-assets.s3.ap-south-1.amazonaws.com/public/Slide2.webp" alt="Wealth advisory hero visual" />
+              <img fetchPriority="high" src={img("Slide2")} alt="Wealth advisory hero visual" />
             </div>
           </div>
         </div>
@@ -119,10 +120,11 @@ const SlideShow = () => {
             </div>
 
             <div className="heroImg">
-              <img fetchPriority="high" src="https://dreamladder-assets.s3.ap-south-1.amazonaws.com/public/HP3.webp" alt="Wealth advisory hero visual" />
+              <img fetchPriority="high" src={img("HP3")} alt="Wealth advisory hero visual" />
             </div>
           </div>
         </div>
+
 
       </div>
     </div>

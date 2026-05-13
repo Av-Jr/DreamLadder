@@ -11,6 +11,8 @@ import {
   MapPin,
 } from "lucide-react";
 
+import { img } from "../../utils/image.js";
+
 
 const Connect = () => {
 
@@ -72,7 +74,7 @@ ${formData.message}
             <div className="left">
 
               <img
-                src="https://dreamladder-assets.s3.ap-south-1.amazonaws.com/public/Contactpgone.webp"
+                src={img("Contactpgone")}
                 alt="Contact"
                 loading="lazy"
               />

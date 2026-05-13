@@ -1,4 +1,5 @@
 import "./PMSAIF.scss";
+import {img} from "../../utils/image.js";
 
 import {
   UserRoundCog,
@@ -243,7 +244,7 @@ const WhyAIFData = {
       <div className="PMSone">
         <img loading="lazy"
           className={"heroImg"}
-          src={`https://dreamladder-assets.s3.ap-south-1.amazonaws.com/public/${PMSHeroData.image}.webp`}
+          src={`${img(PMSHeroData.image)}`}
           alt=""
         />
 
@@ -266,7 +267,7 @@ const WhyAIFData = {
 
           <span>{PMSFeatureData.description}</span>
 
-          <img loading="lazy" src={`https://dreamladder-assets.s3.ap-south-1.amazonaws.com/public/${PMSFeatureData.image}.webp`} alt="" />
+          <img loading="lazy" src={`${img(PMSFeatureData.image)}`} alt="" />
         </div>
 
         <div className="right">
@@ -309,7 +310,7 @@ const WhyAIFData = {
             {PMSRegulationData.quote}
           </span>
 
-          <img loading="lazy" src={`https://dreamladder-assets.s3.ap-south-1.amazonaws.com/public/${PMSRegulationData.image}.webp`} alt="" />
+          <img loading="lazy" src={`${img(PMSRegulationData.image)}`} alt="" />
         </div>
       </div>
 
@@ -326,7 +327,7 @@ const WhyAIFData = {
       <div className="PMSfive">
 
         <div className="heroImg">
-          <img loading="lazy" src={`https://dreamladder-assets.s3.ap-south-1.amazonaws.com/public/${AIFIntroData.image}.webp`} alt="" />
+          <img loading="lazy" src={`${img(AIFIntroData.image)}`} alt="" />
         </div>
 
         <div className="heroText">
@@ -389,7 +390,7 @@ const WhyAIFData = {
             SEBI classifies Alternative Investment Funds into three distinct categories based on investment objectives and asset classes.
           </span>
 
-          <img loading="lazy" src={`https://dreamladder-assets.s3.ap-south-1.amazonaws.com/public/${AIFTypesData.image}.webp`} alt="" />
+          <img loading="lazy" src={`${img(AIFTypesData.image)}`} alt="" />
         </div>
 
       </div>
@@ -403,7 +404,7 @@ const WhyAIFData = {
             {AIFRegulationData.description}
           </span>
 
-          <img loading="lazy" src={`https://dreamladder-assets.s3.ap-south-1.amazonaws.com/public/${AIFRegulationData.image}.webp`} alt="" />
+          <img loading="lazy" src={`${img(AIFRegulationData.image)}`} alt="" />
         </div>
 
         <div className="right">

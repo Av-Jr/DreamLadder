@@ -3,6 +3,7 @@ import {useNavigate} from "react-router-dom";
 import NavBar from "../../LandingPage/1.NavBar/NavBar.jsx";
 import Ql from "../../LandingPage/9.QuickLinks/Ql.jsx";
 import "./wws.scss";
+import {img} from "../../utils/image.js";
 
 const Wws = () => {
     const nav = useNavigate();
@@ -49,7 +50,7 @@ const wwsData = [
             <div className="WwsCardsCon">
                 {wwsData.map((item, index) => (
                     <div className={`WwsCards ${index % 2 === 0 ? "rev" : ""}`} key={index}>
-                        <img loading="lazy" src={`https://dreamladder-assets.s3.ap-south-1.amazonaws.com/public/${item.image}.webp`} alt=""/>
+                        <img loading="lazy" src={`${img(item.image)}`} alt=""/>
                         <div className={"heroText"}>
                             <h1>{item.title}</h1>
                             <span>{item.description}</span>

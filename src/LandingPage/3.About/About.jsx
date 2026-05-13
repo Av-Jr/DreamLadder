@@ -1,5 +1,6 @@
 import "./About.scss";
 import { useState, useEffect, useRef } from "react";
+import {img} from "../../utils/image.js";
 import {useNavigate} from "react-router-dom";
 
 
@@ -12,11 +13,11 @@ const About = () => {
       <div className="GridCon">
 
         <div className="Con ACone">
-          <img loading="lazy" src="https://dreamladder-assets.s3.ap-south-1.amazonaws.com/public/InvestInsight.webp" loading="lazy" alt=""/>
+          <img src={img("InvestInsight")} loading="lazy" alt=""/>
 
           <h3>Your legacy deserves a solid foundation. DreamLadder Capital helps you build lasting wealth through smart,
             diversified strategies.</h3>
-          <img loading="lazy" src="https://dreamladder-assets.s3.ap-south-1.amazonaws.com/public/tele.webp" loading="lazy" alt=""/>
+          <img loading="lazy" src={img("tele")} alt=""/>
         </div>
 
         <div className="Con ACtwo">
@@ -46,7 +47,7 @@ const About = () => {
           </div>
         </div>
 
-        <div className="Con ACthree"><img loading="lazy" src="https://dreamladder-assets.s3.ap-south-1.amazonaws.com/public/profileDashboard.webp" loading="lazy" alt=""/></div>
+        <div className="Con ACthree"><img loading="lazy" src={img("profileDashboard")} alt=""/></div>
 
         <div className="Con ACfour">
           <h2>All Your Family Investments, One Simple App</h2>
@@ -64,7 +65,7 @@ const About = () => {
         </div>
 
         <div className="Con ACsix">
-          <img loading="lazy" src="https://dreamladder-assets.s3.ap-south-1.amazonaws.com/public/sipAmount.webp" loading="lazy" alt=""/>
+          <img loading="lazy" src={img("sipAmount")} alt=""/>
         </div>
 
       </div>

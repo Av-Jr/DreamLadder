@@ -8,6 +8,7 @@ import NavBar from "../../LandingPage/1.NavBar/NavBar.jsx";
 import Ql from "../../LandingPage/9.QuickLinks/Ql.jsx";
 
 import { CheckCircle2 } from "lucide-react";
+import { img } from "../../utils/image.js";
 
 const Bp = () => {
 
@@ -86,7 +87,7 @@ const Bp = () => {
             <div className="heroImage">
 
               <img
-                src="https://dreamladder-assets.s3.ap-south-1.amazonaws.com/public/bPpgone.webp"
+                src={img("bPpgone")}
                 alt="Bespoke Portfolio"
               />
 
@@ -99,7 +100,7 @@ const Bp = () => {
             <div className="philosophyImage">
 
               <img
-                src="https://dreamladder-assets.s3.ap-south-1.amazonaws.com/public/bPpgtwo.webp"
+                src={img("bPpgtwo")}
                 alt="Core Philosophy"
               />
 
@@ -179,14 +180,14 @@ const Bp = () => {
           <div
             className="ctaSection"
             style={{
-              background: `url("https://dreamladder-assets.s3.ap-south-1.amazonaws.com/public/HP4.webp") center/cover no-repeat`,
+              background: `url(${img("HP4")}) center/cover no-repeat`,
             }}
           >
 
             <div className="ctaImage">
 
               <img
-                src="https://dreamladder-assets.s3.ap-south-1.amazonaws.com/public/bPpgthree.webp"
+                src={img("bPpgthree")}
                 alt="AI Assistant"
               />
 

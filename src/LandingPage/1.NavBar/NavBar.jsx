@@ -1,6 +1,7 @@
 import "./NavBar.scss"
 import { useState, useEffect } from 'react';
 import {useNavigate} from "react-router-dom";
+import {img} from "../../utils/image.js"
 
 const NavBar = () => {
 
@@ -106,7 +107,7 @@ const NavBar = () => {
                 >
                     <img
                         fetchPriority={"high"}
-                        src="https://dreamladder-assets.s3.ap-south-1.amazonaws.com/public/logo.webp"
+                        src={img("logo")}
                         alt=""
                         className="logo"
                     />

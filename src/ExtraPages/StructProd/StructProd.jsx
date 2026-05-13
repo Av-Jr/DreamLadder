@@ -1,4 +1,5 @@
 import "./StructProd.scss";
+import {img} from "../../utils/image.js";
 
 import NavBar from "../../LandingPage/1.NavBar/NavBar.jsx";
 import Ql from "../../LandingPage/9.QuickLinks/Ql.jsx";
@@ -134,7 +135,7 @@ const StructProd = () => {
 
         <div className={"heroImg"}>
           <img loading="lazy"
-            src={`https://dreamladder-assets.s3.ap-south-1.amazonaws.com/public/${StructuredProductsHeroData.image}.webp`}
+            src={`${img(StructuredProductsHeroData.image)}`}
             alt=""
           />
         </div>
@@ -189,8 +190,8 @@ const StructProd = () => {
           </span>
 
           <img loading="lazy"
-            src={`https://dreamladder-assets.s3.ap-south-1.amazonaws.com/public/${StructuredProductsRegulationData.image}.webp`}
             alt=""
+            src={`${img(StructuredProductsRegulationData.image)}`}
           />
 
         </div>

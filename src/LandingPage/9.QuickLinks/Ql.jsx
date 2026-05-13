@@ -1,5 +1,6 @@
 import "./Ql.scss";
 import React from "react";
+import {img} from "../../utils/image.js"
 
 const socialLinks = [
   {
@@ -214,7 +215,7 @@ export default function Ql() {
           <a href="/">
             <img
               loading="lazy"
-              src="https://dreamladder-assets.s3.ap-south-1.amazonaws.com/public/logo.webp"
+              src={img("logo")}
               alt="DreamLadder Capital Logo"
               className="logo"
             />

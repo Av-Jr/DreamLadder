@@ -2,6 +2,7 @@ import "./LEP.scss";
 
 import NavBar from "../../LandingPage/1.NavBar/NavBar.jsx";
 import Ql from "../../LandingPage/9.QuickLinks/Ql.jsx";
+import {img} from "../../utils/image.js";
 
 const LEP = () => {
 
@@ -146,7 +147,7 @@ const LEP = () => {
         <div className={"right"}>
 
           <img loading="lazy"
-            src={`https://dreamladder-assets.s3.ap-south-1.amazonaws.com/public/${LegacyEstateHeroData.image}.webp`}
+            src={`${img(LegacyEstateHeroData.image)}`}
             alt=""
           />
 
@@ -167,7 +168,7 @@ const LEP = () => {
               <div className={"imgCont"}>
 
                 <img loading="lazy"
-                  src={`https://dreamladder-assets.s3.ap-south-1.amazonaws.com/public/${item.image}.webp`}
+                  src={`${img(item.image)}`}
                   alt=""
                 />
 

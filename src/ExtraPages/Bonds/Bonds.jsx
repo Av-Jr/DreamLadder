@@ -2,6 +2,7 @@ import "./Bonds.scss";
 
 import NavBar from "../../LandingPage/1.NavBar/NavBar.jsx";
 import Ql from "../../LandingPage/9.QuickLinks/Ql.jsx";
+import { img } from "../../utils/image.js";
 
 const Bonds = () => {
 
@@ -207,7 +208,7 @@ return (
         </div>
 
         <div className="heroImg">
-            <img loading="lazy" src={`https://dreamladder-assets.s3.ap-south-1.amazonaws.com/public/${BondsHeroData.image}.webp`} alt=""/>
+            <img loading="lazy" src={img(BondsHeroData.image)} alt=""/>
         </div>
 
     </div>
@@ -238,7 +239,7 @@ return (
                 {BondsRegulationData.quote}
             </span>
 
-            <img loading="lazy" src={`https://dreamladder-assets.s3.ap-south-1.amazonaws.com/public/${BondsRegulationData.image}.webp`} alt=""/>
+            <img loading="lazy" src={img(BondsRegulationData.image)} alt=""/>
 
         </div>
 
@@ -255,7 +256,7 @@ return (
     <div className="Bondsfour">
 
         <div className="heroImg">
-            <img loading="lazy" src={`https://dreamladder-assets.s3.ap-south-1.amazonaws.com/public/${FixedIncomeIntroData.image}.webp`} alt=""/>
+            <img loading="lazy" src={img(FixedIncomeIntroData.image)} alt=""/>
         </div>
 
         <div className="heroText">
@@ -306,7 +307,7 @@ return (
             </div>
 
             <div className="centerImg">
-                <img loading="lazy" src={`https://dreamladder-assets.s3.ap-south-1.amazonaws.com/public/${FixedIncomeTypesData.image}.webp`} alt=""/>
+                <img loading="lazy" src={img(FixedIncomeTypesData.image)} alt=""/>
             </div>
 
             <div className="right">
@@ -336,7 +337,7 @@ return (
 
         <div className="left">
 
-            <img loading="lazy" src={`https://dreamladder-assets.s3.ap-south-1.amazonaws.com/public/${WhyFixedIncomeData.image}.webp`} alt=""/>
+            <img loading="lazy" src={img(WhyFixedIncomeData.image)} alt=""/>
 
             <span className={"quoteEle"}>
                 {WhyFixedIncomeData.quote}

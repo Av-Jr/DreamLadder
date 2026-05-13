@@ -1,5 +1,6 @@
 import "./ReturnSlider.scss";
 import {useState, useEffect} from 'react';
+import {img} from "../../utils/image.js"
 
 
 const ReturnSlider = () => {
@@ -57,7 +58,7 @@ const ReturnSlider = () => {
                       <h2>{`₹${item.amt} CR`}</h2>
                       <div className="imgPart">
                         <img loading="lazy"
-                          src={`https://dreamladder-assets.s3.ap-south-1.amazonaws.com/public/imgPart${item.img}.webp`}
+                          src={img(`imgPart${item.img}`)}
                           alt={item.tag}
                         />
                       </div>

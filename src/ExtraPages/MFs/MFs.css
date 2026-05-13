@@ -8,7 +8,10 @@ html {
 }
 #MFsMC .endingStatement {
   min-height: 30vh;
-  background: url("https://dreamladder-assets.s3.ap-south-1.amazonaws.com/public/flexBack.webp") center/cover no-repeat;
+  background-image: url("https://dreamladder-assets.s3.ap-south-1.amazonaws.com/public/flexBack.webp");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -108,7 +111,10 @@ html {
 #MFsMC .MFtwo {
   min-height: 100vh;
   width: 100%;
-  background: url("https://dreamladder-assets.s3.ap-south-1.amazonaws.com/public/flexBack.webp") center/cover no-repeat;
+  background-image: url("https://dreamladder-assets.s3.ap-south-1.amazonaws.com/public/flexBack.webp");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -169,7 +175,10 @@ html {
   text-align: center;
   display: grid;
   place-items: center;
-  background: url("https://dreamladder-assets.s3.ap-south-1.amazonaws.com/public/HP56.webp") center/cover no-repeat;
+  background-image: url("https://dreamladder-assets.s3.ap-south-1.amazonaws.com/public/HP56.webp");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 #MFsMC .headTit h1 {
   font-size: clamp(0px, 5vh, 40px);

@@ -42,7 +42,10 @@
   }
   
   .SlideOne{
-    background :url("https://dreamladder-assets.s3.ap-south-1.amazonaws.com/public/HP4.webp") center / cover no-repeat;
+    background-image: img("HP4");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
     
     img{
       width : 100%;
@@ -53,7 +56,10 @@
   }
   
   .SlideTwo{
-    background : url("https://dreamladder-assets.s3.ap-south-1.amazonaws.com/public/HP56.webp") center / cover no-repeat;
+    background-image: img("HP56");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
     
     img{
       width : 70%;

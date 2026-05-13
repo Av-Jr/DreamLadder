@@ -2,6 +2,7 @@ import NavBar from "../../LandingPage/1.NavBar/NavBar.jsx";
 import "./About.scss"
 import { Shield, Search, Briefcase, Handshake, TrendingUp, LayoutGrid, ChartColumn, MonitorSmartphone, Zap, Lock, Smartphone} from "lucide-react";
 import Ql from "../../LandingPage/9.QuickLinks/Ql.jsx";
+import { img } from "../../utils/image.js";
 
 import React from 'react'
 
@@ -41,7 +42,7 @@ export default function About() {
             icon: Smartphone
           }
         ]
-    
+
     const whyChooseData = [
       {
         icon: Search,
@@ -98,7 +99,7 @@ export default function About() {
         name: "Saday Sinha",
         description:
           "Saday Sinha is the Founder and CEO of DreamLadder Capital, a wealth management firm dedicated to helping clients achieve financial independence through tailored investment solutions. His approach is rooted in transparency and goal-oriented growth.",
-        image: "https://dreamladder-assets.s3.ap-south-1.amazonaws.com/public/AboutFifthPgSaday.webp"
+        image: img("AboutFifthPgSaday")
       },
 
       {
@@ -106,7 +107,7 @@ export default function About() {
         name: "Priyanka Mishra",
         description:
           "Priyanka Mishra serves as a Director at DreamLadder Capital, where she leads Financial Products, Operations, and New Initiatives divisions. She plays a pivotal role in driving innovation and ensuring operational excellence.",
-        image: "https://dreamladder-assets.s3.ap-south-1.amazonaws.com/public/AboutFifthPgPriyanka.webp"
+        image: img("AboutFifthPgPriyanka")
       },
     ];
 
@@ -119,7 +120,7 @@ export default function About() {
                     <span className={'toEdit'}> Clarity, Courage and Consistency."</span>
                     <span className={"Intro"}>Mr. Saday Sinha<br/><span className={'title'}>CEO & Founder</span></span>
                  </span>
-                <img loading="lazy" src="https://dreamladder-assets.s3.ap-south-1.amazonaws.com/public/AboutSaday.webp" alt=""/>
+                <img loading="lazy" src={img("AboutSaday")} alt=""/>
             </div>
 
             <div className="secondPage">
@@ -135,7 +136,7 @@ export default function About() {
                         <span><span className={"changeC"}>500+</span><br/>FAMILIES SERVED</span>
                     </div>
                 </div>
-                <img loading="lazy" src="https://dreamladder-assets.s3.ap-south-1.amazonaws.com/public/AboutTwo.webp" alt=""/>
+                <img loading="lazy" src={img("AboutTwo")} alt=""/>
             </div>
 
             <div className="thirdPage">
@@ -186,7 +187,7 @@ export default function About() {
             <div className="sixthPage">
                 <div className="heroImg">
                     <h1>What helps us do well</h1>
-                    <img loading="lazy" src="https://dreamladder-assets.s3.ap-south-1.amazonaws.com/public/sixthPG.webp" alt=""/>
+                    <img loading="lazy" src={img("sixthPG")} alt=""/>
                 </div>
                 <div className="heroText">
                     {
