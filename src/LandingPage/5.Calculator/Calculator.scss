@@ -11,7 +11,10 @@
   justify-content : stretch;
   padding : 100px;
   gap : 50px;
-  background: url("https://dreamladder-assets.s3.ap-south-1.amazonaws.com/public/flexBack.webp") center / cover no-repeat;
+      background-image: img("flexBack");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
   
   h2{
     font-family : SyneMono;
