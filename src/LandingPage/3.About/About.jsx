@@ -60,7 +60,7 @@ const About = () => {
           <h3>Setup SIP in Mutual Funds and diversify your portfolio to grow your net worth</h3>
           <div className="IL1">
             <button className="navBtn s" onClick={() => window.open("https://dreamladdercapital.my-portfolio.co.in/app/#/login", "_blank")}>Setup SIP</button>
-            <button className="navBtn s" onClick={() => nav("/calc")}>SIP Calculator</button>
+            <button className="navBtn s" onClick={() => window.location.href = "/calc"}>SIP Calculator</button>
           </div>
         </div>
 

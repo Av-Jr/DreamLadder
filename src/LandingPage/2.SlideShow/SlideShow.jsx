@@ -114,8 +114,8 @@ const SlideShow = () => {
               </h1>
 
               <div className="heroActions">
-                <button className="navBtn s">Learning</button>
-                <button className="navBtn s">Book my Appointment</button>
+                <button className="navBtn s" onClick={() => {window.location.href = "/blogs"}}>Learning</button>
+                <button className="navBtn s" onClick={() => {window.location.href = "https://calendly.com/dreamladdercapital/portfolio-discussion-meeting"}}>Book my Appointment</button>
               </div>
             </div>
 

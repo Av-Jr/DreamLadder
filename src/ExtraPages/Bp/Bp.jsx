@@ -257,14 +257,14 @@ const Bp = () => {
 
               <button
                 className="navBtn s"
-                onClick={() => navigate("/blog")}
+                onClick={() => window.location.href = "/blogs"}
               >
                 Read More
               </button>
 
               <button
                 className="navBtn s"
-                onClick={() => navigate("/connect")}
+                onClick={() => window.location.href = "/connect"}
               >
                 Contact Us
               </button>
