@@ -1,5 +1,6 @@
 import "./Calculator.scss";
 import {useNavigate} from "react-router-dom";
+import {img} from "../../utils/image.js";
 
 
 
@@ -21,8 +22,8 @@ const Calculator = () => {
             <h2>Calculators</h2>
             <div className="CalcEleCon">
                 {retData.map((item, index) => (
-                    <div className="CalcEle" onClick={() => {nt("/calc")}}>
-                        <img loading="lazy" src={`https://dreamladder-assets.s3.ap-south-1.amazonaws.com/public/Calc${item.i}.webp`} alt={item.i}/>
+                    <div key={index} className="CalcEle" onClick={() => {window.location.href = "/calc"}}>
+                        <img loading="lazy" src={img(`Calc${item.i}`)} alt={item.i} />
                         <h3>{item.t}</h3>
                     </div>
                 ))}

@@ -1,54 +1,83 @@
-* {
-  box-sizing: border-box;
-}
+@use "../../mixins" as *;
 
 #PowMC {
   min-height: 100vh;
   width: 100%;
-  display : grid;
-  padding : 50px;
-  place-items : center;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 50px;
+
   background: #f8f8f8;
+
+  * {
+    box-sizing: border-box;
+  }
 
   .containingCon {
     width: 100%;
-    gap : 20px;
+
     display: flex;
     flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+    gap: 20px;
+
     h1 {
       text-align: center;
-      font-size: clamp(0px, 2.5vh, 30px);
+
+      font-size: clamp(32px, 4vw, 60px);
       font-weight: 500;
+
+      margin: 0;
     }
 
     .contentRow {
       width: 100%;
-      height : 100%;
+      height: 100%;
+
       display: flex;
       align-items: flex-start;
+
       gap: 20px;
 
       .sideImg {
+        width: 35%;
+
         object-fit: contain;
+
+        display: block;
       }
 
       .slider {
+        width: 100%;
+        height: auto;
 
         .track {
+          width: 100%;
+          height: 100%;
+
           display: flex;
           flex-direction: column;
+
           gap: 24px;
-          height : 100%;
-          width : 100%;
         }
 
         .card {
           width: 100%;
-          padding : 10px;
-          font-family : Genos;
+
+          padding: 16px;
+
+          font-family: Genos;
+
           display: flex;
           align-items: center;
-          gap: 10px;
+          justify-content: space-between;
+
+          gap: 16px;
 
           background: white;
 
@@ -63,35 +92,46 @@
 
             display: flex;
             flex-direction: column;
+
             gap: 10px;
 
             span {
-              font-size : clamp(0px, 2vh, 22px);
+              font-size: clamp(16px, 1.2vw, 22px);
+
               line-height: 1.8;
+
               color: #444;
             }
 
             h2 {
-              font-size: clamp(28px, 2vw, 42px);
-              font-weight: 700;
               margin: 0;
+
+              font-size: clamp(28px, 2vw, 42px);
+
+              font-weight: 700;
             }
 
             h3 {
-              font-size: clamp(18px, 1.1vw, 24px);
-              color: purple;
               margin: 0;
+
+              font-size: clamp(18px, 1.1vw, 24px);
+
+              color: purple;
+
               font-weight: 500;
             }
           }
 
           .image {
             width: 220px;
+
             flex-shrink: 0;
 
             img {
               width: 100%;
+
               aspect-ratio: 1;
+
               object-fit: cover;
 
               display: block;
@@ -107,15 +147,28 @@
   }
 }
 
-@media (max-width: 900px) {
+
+@include mediaDevice(mobile) {
   #PowMC {
-    padding: 40px 16px;
+    min-height: auto;
+
+    padding: 32px 16px;
+
+    align-items: flex-start;
 
     .containingCon {
-      gap: 32px;
+      gap: 20px;
+
+      h1 {
+        font-size: clamp(28px, 8vw, 42px);
+      }
 
       .contentRow {
         flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 16px;
 
         .sideImg {
           display: none;
@@ -124,13 +177,47 @@
         .slider {
           width: 100%;
 
+          .track {
+            width: 100%;
+
+            gap: 20px;
+          }
+
           .card {
+            width: 100%;
+
             flex-direction: column-reverse;
-            text-align: center;
-            padding: 24px;
+
+            align-items: flex-start;
+
+            padding: 18px;
+
+            gap: 18px;
+
+            .text {
+              width: 100%;
+
+              span {
+                font-size: 18px;
+
+                line-height: 1.7;
+              }
+
+              h2 {
+                font-size: 42px;
+              }
+
+              h3 {
+                font-size: 22px;
+              }
+            }
 
             .image {
-              width: 180px;
+              width: 120px;
+
+              img {
+                border-radius: 16px;
+              }
             }
           }
         }

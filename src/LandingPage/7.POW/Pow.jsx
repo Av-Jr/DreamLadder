@@ -1,5 +1,5 @@
 import "./Pow.scss"
-import {img} from "../../utils/image.js"
+import { img } from "../../utils/image.js"
 
 const Pow = () => {
   const userInfo = [
@@ -25,29 +25,37 @@ const Pow = () => {
         <h1>What Clients say about us</h1>
 
         <div className="contentRow">
-          <img loading="lazy" className="sideImg" src={img("POWwomen")} alt="" />
+          <img
+            loading="lazy"
+            className="sideImg"
+            src={img("POWwomen")}
+            alt=""
+          />
 
           <div className="slider">
             <div className="track">
               {userInfo.map((item, index) => (
                 <div key={index} className="card">
-
                   <div className="text">
                     <span>"{item.statement}"</span>
+
                     <h2>{item.name}</h2>
+
                     <h3>{item.position}</h3>
                   </div>
 
                   <div className="image">
-                    <img loading="lazy" src={`${img(item.image)}`} alt="" />
+                    <img
+                      loading="lazy"
+                      src={img(item.image)}
+                      alt={item.name}
+                    />
                   </div>
-
                 </div>
               ))}
             </div>
           </div>
         </div>
-
       </div>
     </div>
   )
