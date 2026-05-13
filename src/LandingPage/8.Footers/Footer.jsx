@@ -30,7 +30,14 @@ const titles = [
             <h3>Select a topic below to find quick answers.</h3>
             <div className="topicEles">
                 {titles.map((item, index) => (
-                    <div key={index} onClick = {() => navigate("/faqs")}>{item}</div>
+                <div
+                  key={index}
+                  onClick={() => {
+                    window.location.href = "/faqs";
+                  }}
+                >
+                  {item}
+                </div>
                 ))}
             </div>
         </div>
