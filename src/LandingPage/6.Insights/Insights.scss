@@ -28,7 +28,7 @@ h3{
 
 .iframeElesCon{
   display : grid;
-  grid-template-columns : 1fr 1fr 1fr 1fr;
+  grid-template-columns : repeat(4, 1fr);
   grid-template-rows : auto;
   gap : 20px;
   width : 100%;
@@ -37,6 +37,7 @@ h3{
   h3{
     grid-column : span 4;
     text-decoration : underline;
+    font-size : clamp(0px, 2.5vh, 30px);
   }
 }
 
@@ -86,11 +87,12 @@ h3{
     padding : 20px;
     
     .iframeElesCon{
-      grid-template-columns : 1fr 1fr;
-      grid-template-rows : 1fr;
+      grid-template-columns : 1fr;
+      grid-template-rows : auto;
+      gap : 20px;
       
       h3{
-        grid-column : span 2;
+        grid-column : span 1;
       }
     }
     

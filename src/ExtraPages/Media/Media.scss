@@ -1,0 +1,22 @@
+#MediaMC{
+  min-height : 100vh;
+  width : 100%;
+  
+  h1{
+	background : url("https://dreamladder-assets.s3.ap-south-1.amazonaws.com/public/HP56.webp") center/cover no-repeat;
+	height : 20vh;
+	display : grid;
+	place-items : center;
+	font-family : Genos;
+	font-size : clamp(0px, 5vh, 60px);
+	margin-bottom : 50px;
+  }
+  span{
+	display: flex;
+	font-size : clamp(0px, 7vh, 80px);
+	font-family : SyneMono;
+	text-align : center;
+	align-items : center;
+	justify-content : center;
+  }
+}

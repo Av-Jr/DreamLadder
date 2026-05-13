@@ -46,7 +46,7 @@ const Bp = () => {
           <div className="overlay"></div>
 
           <div className="heroContent">
-            <h1>Bespoke Portfolios</h1>
+            <h1>Bespoke Portfolio</h1>
           </div>
 
         </div>
@@ -86,7 +86,7 @@ const Bp = () => {
             <div className="heroImage">
 
               <img
-                src="/bPpgone.webp"
+                src="https://dreamladder-assets.s3.ap-south-1.amazonaws.com/public/bPpgone.webp"
                 alt="Bespoke Portfolio"
               />
 
@@ -99,7 +99,7 @@ const Bp = () => {
             <div className="philosophyImage">
 
               <img
-                src="/bPpgtwo.webp"
+                src="https://dreamladder-assets.s3.ap-south-1.amazonaws.com/public/bPpgtwo.webp"
                 alt="Core Philosophy"
               />
 
@@ -160,9 +160,11 @@ const Bp = () => {
 
                   <div className="approachCard" key={index}>
 
+                    <span className={"matchCol"}>
                     <div className="line"></div>
 
                     <h3>{item.title}</h3>
+                    </span>
 
                     <p>{item.desc}</p>
 
@@ -177,14 +179,14 @@ const Bp = () => {
           <div
             className="ctaSection"
             style={{
-              background: `url("/HP4.webp") center/cover no-repeat`,
+              background: `url("https://dreamladder-assets.s3.ap-south-1.amazonaws.com/public/HP4.webp") center/cover no-repeat`,
             }}
           >
 
             <div className="ctaImage">
 
               <img
-                src="/bPpgthree.webp"
+                src="https://dreamladder-assets.s3.ap-south-1.amazonaws.com/public/bPpgthree.webp"
                 alt="AI Assistant"
               />
 

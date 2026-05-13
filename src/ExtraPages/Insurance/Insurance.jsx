@@ -169,7 +169,7 @@ const Insurance = () => {
 
         <div className={"heroImg"}>
           <img loading="lazy"
-            src={`/${InsuranceHeroData.image}.webp`}
+            src={`https://dreamladder-assets.s3.ap-south-1.amazonaws.com/public/${InsuranceHeroData.image}.webp`}
             alt=""
           />
         </div>
@@ -224,7 +224,7 @@ const Insurance = () => {
           </span>
 
           <img loading="lazy"
-            src={`/${InsuranceRegulationData.image}.webp`}
+            src={`https://dreamladder-assets.s3.ap-south-1.amazonaws.com/public/${InsuranceRegulationData.image}.webp`}
             alt=""
           />
 
@@ -253,7 +253,7 @@ const Insurance = () => {
         <h1>{WhyInsuranceData.title}</h1>
 
         <img loading="lazy"
-          src={`/${WhyInsuranceData.image}.webp`}
+          src={`https://dreamladder-assets.s3.ap-south-1.amazonaws.com/public/${WhyInsuranceData.image}.webp`}
           alt=""
         />
 

@@ -12,7 +12,23 @@ import LEP from "./ExtraPages/LEP/LEP.jsx";
 import Insurance from "./ExtraPages/Insurance/Insurance.jsx";
 import Connect from "./ExtraPages/ConnectUs/Connect.jsx";
 import Bp from "./ExtraPages/Bp/Bp.jsx";
+import Blogs from "./ExtraPages/Blogs/Blogs.jsx";
+import Media from "./ExtraPages/Media/Media.jsx";
+import Disclosure from "./ExtraPages/Disclosure/Disclosure.jsx";
+import Disclaimer from "./ExtraPages/Disclaimer/Disclaimer.jsx";
+import PrivacyPolicy from "./ExtraPages/PrivacyPolicy/PrivacyPolicy.jsx";
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
+function ScrollToTop() {
 
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
+}
 
 
 const App = () => {
@@ -33,6 +49,11 @@ const App = () => {
                   <Route path={"/Insurance"} element={<Insurance />}></Route>
                   <Route path={"/connect"} element={<Connect></Connect>}></Route>
                   <Route path={"/bespoke-portfolio"} element={<Bp />}></Route>
+                  <Route path={'/blogs'} element={<Blogs />}></Route>
+                  <Route path={'/media'} element={<Media />}></Route>
+                  <Route path={'/disclosure'} element={<Disclosure />}></Route>
+                  <Route path={'/disclaimer'} element={<Disclaimer />}></Route>
+                  <Route path={'/privacy-policy'} element={<PrivacyPolicy />}></Route>
               </Routes>
           </BrowserRouter>
       </>

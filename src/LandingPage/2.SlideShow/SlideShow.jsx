@@ -1,5 +1,6 @@
 import "./SlideShow.scss";
 import {useState, useEffect} from "react";
+import {useNavigate} from "react-router-dom";
 
 const SlideShow = () => {
     const [activeSlide, setActiveSlide] = useState(0);
@@ -26,6 +27,8 @@ const SlideShow = () => {
       }
     }, [activeSlide]);
 
+    const nav = useNavigate();
+
   return (
     <div id="SlideShowMC">
       <div className="SlideTrack"   style={{
@@ -42,13 +45,13 @@ const SlideShow = () => {
               </h1>
 
               <div className="heroActions">
-                <button className="navBtn s">Learning</button>
+                <button className="navBtn s" onClick={() => {nav("/blogs")}}>Learning</button>
                 <button className="navBtn s" onClick={() => {window.open("https://calendly.com/dreamladdercapital/portfolio-discussion-meeting", "_blank")}}>Book my Appointment</button>
               </div>
             </div>
 
             <div className="heroImg">
-              <img src="/HP3.webp" alt="Wealth advisory hero visual" />
+              <img src="https://dreamladder-assets.s3.ap-south-1.amazonaws.com/public/HP3.webp" alt="Wealth advisory hero visual" />
             </div>
           </div>
         </div>
@@ -66,10 +69,10 @@ const SlideShow = () => {
 
               <div className="heroActions pas">
                 <button className="navBtn s ps" onClick={() => window.open("https://play.google.com/store/search?q=dreamladder+capital&c=apps&hl=en_IN", "_blank")}>
-                  <img src="/gplay.webp" alt=""/>
+                  <img src="https://dreamladder-assets.s3.ap-south-1.amazonaws.com/public/gplay.webp" alt=""/>
                 </button>
                 <button className="navBtn s as" onClick={() => window.open("https://apps.apple.com/in/app/dreamladder-capital/id1527793478", "_blank")}>
-                  <img  src="/appStore.webp" alt=""/>
+                  <img  src="https://dreamladder-assets.s3.ap-south-1.amazonaws.com/public/appStore.webp" alt=""/>
                 </button>
               </div>
 
@@ -95,7 +98,7 @@ const SlideShow = () => {
             </div>
 
             <div className="heroImg">
-              <img fetchPriority="high" src="/Slide2.webp" alt="Wealth advisory hero visual" />
+              <img fetchPriority="high" src="https://dreamladder-assets.s3.ap-south-1.amazonaws.com/public/Slide2.webp" alt="Wealth advisory hero visual" />
             </div>
           </div>
         </div>
@@ -116,7 +119,7 @@ const SlideShow = () => {
             </div>
 
             <div className="heroImg">
-              <img fetchPriority="high" src="/HP3.webp" alt="Wealth advisory hero visual" />
+              <img fetchPriority="high" src="https://dreamladder-assets.s3.ap-south-1.amazonaws.com/public/HP3.webp" alt="Wealth advisory hero visual" />
             </div>
           </div>
         </div>

@@ -1,7 +1,6 @@
 
 @use "../../mixins" as *;
 
-@include CustomFont("SyneMono", "/Fonts/SyneMono.ttf");
 #SlideShowMC {
   position: relative;
   height: calc(100vh - 100px);
@@ -43,7 +42,7 @@
   }
   
   .SlideOne{
-    background :url("/HP4.webp") center / cover no-repeat;
+    background :url("https://dreamladder-assets.s3.ap-south-1.amazonaws.com/public/HP4.webp") center / cover no-repeat;
     
     img{
       width : 100%;
@@ -54,7 +53,7 @@
   }
   
   .SlideTwo{
-    background : url("/HP56.webp") center / cover no-repeat;
+    background : url("https://dreamladder-assets.s3.ap-south-1.amazonaws.com/public/HP56.webp") center / cover no-repeat;
     
     img{
       width : 70%;

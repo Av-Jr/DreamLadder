@@ -11,7 +11,7 @@
 
     position: relative;
 
-    background: url("/HP56.webp") center/cover no-repeat;
+    background: url("https://dreamladder-assets.s3.ap-south-1.amazonaws.com/public/HP56.webp") center/cover no-repeat;
 
     display: flex;
     justify-content: center;
@@ -202,8 +202,16 @@
 
         display: flex;
         flex-direction: column;
+        align-items : start;
 
         gap: 24px;
+        
+        .matchCol{
+          display : flex;
+          justify-content : center;
+          align-items : center;
+          gap : 10px;
+        }
 
         .line {
           width: 6px;

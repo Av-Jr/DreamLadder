@@ -35,6 +35,20 @@ button, input, textarea, select {
   line-height: 1.5;
 }
 
+@font-face {
+  font-family: "Genos";
+  src: url("/Fonts/Genos.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "SyneMono";
+  src: url("/Fonts/SyneMono.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
 #AppMC {
   display: flex;
   flex-direction: column;

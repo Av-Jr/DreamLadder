@@ -10,7 +10,7 @@ html {
 .bespokePage .heroSection {
   width: 100%;
   position: relative;
-  background: url("/HP56.webp") center/cover no-repeat;
+  background: url("https://dreamladder-assets.s3.ap-south-1.amazonaws.com/public/HP56.webp") center/cover no-repeat;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -151,7 +151,14 @@ html {
   border: 1px solid #ececec;
   display: flex;
   flex-direction: column;
+  align-items: start;
   gap: 24px;
+}
+.bespokePage .approachSection .approachRight .approachCard .matchCol {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
 }
 .bespokePage .approachSection .approachRight .approachCard .line {
   width: 6px;

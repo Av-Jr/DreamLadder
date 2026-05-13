@@ -243,7 +243,7 @@ const WhyAIFData = {
       <div className="PMSone">
         <img loading="lazy"
           className={"heroImg"}
-          src={`/${PMSHeroData.image}.webp`}
+          src={`https://dreamladder-assets.s3.ap-south-1.amazonaws.com/public/${PMSHeroData.image}.webp`}
           alt=""
         />
 
@@ -266,7 +266,7 @@ const WhyAIFData = {
 
           <span>{PMSFeatureData.description}</span>
 
-          <img loading="lazy" src={`/${PMSFeatureData.image}.webp`} alt="" />
+          <img loading="lazy" src={`https://dreamladder-assets.s3.ap-south-1.amazonaws.com/public/${PMSFeatureData.image}.webp`} alt="" />
         </div>
 
         <div className="right">
@@ -309,7 +309,7 @@ const WhyAIFData = {
             {PMSRegulationData.quote}
           </span>
 
-          <img loading="lazy" src={`/${PMSRegulationData.image}.webp`} alt="" />
+          <img loading="lazy" src={`https://dreamladder-assets.s3.ap-south-1.amazonaws.com/public/${PMSRegulationData.image}.webp`} alt="" />
         </div>
       </div>
 
@@ -326,7 +326,7 @@ const WhyAIFData = {
       <div className="PMSfive">
 
         <div className="heroImg">
-          <img loading="lazy" src={`/${AIFIntroData.image}.webp`} alt="" />
+          <img loading="lazy" src={`https://dreamladder-assets.s3.ap-south-1.amazonaws.com/public/${AIFIntroData.image}.webp`} alt="" />
         </div>
 
         <div className="heroText">
@@ -389,7 +389,7 @@ const WhyAIFData = {
             SEBI classifies Alternative Investment Funds into three distinct categories based on investment objectives and asset classes.
           </span>
 
-          <img loading="lazy" src={`/${AIFTypesData.image}.webp`} alt="" />
+          <img loading="lazy" src={`https://dreamladder-assets.s3.ap-south-1.amazonaws.com/public/${AIFTypesData.image}.webp`} alt="" />
         </div>
 
       </div>
@@ -403,7 +403,7 @@ const WhyAIFData = {
             {AIFRegulationData.description}
           </span>
 
-          <img loading="lazy" src={`/${AIFRegulationData.image}.webp`} alt="" />
+          <img loading="lazy" src={`https://dreamladder-assets.s3.ap-south-1.amazonaws.com/public/${AIFRegulationData.image}.webp`} alt="" />
         </div>
 
         <div className="right">

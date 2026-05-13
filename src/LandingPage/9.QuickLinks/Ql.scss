@@ -62,7 +62,7 @@
 
     @each $icon in $icons {
       .#{$icon} {
-        background-image: url("/#{$icon}L.webp");
+        background-image: url("https://dreamladder-assets.s3.ap-south-1.amazonaws.com/public/#{$icon}L.webp");
       }
     }
   }
@@ -90,7 +90,7 @@
 
     @each $app in $apps {
       .#{$app} {
-        background-image: url("/#{$app}.webp");
+        background-image: url("https://dreamladder-assets.s3.ap-south-1.amazonaws.com/public/#{$app}.webp");
       }
     }
   }
@@ -158,8 +158,124 @@
       line-height: 1.5;
     }
   }
-}
 
+  .footerDivider {
+    width: 100%;
+    max-width: 1440px;
+    height: 1px;
+    background: #e8e8e8;
+    margin: 60px 0 30px;
+  }
+
+  .bottomDivider {
+    margin: 30px 0;
+  }
+
+  .riskFactors {
+    width: 100%;
+    max-width: 1440px;
+
+    font-family: Genos;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.8;
+
+    color: #7a7a7a;
+
+    .riskTitle {
+      font-weight: 700;
+      color: #4a4a4a;
+    }
+
+    .riskText {
+      color: #7a7a7a;
+    }
+  }
+
+  .registrationInfo {
+    width: 100%;
+    max-width: 1440px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+
+    p {
+      margin: 0;
+
+      text-align: center;
+
+      font-family: Genos;
+      font-size: 15px;
+      font-weight: 600;
+      line-height: 1.5;
+
+      color: #5f5f5f;
+    }
+  }
+
+  .bottomLegal {
+    width: 100%;
+    max-width: 1440px;
+
+    margin-top: 40px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+  }
+
+  .copyright {
+    margin: 0;
+
+    font-family: Genos;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 1;
+
+    color: #7a7a7a;
+  }
+
+  .legalLinks {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .legalLink {
+    text-decoration: none;
+    border: none;
+    background: transparent;
+    padding: 0;
+    margin: 0;
+
+    cursor: pointer;
+
+    font-family: Genos;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 1.4;
+
+    color: #6b6b6b;
+
+    transition: color 0.2s ease;
+
+    &:hover {
+      color: #111111;
+    }
+  }
+
+  .separator {
+    font-family: Genos;
+    font-size: 14px;
+    font-weight: 500;
+    color: #9a9a9a;
+  }
+}
 
 @include mediaDevice(mobile) {
 
@@ -218,6 +334,50 @@
     .RU {
       grid-column: span 2;
       max-width: 100%;
+    }
+
+    .footerDivider {
+      margin: 45px 0 24px;
+    }
+
+    .bottomDivider {
+      margin: 24px 0;
+    }
+
+    .riskFactors {
+      font-size: 13px;
+      line-height: 1.7;
+    }
+
+    .registrationInfo {
+
+      p {
+        font-size: 14px;
+        line-height: 1.6;
+      }
+    }
+
+    .bottomLegal {
+      margin-top: 32px;
+      gap: 16px;
+    }
+
+    .copyright {
+      text-align: center;
+      font-size: 14px;
+    }
+
+    .legalLinks {
+      gap: 8px;
+    }
+
+    .legalLink {
+      font-size: 14px;
+      text-align: center;
+    }
+
+    .separator {
+      font-size: 13px;
     }
   }
 }

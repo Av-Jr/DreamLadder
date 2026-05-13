@@ -134,7 +134,7 @@ const StructProd = () => {
 
         <div className={"heroImg"}>
           <img loading="lazy"
-            src={`/${StructuredProductsHeroData.image}.webp`}
+            src={`https://dreamladder-assets.s3.ap-south-1.amazonaws.com/public/${StructuredProductsHeroData.image}.webp`}
             alt=""
           />
         </div>
@@ -189,7 +189,7 @@ const StructProd = () => {
           </span>
 
           <img loading="lazy"
-            src={`/${StructuredProductsRegulationData.image}.webp`}
+            src={`https://dreamladder-assets.s3.ap-south-1.amazonaws.com/public/${StructuredProductsRegulationData.image}.webp`}
             alt=""
           />
 

@@ -75,9 +75,11 @@ const NavBar = () => {
             dropdown: [
                 {
                     title: "Blogs",
+                    path : "/blogs"
                 },
                 {
                     title: "Media",
+                    path : "/media"
                 },
                 {
                     title: "Calculator",
@@ -104,7 +106,7 @@ const NavBar = () => {
                 >
                     <img
                         fetchPriority={"high"}
-                        src="/logo.webp"
+                        src="https://dreamladder-assets.s3.ap-south-1.amazonaws.com/public/logo.webp"
                         alt=""
                         className="logo"
                     />

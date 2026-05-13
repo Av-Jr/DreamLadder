@@ -146,7 +146,7 @@ const LEP = () => {
         <div className={"right"}>
 
           <img loading="lazy"
-            src={`/${LegacyEstateHeroData.image}.webp`}
+            src={`https://dreamladder-assets.s3.ap-south-1.amazonaws.com/public/${LegacyEstateHeroData.image}.webp`}
             alt=""
           />
 
@@ -167,7 +167,7 @@ const LEP = () => {
               <div className={"imgCont"}>
 
                 <img loading="lazy"
-                  src={`/${item.image}.webp`}
+                  src={`https://dreamladder-assets.s3.ap-south-1.amazonaws.com/public/${item.image}.webp`}
                   alt=""
                 />
 

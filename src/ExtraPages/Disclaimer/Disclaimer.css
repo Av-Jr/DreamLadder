@@ -1,0 +1,79 @@
+html {
+  overflow-x: scroll;
+}
+
+#DisclaimerMC {
+  width: 100%;
+  min-height: 100vh;
+  background: #ffffff;
+}
+#DisclaimerMC .heroSec {
+  width: 100%;
+  height: 420px;
+  background-image: url("https://dreamladder-assets.s3.ap-south-1.amazonaws.com/public/HP56.webp");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#DisclaimerMC .heroContent {
+  width: 100%;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#DisclaimerMC .heroContent h1 {
+  margin: 0;
+  font-family: Genos;
+  font-size: 82px;
+  font-weight: 700;
+  line-height: 1;
+  color: #111111;
+  text-align: center;
+}
+#DisclaimerMC .contentSec {
+  width: 100%;
+  padding: 90px 40px 110px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+}
+#DisclaimerMC .contentWrap {
+  width: 100%;
+  max-width: 1060px;
+  display: flex;
+  flex-direction: column;
+  gap: 42px;
+}
+#DisclaimerMC .contentWrap p {
+  margin: 0;
+  font-family: Genos;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1.9;
+  color: #3f4c63;
+}
+
+@media (max-width: 1024px) {
+  #DisclaimerMC .heroSec {
+    height: 320px;
+  }
+  #DisclaimerMC .heroContent h1 {
+    font-size: 52px;
+  }
+  #DisclaimerMC .contentSec {
+    padding: 50px 16px 70px;
+  }
+  #DisclaimerMC .contentWrap {
+    gap: 28px;
+  }
+  #DisclaimerMC .contentWrap p {
+    font-size: 18px;
+    line-height: 1.8;
+  }
+}
+
+/*# sourceMappingURL=Disclaimer.css.map */

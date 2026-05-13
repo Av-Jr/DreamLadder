@@ -8,15 +8,15 @@ const About = () => {
   const nav = useNavigate();
   return (
     <div id="AboutMC">
-      <h1>What We Offer</h1>
+      <h1 id={"top"}>What We Offer</h1>
       <div className="GridCon">
 
         <div className="Con ACone">
-          <img loading="lazy" src="/InvestInsight.webp" loading="lazy" alt=""/>
+          <img loading="lazy" src="https://dreamladder-assets.s3.ap-south-1.amazonaws.com/public/InvestInsight.webp" loading="lazy" alt=""/>
 
           <h3>Your legacy deserves a solid foundation. DreamLadder Capital helps you build lasting wealth through smart,
             diversified strategies.</h3>
-          <img loading="lazy" src="/tele.webp" loading="lazy" alt=""/>
+          <img loading="lazy" src="https://dreamladder-assets.s3.ap-south-1.amazonaws.com/public/tele.webp" loading="lazy" alt=""/>
         </div>
 
         <div className="Con ACtwo">
@@ -46,7 +46,7 @@ const About = () => {
           </div>
         </div>
 
-        <div className="Con ACthree"><img loading="lazy" src="/profileDashboard.webp" loading="lazy" alt=""/></div>
+        <div className="Con ACthree"><img loading="lazy" src="https://dreamladder-assets.s3.ap-south-1.amazonaws.com/public/profileDashboard.webp" loading="lazy" alt=""/></div>
 
         <div className="Con ACfour">
           <h2>All Your Family Investments, One Simple App</h2>
@@ -64,7 +64,7 @@ const About = () => {
         </div>
 
         <div className="Con ACsix">
-          <img loading="lazy" src="/sipAmount.webp" loading="lazy" alt=""/>
+          <img loading="lazy" src="https://dreamladder-assets.s3.ap-south-1.amazonaws.com/public/sipAmount.webp" loading="lazy" alt=""/>
         </div>
 
       </div>

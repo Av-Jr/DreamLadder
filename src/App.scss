@@ -2,6 +2,9 @@
 
 @include InitialSetup;
 
+@include CustomFont("Genos", "/Fonts/Genos.woff");
+@include CustomFont("SyneMono", "/Fonts/SyneMono.woff");
+
 #AppMC{
   @include flex-center;
   position : relative;

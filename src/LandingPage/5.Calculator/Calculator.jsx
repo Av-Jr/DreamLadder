@@ -22,7 +22,7 @@ const Calculator = () => {
             <div className="CalcEleCon">
                 {retData.map((item, index) => (
                     <div className="CalcEle" onClick={() => {nt("/calc")}}>
-                        <img loading="lazy" src={`/Calc${item.i}.webp`} alt={item.i}/>
+                        <img loading="lazy" src={`https://dreamladder-assets.s3.ap-south-1.amazonaws.com/public/Calc${item.i}.webp`} alt={item.i}/>
                         <h3>{item.t}</h3>
                     </div>
                 ))}

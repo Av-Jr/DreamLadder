@@ -57,7 +57,7 @@ const ReturnSlider = () => {
                       <h2>{`₹${item.amt} CR`}</h2>
                       <div className="imgPart">
                         <img loading="lazy"
-                          src={`/imgPart${item.img}.webp`}
+                          src={`https://dreamladder-assets.s3.ap-south-1.amazonaws.com/public/imgPart${item.img}.webp`}
                           alt={item.tag}
                         />
                       </div>

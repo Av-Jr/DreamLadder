@@ -1,6 +1,5 @@
 import "./Ql.scss";
 import React from "react";
-import { Link, useNavigate } from "react-router-dom";
 
 const socialLinks = [
   {
@@ -151,7 +150,7 @@ const footerSections = [
         label: "info@dreamladdercapital.com",
         className: "RUe",
         type: "internal",
-        path: "/about"
+        path: "/about#top"
       },
       {
         label:
@@ -164,19 +163,46 @@ const footerSections = [
   }
 ];
 
+const legalLinks = [
+  {
+    label: "Privacy Policy",
+    type: "internal",
+    path: "/privacy-policy"
+  },
+  {
+    label: "Disclaimer",
+    type: "internal",
+    path: "/disclaimer"
+  },
+  {
+    label: "Disclosure",
+    type: "internal",
+    path: "/disclosure"
+  },
+  {
+    label: "SID/SAI/KIM",
+    type: "external",
+    path: "https://www.sebi.gov.in/filings/mutual-funds.html"
+  },
+  {
+    label: "Code of Conduct",
+    type: "none"
+  },
+  {
+    label: "SEBI Circulars",
+    type: "external",
+    path:
+      "https://www.sebi.gov.in/sebiweb/home/HomeAction.do?doListing=yes&sid=1&ssid=7&smid=0"
+  },
+  {
+    label: "AMFI Risk Factors",
+    type: "external",
+    path:
+      "https://www.amfiindia.com/investor-corner/knowledge-center/risks-in-mutual-funds.html"
+  }
+];
+
 export default function Ql() {
-
-  const navigate = useNavigate();
-
-  const handleNavigation = (type, path) => {
-
-    if (type === "external") {
-      window.open(path, "_blank", "noopener,noreferrer");
-      return;
-    }
-
-    navigate(path);
-  };
 
   return (
     <footer id="QlMC">
@@ -185,14 +211,14 @@ export default function Ql() {
 
         <div className="socials">
 
-          <Link to="/">
+          <a href="/">
             <img
               loading="lazy"
-              src="/logo.webp"
+              src="https://dreamladder-assets.s3.ap-south-1.amazonaws.com/public/logo.webp"
               alt="DreamLadder Capital Logo"
               className="logo"
             />
-          </Link>
+          </a>
 
           <div className="socialsEles">
 
@@ -241,13 +267,13 @@ export default function Ql() {
 
                 item.type === "internal" ? (
 
-                  <Link
+                  <a
                     key={item.label}
-                    to={item.path}
+                    href={item.path}
                     className={`linkItem ${item.className}`}
                   >
                     {item.label}
-                  </Link>
+                  </a>
 
                 ) : (
 
@@ -255,7 +281,11 @@ export default function Ql() {
                     key={item.label}
                     className={`linkItem ${item.className}`}
                     onClick={() =>
-                      handleNavigation(item.type, item.path)
+                      window.open(
+                        item.path,
+                        "_blank",
+                        "noopener,noreferrer"
+                      )
                     }
                   >
                     {item.label}
@@ -270,6 +300,107 @@ export default function Ql() {
           </div>
 
         ))}
+
+      </div>
+
+      <div className="footerDivider" />
+
+      <div className="riskFactors">
+
+        <span className="riskTitle">
+          Risk Factors –
+        </span>
+
+        <span className="riskText">
+          Investments in Mutual Funds are subject to Market Risks. Read all
+          scheme related documents carefully before investing. Mutual Fund
+          Schemes do not assure or guarantee any returns. Past performances
+          of any Mutual Fund Scheme may or may not be sustained in future.
+          There is no guarantee that the investment objective of any
+          suggested scheme shall be achieved. All existing and prospective
+          investors are advised to check and evaluate the Exit loads and
+          other cost structure (TER) applicable at the time of making the
+          investment before finalizing on any investment decision for Mutual
+          Funds schemes. We deal in Regular Plans only for Mutual Fund
+          Schemes and earn a Trailing Commission on client investments.
+          Disclosure for Commission earnings is made to clients at the time
+          of investments. Option of Direct Plan for every Mutual Fund Scheme
+          is available to investors offering advantage of lower expense
+          ratio. We are not entitled to earn any commission on Direct plans.
+          Hence we do not deal in Direct Plans.
+        </span>
+
+      </div>
+
+      <div className="footerDivider bottomDivider" />
+
+      <div className="registrationInfo">
+
+        <p>
+          AMFI Registered Mutual Funds Distributor | ARN-143182 |
+          Initial Date of Registration: 04/04/2018 |
+          Validity: 03/04/2027
+        </p>
+
+        <p>
+          APRN Code: APRN05201 | Validity: 06/04/2028
+        </p>
+
+      </div>
+
+      <div className="bottomLegal">
+
+        <p className="copyright">
+          ©2026 DreamLadder Capital.
+        </p>
+
+        <div className="legalLinks">
+
+          {legalLinks.map((item, index) => (
+
+            <React.Fragment key={item.label}>
+
+              {item.type === "internal" && (
+
+                <a
+                  href={item.path}
+                  className="legalLink"
+                >
+                  {item.label}
+                </a>
+
+              )}
+
+              {item.type === "external" && (
+
+                <a
+                  href={item.path}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="legalLink"
+                >
+                  {item.label}
+                </a>
+
+              )}
+
+              {item.type === "none" && (
+
+                <span className="legalLink">
+                  {item.label}
+                </span>
+
+              )}
+
+              {index !== legalLinks.length - 1 && (
+                <span className="separator">|</span>
+              )}
+
+            </React.Fragment>
+
+          ))}
+
+        </div>
 
       </div>
 

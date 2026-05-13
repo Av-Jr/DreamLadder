@@ -54,8 +54,8 @@ const Insights = () => {
                 <h3>Latest Blogs</h3>
                 {
                     blogData.map((item, index) => (
-                        <div className={"ifEle blogs"}>
-                            <img loading="lazy" src={`/${item.image}.webp`} alt=""/>
+                        <div className={"ifEle blogs"} key={index}>
+                            <img loading="lazy" src={`https://dreamladder-assets.s3.ap-south-1.amazonaws.com/public/${item.image}.webp`} alt=""/>
                              <span>{item.date}</span>
                              <span>{item.type}</span>
                              <span>{item.title}</span>

@@ -24,7 +24,7 @@ const Pow = () => {
         <h1>What Clients say about us</h1>
 
         <div className="contentRow">
-          <img loading="lazy" className="sideImg" src="/POWwomen.webp" alt="" />
+          <img loading="lazy" className="sideImg" src="https://dreamladder-assets.s3.ap-south-1.amazonaws.com/public/POWwomen.webp" alt="" />
 
           <div className="slider">
             <div className="track">
@@ -38,7 +38,7 @@ const Pow = () => {
                   </div>
 
                   <div className="image">
-                    <img loading="lazy" src={`/${item.image}.webp`} alt="" />
+                    <img loading="lazy" src={`https://dreamladder-assets.s3.ap-south-1.amazonaws.com/public/${item.image}.webp`} alt="" />
                   </div>
 
                 </div>

@@ -2,13 +2,6 @@ html {
   overflow-x: scroll;
 }
 
-@font-face {
-  font-family: "SyneMono";
-  src: url("/Fonts/SyneMono.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
 #SlideShowMC {
   position: relative;
   height: calc(100vh - 100px);
@@ -49,7 +42,7 @@ html {
   height: 100%;
 }
 #SlideShowMC .SlideOne {
-  background: url("/HP4.webp") center/cover no-repeat;
+  background: url("https://dreamladder-assets.s3.ap-south-1.amazonaws.com/public/HP4.webp") center/cover no-repeat;
 }
 #SlideShowMC .SlideOne img {
   width: 100%;
@@ -58,7 +51,7 @@ html {
   object-position: center;
 }
 #SlideShowMC .SlideTwo {
-  background: url("/HP56.webp") center/cover no-repeat;
+  background: url("https://dreamladder-assets.s3.ap-south-1.amazonaws.com/public/HP56.webp") center/cover no-repeat;
 }
 #SlideShowMC .SlideTwo img {
   width: 70%;

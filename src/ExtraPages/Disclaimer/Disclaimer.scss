@@ -1,0 +1,101 @@
+@use "../../mixins" as *;
+
+#DisclaimerMC {
+  width: 100%;
+  min-height: 100vh;
+  background: #ffffff;
+
+  .heroSec {
+    width: 100%;
+    height: 420px;
+
+    background-image: url("https://dreamladder-assets.s3.ap-south-1.amazonaws.com/public/HP56.webp");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .heroContent {
+    width: 100%;
+    flex: 1;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    h1 {
+      margin: 0;
+
+      font-family: Genos;
+      font-size: 82px;
+      font-weight: 700;
+      line-height: 1;
+
+      color: #111111;
+      text-align: center;
+    }
+  }
+
+  .contentSec {
+    width: 100%;
+    padding: 90px 40px 110px;
+    box-sizing: border-box;
+
+    display: flex;
+    justify-content: center;
+  }
+
+  .contentWrap {
+    width: 100%;
+    max-width: 1060px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 42px;
+
+    p {
+      margin: 0;
+
+      font-family: Genos;
+      font-size: 24px;
+      font-weight: 500;
+      line-height: 1.9;
+
+      color: #3f4c63;
+    }
+  }
+}
+
+@include mediaDevice(mobile) {
+
+  #DisclaimerMC {
+
+    .heroSec {
+      height: 320px;
+    }
+
+    .heroContent {
+
+      h1 {
+        font-size: 52px;
+      }
+    }
+
+    .contentSec {
+      padding: 50px 16px 70px;
+    }
+
+    .contentWrap {
+      gap: 28px;
+
+      p {
+        font-size: 18px;
+        line-height: 1.8;
+      }
+    }
+  }
+}

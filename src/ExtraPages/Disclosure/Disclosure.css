@@ -1,0 +1,149 @@
+html {
+  overflow-x: scroll;
+}
+
+#DisclosureMC {
+  width: 100%;
+  min-height: 100vh;
+  background: #ffffff;
+}
+#DisclosureMC .heroSec {
+  width: 100%;
+  height: 420px;
+  position: relative;
+  overflow: hidden;
+  background-image: url("https://dreamladder-assets.s3.ap-south-1.amazonaws.com/public/HP56.webp");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#DisclosureMC .heroContent {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#DisclosureMC .heroContent h1 {
+  margin: 0;
+  font-family: Genos;
+  font-size: 82px;
+  font-weight: 700;
+  line-height: 1;
+  color: #111111;
+  text-align: center;
+}
+#DisclosureMC .tableSec {
+  width: 100%;
+  padding: 80px 40px 100px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 60px;
+}
+#DisclosureMC .tableWrap {
+  width: 100%;
+  max-width: 1040px;
+  border: 1px solid #dfe5ec;
+  border-radius: 18px;
+  overflow: hidden;
+  background: #ffffff;
+}
+#DisclosureMC .tableHead {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 2fr 1.2fr;
+  background: #f5f7fa;
+  border-bottom: 1px solid #dfe5ec;
+}
+#DisclosureMC .tableRow {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 2fr 1.2fr;
+  border-bottom: 1px solid #e6ebf1;
+}
+#DisclosureMC .tableRow:last-child {
+  border-bottom: none;
+}
+#DisclosureMC .th,
+#DisclosureMC .td {
+  padding: 28px 26px;
+  box-sizing: border-box;
+  font-family: Genos;
+  color: #3d4b63;
+}
+#DisclosureMC .th {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.3;
+  letter-spacing: 0.08em;
+}
+#DisclosureMC .td {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.5;
+}
+#DisclosureMC .trail {
+  border-left: 1px solid #e6ebf1;
+}
+#DisclosureMC .notesSec {
+  width: 100%;
+  max-width: 1040px;
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+}
+#DisclosureMC .notesSec p {
+  margin: 0;
+  font-family: Genos;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1.7;
+  color: #273043;
+}
+
+@media (max-width: 1024px) {
+  #DisclosureMC .heroSec {
+    height: 320px;
+  }
+  #DisclosureMC .heroContent h1 {
+    font-size: 52px;
+  }
+  #DisclosureMC .tableSec {
+    padding: 50px 16px 70px;
+    gap: 40px;
+  }
+  #DisclosureMC .tableWrap {
+    border-radius: 14px;
+    overflow-x: auto;
+  }
+  #DisclosureMC .tableHead,
+  #DisclosureMC .tableRow {
+    min-width: 720px;
+  }
+  #DisclosureMC .th,
+  #DisclosureMC .td {
+    padding: 22px 18px;
+  }
+  #DisclosureMC .th {
+    font-size: 15px;
+  }
+  #DisclosureMC .td {
+    font-size: 17px;
+  }
+  #DisclosureMC .notesSec {
+    gap: 20px;
+  }
+  #DisclosureMC .notesSec p {
+    font-size: 18px;
+    line-height: 1.6;
+  }
+}
+
+/*# sourceMappingURL=Disclosure.css.map */

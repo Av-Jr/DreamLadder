@@ -35,7 +35,7 @@ html {
 #StructuredProductsMC .headTit {
   width: 100%;
   height: 25vh;
-  background: url("/HP56.webp") center/cover no-repeat;
+  background: url("https://dreamladder-assets.s3.ap-south-1.amazonaws.com/public/HP56.webp") center/cover no-repeat;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -79,7 +79,7 @@ html {
 #StructuredProductsMC .SPtwo {
   width: 100%;
   min-height: 100vh;
-  background: url("/flexBack.webp") center/cover no-repeat;
+  background: url("https://dreamladder-assets.s3.ap-south-1.amazonaws.com/public/flexBack.webp") center/cover no-repeat;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -191,7 +191,7 @@ html {
 #StructuredProductsMC .SPfour {
   width: 100%;
   min-height: 30vh;
-  background: url("/flexBack.webp") center/cover no-repeat;
+  background: url("https://dreamladder-assets.s3.ap-south-1.amazonaws.com/public/flexBack.webp") center/cover no-repeat;
   display: flex;
   flex-direction: column;
   justify-content: center;

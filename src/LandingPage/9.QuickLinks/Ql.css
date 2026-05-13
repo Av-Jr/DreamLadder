@@ -54,19 +54,19 @@ html {
   background-color: #efefef;
 }
 #QlMC .socialsEles .youtube {
-  background-image: url("/youtubeL.webp");
+  background-image: url("https://dreamladder-assets.s3.ap-south-1.amazonaws.com/public/youtubeL.webp");
 }
 #QlMC .socialsEles .linkedin {
-  background-image: url("/linkedinL.webp");
+  background-image: url("https://dreamladder-assets.s3.ap-south-1.amazonaws.com/public/linkedinL.webp");
 }
 #QlMC .socialsEles .facebook {
-  background-image: url("/facebookL.webp");
+  background-image: url("https://dreamladder-assets.s3.ap-south-1.amazonaws.com/public/facebookL.webp");
 }
 #QlMC .socialsEles .instagram {
-  background-image: url("/instagramL.webp");
+  background-image: url("https://dreamladder-assets.s3.ap-south-1.amazonaws.com/public/instagramL.webp");
 }
 #QlMC .socialsEles .x {
-  background-image: url("/xL.webp");
+  background-image: url("https://dreamladder-assets.s3.ap-south-1.amazonaws.com/public/xL.webp");
 }
 #QlMC .downloadsSec {
   display: flex;
@@ -86,10 +86,10 @@ html {
   transform: scale(0.96);
 }
 #QlMC .downloadsSec .appStore {
-  background-image: url("/appStore.webp");
+  background-image: url("https://dreamladder-assets.s3.ap-south-1.amazonaws.com/public/appStore.webp");
 }
 #QlMC .downloadsSec .gplay {
-  background-image: url("/gplay.webp");
+  background-image: url("https://dreamladder-assets.s3.ap-south-1.amazonaws.com/public/gplay.webp");
 }
 #QlMC .QLeles {
   min-width: 170px;
@@ -141,6 +141,96 @@ html {
 #QlMC .RU .linkItem {
   line-height: 1.5;
 }
+#QlMC .footerDivider {
+  width: 100%;
+  max-width: 1440px;
+  height: 1px;
+  background: #e8e8e8;
+  margin: 60px 0 30px;
+}
+#QlMC .bottomDivider {
+  margin: 30px 0;
+}
+#QlMC .riskFactors {
+  width: 100%;
+  max-width: 1440px;
+  font-family: Genos;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.8;
+  color: #7a7a7a;
+}
+#QlMC .riskFactors .riskTitle {
+  font-weight: 700;
+  color: #4a4a4a;
+}
+#QlMC .riskFactors .riskText {
+  color: #7a7a7a;
+}
+#QlMC .registrationInfo {
+  width: 100%;
+  max-width: 1440px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+#QlMC .registrationInfo p {
+  margin: 0;
+  text-align: center;
+  font-family: Genos;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.5;
+  color: #5f5f5f;
+}
+#QlMC .bottomLegal {
+  width: 100%;
+  max-width: 1440px;
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+}
+#QlMC .copyright {
+  margin: 0;
+  font-family: Genos;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1;
+  color: #7a7a7a;
+}
+#QlMC .legalLinks {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+#QlMC .legalLink {
+  text-decoration: none;
+  border: none;
+  background: transparent;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  font-family: Genos;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.4;
+  color: #6b6b6b;
+  transition: color 0.2s ease;
+}
+#QlMC .legalLink:hover {
+  color: #111111;
+}
+#QlMC .separator {
+  font-family: Genos;
+  font-size: 14px;
+  font-weight: 500;
+  color: #9a9a9a;
+}
 
 @media (max-width: 1024px) {
   #QlMC {
@@ -187,6 +277,38 @@ html {
   #QlMC .RU {
     grid-column: span 2;
     max-width: 100%;
+  }
+  #QlMC .footerDivider {
+    margin: 45px 0 24px;
+  }
+  #QlMC .bottomDivider {
+    margin: 24px 0;
+  }
+  #QlMC .riskFactors {
+    font-size: 13px;
+    line-height: 1.7;
+  }
+  #QlMC .registrationInfo p {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+  #QlMC .bottomLegal {
+    margin-top: 32px;
+    gap: 16px;
+  }
+  #QlMC .copyright {
+    text-align: center;
+    font-size: 14px;
+  }
+  #QlMC .legalLinks {
+    gap: 8px;
+  }
+  #QlMC .legalLink {
+    font-size: 14px;
+    text-align: center;
+  }
+  #QlMC .separator {
+    font-size: 13px;
   }
 }
 

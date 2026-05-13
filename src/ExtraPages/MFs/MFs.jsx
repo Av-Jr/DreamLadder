@@ -162,7 +162,7 @@ const MFAssistData = {
             <div className="headTit"><h1>Mutual-Funds</h1></div>
 
             <div className="MFone">
-                <img loading="lazy" className={"heroImg"} src={`/${MFHeroData.image}.webp`} alt=""/>
+                <img loading="lazy" className={"heroImg"} src={`https://dreamladder-assets.s3.ap-south-1.amazonaws.com/public/${MFHeroData.image}.webp`} alt=""/>
                 <div className="heroText">
                     {MFHeroData.description.map((item, index) => (
                         <span className="descEles" key={index}>{item.text}</span>
@@ -178,7 +178,7 @@ const MFAssistData = {
                 <h1 className="titleHead">{MFBenefitsData.title}</h1>
                 <span className="titleDesc">{MFBenefitsData.description}</span>
                 <div className="twoMC">
-                    <img loading="lazy" src={`/${MFBenefitsData.image}.webp`} alt=""/>
+                    <img loading="lazy" src={`https://dreamladder-assets.s3.ap-south-1.amazonaws.com/public/${MFBenefitsData.image}.webp`} alt=""/>
                     <div className="heroText">
                         {
                             MFBenefitsData.cards.map((item, index) =>{
@@ -196,7 +196,7 @@ const MFAssistData = {
 
             <div className="MFthree">
                 <div className="heroImg">
-                    <img loading="lazy" src={`/${MFInvestorData.image}.webp`} alt=""/>
+                    <img loading="lazy" src={`https://dreamladder-assets.s3.ap-south-1.amazonaws.com/public/${MFInvestorData.image}.webp`} alt=""/>
                     <h1>{MFInvestorData.quote}</h1>
                 </div>
 
@@ -234,7 +234,7 @@ const MFAssistData = {
                         }
                     </div>
                 </div>
-                <img loading="lazy" src="/MFpg7.webp" alt=""/>
+                <img loading="lazy" src="https://dreamladder-assets.s3.ap-south-1.amazonaws.com/public/MFpg7.webp" alt=""/>
             </div>
 
             <div className={"endingStatement"}>

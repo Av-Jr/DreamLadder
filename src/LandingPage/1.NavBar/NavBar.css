@@ -2,13 +2,6 @@ html {
   overflow-x: scroll;
 }
 
-@font-face {
-  font-family: "Genos";
-  src: url("/Fonts/Genos.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
 button {
   border: none;
   background: transparent;
