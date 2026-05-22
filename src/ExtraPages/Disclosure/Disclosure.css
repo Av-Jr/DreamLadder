@@ -9,7 +9,7 @@ html {
 }
 #DisclosureMC .heroSec {
   width: 100%;
-  height: 420px;
+  height: 20vh;
   position: relative;
   overflow: hidden;
   background-image: url("https://dreamladder-assets.s3.ap-south-1.amazonaws.com/public/HP56.webp");
@@ -32,8 +32,7 @@ html {
 #DisclosureMC .heroContent h1 {
   margin: 0;
   font-family: Genos;
-  font-size: 82px;
-  font-weight: 700;
+  font-weight: 600;
   line-height: 1;
   color: #111111;
   text-align: center;
@@ -109,12 +108,6 @@ html {
 }
 
 @media (max-width: 1024px) {
-  #DisclosureMC .heroSec {
-    height: 320px;
-  }
-  #DisclosureMC .heroContent h1 {
-    font-size: 52px;
-  }
   #DisclosureMC .tableSec {
     padding: 50px 16px 70px;
     gap: 40px;
@@ -131,18 +124,8 @@ html {
   #DisclosureMC .td {
     padding: 22px 18px;
   }
-  #DisclosureMC .th {
-    font-size: 15px;
-  }
-  #DisclosureMC .td {
-    font-size: 17px;
-  }
   #DisclosureMC .notesSec {
     gap: 20px;
-  }
-  #DisclosureMC .notesSec p {
-    font-size: 18px;
-    line-height: 1.6;
   }
 }
 

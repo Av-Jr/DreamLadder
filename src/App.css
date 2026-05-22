@@ -64,5 +64,14 @@ body {
   overflow: visible;
   background: white;
 }
+body h1 {
+  font-size: clamp(0px, 4vh, 50px);
+}
+body h2 {
+  font-size: clamp(0px, 3vh, 40px);
+}
+body h3 {
+  font-size: clamp(15px, 2.5vh, 30px);
+}
 
 /*# sourceMappingURL=App.css.map */

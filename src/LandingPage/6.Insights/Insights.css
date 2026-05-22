@@ -17,13 +17,11 @@ html {
 h1 {
   font-family: "Genos";
   font-weight: 400;
-  font-size: clamp(0px, 5vh, 50px);
   color: black;
 }
 
 h3 {
   font-family: "Genos";
-  font-size: clamp(0px, 2vh, 20px);
   color: grey;
   word-spacing: 1px;
 }
@@ -39,7 +37,6 @@ h3 {
 .iframeElesCon h3 {
   grid-column: span 4;
   text-decoration: underline;
-  font-size: clamp(0px, 2.5vh, 30px);
 }
 
 .ifEle {
@@ -58,7 +55,6 @@ h3 {
   white-space: normal;
   gap: 15px;
   font-family: Genos;
-  font-size: 15px;
   color: grey;
   grid-template-columns: 1fr 1fr;
   border: 3px solid #f9f9fa;
@@ -72,7 +68,6 @@ h3 {
   grid-column: span 2;
   object-fit: contain;
   object-position: center;
-  font-size: 20px;
   color: black;
   transition: 0.3s ease;
   overflow: hidden;

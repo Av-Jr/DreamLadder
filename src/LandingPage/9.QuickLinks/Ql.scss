@@ -103,7 +103,6 @@
 
     h2 {
       margin: 0;
-      font-size: 24px;
       font-weight: 700;
       line-height: 1;
       color: #111111;
@@ -127,7 +126,6 @@
       cursor: pointer;
 
       font-family: Genos;
-      font-size: 18px;
       font-weight: 500;
       line-height: 1.4;
 
@@ -176,7 +174,6 @@
     max-width: 1440px;
 
     font-family: Genos;
-    font-size: 14px;
     font-weight: 500;
     line-height: 1.8;
 
@@ -207,7 +204,6 @@
       text-align: center;
 
       font-family: Genos;
-      font-size: 15px;
       font-weight: 600;
       line-height: 1.5;
 
@@ -231,7 +227,6 @@
     margin: 0;
 
     font-family: Genos;
-    font-size: 15px;
     font-weight: 500;
     line-height: 1;
 
@@ -256,7 +251,6 @@
     cursor: pointer;
 
     font-family: Genos;
-    font-size: 15px;
     font-weight: 500;
     line-height: 1.4;
 
@@ -271,7 +265,6 @@
 
   .separator {
     font-family: Genos;
-    font-size: 14px;
     font-weight: 500;
     color: #9a9a9a;
   }
@@ -317,18 +310,12 @@
       width: 100%;
       min-width: 0;
       gap: 18px;
-
-      h2 {
-        font-size: 22px;
-      }
+      
 
       .items {
         gap: 12px;
       }
-
-      .linkItem {
-        font-size: 17px;
-      }
+      
     }
 
     .RU {
@@ -345,14 +332,12 @@
     }
 
     .riskFactors {
-      font-size: 13px;
       line-height: 1.7;
     }
 
     .registrationInfo {
 
       p {
-        font-size: 14px;
         line-height: 1.6;
       }
     }
@@ -372,12 +357,10 @@
     }
 
     .legalLink {
-      font-size: 14px;
       text-align: center;
     }
 
     .separator {
-      font-size: 13px;
     }
   }
 }

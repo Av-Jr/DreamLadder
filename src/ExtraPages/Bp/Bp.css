@@ -4,8 +4,11 @@ html {
 
 .bespokePage {
   width: 100%;
-  min-height: 100vh;
+  min-height: auto;
   background: #f7f7f7;
+}
+.bespokePage .quoteT {
+  font-style: italic;
 }
 .bespokePage .heroSection {
   width: 100%;
@@ -24,11 +27,12 @@ html {
   width: 100%;
   position: relative;
   z-index: 2;
-  padding: 80px;
+  height: 20vh;
+  display: grid;
+  place-items: center;
 }
 .bespokePage .heroSection .heroContent h1 {
   font-family: Genos;
-  font-size: clamp(0px, 5vh, 50px);
   font-weight: bold;
   text-align: center;
   color: #111;
@@ -39,6 +43,9 @@ html {
   flex-direction: column;
   gap: 80px;
   padding: 60px 100px;
+}
+.bespokePage .mainContainer h2 {
+  font-weight: bold;
 }
 .bespokePage .heroContainer,
 .bespokePage .philosophyContainer {
@@ -51,24 +58,19 @@ html {
 .bespokePage .heroText,
 .bespokePage .philosophyText {
   flex: 1;
+  gap: 32px;
   display: flex;
   flex-direction: column;
-  gap: 32px;
 }
 .bespokePage .heroText h2,
 .bespokePage .philosophyText h2 {
   font-family: Genos;
-  font-size: clamp(0px, 5vh, 50px);
-  font-weight: bold;
-  color: #111;
 }
-.bespokePage .heroText p,
-.bespokePage .philosophyText p {
+.bespokePage .heroText h3,
+.bespokePage .philosophyText h3 {
   font-family: Genos;
-  font-size: clamp(0px, 2.5vh, 30px);
-  line-height: 1.6;
-  font-weight: 500;
   color: #000;
+  font-weight: 50;
 }
 .bespokePage .heroText .quoteBox,
 .bespokePage .philosophyText .quoteBox {
@@ -82,12 +84,6 @@ html {
   height: 90px;
   border-radius: 20px;
   background: #ef2b2d;
-}
-.bespokePage .heroText .quoteBox p,
-.bespokePage .philosophyText .quoteBox p {
-  font-size: clamp(0px, 2.5vh, 28px);
-  font-style: italic;
-  color: grey;
 }
 .bespokePage .heroImage,
 .bespokePage .philosophyImage {
@@ -116,26 +112,13 @@ html {
 }
 .bespokePage .approachSection .approachLeft h2 {
   font-family: Genos;
-  font-size: clamp(0px, 5vh, 50px);
-  font-weight: bold;
   color: #111;
-}
-.bespokePage .approachSection .approachLeft p {
-  font-family: Genos;
-  font-size: clamp(0px, 2.5vh, 30px);
-  line-height: 1.6;
-  font-weight: 500;
-  color: #5f6d85;
 }
 .bespokePage .approachSection .approachLeft .miniQuote {
   width: fit-content;
   padding: 30px;
-  border-radius: 14px;
-  background: #fff;
   font-family: Genos;
-  font-size: clamp(0px, 2.5vh, 28px);
   font-style: italic;
-  font-weight: 600;
   color: #5f6d85;
 }
 .bespokePage .approachSection .approachRight {
@@ -143,6 +126,10 @@ html {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 30px;
+}
+.bespokePage .approachSection .approachRight .approachCard h2 {
+  font-family: SyneMono;
+  font-weight: 100;
 }
 .bespokePage .approachSection .approachRight .approachCard {
   background: #fff;
@@ -168,16 +155,12 @@ html {
 }
 .bespokePage .approachSection .approachRight .approachCard h3 {
   font-family: Genos;
-  font-size: clamp(0px, 2.5vh, 32px);
-  font-weight: bold;
   line-height: 1.4;
   color: #111;
 }
 .bespokePage .approachSection .approachRight .approachCard p {
   font-family: Genos;
-  font-size: clamp(0px, 2vh, 26px);
   line-height: 1.7;
-  font-weight: 500;
   color: #5f6d85;
 }
 .bespokePage .ctaSection {
@@ -207,14 +190,15 @@ html {
   gap: 30px;
 }
 .bespokePage .ctaSection .ctaContent h2 {
-  font-family: Genos;
-  font-size: clamp(0px, 4vh, 50px);
+  font-family: SyneMono;
   line-height: 1.3;
-  font-weight: bold;
   color: #111;
 }
 .bespokePage .ctaSection .ctaContent .navBtn.s {
   width: fit-content;
+}
+.bespokePage .ctaSection .ctaPoints h3 {
+  color: rgba(0, 0, 0, 0.6);
 }
 .bespokePage .ctaSection .ctaPoints {
   flex: 1;
@@ -234,9 +218,7 @@ html {
 }
 .bespokePage .ctaSection .ctaPoints .point p {
   font-family: Genos;
-  font-size: clamp(0px, 2.5vh, 28px);
   line-height: 1.5;
-  font-weight: 600;
   color: #5f6d85;
 }
 .bespokePage .bottomBar {
@@ -247,13 +229,11 @@ html {
   background: #2b2b2b;
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: center;
   gap: 20px;
 }
-.bespokePage .bottomBar h3 {
+.bespokePage .bottomBar h2 {
   font-family: Genos;
-  font-size: 34px;
-  font-weight: bold;
   color: #fff;
 }
 .bespokePage .bottomBar .btns {
@@ -264,9 +244,6 @@ html {
 @media (max-width: 1024px) {
   .bespokePage .heroSection .heroContent {
     padding: 40px 0;
-  }
-  .bespokePage .heroSection .heroContent h1 {
-    font-size: 34px;
   }
   .bespokePage .mainContainer {
     padding: 0;
@@ -298,7 +275,6 @@ html {
   }
   .bespokePage .heroText .quoteBox p,
   .bespokePage .philosophyText .quoteBox p {
-    font-size: 18px;
     text-align: left;
   }
   .bespokePage .heroText .quoteBox span,
@@ -373,7 +349,6 @@ html {
     gap: 30px;
   }
   .bespokePage .bottomBar h3 {
-    font-size: 24px;
     text-align: center;
   }
   .bespokePage .bottomBar .btns {

@@ -12,7 +12,6 @@
   h1{
     font-family : Genos;
     text-align : center;
-    font-size : 4vh;
     padding-bottom : 20px;
   }
   .GridCon{
@@ -20,10 +19,10 @@
     height : auto;
     width : auto;
     display : grid;
-    grid-template-columns : 1fr 1fr;
+    grid-template-columns : auto auto;
     grid-template-rows : auto;
     place-items : center;
-    gap : 20px;
+    gap : 50px;
     
     
     .Con{
@@ -33,13 +32,10 @@
       padding : 40px;
       display : grid;
       gap : 20px;
-      justify-content : start;
       align-items : start;
+      justify-items : start;
       border-radius : 20px;
       
-      button{
-        flex : 1 1 0;
-      }
       
        img{
          width : 100%;
@@ -49,29 +45,35 @@
       
       h2{
         font-family : SyneMono;
-        text-align : center;
+        text-align : start;
+        font-weight : 200;
       }
       h3{
         font-family : Genos;
         white-space : normal;
-        color : rgba(0, 0, 0, 0.4);
-        text-align : center;
+        color : rgba(0, 0, 0, 0.6);
+        text-align : start;
       }
       
       &.ACtwo{
         position : relative;
         display : flex;
         flex-direction : column;
+        width : 100%;
         
         .ContwoEles{
           position : relative;
           width : 100%;
-    background-image: img("flexBack");
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-          padding : 10px;
+          background-image: img("flexBack");
+          background-position: center;
+          background-size: cover;
+          background-repeat: no-repeat;
+          padding : 10px 15px;
           border-radius : 20px;
+          display : flex;
+          flex-direction : column;
+          gap : 5px;
+          margin : auto;
         }
       }
       

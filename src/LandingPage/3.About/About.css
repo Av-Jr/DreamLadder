@@ -14,7 +14,6 @@ html {
 #AboutMC h1 {
   font-family: Genos;
   text-align: center;
-  font-size: 4vh;
   padding-bottom: 20px;
 }
 #AboutMC .GridCon {
@@ -22,10 +21,10 @@ html {
   height: auto;
   width: auto;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: auto auto;
   grid-template-rows: auto;
   place-items: center;
-  gap: 20px;
+  gap: 50px;
 }
 #AboutMC .GridCon .Con {
   position: relative;
@@ -34,12 +33,9 @@ html {
   padding: 40px;
   display: grid;
   gap: 20px;
-  justify-content: start;
   align-items: start;
+  justify-items: start;
   border-radius: 20px;
-}
-#AboutMC .GridCon .Con button {
-  flex: 1 1 0;
 }
 #AboutMC .GridCon .Con img {
   width: 100%;
@@ -48,18 +44,20 @@ html {
 }
 #AboutMC .GridCon .Con h2 {
   font-family: SyneMono;
-  text-align: center;
+  text-align: start;
+  font-weight: 200;
 }
 #AboutMC .GridCon .Con h3 {
   font-family: Genos;
   white-space: normal;
-  color: rgba(0, 0, 0, 0.4);
-  text-align: center;
+  color: rgba(0, 0, 0, 0.6);
+  text-align: start;
 }
 #AboutMC .GridCon .Con.ACtwo {
   position: relative;
   display: flex;
   flex-direction: column;
+  width: 100%;
 }
 #AboutMC .GridCon .Con.ACtwo .ContwoEles {
   position: relative;
@@ -68,8 +66,12 @@ html {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  padding: 10px;
+  padding: 10px 15px;
   border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin: auto;
 }
 
 @media (max-width: 1024px) {

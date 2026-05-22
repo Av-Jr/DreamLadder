@@ -11,18 +11,11 @@ html {
 #InsuranceMC * {
   box-sizing: border-box;
 }
-#InsuranceMC h1, #InsuranceMC h2, #InsuranceMC h3 {
-  margin: 0;
-  text-align: center;
-}
 #InsuranceMC p {
   margin: 0;
 }
 #InsuranceMC span, #InsuranceMC p {
   font-family: Genos;
-}
-#InsuranceMC h1, #InsuranceMC h2, #InsuranceMC h3 {
-  font-family: SyneMono;
 }
 #InsuranceMC .quoteEle {
   border-left: 4px #ef3b3b solid;
@@ -34,7 +27,7 @@ html {
 }
 #InsuranceMC .headTit {
   width: 100%;
-  height: 25vh;
+  height: 20vh;
   background-image: url("https://dreamladder-assets.s3.ap-south-1.amazonaws.com/public/HP56.webp");
   background-position: center;
   background-size: cover;
@@ -42,9 +35,6 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-#InsuranceMC .headTit h1 {
-  font-size: clamp(0px, 4vh, 40px);
 }
 #InsuranceMC .INSone,
 #InsuranceMC .INStwo,
@@ -55,7 +45,6 @@ html {
 #InsuranceMC .INSone,
 #InsuranceMC .INSthree {
   width: 100%;
-  min-height: 100vh;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 60px;
@@ -67,10 +56,8 @@ html {
   gap: 35px;
   justify-content: center;
 }
-#InsuranceMC .INSone .heroText span {
-  font-size: clamp(0px, 2.7vh, 28px);
-  line-height: 1.7;
-  font-weight: 700;
+#InsuranceMC .INSone .heroText h3 {
+  font-weight: 300;
   color: black;
 }
 #InsuranceMC .INSone .heroText .quoteEle {
@@ -92,10 +79,6 @@ html {
   flex-direction: column;
   align-items: center;
   gap: 25px;
-}
-#InsuranceMC .INStwo h1 {
-  font-size: clamp(0px, 6vh, 60px);
-  font-family: Genos;
 }
 #InsuranceMC .INStwo > span {
   max-width: 70%;
@@ -140,23 +123,17 @@ html {
   color: #ef3b3b;
 }
 #InsuranceMC .INStwo .cardsCont .cardEle .cardTop h2 {
-  font-size: clamp(0px, 3vh, 38px);
+  font-family: Genos;
 }
-#InsuranceMC .INStwo .cardsCont .cardEle p {
-  font-size: clamp(0px, 2.4vh, 24px);
+#InsuranceMC .INStwo .cardsCont .cardEle h3 {
   color: #5f697d;
   line-height: 1.7;
-  font-weight: 700;
+  font-weight: 200;
 }
 #InsuranceMC .INSthree .left {
   display: flex;
   flex-direction: column;
   gap: 35px;
-}
-#InsuranceMC .INSthree .left h1 {
-  font-size: clamp(0px, 6vh, 60px);
-  font-family: Genos;
-  text-align: left;
 }
 #InsuranceMC .INSthree .left .line {
   width: 80px;

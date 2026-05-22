@@ -28,10 +28,7 @@
 
     h1 {
       text-align: center;
-
-      font-size: clamp(32px, 4vw, 60px);
       font-weight: 500;
-
       margin: 0;
     }
 
@@ -96,25 +93,26 @@
             gap: 10px;
 
             span {
-              font-size: clamp(16px, 1.2vw, 22px);
-
               line-height: 1.8;
 
               color: #444;
             }
-
+            
+            .statement{
+              color : grey;
+              font-style : italic;
+              font-weight : 100;
+            }
             h2 {
               margin: 0;
-
-              font-size: clamp(28px, 2vw, 42px);
+              
 
               font-weight: 700;
             }
 
             h3 {
               margin: 0;
-
-              font-size: clamp(18px, 1.1vw, 24px);
+              
 
               color: purple;
 
@@ -159,10 +157,6 @@
     .containingCon {
       gap: 20px;
 
-      h1 {
-        font-size: clamp(28px, 8vw, 42px);
-      }
-
       .contentRow {
         flex-direction: column;
 
@@ -196,20 +190,8 @@
 
             .text {
               width: 100%;
-
-              span {
-                font-size: 18px;
-
-                line-height: 1.7;
-              }
-
-              h2 {
-                font-size: 42px;
-              }
-
-              h3 {
-                font-size: 22px;
-              }
+              
+              
             }
 
             .image {

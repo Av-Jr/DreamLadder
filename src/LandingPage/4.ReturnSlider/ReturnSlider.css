@@ -7,128 +7,77 @@ html {
   width: 100%;
   position: relative;
   display: flex;
-  gap: 20px;
   flex-direction: column;
+  gap: 50px;
+  padding: 60px 100px 100px 100px;
   background-image: url("https://dreamladder-assets.s3.ap-south-1.amazonaws.com/public/flexBack.webp");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  padding: 0 100px 100px 100px;
-}
-#ReturnSliderMC h1 {
-  font-family: Genos;
-  text-align: center;
-  font-size: 4vh;
-  padding-bottom: 20px;
-}
-#ReturnSliderMC h2 {
-  font-family: SyneMono;
-  text-align: center;
-  font-size: 4vh;
-}
-#ReturnSliderMC h3 {
-  font-family: Genos;
-  white-space: normal;
-  color: rgba(0, 0, 0, 0.4);
-  text-align: center;
-}
-#ReturnSliderMC .childsR.two h2 {
-  font-size: clamp(0px, 2vh, 20px);
-}
-#ReturnSliderMC .childsR.two {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-#ReturnSliderMC .childsR.two .retElesCon {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  background: transparent;
-  padding: 20px;
-  gap: 20px;
-}
-#ReturnSliderMC .childsR.two .retElesCon .retEle {
-  flex: 1 1 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
-  background: transparent;
-}
-#ReturnSliderMC .childsR.two .retElesCon .retEle:hover img {
-  transform: scale(1.2);
-}
-#ReturnSliderMC .childsR.two .retElesCon .retEle .retBadge {
-  font-family: Genos;
-  background: #f1f2f4;
-  width: auto;
-  height: auto;
-  padding: 8px;
-  border-radius: 20px;
-}
-#ReturnSliderMC .childsR.two .retElesCon .retEle .retCircle {
-  display: grid;
-  place-items: center;
-  aspect-ratio: 1/1;
-  width: 100%;
-  border-radius: 50%;
-  border: 3px solid #f9f9fa;
-  background: #f1f2f4;
-  overflow: hidden;
-}
-#ReturnSliderMC .childsR.two .retElesCon .retEle .retCircle img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  transition: 0.4s ease;
 }
 #ReturnSliderMC .childsR.one {
   display: grid;
   place-items: center;
-  flex: 1 1 0;
+  gap: 30px;
+}
+#ReturnSliderMC .childsR.one h1 {
+  font-family: SyneMono;
+  text-align: center;
+  font-weight: 400;
+}
+#ReturnSliderMC .childsR.one h2 {
+  font-family: SyneMono;
+  font-weight: 200;
+  text-align: center;
+  white-space: normal;
+  color: rgba(0, 0, 0, 0.7);
 }
 #ReturnSliderMC .childsR.one .SliderCon {
-  font-family: Genos;
   position: relative;
-  background: white;
-  border-radius: 20px;
   width: clamp(320px, 50vw, 700px);
   min-height: 200px;
   display: grid;
   grid-template-columns: 1fr;
-  gap: 18px;
+  gap: 22px;
+  padding: 30px;
+  background: white;
+  border-radius: 24px;
   text-align: center;
-  padding: 24px;
+  font-family: Genos;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
 }
 #ReturnSliderMC .childsR.one .SliderCon #SCMC {
-  border: 2px solid #E53935;
   width: fit-content;
   margin: 0 auto;
-  font-size: clamp(18px, 3vh, 30px);
   padding: 10px 18px;
+  border: 2px solid #E53935;
   border-radius: 20px;
   color: #E53935;
   font-weight: bold;
 }
 #ReturnSliderMC .childsR.one .SliderCon .stateBtns {
   display: flex;
-  gap: 12px;
   justify-content: center;
   flex-wrap: wrap;
-  padding: 6px;
-  border-radius: 12px;
+  gap: 12px;
+  padding: 8px;
   background: #FAF9F6;
+  border-radius: 14px;
 }
 #ReturnSliderMC .childsR.one .SliderCon .StateBtnC {
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
   padding: 8px 14px;
-  border: none;
-  border-radius: 10px;
   background: transparent;
+  border-radius: 12px;
   color: black;
-  font-weight: bold;
-  cursor: pointer;
-  transition: 0.25s ease;
+  white-space: nowrap;
+  font-family: Genos, sans-serif;
+  font-weight: 750;
+  transition: 0.2s ease;
 }
 #ReturnSliderMC .childsR.one .SliderCon .StateBtnC.active {
   background: #E53935;
@@ -142,11 +91,7 @@ html {
   display: flex;
   justify-content: space-between;
   gap: 10px;
-  font-size: 16px;
   font-weight: 600;
-}
-#ReturnSliderMC .childsR.one .SliderCon {
-  /* RANGE INPUT BASE */
 }
 #ReturnSliderMC .childsR.one .SliderCon input[type=range] {
   -webkit-appearance: none;
@@ -158,105 +103,103 @@ html {
 #ReturnSliderMC .childsR.one .SliderCon input[type=range]:focus {
   outline: none;
 }
-#ReturnSliderMC .childsR.one .SliderCon {
-  /* WEBKIT TRACK - Chrome / Safari / Edge */
-}
 #ReturnSliderMC .childsR.one .SliderCon input[type=range]::-webkit-slider-runnable-track {
   height: 8px;
   background: #E53935;
   border-radius: 999px;
 }
-#ReturnSliderMC .childsR.one .SliderCon {
-  /* WEBKIT THUMB */
-}
 #ReturnSliderMC .childsR.one .SliderCon input[type=range]::-webkit-slider-thumb {
   -webkit-appearance: none;
   appearance: none;
-  margin-top: -7px;
   width: 22px;
   height: 22px;
+  margin-top: -7px;
   border-radius: 50%;
-  background: white;
   border: 2px solid #E53935;
+  background: white;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
   transition: 0.2s ease;
 }
 #ReturnSliderMC .childsR.one .SliderCon input[type=range]:active::-webkit-slider-thumb {
   transform: scale(1.05);
 }
-#ReturnSliderMC .childsR.one .SliderCon {
-  /* FIREFOX TRACK */
-}
 #ReturnSliderMC .childsR.one .SliderCon input[type=range]::-moz-range-track {
   height: 8px;
   background: #E53935;
   border-radius: 999px;
 }
-#ReturnSliderMC .childsR.one .SliderCon {
-  /* FIREFOX THUMB */
-}
 #ReturnSliderMC .childsR.one .SliderCon input[type=range]::-moz-range-thumb {
   width: 22px;
   height: 22px;
   border-radius: 50%;
-  background: white;
   border: 2px solid #E53935;
+  background: white;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
   transition: 0.2s ease;
 }
 #ReturnSliderMC .childsR.one .SliderCon input[type=range]:active::-moz-range-thumb {
   transform: scale(1.05);
 }
-#ReturnSliderMC .childsR.one .SliderCon {
-  /* IE / old Edge fallback */
+#ReturnSliderMC .childsR.two {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
 }
-#ReturnSliderMC .childsR.one .SliderCon input[type=range]::-ms-track {
-  width: 100%;
-  height: 8px;
+#ReturnSliderMC .childsR.two h2 {
+  font-family: Genos;
+  text-align: center;
+}
+#ReturnSliderMC .childsR.two .retElesCon {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  padding: 10px;
   background: transparent;
-  border-color: transparent;
-  color: transparent;
+  height: 100%;
+  width: 100%;
 }
-#ReturnSliderMC .childsR.one .SliderCon input[type=range]::-ms-fill-lower {
-  background: #E53935;
-  border-radius: 999px;
+#ReturnSliderMC .childsR.two .retElesCon .retEle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+  background: transparent;
 }
-#ReturnSliderMC .childsR.one .SliderCon input[type=range]::-ms-fill-upper {
-  background: #E53935;
-  border-radius: 999px;
+#ReturnSliderMC .childsR.two .retElesCon .retEle:hover img {
+  transform: scale(1.15);
 }
-#ReturnSliderMC .childsR.one .SliderCon input[type=range]::-ms-thumb {
-  width: 22px;
-  height: 22px;
-  border-radius: 50%;
+#ReturnSliderMC .childsR.two .retElesCon .retEle .retBadge {
+  width: fit-content;
+  padding: 8px 14px;
   background: white;
-  border: 2px solid #E53935;
-  cursor: pointer;
-  margin-top: 0;
+  border-radius: 20px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  font-family: Genos;
+}
+#ReturnSliderMC .childsR.two .retElesCon .retEle .retCircle {
+  width: auto;
+  max-width: 300px;
+  aspect-ratio: 1/1;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  border-radius: 50%;
+  border: 3px solid #f9f9fa;
+  background: #f1f2f4;
+}
+#ReturnSliderMC .childsR.two .retElesCon .retEle .retCircle img {
+  object-fit: cover;
+  transition: 0.4s ease;
 }
 
 /* MOBILE */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   #ReturnSliderMC {
-    padding: 10px;
-  }
-  #ReturnSliderMC .childsR.one .SliderCon {
-    width: 92%;
-    padding: 18px;
-    gap: 16px;
-  }
-  #ReturnSliderMC .childsR.one .SliderCon .stateBtns {
-    gap: 8px;
-  }
-  #ReturnSliderMC .childsR.one .SliderCon .StateBtnC {
-    font-size: 14px;
-    padding: 8px 12px;
-  }
-  #ReturnSliderMC .childsR.one .SliderCon span {
-    font-size: 14px;
-  }
-  #ReturnSliderMC .childsR.two .retElesCon {
-    flex-direction: column;
+    min-height: 100dvh;
+    padding: 0;
   }
 }
 

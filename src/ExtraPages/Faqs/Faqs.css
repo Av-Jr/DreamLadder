@@ -22,8 +22,6 @@ html {
   overflow: hidden;
 }
 #FaqsMC .QuestCon h2 {
-  font-size: 1.8rem;
-  font-weight: 700;
   font-family: SyneMono;
   color: #1d2433;
   padding: 28px 30px;
@@ -52,8 +50,7 @@ html {
   gap: 30px;
 }
 #FaqsMC .QuestCon .QuestEle .qq {
-  font-size: 1.5rem;
-  font-weight: 600;
+  font-weight: 300;
   line-height: 1.5;
   color: #20293a;
   font-family: Genos;

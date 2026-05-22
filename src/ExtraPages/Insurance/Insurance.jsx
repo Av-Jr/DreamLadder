@@ -157,13 +157,13 @@ const Insurance = () => {
 
           {
             InsuranceHeroData.description.map((item, index) => (
-              <span key={index}>{item.text}</span>
+              <h3 key={index}>{item.text}</h3>
             ))
           }
 
-          <span className={"quoteEle"}>
+          <h3 className={"quoteEle"}>
             {InsuranceHeroData.strategicSignificance}
-          </span>
+          </h3>
 
         </div>
 
@@ -180,7 +180,7 @@ const Insurance = () => {
 
         <h1>{InsuranceTypesData.title}</h1>
 
-        <span>{InsuranceTypesData.description}</span>
+        <h3>{InsuranceTypesData.description}</h3>
 
         <div className={"cardsCont"}>
 
@@ -200,7 +200,7 @@ const Insurance = () => {
 
                   </div>
 
-                  <p>{item.description}</p>
+                  <h3>{item.description}</h3>
 
                 </div>
               );
@@ -219,9 +219,9 @@ const Insurance = () => {
 
           <div className={"line"}></div>
 
-          <span>
+          <h3>
             {InsuranceRegulationData.description}
-          </span>
+          </h3>
 
           <img loading="lazy"
             src={`https://dreamladder-assets.s3.ap-south-1.amazonaws.com/public/${InsuranceRegulationData.image}.webp`}
@@ -238,7 +238,7 @@ const Insurance = () => {
 
                 <h2>{`0${index + 1}`}</h2>
 
-                <p>{item}</p>
+                <h3>{item}</h3>
 
               </div>
             ))
@@ -267,7 +267,7 @@ const Insurance = () => {
                   {item.number}
                 </div>
 
-                <span>{item.text}</span>
+                <h3>{item.text}</h3>
 
               </div>
             ))

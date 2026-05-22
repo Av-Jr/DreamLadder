@@ -25,10 +25,8 @@ export default function Disclaimer() {
 
   return (
     <div id="DisclaimerMC">
-
-      <div className="heroSec">
-
         <NavBar />
+      <div className="heroSec">
 
         <div className="heroContent">
 
@@ -44,9 +42,9 @@ export default function Disclaimer() {
 
           {disclaimerContent.map((item, index) => (
 
-            <p key={index}>
+            <h3 key={index}>
               {item}
-            </p>
+            </h3>
 
           ))}
 

@@ -56,11 +56,9 @@ export default function Disclosure() {
 
   return (
     <div id="DisclosureMC">
+      <NavBar />
 
       <div className="heroSec">
-
-        <NavBar />
-
         <div className="heroOverlay" />
 
         <div className="heroContent">
@@ -110,21 +108,21 @@ export default function Disclosure() {
 
         <div className="notesSec">
 
-          <p>
+          <h3>
             Details of Scheme level commission on Mutual funds are available
             with the Relationship Managers and would be produced on demand.
-          </p>
+          </h3>
 
-          <p>
+          <h3>
             This is on a best effort basis and rates are updated as and when
             actual rates are received from AMCS.
-          </p>
+          </h3>
 
-          <p>
+          <h3>
             We are a NISM certified / AMFI registered mutual fund
             distributor and not an RIA. We get compensated / incentivised
             by AMCS. We don&apos;t charge any fees for our services.
-          </p>
+          </h3>
 
         </div>
 

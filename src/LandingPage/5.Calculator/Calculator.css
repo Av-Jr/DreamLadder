@@ -5,13 +5,11 @@ html {
 #CalculatorMC {
   min-height: 100vh;
   width: 100%;
-  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: stretch;
-  padding: 100px;
-  gap: 50px;
+  justify-content: center;
+  gap: 40px;
   background-image: url("https://dreamladder-assets.s3.ap-south-1.amazonaws.com/public/flexBack.webp");
   background-position: center;
   background-size: cover;
@@ -19,21 +17,24 @@ html {
 }
 #CalculatorMC h2 {
   font-family: SyneMono;
-  font-size: clamp(0px, 4vh, 50px);
 }
 #CalculatorMC .CalcEleCon {
-  flex: 1 1 0;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  place-items: center;
-  text-align: center;
-  gap: 50px;
+  grid-template-columns: repeat(4, 220px);
+  justify-content: center;
+  gap: 20px;
+  width: fit-content;
   height: auto;
-  width: 100%;
 }
 #CalculatorMC .CalcEleCon .CalcEle {
-  aspect-ratio: 1;
+  width: 100%;
   transition: 0.2s ease;
+  display: grid;
+  place-items: center;
+  gap: 30px;
+  padding: 20px 10px;
+  background: #f1f2f4;
+  border-radius: 30px;
 }
 #CalculatorMC .CalcEleCon .CalcEle:hover {
   box-shadow: 0 8px 14px -8px rgba(0, 0, 0, 0.28);
@@ -42,22 +43,14 @@ html {
 #CalculatorMC .CalcEleCon .CalcEle:hover img {
   transform: scale(1.1);
 }
-#CalculatorMC .CalcEleCon .CalcEle {
-  display: grid;
-  place-items: center;
-  gap: 30px;
-  padding: 3vh;
-  background: #f1f2f4;
-  border-radius: 30px;
-}
 #CalculatorMC .CalcEleCon .CalcEle img {
+  width: 100%;
   object-fit: contain;
   transition: 0.2s ease;
 }
 #CalculatorMC .CalcEleCon .CalcEle h3 {
   font-family: Genos;
-  font-weight: 700;
-  font-size: clamp(0px, 3vh, 30px);
+  text-align: center;
 }
 
 @media (max-width: 1024px) {
@@ -81,11 +74,9 @@ html {
   }
   #CalculatorMC .CalcEle img {
     width: 100%;
-    max-width: 80px;
     height: auto;
   }
   #CalculatorMC .CalcEle h3 {
-    font-size: 20px;
     text-align: center;
   }
   #CalculatorMC .CalcEle:active {

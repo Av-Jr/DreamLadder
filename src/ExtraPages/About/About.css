@@ -104,7 +104,6 @@ html {
   gap: 10px;
   font-family: Genos;
   font-weight: 600;
-  font-size: 2vh;
 }
 #About2MC .sixthPage .heroText .sixthPgCard {
   border: 1px solid white;
@@ -131,48 +130,59 @@ html {
   min-height: 100vh;
   width: 100%;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(3, auto);
+  grid-template-columns: 1fr;
   place-items: center;
   padding: 50px;
-  gap: 100px;
 }
 #About2MC .fifthPage .teamIntro {
-  grid-column: span 2;
   text-align: center;
   font-family: Genos;
   display: grid;
-  gap: 20px;
+  place-items: center;
 }
 #About2MC .fifthPage .teamIntro h1 {
   text-decoration: underline 3px #E53935;
 }
-#About2MC .fifthPage .teamIntro span {
-  font-size: 3vh;
+#About2MC .fifthPage .teamIntro h3 {
+  max-width: 80%;
   color: grey;
   font-weight: 100;
   line-height: 1.5;
 }
 #About2MC .fifthPage .MemberCard {
-  height: 100%;
+  height: 80%;
   display: flex;
   flex-direction: row;
+  width: fit-content;
+  justify-content: center;
+  align-items: center;
+}
+#About2MC .fifthPage .MemberCard img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+  object-position: center;
+  padding: 40px;
 }
 #About2MC .fifthPage .MemberCard .heroText {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  padding: 10px;
+  display: grid;
+  place-items: center;
+  padding: 5px;
+  height: 100%;
+  width: 100%;
 }
 #About2MC .fifthPage .MemberCard .heroText h1 {
   font-family: SyneMono;
 }
-#About2MC .fifthPage .MemberCard .heroText h3 {
+#About2MC .fifthPage .MemberCard .heroText h2 {
+  font-family: Genos;
   color: #E53935;
 }
-#About2MC .fifthPage .MemberCard .heroText span {
+#About2MC .fifthPage .MemberCard .heroText h3 {
   font-family: Genos;
-  font-weight: 700;
-  font-size: 2vh;
+  font-weight: 200;
+  max-width: 60%;
 }
 #About2MC .fifthPage .MemberCard img {
   border-radius: 10px;
@@ -182,12 +192,10 @@ html {
 }
 #About2MC .fourthPage {
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  display: grid;
+  place-items: center;
   background: url("https://dreamladder-assets.s3.ap-south-1.amazonaws.com/public/flexBack.webp") center/cover no-repeat;
-  gap: 100px;
+  padding: 20px;
 }
 #About2MC .fourthPage h1 {
   font-weight: 800;
@@ -219,11 +227,9 @@ html {
 }
 #About2MC .fourthPage .cardElesfP .cardEle h2 {
   font-family: SyneMono;
-  font-size: clamp(0px, 3vh, 30px);
 }
 #About2MC .fourthPage .cardElesfP .cardEle span {
   font-family: Genos;
-  font-size: clamp(0px, 2vh, 30px);
 }
 #About2MC .thirdPage {
   min-height: 100vh;
@@ -241,7 +247,6 @@ html {
   width: 60%;
   height: auto;
   font-family: SyneMono;
-  font-size: clamp(0px, 2vw, 35px);
   line-height: 2;
   display: grid;
   place-items: center;
@@ -256,7 +261,6 @@ html {
   text-align: center;
   line-height: 1.5;
   font-weight: 800;
-  font-size: clamp(0px, 2vw, 35px);
   padding: 0 10%;
 }
 #About2MC .thirdPage .Intro .title {
@@ -265,7 +269,7 @@ html {
   line-height: inherit;
 }
 #About2MC .secondPage {
-  min-height: 100vh;
+  height: auto;
   width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -280,12 +284,10 @@ html {
 }
 #About2MC .secondPage .text {
   width: 90%;
-  height: 100%;
   padding: 20px;
   display: grid;
   place-items: center;
   font-family: Genos;
-  font-size: clamp(0px, 2.5vh, 30px);
 }
 #About2MC .secondPage .text .toShow {
   width: 100%;
@@ -296,7 +298,6 @@ html {
   color: grey;
 }
 #About2MC .secondPage .text .toShow .changeC {
-  font-size: 4vh;
   color: #E53935;
   font-weight: bold;
 }
@@ -326,23 +327,20 @@ html {
   text-align: center;
   line-height: 1;
   font-weight: bold;
-  font-size: clamp(0px, 2vh, 20px);
 }
 #About2MC .firstPage .Intro .title {
   color: grey;
   font-family: inherit;
   line-height: inherit;
 }
-#About2MC .firstPage span {
+#About2MC .firstPage h1 {
   font-family: SyneMono;
-  font-size: clamp(0px, 3vh, 40px);
   line-height: 2;
   text-align: center;
 }
 #About2MC .firstPage .toEdit {
   font-style: italic;
   color: red;
-  font-size: inherit;
 }
 
 @media (max-width: 1024px) {
@@ -351,7 +349,7 @@ html {
     padding: 0;
   }
   #About2MC .seventhPage, #About2MC .sixthPage, #About2MC .fifthPage, #About2MC .fourthPage, #About2MC .thirdPage, #About2MC .secondPage, #About2MC .firstPage {
-    padding: 20px;
+    padding: 70px 30px;
   }
   #About2MC .seventhPage {
     padding: 50px 0;
@@ -376,7 +374,6 @@ html {
     grid-template-rows: auto auto;
     padding: 10px;
     gap: 10px;
-    font-size: 15px;
     font-weight: normal;
   }
   #About2MC .sixthPage .heroText .sixthPgCard span {
@@ -407,7 +404,6 @@ html {
   }
   #About2MC .fifthPage .teamIntro span {
     width: 100%;
-    font-size: clamp(16px, 2.5vh, 22px);
     line-height: 1.6;
     color: grey;
     font-weight: 100;
@@ -435,18 +431,9 @@ html {
     padding: 10px;
     align-items: center;
   }
-  #About2MC .fifthPage .MemberCard .heroText h3 {
-    color: #E53935;
-    letter-spacing: 2px;
-    font-size: 14px;
-  }
-  #About2MC .fifthPage .MemberCard .heroText h1 {
-    font-size: clamp(28px, 4vw, 40px);
-  }
   #About2MC .fifthPage .MemberCard .heroText span {
     font-family: Genos;
     font-weight: 700;
-    font-size: clamp(16px, 2.2vh, 22px);
     line-height: 1.5;
   }
   #About2MC .fourthPage {
@@ -471,7 +458,6 @@ html {
     padding: 0;
     width: 100%;
     height: 100%;
-    font-size: clamp(0px, 3vh, 30px);
     background: rgba(255, 255, 255, 0.5);
     border-radius: 10px;
     text-align: center;
@@ -479,7 +465,6 @@ html {
   #About2MC .thirdPage .Intro {
     padding: 5px;
     width: auto;
-    font-size: clamp(0px, 3vh, 30px);
     background: rgba(255, 255, 255, 0.5);
     text-align: center;
     border-radius: 10px;
@@ -494,7 +479,7 @@ html {
     width: 100%;
     padding: 0;
     grid-row: 2;
-    text-align: left;
+    text-align: center;
   }
   #About2MC .secondPage img {
     height: auto;
@@ -514,7 +499,6 @@ html {
     padding: 20px;
   }
   #About2MC .firstPage span {
-    font-size: clamp(0px, 6vw, 50px);
     width: 100%;
     white-space: normal;
   }

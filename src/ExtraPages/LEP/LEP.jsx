@@ -130,7 +130,7 @@ const LEP = () => {
               LegacyEstateHeroData.points.map((item, index) => (
                 <div className={"pointEle"} key={index}>
 
-                  <span>{item}</span>
+                  <h3>{item}</h3>
 
                 </div>
               ))
@@ -138,9 +138,9 @@ const LEP = () => {
 
           </div>
 
-          <span className={"quoteEle"}>
+          <h3 className={"quoteEle"}>
             {LegacyEstateHeroData.strategicSignificance}
-          </span>
+          </h3>
 
         </div>
 
@@ -180,15 +180,15 @@ const LEP = () => {
 
                 <h1>{item.title}</h1>
 
-                <p>{item.description}</p>
+                <h3>{item.description}</h3>
 
                 <div className={"quoteBox"}>
 
                   <h4>STRATEGIC SIGNIFICANCE</h4>
 
-                  <span>
+                  <h2>
                     “{item.strategicSignificance}”
-                  </span>
+                  </h2>
 
                 </div>
 

@@ -166,18 +166,18 @@ const MFAssistData = {
                 <img loading="lazy" className={"heroImg"} src={`${img(MFHeroData.image)}`} alt=""/>
                 <div className="heroText">
                     {MFHeroData.description.map((item, index) => (
-                        <span className="descEles" key={index}>{item.text}</span>
+                        <h3 className="descEles" key={index}>{item.text}</h3>
                     ),
                     )}
-                    <span className="quoteEle">
+                    <h3 className="quoteEle">
                         {MFHeroData.quote}
-                    </span>
+                    </h3>
                 </div>
             </div>
 
             <div className="MFtwo">
                 <h1 className="titleHead">{MFBenefitsData.title}</h1>
-                <span className="titleDesc">{MFBenefitsData.description}</span>
+                <h3 className="titleDesc">{MFBenefitsData.description}</h3>
                 <div className="twoMC">
                     <img loading="lazy" src={`${img(MFBenefitsData.image)}`} alt=""/>
                     <div className="heroText">
@@ -187,7 +187,7 @@ const MFAssistData = {
                               return (
                                 <div className={'MFtwoCards'} key={index}>
                                     <h1><Icon className={"cardIconMF"}/>{item.title}</h1>
-                                    <span>{item.description}</span>
+                                    <h3 id={"CardsMean"}>{item.description}</h3>
                                 </div>
                             )})
                         }
@@ -198,7 +198,7 @@ const MFAssistData = {
             <div className="MFthree">
                 <div className="heroImg">
                     <img loading="lazy" src={img(MFInvestorData.image)} />
-                    <h1>{MFInvestorData.quote}</h1>
+                    <h3>{MFInvestorData.quote}</h3>
                 </div>
 
                 <div className="heroText">
@@ -209,8 +209,8 @@ const MFAssistData = {
 
                             return(
                                 <div className={"thirdCardEles"}>
-                                    <Icon className={"threeIcon"}/>
-                                    <span key={index}>{item}</span>
+                                    <Icon size={30} className={"threeIcon"}/>
+                                    <h3 key={index}>{item}</h3>
                                 </div>
                             )
                         })
@@ -228,7 +228,7 @@ const MFAssistData = {
                                     <h1>{item.step}. </h1>
                                     <span>
                                         <h1>{item.title}</h1>
-                                        <span>{item.description}</span>
+                                        <h3>{item.description}</h3>
                                     </span>
                                 </div>
                             ))
@@ -240,7 +240,7 @@ const MFAssistData = {
 
             <div className={"endingStatement"}>
                 <h1>Why Through Us ?</h1>
-                <span>Investing is made easy with our automated digital platform, while our expert fund selection, personalized advice, and active monitoring keep your portfolio smarter, safer, and goal-driven.</span>
+                <h2>Investing is made easy with our automated digital platform, while our expert fund selection, personalized advice, and active monitoring keep your portfolio smarter, safer, and goal-driven.</h2>
             </div>
             <Ql></Ql>
         </div>

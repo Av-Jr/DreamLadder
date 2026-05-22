@@ -250,14 +250,14 @@ const WhyAIFData = {
 
         <div className="heroText">
           {PMSHeroData.description.map((item, index) => (
-            <span className="descEles" key={index}>
+            <h3 className="descEles" key={index}>
               {item.text}
-            </span>
+            </h3>
           ))}
 
-          <span className="quoteEle">
+          <h3 className="quoteEle">
             {PMSHeroData.quote}
-          </span>
+          </h3>
         </div>
       </div>
 
@@ -265,7 +265,7 @@ const WhyAIFData = {
         <div className="left">
           <h1>{PMSFeatureData.title}</h1>
 
-          <span>{PMSFeatureData.description}</span>
+          <h3>{PMSFeatureData.description}</h3>
 
           <img loading="lazy" src={`${img(PMSFeatureData.image)}`} alt="" />
         </div>
@@ -282,7 +282,7 @@ const WhyAIFData = {
                     {item.title}
                   </h1>
 
-                  <span>{item.description}</span>
+                  <h3>{item.description}</h3>
                 </div>
               );
             })
@@ -299,16 +299,16 @@ const WhyAIFData = {
               <div className="timelineCard" key={index}>
                 <h2>{item.title}</h2>
 
-                <span>{item.description}</span>
+                <h3>{item.description}</h3>
               </div>
             ))
           }
         </div>
 
         <div className="right">
-          <span className="quoteEle">
+          <h3 className="quoteEle">
             {PMSRegulationData.quote}
-          </span>
+          </h3>
 
           <img loading="lazy" src={`${img(PMSRegulationData.image)}`} alt="" />
         </div>
@@ -318,9 +318,9 @@ const WhyAIFData = {
 
         <h1>{WhyPMSData.title}</h1>
 
-        <span>
+        <h3>
           {WhyPMSData.description}
-        </span>
+        </h3>
 
       </div>
 
@@ -336,15 +336,15 @@ const WhyAIFData = {
 
           {
             AIFIntroData.description.map((item, index) => (
-              <span key={index}>
+              <h3 key={index}>
                 {item.text}
-              </span>
+              </h3>
             ))
           }
 
-          <span className="quoteEle">
+          <h3 className="quoteEle">
             {AIFIntroData.quote}
-          </span>
+          </h3>
 
         </div>
 
@@ -362,19 +362,19 @@ const WhyAIFData = {
                   {item.title}
                 </h1>
 
-                <p>{item.description}</p>
+                <h3>{item.description}</h3>
 
                 <div className="bottom">
 
                   <span>
                     <h3>OBJECTIVE</h3>
-                    <p>{item.objective}</p>
+                    <h3>{item.objective}</h3>
                   </span>
 
-                  <span>
+                  <h3>
                     <h3>EXAMPLES</h3>
-                    <p>{item.examples}</p>
-                  </span>
+                    <h3>{item.examples}</h3>
+                  </h3>
 
                 </div>
 
@@ -400,9 +400,9 @@ const WhyAIFData = {
         <div className="left">
           <h1>{AIFRegulationData.title}</h1>
 
-          <span>
+          <h3>
             {AIFRegulationData.description}
-          </span>
+          </h3>
 
           <img loading="lazy" src={`${img(AIFRegulationData.image)}`} alt="" />
         </div>
@@ -413,7 +413,7 @@ const WhyAIFData = {
               <div className="regCard" key={index}>
                 <h1>0{index + 1}</h1>
 
-                <span>{item}</span>
+                <h3>{item}</h3>
               </div>
             ))
           }
@@ -425,9 +425,9 @@ const WhyAIFData = {
 
         <h1>{WhyAIFData.title}</h1>
 
-        <span>
+        <h3>
           {WhyAIFData.description}
-        </span>
+        </h3>
 
       </div>
 

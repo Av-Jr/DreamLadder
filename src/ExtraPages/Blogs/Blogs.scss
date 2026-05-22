@@ -10,10 +10,9 @@
 	display : grid;
 	place-items : center;
 	font-family : Genos;
-	font-size : clamp(0px, 5vh, 60px);
 	margin-bottom : 50px;
   }
-  span{
+  h2{
 	display: flex;
 	font-size : clamp(0px, 7vh, 80px);
 	font-family : SyneMono;

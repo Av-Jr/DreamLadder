@@ -37,7 +37,7 @@ const Pow = () => {
               {userInfo.map((item, index) => (
                 <div key={index} className="card">
                   <div className="text">
-                    <span>"{item.statement}"</span>
+                    <h2 className={"statement"}>"{item.statement}"</h2>
 
                     <h2>{item.name}</h2>
 

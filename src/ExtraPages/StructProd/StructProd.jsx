@@ -123,13 +123,13 @@ const StructProd = () => {
 
           {
             StructuredProductsHeroData.description.map((item, index) => (
-              <span key={index}>{item.text}</span>
+              <h3 key={index}>{item.text}</h3>
             ))
           }
 
-          <span className={"quoteEle"}>
+          <h3 className={"quoteEle"}>
             {StructuredProductsHeroData.quote}
-          </span>
+          </h3>
 
         </div>
 
@@ -146,7 +146,7 @@ const StructProd = () => {
 
         <h1>{StructuredProductsTypesData.title}</h1>
 
-        <span>{StructuredProductsTypesData.description}</span>
+        <h3>{StructuredProductsTypesData.description}</h3>
 
         <div className={"cardsCont"}>
 
@@ -162,11 +162,11 @@ const StructProd = () => {
 
                     <Icon/>
 
-                    <h2>{item.title}</h2>
+                    <h1>{item.title}</h1>
 
                   </div>
 
-                  <p>{item.description}</p>
+                  <h3>{item.description}</h3>
 
                 </div>
               );
@@ -185,9 +185,9 @@ const StructProd = () => {
 
           <div className={"line"}></div>
 
-          <span>
+          <h3>
             {StructuredProductsRegulationData.description}
-          </span>
+          </h3>
 
           <img loading="lazy"
             alt=""
@@ -202,17 +202,17 @@ const StructProd = () => {
             StructuredProductsRegulationData.points.map((item, index) => (
               <div className={"pointEle"} key={index}>
 
-                <h2>{`0${index + 1}`}</h2>
+                <h3>{`0${index + 1}`}</h3>
 
-                <p>{item}</p>
+                <h3>{item}</h3>
 
               </div>
             ))
           }
 
-          <span className={"quoteEle"}>
+          <h3 className={"quoteEle"}>
             {StructuredProductsRegulationData.quote}
-          </span>
+          </h3>
 
         </div>
 
@@ -222,9 +222,9 @@ const StructProd = () => {
 
         <h1>{WhyStructuredProductsData.title}</h1>
 
-        <span>
+        <h3>
           {WhyStructuredProductsData.description}
-        </span>
+        </h3>
 
       </div>
 

@@ -26,14 +26,12 @@ const ReturnSlider = () => {
     return (
         <div id={"ReturnSliderMC"}>
             <div className="childsR one">
-                <span>
-                    <h2>Time Reveals the True Wealth Builder</h2>
-                    <h3>Compounding Power over 25 years.</h3>
-                </span>
+                    <h1>Time Reveals the True Wealth Builder</h1>
+                    <h2>Compounding Power over 25 years.</h2>
                 <div className="SliderCon">
                     <div className="stateBtns">
                         <button className={`StateBtnC ${state === "Monthly" ? "active" : ""}`}
-                                onClick={() => ChangeState("Monthly")}>Monthly(SIP)
+                                onClick={() => ChangeState("Monthly")}>Monthly (SIP)
                         </button>
                         <button className={`StateBtnC ${state === "Yearly" ? "active" : ""}`}
                                 onClick={() => ChangeState("Yearly")}>One-Time
@@ -44,12 +42,12 @@ const ReturnSlider = () => {
                            className="SliderInp" onChange={(e) => {
                         changeVal(Number(e.target.value))
                     }}/>
-                    <span><p>₹500</p><p>{(state === "Monthly") ? "₹5 Lakh" : "₹1 Cr"}</p></span>
+                    <span><p>Rs 500</p><p>{(state === "Monthly") ? "Rs 5 Lakh" : "Rs 1 Cr"}</p></span>
                 </div>
             </div>
 
             <div className="childsR two">
-              <h3>After 25 years, it would have accumulated to</h3>
+              <h2>After 25 years, it would have accumulated to</h2>
 
               <div className="retElesCon">
                 {returnsData.map((item) => (

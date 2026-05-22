@@ -23,7 +23,7 @@ $colorRed : #E53935;
 	  font-size : clamp(0px, 5vh, 50px);
 	}
 	
-	span{
+	h2{
 	  font-family : Genos;
 	  max-width : 50%;
 	  text-align : center;
@@ -95,12 +95,14 @@ $colorRed : #E53935;
 	  justify-content : center;
 	  gap : 30px;
 	  h1{
-		font-size : clamp(0px, 2.5vh, 30px);
 		font-style : Italic;
 		color : grey;
-		max-width : 60%;
 		padding-left : 20px;
 		border-left : 2px $colorRed solid;
+	  }
+	  
+	  h3{
+		font-style : italic;
 	  }
 	}
 	
@@ -114,10 +116,12 @@ $colorRed : #E53935;
 	  
 	  .thirdCardEles{
 		display : flex;
-		gap : 10px;
-		
-		span{
-		  font-size : 2vh;
+		gap : 20px;
+		 
+		.threeIcon{
+		  aspect-ratio : 1;
+		  color : red;
+		  height : 20px;
 		}
 	  }
 
@@ -138,9 +142,7 @@ $colorRed : #E53935;
 	padding : 80px 30px;
 	gap : 40px;
 	
-	span{
-	  font-family : Genos;
-	  font-size : clamp(0px, 2.5vh, 30px);
+	.titleDesc{
 	  color : grey;
 	  max-width : 70%;
 	}
@@ -186,10 +188,9 @@ $colorRed : #E53935;
 			
 		  }
 		  
-		  span{
+		  #CardsMean{
 			color : white;
 			max-width : 100%;
-			font-size : 2.5vh;
 			font-weight : normal;
 		  }
 		}
@@ -209,9 +210,7 @@ $colorRed : #E53935;
     background-size: cover;
     background-repeat: no-repeat;
 	h1{
-	  font-size : clamp(0px, 5vh, 40px);
-	  font-weight : normal;
-	  font-family : SyneMono;
+	  font-family : Genos;
 	}
   }
   
@@ -237,9 +236,7 @@ $colorRed : #E53935;
 	  justify-content : center;
 	  align-items : center;
 	  gap : 35px;
-	  span{
-		font-family : Genos;
-		font-size : clamp(0px, 2.5vh, 30px);
+	  .descEles, .quoteEle{
 		max-width : 70%;
 		padding-left : 30px;
 	  }

@@ -444,13 +444,13 @@ const Faqs = () => {
                                     >
 
                                         <div className={"QuestTop"}>
-                                            <span className={"qq"}>
+                                            <h3 className={"qq"}>
                                                 {it.q}
-                                            </span>
+                                            </h3>
 
-                                            <span className={"plus"}>
+                                            <h3 className={"plus"}>
                                                 {isOpen ? "−" : "+"}
-                                            </span>
+                                            </h3>
                                         </div>
 
                                         <div className={"AnswerWrap"}>

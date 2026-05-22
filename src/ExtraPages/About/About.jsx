@@ -1,4 +1,5 @@
 import NavBar from "../../LandingPage/1.NavBar/NavBar.jsx";
+import {useState} from "react";
 import "./About.scss"
 import { Shield, Search, Briefcase, Handshake, TrendingUp, LayoutGrid, ChartColumn, MonitorSmartphone, Zap, Lock, Smartphone} from "lucide-react";
 import Ql from "../../LandingPage/9.QuickLinks/Ql.jsx";
@@ -7,7 +8,7 @@ import { img } from "../../utils/image.js";
 import React from 'react'
 
 export default function About() {
-
+    const [activeCard, setActiveCard] = useState(null);
 
     const WhyUsData =
         [
@@ -116,9 +117,9 @@ export default function About() {
             <NavBar></NavBar>
             <div className="firstPage">
                 <span className={"main"}>
-                    <span>"Wealth is not built overnight, its crafted through</span>
-                    <span className={'toEdit'}> Clarity, Courage and Consistency."</span>
-                    <span className={"Intro"}>Mr. Saday Sinha<br/><span className={'title'}>CEO & Founder</span></span>
+                    <h1>"Wealth is not built overnight, its crafted through</h1>
+                    <h1 className={'toEdit'}> Clarity, Courage and Consistency."</h1>
+                    <h2 className={"Intro"}>Mr. Saday Sinha<br/><span className={'title'}>CEO & Founder</span></h2>
                  </span>
                 <img loading="lazy" src={img("AboutSaday")} alt=""/>
             </div>
@@ -126,22 +127,22 @@ export default function About() {
             <div className="secondPage">
                 <div className="text">
                     <h1>Our Story</h1><br/><br/>
-                    <span>
+                    <h3>
                         Every great journey begins with a simple belief. Ours began in 2018 with the conviction that investing should be transparent, straightforward, and built on trust.<br/><br/>
                         What started as a focused effort in Mutual Funds has expanded into a comprehensive wealth management suite, including Corporate FDs, Protection Solutions, and Structured Products.<br/><br/>
                         Today, we serve over 500+ families across 12 countries, achieving milestones driven by the same purpose: helping people grow their wealth with clarity.<br/><br/>
-                    </span>
+                    </h3>
                     <div className="toShow">
-                        <span><span className={"changeC"}>25+</span><br/>YEARS EXPERTISE</span>
-                        <span><span className={"changeC"}>500+</span><br/>FAMILIES SERVED</span>
+                        <h2><span className={"changeC"}>25+</span><br/>YEARS EXPERTISE</h2>
+                        <h2><span className={"changeC"}>500+</span><br/>FAMILIES SERVED</h2>
                     </div>
                 </div>
                 <img loading="lazy" src={img("AboutTwo")} alt=""/>
             </div>
 
             <div className="thirdPage">
-                <div className={"textLeft"}>“Our mission is to be one of India’s most trusted partners in building long-term wealth. Every solution we create is designed to be simple, transparent, and effective.”</div>
-                <div className={"Intro"}>- Mr. Saday Sinha<br/><span className={'title'}>Founder & CEO, DreamLadder Capital</span></div>
+                <h2 className={"textLeft"}>“Our mission is to be one of India’s most trusted partners in building long-term wealth. Every solution we create is designed to be simple, transparent, and effective.”</h2>
+                <h3 className={"Intro"}>- Mr. Saday Sinha<br/><span className={'title'}>Founder & CEO, DreamLadder Capital</span></h3>
             </div>
 
             <div className="fourthPage">
@@ -157,7 +158,7 @@ export default function About() {
                                 <div className={"cardEle"}>
                                     <Icon color={"#E53935"} size={40} className={"cardIcon"}></Icon>
                                     <h2>{Tit}</h2>
-                                    <span>{Txt}</span>
+                                    <h3>{Txt}</h3>
                                 </div>
                             )
                         })
@@ -168,16 +169,16 @@ export default function About() {
             <div className={"fifthPage"}>
                 <div className="teamIntro">
                     <h1>{teamIntro.title}</h1>
-                    <span>{teamIntro.description}</span>
+                    <h3>{teamIntro.description}</h3>
                 </div>
                 {
                     teamData.map((item, index) => (
                         <div className={"MemberCard"}>
                             <img loading="lazy" src={`${item.image}`} alt="" className={"heroImg"}/>
                             <div className="heroText">
-                                <h3>{item.role}</h3>
+                                <h2>{item.role}</h2>
                                 <h1>{item.name}</h1>
-                                <span>{item.description}</span>
+                                <h3>{item.description}</h3>
                             </div>
                         </div>
                     ))

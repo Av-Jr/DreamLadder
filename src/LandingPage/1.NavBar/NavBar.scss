@@ -30,18 +30,16 @@ button {
 // ─── NavBar Container ────────────────────────────────────────────────────────
 
 #NavBarMC {
-  position: relative;
+  position: sticky;
   z-index: 20;
-
+  margin : auto;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
-
-  width: 100vw;
+  width: 80vw;
   height: 100px;
-
-  padding: 20px;
+  padding: 10px;
 
   background: transparent;
 
@@ -59,15 +57,12 @@ button {
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
-
   height: 100%;
-  width: auto;
-
-  gap: 30px;
+  gap : 10px;
 }
 
 .logo {
-  height: 100%;
+  height: 80%;
   object-fit: contain;
   object-position: center;
 }
@@ -108,11 +103,9 @@ button {
 
 .navItem {
   position: relative;
-
   display: flex;
   align-items: center;
   justify-content: center;
-
   height: 100%;
 
   // Desktop hover — open dropdown
@@ -142,45 +135,38 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 6px;
-
   padding: 5px 10px;
   border-radius: 10px;
-
   font-family: Genos, sans-serif;
-  font-size: clamp(14px, 2.5vh, 30px);
-  font-weight: 550;
-
+  font-size: clamp(0px, 2vh, 30px);
+  font-weight: 600;
+  width : fit-content;
   color: black;
-
-  transition: color 0.3s ease;
-
+  transition: all 0.2s ease;
   svg {
     width: 16px;
     height: 16px;
-    transition: transform 0.3s ease;
+    transition: transform 0.1s ease;
     flex-shrink: 0;
   }
 
   @media (hover: hover) {
     &:hover {
       color: #E53935;
-
-      svg {
+      svg{
         transform: rotate(180deg);
       }
     }
   }
 
   &.s {
-    border-radius: 12px;
     background: #E53935;
     display : flex;
     text-align : center;
-    justify-content : center;
+    gap : 10px;
     align-items : center;
     color: white;
-    transition: background 0.3s ease;
+    white-space : nowrap;
 
     @media (hover: hover) {
       &:hover {

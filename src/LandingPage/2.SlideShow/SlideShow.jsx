@@ -2,6 +2,13 @@ import "./SlideShow.scss";
 import {useState, useEffect} from "react";
 import {useNavigate} from "react-router-dom";
 import {img} from "../../utils/image.js";
+import {
+  BookOpen,
+  Calendar,
+  ChevronLeft,
+  ChevronRight,
+  ChevronDown
+} from "lucide-react";
 
 const SlideShow = () => {
     const [activeSlide, setActiveSlide] = useState(0);
@@ -46,8 +53,8 @@ const SlideShow = () => {
               </h1>
 
               <div className="heroActions">
-                <button className="navBtn s" onClick={() => {nav("/blogs")}}>Learning</button>
-                <button className="navBtn s" onClick={() => {window.open("https://calendly.com/dreamladdercapital/portfolio-discussion-meeting", "_blank")}}>Book my Appointment</button>
+                <button className="navBtn s" onClick={() => {nav("/blogs")}}><BookOpen size={16}/>Learning</button>
+                <button className="navBtn s" onClick={() => {window.open("https://calendly.com/dreamladdercapital/portfolio-discussion-meeting", "_blank")}}><Calendar size={16}/>Book my Appointment</button>
               </div>
             </div>
 
@@ -114,8 +121,8 @@ const SlideShow = () => {
               </h1>
 
               <div className="heroActions">
-                <button className="navBtn s" onClick={() => {window.location.href = "/blogs"}}>Learning</button>
-                <button className="navBtn s" onClick={() => {window.location.href = "https://calendly.com/dreamladdercapital/portfolio-discussion-meeting"}}>Book my Appointment</button>
+                <button className="navBtn s" onClick={() => {window.location.href = "/blogs"}}><BookOpen size={16}/>Learning</button>
+                <button className="navBtn s" onClick={() => {window.location.href = "https://calendly.com/dreamladdercapital/portfolio-discussion-meeting"}}><Calendar size={16}/>Book my Appointment</button>
               </div>
             </div>
 

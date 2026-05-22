@@ -11,19 +11,6 @@ html {
 #StructuredProductsMC * {
   box-sizing: border-box;
 }
-#StructuredProductsMC h1, #StructuredProductsMC h2, #StructuredProductsMC h3 {
-  margin: 0;
-  text-align: center;
-}
-#StructuredProductsMC p {
-  margin: 0;
-}
-#StructuredProductsMC span, #StructuredProductsMC p {
-  font-family: Genos;
-}
-#StructuredProductsMC h1, #StructuredProductsMC h2, #StructuredProductsMC h3 {
-  font-family: SyneMono;
-}
 #StructuredProductsMC .quoteEle {
   border-left: 4px #ef3b3b solid;
   padding-left: 25px;
@@ -34,7 +21,7 @@ html {
 }
 #StructuredProductsMC .headTit {
   width: 100%;
-  height: 25vh;
+  height: 20vh;
   background-image: url("https://dreamladder-assets.s3.ap-south-1.amazonaws.com/public/HP56.webp");
   background-position: center;
   background-size: cover;
@@ -42,9 +29,6 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-#StructuredProductsMC .headTit h1 {
-  font-size: clamp(0px, 7vh, 70px);
 }
 #StructuredProductsMC .SPone, #StructuredProductsMC .SPtwo, #StructuredProductsMC .SPthree, #StructuredProductsMC .SPfour {
   padding: 80px 200px;
@@ -65,8 +49,7 @@ html {
   justify-content: center;
   align-items: center;
 }
-#StructuredProductsMC .SPone .heroText span {
-  font-size: clamp(0px, 2.7vh, 28px);
+#StructuredProductsMC .SPone .heroText h3 {
   line-height: 1.7;
   font-weight: 700;
   color: black;
@@ -91,13 +74,7 @@ html {
   align-items: center;
   gap: 25px;
 }
-#StructuredProductsMC .SPtwo h1 {
-  font-size: clamp(0px, 6vh, 60px);
-  text-align: center;
-  font-family: Genos;
-}
-#StructuredProductsMC .SPtwo > span {
-  font-size: clamp(0px, 2.5vh, 25px);
+#StructuredProductsMC .SPtwo > h3 {
   color: #5f697d;
   line-height: 1.7;
   font-weight: 700;
@@ -137,11 +114,7 @@ html {
   border-radius: 10px;
   color: #ef3b3b;
 }
-#StructuredProductsMC .SPtwo .cardsCont .cardEle .cardTop h2 {
-  font-size: clamp(0px, 3vh, 38px);
-}
-#StructuredProductsMC .SPtwo .cardsCont .cardEle p {
-  font-size: clamp(0px, 2.4vh, 24px);
+#StructuredProductsMC .SPtwo .cardsCont .cardEle h3 {
   color: #5f697d;
   line-height: 1.7;
   font-weight: 700;
@@ -208,36 +181,25 @@ html {
   gap: 20px;
   text-align: center;
 }
-#StructuredProductsMC .SPfour h1 {
-  font-size: clamp(0px, 6vh, 60px);
-}
-#StructuredProductsMC .SPfour span {
-  max-width: 70%;
-  font-size: clamp(0px, 2.5vh, 25px);
-  color: #5f697d;
-  line-height: 1.7;
-  font-weight: 700;
-}
-
 @media (max-width: 1024px) {
-  #StructuredProductsMC .SPone,
-  #StructuredProductsMC .SPthree {
+  #StructuredProductsMC #StructuredProductsMC .SPone,
+  #StructuredProductsMC #StructuredProductsMC .SPthree {
     grid-template-columns: 1fr;
     padding: 30px 30px;
   }
-  #StructuredProductsMC .SPtwo {
+  #StructuredProductsMC #StructuredProductsMC .SPtwo {
     padding: 30px 30px;
   }
-  #StructuredProductsMC .SPtwo .cardsCont {
+  #StructuredProductsMC #StructuredProductsMC .SPtwo .cardsCont {
     grid-template-columns: 1fr;
   }
-  #StructuredProductsMC .SPthree .left img {
+  #StructuredProductsMC #StructuredProductsMC .SPthree .left img {
     width: 100%;
   }
-  #StructuredProductsMC .SPfour {
+  #StructuredProductsMC #StructuredProductsMC .SPfour {
     padding: 30px 30px;
   }
-  #StructuredProductsMC .SPfour span {
+  #StructuredProductsMC #StructuredProductsMC .SPfour span {
     max-width: 100%;
   }
 }

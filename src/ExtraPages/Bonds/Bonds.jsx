@@ -195,9 +195,9 @@ return (
 
             {
                 BondsHeroData.description.map((item, index) => (
-                    <span key={index}>
+                    <h3 key={index}>
                         {item.text}
-                    </span>
+                    </h3>
                 ))
             }
 
@@ -225,7 +225,7 @@ return (
 
                         <h2>{item.title}</h2>
 
-                        <span>{item.description}</span>
+                        <h3>{item.description}</h3>
 
                     </div>
                 ))
@@ -249,7 +249,7 @@ return (
 
         <h1>{WhyBondsData.title}</h1>
 
-        <span>{WhyBondsData.description}</span>
+        <h3>{WhyBondsData.description}</h3>
 
     </div>
 
@@ -265,9 +265,9 @@ return (
 
             {
                 FixedIncomeIntroData.description.map((item, index) => (
-                    <span key={index}>
+                    <h2 key={index}>
                         {item.text}
-                    </span>
+                    </h2>
                 ))
             }
 
@@ -283,7 +283,7 @@ return (
 
         <h1>{FixedIncomeTypesData.title}</h1>
 
-        <span>{FixedIncomeTypesData.description}</span>
+        <h3>{FixedIncomeTypesData.description}</h3>
 
         <div className="middleSection">
 
@@ -353,9 +353,9 @@ return (
 
             {
                 WhyFixedIncomeData.points.map((item, index) => (
-                    <span key={index}>
+                    <h3 key={index}>
                         {index + 1}. {item}
-                    </span>
+                    </h3>
                 ))
             }
 

@@ -3,7 +3,7 @@ html {
 }
 
 #BondsMC {
-  min-height: 100vh;
+  height: auto;
   width: 100%;
   overflow-x: hidden;
   background: #f7f7f7;
@@ -33,21 +33,21 @@ html {
 }
 #BondsMC .headTit {
   width: 100%;
-  height: 25vh;
+  height: 20vh;
   background: url("https://dreamladder-assets.s3.ap-south-1.amazonaws.com/public/HP56.webp") center/cover no-repeat;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 #BondsMC .headTit h1 {
-  font-size: clamp(0px, 7vh, 70px);
+  font-family: Genos;
 }
 #BondsMC .Bondsone,
 #BondsMC .Bondstwo,
 #BondsMC .Bondsfour,
 #BondsMC .Bondssix {
   width: 100%;
-  min-height: 100vh;
+  min-height: auto;
   padding: 100px 200px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -59,11 +59,11 @@ html {
   flex-direction: column;
   gap: 35px;
 }
-#BondsMC .Bondsone .heroText span {
-  font-size: clamp(0px, 2.7vh, 28px);
+#BondsMC .Bondsone .heroText h3 {
   line-height: 1.7;
   font-weight: 700;
   color: black;
+  font-family: Genos;
 }
 #BondsMC .Bondsone .heroText .quoteEle {
   max-width: 90%;
@@ -78,9 +78,7 @@ html {
   gap: 50px;
 }
 #BondsMC .Bondstwo .left h1 {
-  font-size: clamp(0px, 6vh, 60px);
   font-family: Genos;
-  font-weight: bold;
 }
 #BondsMC .Bondstwo .left .timelineCard {
   border-left: 2px #c9d0db solid;
@@ -101,14 +99,11 @@ html {
   background: white;
   transform: rotate(45deg);
 }
-#BondsMC .Bondstwo .left .timelineCard h2 {
-  font-size: clamp(0px, 3vh, 30px);
-}
-#BondsMC .Bondstwo .left .timelineCard span {
-  font-size: clamp(0px, 2.3vh, 24px);
+#BondsMC .Bondstwo .left .timelineCard h3 {
   color: #5f697d;
   line-height: 1.7;
-  font-weight: 700;
+  font-weight: 100;
+  font-family: Genos;
 }
 #BondsMC .Bondstwo .right {
   display: flex;
@@ -119,7 +114,6 @@ html {
 }
 #BondsMC .Bondstwo .right .quoteEle {
   max-width: 80%;
-  font-size: clamp(0px, 2.5vh, 25px);
 }
 #BondsMC .Bondstwo .right img {
   width: 100%;
@@ -139,15 +133,13 @@ html {
   padding: 40px;
   text-align: center;
 }
-#BondsMC .Bondsthree h1 {
-  font-size: clamp(0px, 6vh, 60px);
-}
-#BondsMC .Bondsthree span {
+#BondsMC .Bondsthree h3 {
+  font-family: Genos;
   max-width: 60%;
   font-size: clamp(0px, 2.5vh, 25px);
   color: #5f697d;
   line-height: 1.7;
-  font-weight: 700;
+  font-weight: 300;
 }
 #BondsMC .Bondsfour .heroImg img {
   width: 85%;
@@ -158,14 +150,12 @@ html {
   gap: 35px;
 }
 #BondsMC .Bondsfour .heroText h1 {
-  font-size: clamp(0px, 6vh, 60px);
   font-family: Genos;
 }
-#BondsMC .Bondsfour .heroText span {
-  font-size: clamp(0px, 2.6vh, 26px);
-  line-height: 1.7;
-  font-weight: 700;
-  color: black;
+#BondsMC .Bondsfour .heroText h2 {
+  font-family: Genos;
+  font-weight: 100;
+  color: rgba(0, 0, 0, 0.7);
 }
 #BondsMC .Bondsfour .heroText .quoteEle {
   max-width: 90%;
@@ -182,11 +172,10 @@ html {
   gap: 30px;
 }
 #BondsMC .Bondsfive h1 {
-  font-size: clamp(0px, 4vh, 40px);
   text-align: center;
 }
-#BondsMC .Bondsfive > span {
-  font-size: clamp(0px, 2.5vh, 25px);
+#BondsMC .Bondsfive > h3 {
+  font-family: Genos;
   color: #5f697d;
   font-weight: 700;
   text-align: center;
@@ -244,18 +233,16 @@ html {
   gap: 10px;
   align-items: center;
   color: white;
-  font-size: clamp(0px, 2.5vh, 25px);
 }
 #BondsMC .Bondsfive .middleSection .typeCard h2 span {
   color: #ef3b3b;
   font-family: Genos;
-  font-weight: 700;
+  font-weight: 200;
 }
 #BondsMC .Bondsfive .middleSection .typeCard p {
   color: #d6deed;
-  font-size: clamp(0px, 2.1vh, 22px);
   line-height: 1.7;
-  font-weight: 700;
+  font-weight: 200;
 }
 #BondsMC .Bondsfive .middleSection .left .typeCard::before {
   right: -10px;
@@ -275,7 +262,6 @@ html {
 }
 #BondsMC .Bondssix .left .quoteEle {
   max-width: 80%;
-  font-size: clamp(0px, 2.5vh, 25px);
 }
 #BondsMC .Bondssix .right {
   display: flex;
@@ -283,7 +269,6 @@ html {
   gap: 35px;
 }
 #BondsMC .Bondssix .right h1 {
-  font-size: clamp(0px, 6vh, 60px);
   font-family: Genos;
 }
 #BondsMC .Bondssix .right .line {
@@ -291,9 +276,9 @@ html {
   height: 4px;
   background: #ef3b3b;
 }
-#BondsMC .Bondssix .right span {
-  font-size: clamp(0px, 2.6vh, 26px);
-  font-weight: 700;
+#BondsMC .Bondssix .right h3 {
+  font-weight: 200;
+  font-family: Genos;
   color: black;
 }
 

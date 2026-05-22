@@ -4,8 +4,8 @@ $colorRed : #ef3b3b;
 $darkBlue : #17233d;
 
 #BondsMC{
-
-  min-height : 100vh;
+  
+  height : auto;
   width : 100%;
   overflow-x : hidden;
   background : #f7f7f7;
@@ -41,16 +41,13 @@ $darkBlue : #17233d;
 
   .headTit{
     width : 100%;
-    height : 25vh;
-
+    height : 20vh;
     background : img("HP56") center/cover no-repeat;
-
     display : flex;
     justify-content : center;
     align-items : center;
-
     h1{
-      font-size : clamp(0px, 7vh, 70px);
+      font-family : Genos;
     }
   }
 
@@ -59,10 +56,8 @@ $darkBlue : #17233d;
   .Bondsfour,
   .Bondssix{
     width : 100%;
-    min-height : 100vh;
-
+    min-height : auto;
     padding : 100px 200px;
-
     display : grid;
     grid-template-columns : repeat(2,1fr);
     gap : 60px;
@@ -70,18 +65,16 @@ $darkBlue : #17233d;
   }
 
   .Bondsone{
-
     .heroText{
       display : flex;
       flex-direction : column;
       gap : 35px;
 
-      span{
-        font-size : clamp(0px, 2.7vh, 28px);
-        
+      h3{
         line-height : 1.7;
         font-weight : 700;
         color : black;
+        font-family  : Genos;
       }
 
       .quoteEle{
@@ -106,9 +99,7 @@ $darkBlue : #17233d;
       gap : 50px;
 
       h1{
-        font-size : clamp(0px, 6vh, 60px);
         font-family : Genos;
-        font-weight : bold;
       }
 
       .timelineCard{
@@ -134,16 +125,13 @@ $darkBlue : #17233d;
 
           transform : rotate(45deg);
         }
+        
 
-        h2{
-          font-size : clamp(0px, 3vh, 30px);
-        }
-
-        span{
-          font-size : clamp(0px, 2.3vh, 24px);
+        h3{
           color : #5f697d;
           line-height : 1.7;
-          font-weight : 700;
+          font-weight : 100;
+          font-family : Genos;
         }
       }
     }
@@ -157,7 +145,6 @@ $darkBlue : #17233d;
 
       .quoteEle{
         max-width : 80%;
-        font-size : clamp(0px, 2.5vh, 25px);
       }
 
       img{
@@ -172,29 +159,23 @@ $darkBlue : #17233d;
   .Bondsthree{
     width : 100%;
     min-height : 30vh;
-
     background : img("flexBack") center/cover no-repeat;
-
     display : flex;
     flex-direction : column;
     justify-content : center;
     align-items : center;
     gap : 20px;
-
     padding : 40px;
-
     text-align : center;
+    
 
-    h1{
-      font-size : clamp(0px, 6vh, 60px);
-    }
-
-    span{
+    h3{
+      font-family : Genos;
       max-width : 60%;
       font-size : clamp(0px, 2.5vh, 25px);
       color : #5f697d;
       line-height : 1.7;
-      font-weight : 700;
+      font-weight : 300;
     }
   }
 
@@ -213,15 +194,13 @@ $darkBlue : #17233d;
       gap : 35px;
 
       h1{
-        font-size : clamp(0px, 6vh, 60px);
         font-family : Genos;
       }
 
-      span{
-        font-size : clamp(0px, 2.6vh, 26px);
-        line-height : 1.7;
-        font-weight : 700;
-        color : black;
+      h2{
+        font-family : Genos;
+        font-weight : 100;
+        color : rgba(0, 0, 0, 0.7);
       }
 
       .quoteEle{
@@ -245,12 +224,11 @@ $darkBlue : #17233d;
     gap : 30px;
 
     h1{
-      font-size : clamp(0px, 4vh, 40px);
       text-align : center;
     }
 
-    > span{
-      font-size : clamp(0px, 2.5vh, 25px);
+    > h3{
+      font-family : Genos;
       color : #5f697d;
       font-weight : 700;
       text-align : center;
@@ -259,7 +237,6 @@ $darkBlue : #17233d;
     .middleSection{
       width : 100%;
       flex : 1;
-
       display : grid;
       grid-template-columns : 1fr 1fr 1fr;
       align-items : center;
@@ -325,20 +302,18 @@ $darkBlue : #17233d;
           align-items : center;
 
           color : white;
-          font-size : clamp(0px, 2.5vh, 25px);
 
           span{
             color : $colorRed;
             font-family : Genos;
-            font-weight : 700;
+            font-weight : 200;
           }
         }
 
         p{
           color : #d6deed;
-          font-size : clamp(0px, 2.1vh, 22px);
           line-height : 1.7;
-          font-weight : 700;
+          font-weight : 200;
         }
       }
 
@@ -379,7 +354,6 @@ $darkBlue : #17233d;
 
       .quoteEle{
         max-width : 80%;
-        font-size : clamp(0px, 2.5vh, 25px);
       }
     }
 
@@ -389,7 +363,6 @@ $darkBlue : #17233d;
       gap : 35px;
 
       h1{
-        font-size : clamp(0px, 6vh, 60px);
         font-family : Genos;
       }
 
@@ -399,9 +372,9 @@ $darkBlue : #17233d;
         background : $colorRed;
       }
 
-      span{
-        font-size : clamp(0px, 2.6vh, 26px);
-        font-weight : 700;
+      h3{
+        font-weight : 200;
+        font-family : Genos;
         color : black;
       }
     }

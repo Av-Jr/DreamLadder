@@ -6,7 +6,7 @@ $redCol : #E53935;
   width : 100%;
   height : 100vh;
   
-  .seventhPage{
+.seventhPage{
 	padding : 100px;
 	height : auto;
 	width : 100%;
@@ -75,7 +75,6 @@ $redCol : #E53935;
 	  font-weight : 800;
 	}
   }
-  
   .sixthPage{
 	height : auto;
 	width : 100%;
@@ -111,7 +110,6 @@ $redCol : #E53935;
 	  gap : 10px;
 	  font-family : Genos;
 	  font-weight : 600;
-	  font-size : 2vh;
 	  
 	  .sixthPgCard{
 		border : 1px solid white;
@@ -142,24 +140,22 @@ $redCol : #E53935;
 	min-height : 100vh;
 	width : 100%;
 	display : grid;
-	grid-template-columns : 1fr 1fr;
+	grid-template-rows : repeat(3, auto);
+	grid-template-columns : 1fr;
 	place-items : center;
 	padding : 50px;
-	gap : 100px;
 	
 	.teamIntro{
-	  grid-column : span 2;
 	  text-align : center;
 	  font-family : Genos;
 	  display : grid;
-	  gap : 20px;
-	  
+	  place-items : center;
 	  h1{
 		text-decoration : underline 3px #E53935;
 	  }
 	  
-	  span{
-		font-size : 3vh;
+	  h3{
+		max-width : 80%;
 		color : grey;
 		font-weight : 100;
 		line-height : 1.5;
@@ -167,24 +163,38 @@ $redCol : #E53935;
 	}
 	
 	.MemberCard{
-	  height : 100%;
+	  height : 80%;
 	  display : flex;
 	  flex-direction : row;
+	  width : fit-content;
+	  justify-content : center;
+	  align-items : center;
+	  
+	  img{
+		height : 100%;
+		width : 100%;
+		object-fit : contain;
+		object-position : center;
+		padding : 40px;
+	  }
+	  
 	  .heroText{
-		display : flex;
-		flex-direction : column;
-		justify-content : space-around;
-		padding : 10px;
+		display : grid;
+		place-items : center;
+		padding : 5px;
+		height : 100%;
+		width : 100%;
 		
 		h1{font-family : SyneMono;}
-		h3{
+		h2{
+		  font-family : Genos;
 		  color : #E53935;
 		}
 		
-		span{
+		h3{
 		  font-family : Genos;
-		  font-weight : 700;
-		  font-size : 2vh;
+		  font-weight : 200;
+		  max-width : 60%;
 		}
 	  }
 	  
@@ -200,54 +210,49 @@ $redCol : #E53935;
   
   .fourthPage{
 	min-height : 100vh;
-	display : flex;
-	flex-direction : column;
-	justify-content : center;
-	align-items : center;
+	display : grid;
+	place-items : center;
 	background: img("flexBack") center/cover no-repeat;
-	gap : 100px;
-	
+	padding : 20px;
 	h1{
 	  font-weight : 800;
 	}
 	
-	.cardElesfP{
-	  display : grid;
-	  grid-template-columns : repeat(4, auto);
-	  place-items :center;
-	  gap : 20px;
-	  padding : 100px;
-	  
-	  .cardEle{
-		background: white;
-		display : flex;
-		flex-direction : column;
-		justify-content : space-around;
-		align-items : center;
-		min-height : 300px;
-		padding : 30px;
-		text-align : center;
-		border-radius : 20px;
-		
-		.cardIcon{
-		  background: pink;
-		  width : 50px;
-		  aspect-ratio : 1;
-		  padding : 5px;
-		  border-radius : 10px;
-		}
-		
-		h2{
-		  font-family : SyneMono;
-		  font-size : clamp(0px, 3vh, 30px);
-		}
-		
-		span{
-		  font-family : Genos;
-		  font-size : clamp(0px, 2vh, 30px);
-		}
-	  }
-	}
+.cardElesfP{
+  display : grid;
+  grid-template-columns : repeat(4, auto);
+  place-items :center;
+  gap : 20px;
+  padding : 100px;
+  
+  .cardEle{
+    background: white;
+    display : flex;
+    flex-direction : column;
+    justify-content : space-around;
+    align-items : center;
+    min-height : 300px;
+    padding : 30px;
+    text-align : center;
+    border-radius : 20px;
+    
+    .cardIcon{
+      background: pink;
+      width : 50px;
+      aspect-ratio : 1;
+      padding : 5px;
+      border-radius : 10px;
+    }
+    
+    h2{
+      font-family : SyneMono;
+    }
+    
+    span{
+      font-family : Genos;
+    }
+  }
+}
   }
   
   .thirdPage{
@@ -262,12 +267,10 @@ $redCol : #E53935;
 	gap : 50px;
 	overflow : hidden;
 	
-	
 	.textLeft{
 	  width : 60%;
 	  height : auto;
 	  font-family : SyneMono;
-	  font-size : clamp(0px, 2vw, 35px);
 	  line-height : 2;
 	  display : grid;
 	  place-items : center;
@@ -283,7 +286,6 @@ $redCol : #E53935;
 		text-align : center;
 		line-height : 1.5;
 		font-weight : 800;
-		font-size : clamp(0px, 2vw, 35px);
 		padding : 0 10%;
 		
 		
@@ -296,7 +298,7 @@ $redCol : #E53935;
   }
   
   .secondPage{
-	min-height : 100vh;
+	height : auto;
 	width : 100%;
 	display : grid;
 	grid-template-columns : 1fr 1fr;
@@ -312,13 +314,10 @@ $redCol : #E53935;
 	
 	.text{
 	  width : 90%;
-	  height : 100%;
 	  padding : 20px;
-	  
 	  display : grid;
 	  place-items : center;
 	  font-family : Genos;
-	  font-size : clamp(0px, 2.5vh, 30px);
 	  
 	  .toShow{
 		width : 100%;
@@ -329,7 +328,6 @@ $redCol : #E53935;
 		color : grey;
 		
 		.changeC{
-		  font-size : 4vh;
 		  color : #E53935;
 		  font-weight : bold;
 		}
@@ -366,7 +364,7 @@ $redCol : #E53935;
 	  text-align : center;
 	  line-height : 1;
 	  font-weight : bold;
-	  font-size : clamp(0px, 2vh, 20px);
+
 	  
 	  
 	  .title{
@@ -376,9 +374,8 @@ $redCol : #E53935;
 	  }
 	}
 	
-	span{
+	h1{
 	  font-family : SyneMono;
-	  font-size : clamp(0px, 3vh, 40px);
 	  line-height : 2;
 	  text-align : center;
 	}
@@ -386,7 +383,6 @@ $redCol : #E53935;
 	.toEdit{
 	  font-style : italic;
 	  color : red;
-	  font-size : inherit;
 	}
   }
 }
@@ -397,7 +393,7 @@ $redCol : #E53935;
 	padding : 0;
 	
 	.seventhPage, .sixthPage, .fifthPage, .fourthPage, .thirdPage, .secondPage, .firstPage{
-	  padding : 20px;
+	  padding : 70px 30px;
 	}
 	
 	.seventhPage{
@@ -424,7 +420,6 @@ $redCol : #E53935;
 		  grid-template-rows : auto auto;
 		  padding : 10px;
 		  gap : 10px;
-		  font-size : 15px;
 		  font-weight : normal;
 		  span{
 			padding : 10px;
@@ -449,17 +444,12 @@ $redCol : #E53935;
   .teamIntro{
     width: 100%;
     max-width: 100%;
-
     display: flex;
     flex-direction: column;
-
     align-items: center;
     justify-content: center;
-
     text-align: center;
-
     gap: 20px;
-
     grid-column: auto;
 
     h1{
@@ -468,70 +458,38 @@ $redCol : #E53935;
 
     span{
       width: 100%;
-
-      font-size: clamp(16px, 2.5vh, 22px);
-
       line-height: 1.6;
-
       color: grey;
-
       font-weight: 100;
     }
   }
 
   .MemberCard{
     width: 100%;
-
     display: flex;
     flex-direction: column;
-
     align-items: center;
-
     gap: 20px;
-
     text-align: center;
-
     img{
       width: 100%;
       max-width: 300px;
-
       height: auto;
       border-radius: 10px;
-
       object-fit: cover;
     }
 
     .heroText{
       width: 100%;
-
       display: flex;
       flex-direction: column;
-
       gap: 15px;
-
       padding: 10px;
-
       align-items: center;
-
-      h3{
-        color: #E53935;
-
-        letter-spacing: 2px;
-
-        font-size: 14px;
-      }
-
-      h1{
-        font-size: clamp(28px, 4vw, 40px);
-      }
 
       span{
         font-family: Genos;
-
         font-weight: 700;
-
-        font-size: clamp(16px, 2.2vh, 22px);
-
         line-height: 1.5;
       }
     }
@@ -563,7 +521,6 @@ $redCol : #E53935;
 		padding : 0;
 		width : 100%;
 		height : 100%;
-		font-size : clamp(0px, 3vh, 30px);
 	  	background : rgba(255, 255, 255, 0.5);
 		border-radius : 10px;
 		text-align : center;
@@ -572,7 +529,6 @@ $redCol : #E53935;
 	  .Intro{
 		padding : 5px;
 		width :  auto;
-		font-size : clamp(0px, 3vh, 30px);
 	  	background : rgba(255, 255, 255, 0.5);
 		text-align : center;
 		border-radius : 10px;
@@ -589,7 +545,7 @@ $redCol : #E53935;
 		width : 100%;
 		padding : 0;
 		grid-row : 2;
-		text-align : left;
+		text-align : center;
 	  }
 	  
 	  img{
@@ -612,7 +568,6 @@ $redCol : #E53935;
 		padding : 20px;
 	  }
 	  span{
-		font-size : clamp(0px, 6vw, 50px);
 		width : 100%;
 		white-space : normal;
 	  }

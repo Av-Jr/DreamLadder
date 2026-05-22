@@ -11,18 +11,6 @@ html {
 #LegacyEstatePlanningMC * {
   box-sizing: border-box;
 }
-#LegacyEstatePlanningMC h1, #LegacyEstatePlanningMC h2, #LegacyEstatePlanningMC h3, #LegacyEstatePlanningMC h4 {
-  margin: 0;
-}
-#LegacyEstatePlanningMC p {
-  margin: 0;
-}
-#LegacyEstatePlanningMC span, #LegacyEstatePlanningMC p {
-  font-family: Genos;
-}
-#LegacyEstatePlanningMC h1, #LegacyEstatePlanningMC h2, #LegacyEstatePlanningMC h3, #LegacyEstatePlanningMC h4 {
-  font-family: Genos;
-}
 #LegacyEstatePlanningMC .quoteEle {
   border-left: 4px #ef3b3b solid;
   padding-left: 20px;
@@ -33,7 +21,7 @@ html {
 }
 #LegacyEstatePlanningMC .headTit {
   width: 100%;
-  height: 25vh;
+  height: 20vh;
   background-image: url("https://dreamladder-assets.s3.ap-south-1.amazonaws.com/public/HP56.webp");
   background-position: center;
   background-size: cover;
@@ -43,9 +31,8 @@ html {
   align-items: center;
 }
 #LegacyEstatePlanningMC .headTit h1 {
-  font-size: clamp(0px, 4vh, 40px);
   text-align: center;
-  font-family: SyneMono;
+  font-family: Genos;
 }
 #LegacyEstatePlanningMC .LEPone,
 #LegacyEstatePlanningMC .LEPtwo {
@@ -65,7 +52,7 @@ html {
   gap: 20px;
 }
 #LegacyEstatePlanningMC .LEPone .left h1 {
-  font-size: clamp(0px, 6vh, 60px);
+  font-family: genos;
   line-height: 1.3;
 }
 #LegacyEstatePlanningMC .LEPone .left .pointsCont {
@@ -112,19 +99,7 @@ html {
   gap: 30px;
 }
 #LegacyEstatePlanningMC .LEPtwo .expertiseRow .textCont h3 {
-  font-size: clamp(0px, 1.6vh, 16px);
-  letter-spacing: 2px;
   color: #9ba7ba;
-}
-#LegacyEstatePlanningMC .LEPtwo .expertiseRow .textCont h1 {
-  font-size: clamp(0px, 6vh, 60px);
-  line-height: 1.2;
-}
-#LegacyEstatePlanningMC .LEPtwo .expertiseRow .textCont p {
-  font-size: clamp(0px, 2.6vh, 26px);
-  color: #4f5a70;
-  line-height: 1.8;
-  font-weight: 700;
 }
 #LegacyEstatePlanningMC .LEPtwo .expertiseRow .textCont .quoteBox {
   width: 100%;
@@ -137,9 +112,12 @@ html {
   gap: 15px;
 }
 #LegacyEstatePlanningMC .LEPtwo .expertiseRow .textCont .quoteBox h4 {
-  font-size: clamp(0px, 1.5vh, 15px);
-  letter-spacing: 2px;
+  font-family: Genos;
   color: #9ba7ba;
+}
+#LegacyEstatePlanningMC .LEPtwo .expertiseRow .textCont .quoteBox h2 {
+  font-family: genos;
+  color: rgba(0, 0, 0, 0.6);
 }
 #LegacyEstatePlanningMC .LEPtwo .expertiseRow .textCont .quoteBox span {
   font-size: clamp(0px, 2.4vh, 24px);

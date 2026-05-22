@@ -58,27 +58,27 @@ const Bp = () => {
 
             <div className="heroText">
 
-              <p>
+              <h3>
                 Every financial journey is distinct. A bespoke portfolio begins
                 with a clear understanding of your risk appetite, liquidity
                 priorities, and long-term objectives.
-              </p>
+              </h3>
 
-              <p>
+              <h3>
                 Rather than applying standard allocation models, exposure should
                 be structured across suitable investment avenues in alignment
                 with one’s financial landscape — balancing growth, preservation,
                 and continuity with discipline.
-              </p>
+              </h3>
 
               <div className="quoteBox">
 
                 <span></span>
 
-                <p>
+                <h3 className={"quoteT"}>
                   Disciplined allocation. Continuous monitoring.
                   Balanced growth.
-                </p>
+                </h3>
 
               </div>
 
@@ -110,26 +110,26 @@ const Bp = () => {
 
               <h2>Core Philosophy</h2>
 
-              <p>
+              <h3>
                 Enduring wealth is shaped by suitability-driven allocation
                 aligned with risk capacity, financial priorities, and long-term
                 objectives.
-              </p>
+              </h3>
 
-              <p>
+              <h3>
                 Short-term narratives do not define long-term outcomes.
                 The emphasis remains on governance, consistency, and
                 measured progression across market environments.
-              </p>
+              </h3>
 
               <div className="quoteBox">
 
                 <span></span>
 
-                <p>
+                <h3 className={"quoteT"}>
                   Disciplined allocation. Continuous monitoring.
                   Balanced growth.
-                </p>
+                </h3>
 
               </div>
 
@@ -143,14 +143,11 @@ const Bp = () => {
 
               <h2>Our Approach</h2>
 
-              <p>
+              <h3>
                 Significant wealth requires more than product selection.
                 It demands structure, discipline, and clarity of purpose.
-              </p>
+              </h3>
 
-              <div className="miniQuote">
-                “A Structured Philosophy, Not a Standard Template”
-              </div>
 
             </div>
 
@@ -164,7 +161,7 @@ const Bp = () => {
                     <span className={"matchCol"}>
                     <div className="line"></div>
 
-                    <h3>{item.title}</h3>
+                    <h2>{item.title}</h2>
                     </span>
 
                     <p>{item.desc}</p>
@@ -217,32 +214,32 @@ const Bp = () => {
 
               <div className="point">
                 <CheckCircle2 size={22} />
-                <p>Diversification</p>
+                <h3>Diversification</h3>
               </div>
 
               <div className="point">
                 <CheckCircle2 size={22} />
-                <p>Unbiased</p>
+                <h3>Unbiased</h3>
               </div>
 
               <div className="point">
                 <CheckCircle2 size={22} />
-                <p>Simple & Jargon-free</p>
+                <h3>Simple & Jargon-free</h3>
               </div>
 
               <div className="point">
                 <CheckCircle2 size={22} />
-                <p>Follow Portfolio approach</p>
+                <h3>Follow Portfolio approach</h3>
               </div>
 
               <div className="point">
                 <CheckCircle2 size={22} />
-                <p>Constant monitoring & re-balancing</p>
+                <h3>Constant monitoring & re-balancing</h3>
               </div>
 
               <div className="point">
                 <CheckCircle2 size={22} />
-                <p>Regular Hypothesis testing</p>
+                <h3>Regular Hypothesis testing</h3>
               </div>
 
             </div>
@@ -251,7 +248,7 @@ const Bp = () => {
 
           <div className="bottomBar">
 
-            <h3>For more information</h3>
+            <h2>For more information</h2>
 
             <div className="btns">
 

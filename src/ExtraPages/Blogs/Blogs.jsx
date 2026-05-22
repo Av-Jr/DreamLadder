@@ -9,7 +9,7 @@ export default function Blogs() {
         <div id={"BlogsMC"}>
             <NavBar></NavBar>
             <h1>Blogs</h1>
-            <span>Coming Soon....</span>
+            <h2>Coming Soon....</h2>
         </div>
     )
 }
