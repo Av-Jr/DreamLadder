@@ -1,6 +1,7 @@
 @use "../../mixins" as *;
 
 .connectPage {
+  position : relative;
   width: 100%;
   background: #f7f7f7;
   overflow: hidden;

@@ -1,6 +1,7 @@
 @use "../../mixins" as *;
 
 #DisclosureMC {
+  position : relative;
   width: 100%;
   min-height: 100vh;
   background: #ffffff;

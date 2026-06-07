@@ -2,6 +2,7 @@ import "./SlideShow.scss";
 import {useState, useEffect} from "react";
 import {useNavigate} from "react-router-dom";
 import {img} from "../../utils/image.js";
+import NavBar from "../1.NavBar/NavBar.jsx";
 import {
   BookOpen,
   Calendar,
@@ -39,6 +40,7 @@ const SlideShow = () => {
 
   return (
     <div id="SlideShowMC">
+      <NavBar></NavBar>
       <div className="SlideTrack"   style={{
     transform: `translateX(-${activeSlide * 100}vw)`,
     transition: animate ? "transform .8s ease" : "none"
@@ -53,8 +55,8 @@ const SlideShow = () => {
               </h1>
 
               <div className="heroActions">
-                <button className="navBtn s" onClick={() => {nav("/blogs")}}><BookOpen size={16}/>Learning</button>
-                <button className="navBtn s" onClick={() => {window.open("https://calendly.com/dreamladdercapital/portfolio-discussion-meeting", "_blank")}}><Calendar size={16}/>Book my Appointment</button>
+                <button className="ss" onClick={() => {nav("/blogs")}}><BookOpen size={16}/>Learning</button>
+                <button className="ss" onClick={() => {window.open("https://calendly.com/dreamladdercapital/portfolio-discussion-meeting", "_blank")}}><Calendar size={16}/>Book my Appointment</button>
               </div>
             </div>
 
@@ -106,7 +108,7 @@ const SlideShow = () => {
             </div>
 
             <div className="heroImg">
-              <img fetchPriority="high" src={img("Slide2")} alt="Wealth advisory hero visual" />
+              <img className={"BigImg"} fetchPriority="high" src={img("Slide2")} alt="Wealth advisory hero visual" />
             </div>
           </div>
         </div>
@@ -121,8 +123,8 @@ const SlideShow = () => {
               </h1>
 
               <div className="heroActions">
-                <button className="navBtn s" onClick={() => {window.location.href = "/blogs"}}><BookOpen size={16}/>Learning</button>
-                <button className="navBtn s" onClick={() => {window.location.href = "https://calendly.com/dreamladdercapital/portfolio-discussion-meeting"}}><Calendar size={16}/>Book my Appointment</button>
+                <button className="ss" onClick={() => {window.location.href = "/blogs"}}><BookOpen size={16}/>Learning</button>
+                <button className="ss" onClick={() => {window.location.href = "https://calendly.com/dreamladdercapital/portfolio-discussion-meeting"}}><Calendar size={16}/>Book my Appointment</button>
               </div>
             </div>
 

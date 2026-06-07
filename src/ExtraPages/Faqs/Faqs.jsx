@@ -421,8 +421,9 @@ const Faqs = () => {
 
     return (
         <>
-         <NavBar></NavBar>
+          <NavBar></NavBar>
         <div id={"FaqsMC"}>
+
             <h1>FAQ</h1>
             {
                 dataQ.map((item, index) => (
@@ -467,7 +468,7 @@ const Faqs = () => {
                     </div>
                 ))
             }
-        </div>
+            </div>
         </>
     );
 };

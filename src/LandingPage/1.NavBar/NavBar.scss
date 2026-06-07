@@ -21,7 +21,7 @@ button {
   inset: 0;
   z-index: 10;
   background: rgba(0, 0, 0, 0.3);
-
+  
   &.A {
     display: block;
   }
@@ -30,23 +30,23 @@ button {
 // ─── NavBar Container ────────────────────────────────────────────────────────
 
 #NavBarMC {
-  position: sticky;
+  position : absolute;
   z-index: 20;
-  margin : auto;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
-  width: 80vw;
+  width: 100vw;
+  max-width : 2000px;
   height: 100px;
-  padding: 10px;
-
-  background: transparent;
-
+  margin : auto;
+  left : 0;
+  right : 0;
+  
   font-family: Genos, sans-serif;
   font-weight: 550;
-  font-size: clamp(14px, 2.5vh, 30px);
-
+  font-size: clamp(14px, 2.5vh, 15px);
+  
   -webkit-font-smoothing: antialiased;
 }
 
@@ -62,7 +62,7 @@ button {
 }
 
 .logo {
-  height: 80%;
+  height: 50%;
   object-fit: contain;
   object-position: center;
 }
@@ -71,18 +71,18 @@ button {
 
 .HamBtn {
   display: none;
-
+  
   flex-direction: column;
   justify-content: center;
   gap: 5px;
-
+  
   width: 24px;
   height: 20px;
-
+  
   background: transparent;
   border: none;
   cursor: pointer;
-
+  
   span {
     display: block;
     width: 100%;
@@ -90,7 +90,7 @@ button {
     background: black;
     transition: transform 0.3s ease, opacity 0.3s ease, background 0.3s ease;
   }
-
+  
   &.HamActive {
     span { background: #E53935; }
     span:nth-of-type(1) { transform: translateY(7px) rotate(45deg); }
@@ -107,18 +107,18 @@ button {
   align-items: center;
   justify-content: center;
   height: 100%;
-
+  
   // Desktop hover — open dropdown
   @media (hover: hover) {
     &:hover {
       .navBtn {
         color: #E53935;
-
+        
         svg {
           transform: rotate(180deg);
         }
       }
-
+      
       .dropDown {
         opacity: 1;
         visibility: visible;
@@ -138,7 +138,7 @@ button {
   padding: 5px 10px;
   border-radius: 10px;
   font-family: Genos, sans-serif;
-  font-size: clamp(0px, 2vh, 30px);
+  font-size: clamp(0px, 2vh, 20px);
   font-weight: 600;
   width : fit-content;
   color: black;
@@ -149,7 +149,7 @@ button {
     transition: transform 0.1s ease;
     flex-shrink: 0;
   }
-
+  
   @media (hover: hover) {
     &:hover {
       color: #E53935;
@@ -158,20 +158,31 @@ button {
       }
     }
   }
-
+  
   &.s {
-    background: #E53935;
-    display : flex;
-    text-align : center;
-    gap : 10px;
-    align-items : center;
+    display: flex;
+    align-items: center;
+    
+    padding: 0.25rem 0.75rem; /* py-1 px-3 */
+    
+    background-color: #dc2626; /* red-600 */
+    border: 2px solid #dc2626;
+    
     color: white;
-    white-space : nowrap;
-
+    border-radius: 9999px; /* rounded-full */
+    
+    font-weight: 500;
+    font-size: 17px;
+    
+    box-shadow: 0 20px 25px -5px rgba(127, 29, 29, 0.2);
+    
+    transition: all 0.3s ease;
+    cursor: pointer;
+    
     @media (hover: hover) {
       &:hover {
-        background: grey;
-        color: white;
+        background-color: #434242;
+        border-color: #434242;
       }
     }
   }
@@ -184,25 +195,25 @@ button {
   top: 100%;
   left: 50%;
   transform: translate(-50%, 10px);
-
+  
   min-width: 240px;
-
+  
   background: white;
   border-radius: 20px;
   padding: 10px;
-
+  
   display: flex;
   flex-direction: column;
   gap: 4px;
-
+  
   box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.08);
-
+  
   z-index: 100;
-
+  
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
-
+  
   transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
 }
 
@@ -211,14 +222,14 @@ button {
 .dropItem {
   position: relative;
   width: 100%;
-
+  
   @media (hover: hover) {
     &:hover {
       .dropBtn {
         background: #F8F8F8;
         color: #E53935;
       }
-
+      
       .subDropDown {
         opacity: 1;
         visibility: visible;
@@ -233,22 +244,22 @@ button {
 
 .dropBtn {
   width: 100%;
-
+  
   display: flex;
   align-items: center;
   justify-content: space-between;
-
+  
   padding: 14px 16px;
   border-radius: 12px;
-
+  
   font-family: Genos, sans-serif;
   font-size: clamp(14px, 2.2vh, 26px);
   font-weight: 550;
-
+  
   color: #4B5563;
-
+  
   transition: background 0.3s ease, color 0.3s ease;
-
+  
   svg {
     width: 16px;
     height: 16px;
@@ -262,27 +273,27 @@ button {
   position: absolute;
   top: 0;
   left: 100%;
-
+  
   min-width: 280px;
-
+  
   background: white;
   border-radius: 20px;
   padding: 10px;
-
+  
   display: flex;
   flex-direction: column;
   gap: 4px;
-
+  
   box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.08);
-
+  
   z-index: 120;
-
+  
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
-
+  
   transform: translate(10px, 0px);
-
+  
   transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
 }
 
@@ -290,20 +301,20 @@ button {
 
 .subDropBtn {
   width: 100%;
-
+  
   padding: 14px 16px;
   border-radius: 12px;
-
+  
   text-align: left;
-
+  
   font-family: Genos, sans-serif;
   font-size: clamp(14px, 2.2vh, 26px);
   font-weight: 550;
-
+  
   color: #4B5563;
-
+  
   transition: background 0.3s ease, color 0.3s ease;
-
+  
   @media (hover: hover) {
     &:hover {
       background: #F8F8F8;
@@ -315,54 +326,54 @@ button {
 // ─── Mobile ───────────────────────────────────────────────────────────────────
 
 @include mediaDevice(mobile) {
-
+  
   #NavBarMC {
     justify-content: space-between;
   }
-
+  
   .HamBtn {
     display: flex;
   }
-
+  
   // Mobile slide-in panel
   .IL1.toBeInvis {
     display: none;
-
+    
     position: absolute;
     top: 100px;
     left: 0;
-
+    
     width: 100%;
     height: calc(100vh - 100px);
-
+    
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
-
+    
     gap: 10px;
-
+    
     padding: 20px;
-
+    
     background: white;
-
+    
     overflow-y: auto;
-
+    
     z-index: 50;
-
+    
     &.open {
       display: flex;
     }
   }
-
+  
   // Nav items stack vertically
   .navItem {
     width: 100%;
     height: auto;
-
+    
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-
+    
     // Kill desktop hover entirely on mobile
     &:hover {
       .navBtn { color: black; }
@@ -372,16 +383,16 @@ button {
         pointer-events: none;
       }
     }
-
+    
     &.mobileActive {
       & > .navBtn {
         color: #E53935;
-
+        
         svg {
           transform: rotate(180deg);
         }
       }
-
+      
       .dropDown {
         max-height: 1000px;
         opacity: 1;
@@ -392,7 +403,7 @@ button {
       }
     }
   }
-
+  
   .navBtn {
     width: 100%;
     font-size: 18px;
@@ -401,54 +412,54 @@ button {
     align-items: center;
     justify-content: space-between;
     text-align: left;
-
+    
     // No hover color on mobile
     &:hover {
       color: black;
     }
-
+    
     svg {
       transform: rotate(0deg);
     }
   }
-
+  
   // Mobile dropdown — flows in document
   .dropDown {
     position: relative;
     top: auto;
     left: auto;
-
+    
     width: 100%;
     min-width: 100%;
-
+    
     max-height: 0;
     overflow: hidden;
-
+    
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
-
+    
     // Crucial — no translate so nothing slides left
     transform: translate(0, 0);
-
+    
     background: transparent;
     box-shadow: none;
     border-radius: 0;
-
+    
     display: flex;
     flex-direction: column;
     gap: 10px;
-
+    
     padding-left: 15px;
-
+    
     // Only animate max-height/opacity, NOT transform
     transition: max-height 0.3s ease, opacity 0.3s ease,
-                padding 0.3s ease, visibility 0.3s ease;
+    padding 0.3s ease, visibility 0.3s ease;
   }
-
+  
   .dropItem {
     width: 100%;
-
+    
     // Kill desktop hover on mobile
     &:hover {
       .subDropDown {
@@ -457,12 +468,12 @@ button {
         pointer-events: none;
       }
     }
-
+    
     &.mobileSubActive {
       & > .dropBtn {
         color: #E53935;
       }
-
+      
       .subDropDown {
         max-height: 1000px;
         opacity: 1;
@@ -473,71 +484,71 @@ button {
       }
     }
   }
-
+  
   .dropBtn {
     width: 100%;
     font-size: 16px;
     color: #4B5563;
-
+    
     display: flex;
     align-items: center;
     justify-content: space-between;
-
+    
     background: #F8F8F8;
     border-radius: 12px;
     padding: 14px 16px;
-
+    
     // No hover on mobile
     &:hover {
       background: #F8F8F8;
       color: #4B5563;
     }
   }
-
+  
   // Mobile subdropdown — flows in document
   .subDropDown {
     position: relative;
     top: auto;
     left: auto;
-
+    
     width: 100%;
     min-width: 100%;
-
+    
     max-height: 0;
     overflow: hidden;
-
+    
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
-
+    
     // Crucial — no translate so nothing slides left
     transform: translate(0, 0);
-
+    
     background: transparent;
     box-shadow: none;
     border-radius: 0;
-
+    
     display: flex;
     flex-direction: column;
     gap: 10px;
-
+    
     padding-left: 15px;
-
+    
     // Only animate max-height/opacity, NOT transform
     transition: max-height 0.3s ease, opacity 0.3s ease,
-                padding 0.3s ease, visibility 0.3s ease;
+    padding 0.3s ease, visibility 0.3s ease;
   }
-
+  
   .subDropBtn {
     width: 100%;
     font-size: 15px;
     color: #4B5563;
-
+    
     background: #FAFAFA;
     border-radius: 12px;
     padding: 14px 16px;
     text-align: left;
-
+    
     &:hover {
       background: #FAFAFA;
       color: #4B5563;

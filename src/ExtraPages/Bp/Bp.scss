@@ -1,6 +1,7 @@
 @use "../../mixins" as *;
 
 .bespokePage {
+  position : relative;
   width: 100%;
   min-height: auto;
   background: #f7f7f7;

@@ -17,7 +17,7 @@ import React from 'react'
 export default function Home() {
     return (
         <>
-          <NavBar></NavBar>
+
           <div id = "AppMC">
                 <SlideShow></SlideShow>
               <About></About>
