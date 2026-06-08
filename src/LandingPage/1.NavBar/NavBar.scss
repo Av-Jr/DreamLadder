@@ -143,6 +143,8 @@ button {
   width : fit-content;
   color: black;
   transition: all 0.2s ease;
+  text-align : center;
+  white-space : nowrap;
   svg {
     width: 16px;
     height: 16px;
@@ -162,7 +164,7 @@ button {
   &.s {
     display: flex;
     align-items: center;
-    
+    width : fit-content;
     padding: 0.25rem 0.75rem; /* py-1 px-3 */
     
     background-color: #dc2626; /* red-600 */
@@ -328,7 +330,9 @@ button {
 @include mediaDevice(mobile) {
   
   #NavBarMC {
+    position : relative;
     justify-content: space-between;
+    width : 90vw;
   }
   
   .HamBtn {
@@ -376,7 +380,7 @@ button {
     
     // Kill desktop hover entirely on mobile
     &:hover {
-      .navBtn { color: black; }
+      .navBtn { color: white; }
       .dropDown {
         opacity: 0;
         visibility: hidden;
@@ -386,7 +390,7 @@ button {
     
     &.mobileActive {
       & > .navBtn {
-        color: #E53935;
+        color: white;
         
         svg {
           transform: rotate(180deg);
@@ -415,7 +419,7 @@ button {
     
     // No hover color on mobile
     &:hover {
-      color: black;
+      color: white;
     }
     
     svg {

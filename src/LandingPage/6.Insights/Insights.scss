@@ -78,9 +78,10 @@ h3{
 
 @include mediaDevice(mobile){
   #InsightsMC{
-    padding : 20px;
+    padding : 0;
     
     .iframeElesCon{
+      padding : 0;
       grid-template-columns : 1fr;
       grid-template-rows : auto;
       gap : 20px;

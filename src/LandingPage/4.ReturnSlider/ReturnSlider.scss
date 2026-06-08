@@ -75,7 +75,7 @@
         .stateBtns {
           display: flex;
           justify-content: center;
-          flex-wrap: wrap;
+          align-items : center;
           gap: 12px;
 
           padding: 8px;
@@ -259,5 +259,9 @@
   #ReturnSliderMC{
     min-height: 100dvh;
     padding: 0;
+    
+    .retElesCon{
+      flex-wrap : wrap;
+    }
   }
 }

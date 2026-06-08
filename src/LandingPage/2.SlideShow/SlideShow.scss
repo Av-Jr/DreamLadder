@@ -23,7 +23,7 @@
     border-radius: 9999px; /* rounded-full */
     
     font-weight: 1000;
-    font-size: 10px;
+    font-size: clamp(0px, 2vh, 25px);
     
     box-shadow:
             0 20px 25px -5px rgba(127, 29, 29, 0.2),
@@ -37,13 +37,6 @@
     border-color: #434242;
   }
   
-  @media (min-width: 768px) {
-    .ss {
-      padding-left: 16px; /* md:px-4 */
-      padding-right: 16px;
-      font-size: 16px;
-    }
-  }
   
   .ps, .as{
     width : auto;
@@ -188,10 +181,11 @@
 
 @include mediaDevice(mobile) {
   #SlideShowMC {
+    padding : 0;
     .SlideOne, .SlideTwo {
       grid-template-columns: 1fr;
       grid-template-rows: 1fr 1fr;
-      padding: 0;
+      padding : 0;
       
       .heroCon {
         justify-items: center;
