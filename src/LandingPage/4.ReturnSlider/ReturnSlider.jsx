@@ -4,8 +4,26 @@ import {img} from "../../utils/image.js"
 
 
 const ReturnSlider = () => {
+    const calculateReturn = (amount, rate, state) => {
+        if (state === "Yearly") {
+            return amount * Math.pow(1 + rate / 100, 25);
+        }
+
+        const monthlyRate = rate / 100 / 12;
+        const months = 25 * 12;
+
+        return (
+            amount *
+            ((Math.pow(1 + monthlyRate, months) - 1) / monthlyRate) *
+            (1 + monthlyRate)
+        );
+    };
+
+    const formatAmount = (value) => {
+        return (value / 10000000).toFixed(2) + " CR";
+    };
     const [state, setState] = useState("Monthly");
-    const [valS, changeVal] = useState(500);
+    const [valS, changeVal] = useState(50000);
     const returnsData = [
       { id: 1, img: "one", amt: 4.07, tag: "FD", rate: 7 },
       { id: 2, img: "two", amt: 4.79, tag: "Bonds", rate: 8 },
@@ -15,10 +33,11 @@ const ReturnSlider = () => {
     ];
 
     const ChangeState = (stateC) => {
-        if (state !== stateC) {
-            changeVal(500);
-            setState(stateC);
+        if (stateC == "Yearly") {
+            changeVal(1000000);
         }
+        else{changeVal(50000)}
+        setState(stateC);
     }
 
 
@@ -30,10 +49,10 @@ const ReturnSlider = () => {
                     <h2>Compounding Power over 25 years.</h2>
                 <div className="SliderCon">
                     <div className="stateBtns">
-                        <button className={`StateBtnC ${state === "Monthly" ? "active" : ""}`}
+                        <button className={` ${state === "Monthly" ? "navBtn s" : ""}`}
                                 onClick={() => ChangeState("Monthly")}>Monthly (SIP)
                         </button>
-                        <button className={`StateBtnC ${state === "Yearly" ? "active" : ""}`}
+                        <button className={` ${state === "Yearly" ? "navBtn s" : ""}`}
                                 onClick={() => ChangeState("Yearly")}>One-Time
                         </button>
                     </div>
@@ -49,26 +68,31 @@ const ReturnSlider = () => {
             <div className="childsR two">
               <h2>After 25 years, it would have accumulated to</h2>
 
-              <div className="retElesCon">
-                {returnsData.map((item) => (
-                  <div className="retEle" key={item.id}>
-                    <div className="retCircle">
-                      <h2>{`₹${item.amt} CR`}</h2>
-                      <div className="imgPart">
-                        <img loading="lazy"
-                          src={img(`imgPart${item.img}`)}
-                          alt={item.tag}
-                        />
-                      </div>
-                      <h3>{item.tag}</h3>
-                    </div>
+                <div className="retElesCon">
+                    {returnsData.map((item) => (
+                        <div className="retEle" key={item.id}>
+                            <div className="retCircle">
+                                <h2>
+                                    ₹{formatAmount(calculateReturn(valS, item.rate, state))}
+                                </h2>
 
-                    <div className="retBadge">
-                      {`@${item.rate}% Return`}
-                    </div>
-                  </div>
-                ))}
-              </div>
+                                <div className="imgPart">
+                                    <img
+                                        loading="lazy"
+                                        src={img(`imgPart${item.img}`)}
+                                        alt={item.tag}
+                                    />
+                                </div>
+
+                                <h3>{item.tag}</h3>
+                            </div>
+
+                            <div className="retBadge">
+                                @{item.rate}% Return
+                            </div>
+                        </div>
+                    ))}
+                </div>
             </div>
 
         </div>

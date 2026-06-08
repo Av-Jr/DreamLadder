@@ -1,13 +1,12 @@
 @use "../../mixins" as *;
 #FooterMC{
-  min-height :100vh;
+  height : auto;
   width : 100%;
   position : relative;
   display : grid;
   justify-content : center;
   align-content : center;
   gap : 20px;
-  padding : 100px;
   text-align : center;
     background-image: img("HP4");
     background-position: center;

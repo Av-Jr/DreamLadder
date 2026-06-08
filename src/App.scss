@@ -26,4 +26,7 @@ body{
   h3{
     font-size : clamp(15px, 2.5vh, 30px);
   }
+  #AboutMC, #ReturnSliderMC, #CalculatorMC, #InsightsMC, #PowMC, #FooterMC{
+    padding : 60px 60px;
+  }
 }

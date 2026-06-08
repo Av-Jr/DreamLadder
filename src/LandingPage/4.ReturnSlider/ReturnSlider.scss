@@ -1,15 +1,16 @@
 @use "../../mixins" as *;
 
 #ReturnSliderMC {
-  min-height: 100vh;
+  height : auto;
   width: 100%;
   position: relative;
 
   display: flex;
   flex-direction: column;
   gap: 50px;
-
-  padding: 60px 100px 100px 100px;
+  justify-content : center;
+  align-items : center;
+  
 
   background-image: img("flexBack");
   background-position: center;
@@ -20,7 +21,7 @@
 
     &.one {
       display: grid;
-      place-items: center;
+      place-items : center;
       gap: 30px;
 
       h1 {
@@ -44,10 +45,10 @@
         min-height: 200px;
 
         display: grid;
+        place-items : center;
         grid-template-columns: 1fr;
-        gap: 22px;
-
-        padding: 30px;
+        gap : 10px;
+        padding: 20px;
 
         background: white;
         border-radius: 24px;
@@ -64,10 +65,11 @@
           padding: 10px 18px;
 
           border: 2px solid #E53935;
-          border-radius: 20px;
+          border-radius: 10px;
 
           color: #E53935;
-          font-weight: bold;
+          font-size : clamp(0px, 2vh, 20px);
+          font-weight: 1000;
         }
 
         .stateBtns {
@@ -79,7 +81,8 @@
           padding: 8px;
 
           background: #FAF9F6;
-          border-radius: 14px;
+          width : fit-content;
+          border-radius: 9999px;
         }
 
         .StateBtnC {
@@ -107,10 +110,7 @@
             background: #E53935;
             color: white;
           }
-
-          &:hover {
-            transform: translateY(-1px);
-          }
+          
         }
 
         span {
@@ -205,8 +205,8 @@
 
       .retElesCon {
         display: flex;
+        flex-direction : row;
         justify-content: center;
-        flex-wrap: wrap;
         gap: 30px;
         padding: 10px;
         background: transparent;

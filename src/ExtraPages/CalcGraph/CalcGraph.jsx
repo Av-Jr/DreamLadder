@@ -1,4 +1,5 @@
 import { useState, useCallback } from "react";
+import { useSearchParams} from "react-router-dom";
 import NavBar from "../../LandingPage/1.NavBar/NavBar.jsx"
 import Ql from "../../LandingPage/9.QuickLinks/Ql.jsx";
 import {
@@ -1396,16 +1397,21 @@ const TAB_COMPONENTS = {
 };
 
 export default function CalcGraph() {
+  const [searchParams] = useSearchParams();
+
+  const initialTab =
+      searchParams.get("tab") || "sip";
   const [activeTab, setActiveTab] =
-    useState("sip");
+    useState(initialTab);
 
   const ActiveComponent =
     TAB_COMPONENTS[activeTab];
 
   return (
       <>
-      <NavBar></NavBar>
+
     <div className="calc-root">
+      <NavBar></NavBar>
       <div className="calc-tabs">
         <div className="calc-tabs__inner">
           {TABS.map(({ id, label, Icon }) => (
