@@ -5,9 +5,140 @@ $redCol : #E53935;
 #About2MC{
   position : relative;
   width : 100%;
-  height : 100vh;
+  min-height : 100vh;
+  .journeyPage{
+	width: 100%;
+	padding: 120px 40px;
+	
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	
+	h1{
+	  font-family: SyneMono;
+	  margin-bottom: 80px;
+	}
+  }
   
-.seventhPage{
+  .timeline{
+	position: relative;
+	
+	width: 100%;
+	max-width: 1200px;
+	
+	&::before{
+	  content: "";
+	  
+	  position: absolute;
+	  
+	  left: 50%;
+	  top: 0;
+	  bottom: 0;
+	  
+	  width: 2px;
+	  
+	  background: #e5e5e5;
+	  
+	  transform: translateX(-50%);
+	}
+  }
+  
+  .progressLine{
+	position: absolute;
+	
+	left: 50%;
+	top: 0;
+	
+	width: 2px;
+	height: 100%;
+	
+	background: #E53935;
+	
+	transform: translateX(-50%) scaleY(0);
+	transform-origin: top;
+  }
+  
+  .timelineItem{
+	position: relative;
+	
+	width: 100%;
+	
+	display: flex;
+	
+	margin-bottom: 140px;
+	
+	&.left{
+	  justify-content: flex-start;
+	  
+	  .timelineCard{
+		margin-right: calc(50% + 80px);
+	  }
+	}
+	
+	&.right{
+	  justify-content: flex-end;
+	  
+	  .timelineCard{
+		margin-left: calc(50% + 80px);
+	  }
+	}
+  }
+  
+  .year{
+	position: absolute;
+	
+	left: 50%;
+	top: 30px;
+	
+	transform: translateX(-50%);
+	
+	width: 90px;
+	height: 90px;
+	
+	border-radius: 50%;
+	
+	background: white;
+	
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	
+	font-family: SyneMono;
+	
+	box-shadow: 0 10px 25px rgba(0,0,0,.1);
+	
+	z-index: 3;
+  }
+  
+  .dot{
+	display: none;
+  }
+  
+  .timelineCard{
+	width: 500px;
+	
+	background: white;
+	
+	border-radius: 20px;
+	
+	padding: 40px;
+	
+	box-shadow: 0 10px 25px rgba(0,0,0,.08);
+	
+	h2{
+	  font-family: SyneMono;
+	  margin-bottom: 15px;
+	}
+	
+	p{
+	  font-family: Genos;
+	  font-size: 20px;
+	  line-height: 1.8;
+	  color: grey;
+	}
+  }
+  
+  .seventhPage{
 	padding : 100px;
 	height : auto;
 	width : 100%;
@@ -28,7 +159,7 @@ $redCol : #E53935;
 		position : relative;
 		min-width : 250px;
 		background: transparent;
-	  	font-family : SyneMono;
+		font-family : SyneMono;
 		font-weight : normal;
 		place-items : center;
 		gap : 0;
@@ -44,7 +175,7 @@ $redCol : #E53935;
 		  transform : rotateY(180deg);
 		  .desc{
 			opacity : 1;
-		  	transform : rotateY(180deg);
+			transform : rotateY(180deg);
 		  }
 		}
 		
@@ -134,81 +265,96 @@ $redCol : #E53935;
 		  font-family : Genos;
 		}
 	  }
-  	}
+	}
   }
   
   .fifthPage{
-	min-height : 100vh;
-	width : 100%;
-	display : grid;
-	grid-template-rows : repeat(3, auto);
-	grid-template-columns : 1fr;
-	place-items : center;
-	padding : 50px;
+	min-height: 100vh;
+	width: 100%;
+	
+	display: grid;
+	grid-template-columns: 0.9fr 1fr 1fr;
+	gap: 50px;
+	
+	padding: 100px;
 	
 	.teamIntro{
-	  text-align : center;
-	  font-family : Genos;
-	  display : grid;
-	  place-items : center;
+	  display: flex;
+	  flex-direction: column;
+	  justify-content: flex-start;
+	  align-items: flex-start;
+	  
 	  h1{
-		text-decoration : underline 3px #E53935;
+		font-family: SyneMono;
+		font-size: clamp(0px, 3vh, 30px);
+		margin-bottom: 20px;
 	  }
 	  
 	  h3{
-		max-width : 80%;
-		color : grey;
-		font-weight : 100;
-		line-height : 1.5;
+		font-family: Genos;
+		font-size: clamp(0px, 2vh, 25px);
+		line-height: 1.8;
+		color: rgba(0,0,0,.6);
+		font-weight: 600;
+		max-width: 500px;
+	  }
+	  
+	  &::after{
+		content:"";
+		width:70px;
+		height:3px;
+		background:#E53935;
+		margin:25px 0;
 	  }
 	}
 	
 	.MemberCard{
-	  height : 80%;
-	  display : flex;
-	  flex-direction : row;
-	  width : fit-content;
-	  justify-content : center;
-	  align-items : center;
+	  display: contents;
+	}
+	
+	.heroImg{
+	  width: 100%;
+	  max-width: 400px;
 	  
 	  img{
-		height : 100%;
-		width : 100%;
-		object-fit : contain;
-		object-position : center;
-		padding : 40px;
-	  }
-	  
-	  .heroText{
-		display : grid;
-		place-items : center;
-		padding : 5px;
-		height : 100%;
-		width : 100%;
+		width:80%;
+		height:auto;
+		object-fit:contain;
 		
-		h1{font-family : SyneMono;}
-		h2{
-		  font-family : Genos;
-		  color : #E53935;
-		}
-		
-		h3{
-		  font-family : Genos;
-		  font-weight : 200;
-		  max-width : 60%;
-		}
-	  }
-	  
-	  img{
-		border-radius : 10px;
-		object-fit : contain;
-		width : 100%;
-		height : auto;
+		border-radius:20px;
+		border:1px solid rgba(0,0,0,.05);
 	  }
 	}
 	
+	.heroText{
+	  display:flex;
+	  flex-direction:column;
+	  justify-content:center;
+	  align-items:flex-start;
+	  
+	  h2{
+		font-family: Genos;
+		color:#E53935;
+		letter-spacing:4px;
+		font-size:14px;
+		margin-bottom:10px;
+	  }
+	  
+	  h1{
+		font-family: SyneMono;
+		font-size: clamp(0px, 3vh, 30px);
+		margin-bottom:25px;
+	  }
+	  
+	  h3{
+		font-family: Genos;
+		font-size: clamp(0px, 2vh, 25px);
+		line-height:1.8;
+		color:rgba(0,0,0,.65);
+		font-weight:600;
+	  }
+	}
   }
-  
   .fourthPage{
 	min-height : 100vh;
 	display : grid;
@@ -219,41 +365,41 @@ $redCol : #E53935;
 	  font-weight : 800;
 	}
 	
-.cardElesfP{
-  display : grid;
-  grid-template-columns : repeat(4, auto);
-  place-items :center;
-  gap : 20px;
-  padding : 100px;
-  
-  .cardEle{
-    background: white;
-    display : flex;
-    flex-direction : column;
-    justify-content : space-around;
-    align-items : center;
-    min-height : 300px;
-    padding : 30px;
-    text-align : center;
-    border-radius : 20px;
-    
-    .cardIcon{
-      background: pink;
-      width : 50px;
-      aspect-ratio : 1;
-      padding : 5px;
-      border-radius : 10px;
-    }
-    
-    h2{
-      font-family : SyneMono;
-    }
-    
-    span{
-      font-family : Genos;
-    }
-  }
-}
+	.cardElesfP{
+	  display : grid;
+	  grid-template-columns : repeat(4, auto);
+	  place-items :center;
+	  gap : 20px;
+	  padding : 100px;
+	  
+	  .cardEle{
+		background: white;
+		display : flex;
+		flex-direction : column;
+		justify-content : space-around;
+		align-items : center;
+		min-height : 300px;
+		padding : 30px;
+		text-align : center;
+		border-radius : 20px;
+		
+		.cardIcon{
+		  background: pink;
+		  width : 50px;
+		  aspect-ratio : 1;
+		  padding : 5px;
+		  border-radius : 10px;
+		}
+		
+		h2{
+		  font-family : SyneMono;
+		}
+		
+		span{
+		  font-family : Genos;
+		}
+	  }
+	}
   }
   
   .thirdPage{
@@ -280,22 +426,22 @@ $redCol : #E53935;
 	  padding : 0 10%;
 	}
 	
-	  .Intro{
-		width : 60%;
-		height : auto;
-		font-family : Genos;
-		text-align : center;
-		line-height : 1.5;
-		font-weight : 800;
-		padding : 0 10%;
-		
-		
-		.title{
-		  color : #E53935;
-		  font-family : inherit;
-		  line-height : inherit;
-		}
+	.Intro{
+	  width : 60%;
+	  height : auto;
+	  font-family : Genos;
+	  text-align : center;
+	  line-height : 1.5;
+	  font-weight : 800;
+	  padding : 0 10%;
+	  
+	  
+	  .title{
+		color : #E53935;
+		font-family : inherit;
+		line-height : inherit;
 	  }
+	}
   }
   
   .secondPage{
@@ -362,10 +508,11 @@ $redCol : #E53935;
 	
 	.Intro{
 	  font-family : Genos;
-	  text-align : center;
+	  text-align : end;
 	  line-height : 1;
 	  font-weight : bold;
-
+	  margin-top : 20px;
+	  
 	  
 	  
 	  .title{
@@ -376,8 +523,8 @@ $redCol : #E53935;
 	}
 	
 	h1{
-	  font-family : SyneMono;
-	  line-height : 2;
+	  font-family : Genos;
+	  line-height : 1;
 	  text-align : center;
 	}
 	
@@ -392,6 +539,63 @@ $redCol : #E53935;
   #About2MC{
 	width : 100%;
 	padding : 0;
+	
+	.journeyPage{
+	  padding: 80px 20px;
+	  
+	  h1{
+		margin-bottom: 50px;
+		text-align: center;
+	  }
+	}
+	
+	.timeline{
+	  max-width: 100%;
+	  
+	  &::before{
+		left: 35px;
+	  }
+	}
+	
+	.progressLine{
+	  left: 35px;
+	}
+	
+	.timelineItem{
+	  margin-bottom: 60px;
+	  
+	  justify-content: flex-start !important;
+	}
+	
+	.year{
+	  left: 35px;
+	  
+	  width: 70px;
+	  height: 70px;
+	  
+	  font-size: 14px;
+	  
+	  z-index: 10;
+	}
+	
+	.timelineCard{
+	  width: calc(100% - 110px);
+	  
+	  margin-left: 90px !important;
+	  margin-right: 0 !important;
+	  
+	  padding: 20px;
+	  
+	  h2{
+		font-size: 12px;
+		margin-bottom: 10px;
+	  }
+	  
+	  p{
+		font-size: 8px;
+		line-height: 1.6;
+	  }
+	}
 	
 	.seventhPage, .sixthPage, .fifthPage, .fourthPage, .thirdPage, .secondPage, .firstPage{
 	  padding : 70px 30px;
@@ -430,72 +634,72 @@ $redCol : #E53935;
 	  }
 	}
 	
-.fifthPage{
-  width: 100%;
-  min-height: auto;
-
-  display: grid;
-  grid-template-columns: 1fr;
-
-  gap: 40px;
-  
-
-  place-items: center;
-
-  .teamIntro{
-    width: 100%;
-    max-width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    gap: 20px;
-    grid-column: auto;
-
-    h1{
-      text-underline-offset: 8px;
-    }
-
-    span{
-      width: 100%;
-      line-height: 1.6;
-      color: grey;
-      font-weight: 100;
-    }
-  }
-
-  .MemberCard{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-    text-align: center;
-    img{
-      width: 100%;
-      max-width: 300px;
-      height: auto;
-      border-radius: 10px;
-      object-fit: cover;
-    }
-
-    .heroText{
-      width: 100%;
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
-      padding: 10px;
-      align-items: center;
-
-      span{
-        font-family: Genos;
-        font-weight: 700;
-        line-height: 1.5;
-      }
-    }
-  }
-}
+	.fifthPage{
+	  width: 100%;
+	  min-height: auto;
+	  
+	  display: grid;
+	  grid-template-columns: 1fr;
+	  
+	  gap: 40px;
+	  
+	  
+	  place-items: center;
+	  
+	  .teamIntro{
+		width: 100%;
+		max-width: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+		gap: 20px;
+		grid-column: auto;
+		
+		h1{
+		  text-underline-offset: 8px;
+		}
+		
+		span{
+		  width: 100%;
+		  line-height: 1.6;
+		  color: grey;
+		  font-weight: 100;
+		}
+	  }
+	  
+	  .MemberCard{
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 20px;
+		text-align: center;
+		img{
+		  width: 100%;
+		  max-width: 300px;
+		  height: auto;
+		  border-radius: 10px;
+		  object-fit: cover;
+		}
+		
+		.heroText{
+		  width: 100%;
+		  display: flex;
+		  flex-direction: column;
+		  gap: 15px;
+		  padding: 10px;
+		  align-items: center;
+		  
+		  span{
+			font-family: Genos;
+			font-weight: 700;
+			line-height: 1.5;
+		  }
+		}
+	  }
+	}
 	
 	.fourthPage{
 	  justify-content : flex-start;
@@ -522,7 +726,7 @@ $redCol : #E53935;
 		padding : 0;
 		width : 100%;
 		height : 100%;
-	  	background : rgba(255, 255, 255, 0.5);
+		background : rgba(255, 255, 255, 0.5);
 		border-radius : 10px;
 		text-align : center;
 	  }
@@ -530,7 +734,7 @@ $redCol : #E53935;
 	  .Intro{
 		padding : 5px;
 		width :  auto;
-	  	background : rgba(255, 255, 255, 0.5);
+		background : rgba(255, 255, 255, 0.5);
 		text-align : center;
 		border-radius : 10px;
 	  }
