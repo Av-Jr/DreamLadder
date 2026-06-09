@@ -379,7 +379,7 @@ button {
     
     // Kill desktop hover entirely on mobile
     &:hover {
-      .navBtn { color: white; }
+      .navBtn { color:red; }
       .dropDown {
         opacity: 0;
         visibility: hidden;
@@ -389,7 +389,7 @@ button {
     
     &.mobileActive {
       & > .navBtn {
-        color: white;
+        color: red;
         
         svg {
           transform: rotate(180deg);
