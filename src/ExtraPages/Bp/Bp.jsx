@@ -37,126 +37,116 @@ const Bp = () => {
   ];
 
   return (
-    <>
-      <NavBar />
-
-      <div className="bespokePage">
-
-        <div className="heroSection">
-
-          <div className="overlay"></div>
-
-          <div className="heroContent">
-            <h1>Bespoke Portfolio</h1>
+      <>
+        <div className="bespokePage">
+          <div className="titleHeadZ">
+            <NavBar></NavBar>
+            <span className="titleZ">Bespoke Portfolio</span>
           </div>
+          <div className="mainContainer">
+            <div className="heroContainer">
 
-        </div>
+              <div className="heroText">
 
-        <div className="mainContainer">
-
-          <div className="heroContainer">
-
-            <div className="heroText">
-
-              <h3>
-                Every financial journey is distinct. A bespoke portfolio begins
-                with a clear understanding of your risk appetite, liquidity
-                priorities, and long-term objectives.
-              </h3>
-
-              <h3>
-                Rather than applying standard allocation models, exposure should
-                be structured across suitable investment avenues in alignment
-                with one’s financial landscape — balancing growth, preservation,
-                and continuity with discipline.
-              </h3>
-
-              <div className="quoteBox">
-
-                <span></span>
-
-                <h3 className={"quoteT"}>
-                  Disciplined allocation. Continuous monitoring.
-                  Balanced growth.
+                <h3>
+                  Every financial journey is distinct. A bespoke portfolio begins
+                  with a clear understanding of your risk appetite, liquidity
+                  priorities, and long-term objectives.
                 </h3>
+
+                <h3>
+                  Rather than applying standard allocation models, exposure should
+                  be structured across suitable investment avenues in alignment
+                  with one’s financial landscape — balancing growth, preservation,
+                  and continuity with discipline.
+                </h3>
+
+                <div className="quoteBox">
+
+                  <span></span>
+
+                  <h3 className={"quoteT"}>
+                    Disciplined allocation. Continuous monitoring.
+                    Balanced growth.
+                  </h3>
+
+                </div>
+
+              </div>
+
+              <div className="heroImage">
+
+                <img
+                    src={img("bPpgone")}
+                    alt="Bespoke Portfolio"
+                />
 
               </div>
 
             </div>
 
-            <div className="heroImage">
+            <div className="philosophyContainer">
 
-              <img
-                src={img("bPpgone")}
-                alt="Bespoke Portfolio"
-              />
+              <div className="philosophyImage">
 
-            </div>
+                <img
+                    src={img("bPpgtwo")}
+                    alt="Core Philosophy"
+                />
 
-          </div>
+              </div>
 
-          <div className="philosophyContainer">
+              <div className="philosophyText">
 
-            <div className="philosophyImage">
+                <h2>Core Philosophy</h2>
 
-              <img
-                src={img("bPpgtwo")}
-                alt="Core Philosophy"
-              />
-
-            </div>
-
-            <div className="philosophyText">
-
-              <h2>Core Philosophy</h2>
-
-              <h3>
-                Enduring wealth is shaped by suitability-driven allocation
-                aligned with risk capacity, financial priorities, and long-term
-                objectives.
-              </h3>
-
-              <h3>
-                Short-term narratives do not define long-term outcomes.
-                The emphasis remains on governance, consistency, and
-                measured progression across market environments.
-              </h3>
-
-              <div className="quoteBox">
-
-                <span></span>
-
-                <h3 className={"quoteT"}>
-                  Disciplined allocation. Continuous monitoring.
-                  Balanced growth.
+                <h3>
+                  Enduring wealth is shaped by suitability-driven allocation
+                  aligned with risk capacity, financial priorities, and long-term
+                  objectives.
                 </h3>
+
+                <h3>
+                  Short-term narratives do not define long-term outcomes.
+                  The emphasis remains on governance, consistency, and
+                  measured progression across market environments.
+                </h3>
+
+                <div className="quoteBox">
+
+                  <span></span>
+
+                  <h3 className={"quoteT"}>
+                    Disciplined allocation. Continuous monitoring.
+                    Balanced growth.
+                  </h3>
+
+                </div>
 
               </div>
 
             </div>
 
-          </div>
+            <div className="approachSection">
 
-          <div className="approachSection">
+              <div className="approachLeft">
 
-            <div className="approachLeft">
+                <h2>Our Approach</h2>
 
-              <h2>Our Approach</h2>
-
-              <h3>
-                Significant wealth requires more than product selection.
-                It demands structure, discipline, and clarity of purpose.
-              </h3>
+                <h3>
+                  Significant wealth requires more than product selection.
+                  It demands structure, discipline, and clarity of purpose.
+                </h3>
 
 
-            </div>
+              </div>
 
-            <div className="approachRight">
+              <div className="approachRight">
 
-              {
-                cards.map((item, index) => (
+                {
+                  cards.map((item, index) => (
 
-                  <div className="approachCard" key={index}>
+                      <div className="approachCard" key={index}>
 
                     <span className={"matchCol"}>
                     <div className="line"></div>
@@ -164,107 +154,109 @@ const Bp = () => {
                     <h2>{item.title}</h2>
                     </span>
 
-                    <p>{item.desc}</p>
+                        <p>{item.desc}</p>
 
-                  </div>
-                ))
-              }
-
-            </div>
-
-          </div>
-
-          <div
-            className="ctaSection"
-            style={{
-              background: `url(${img("HP4")}) center/cover no-repeat`,
-            }}
-          >
-
-            <div className="ctaImage">
-
-              <img
-                src={img("bPpgthree")}
-                alt="AI Assistant"
-              />
-
-            </div>
-
-            <div className="ctaContent">
-
-              <h2>
-                “Hi, I am your trusted friend and financial co-pilot.”
-              </h2>
-
-              <button
-                className="navBtn s"
-                onClick={() =>
-                  window.open(
-                    "https://calendly.com/dreamladdercapital/portfolio-discussion-meeting",
-                    "_blank"
-                  )
+                      </div>
+                  ))
                 }
-              >
-                Book your slot
-              </button>
 
-            </div>
-
-            <div className="ctaPoints">
-
-              <div className="point">
-                <CheckCircle2 size={22} />
-                <h3>Diversification</h3>
-              </div>
-
-              <div className="point">
-                <CheckCircle2 size={22} />
-                <h3>Unbiased</h3>
-              </div>
-
-              <div className="point">
-                <CheckCircle2 size={22} />
-                <h3>Simple & Jargon-free</h3>
-              </div>
-
-              <div className="point">
-                <CheckCircle2 size={22} />
-                <h3>Follow Portfolio approach</h3>
-              </div>
-
-              <div className="point">
-                <CheckCircle2 size={22} />
-                <h3>Constant monitoring & re-balancing</h3>
-              </div>
-
-              <div className="point">
-                <CheckCircle2 size={22} />
-                <h3>Regular Hypothesis testing</h3>
               </div>
 
             </div>
 
-          </div>
+            <div
+                className="ctaSection"
+                style={{
+                  background: `url(${img("HP4")}) center/cover no-repeat`,
+                }}
+            >
 
-          <div className="bottomBar">
+              <div className="ctaImage">
 
-            <h2>For more information</h2>
+                <img
+                    src={img("bPpgthree")}
+                    alt="AI Assistant"
+                />
 
-            <div className="btns">
+              </div>
 
-              <button
-                className="navBtn s"
-                onClick={() => window.location.href = "/blogs"}
-              >
-                Read More
-              </button>
+              <div className="ctaContent">
 
-              <button
-                className="navBtn s"
-                onClick={() => window.location.href = "/connect"}
-              >
-                Contact Us
-              </button>
+                <h2>
+                  “Hi, I am your trusted friend and financial co-pilot.”
+                </h2>
+
+                <button
+                    className="navBtn s"
+                    onClick={() =>
+                        window.open(
+                            "https://calendly.com/dreamladdercapital/portfolio-discussion-meeting",
+                            "_blank"
+                        )
+                    }
+                >
+                  Book your slot
+                </button>
+
+              </div>
+
+              <div className="ctaPoints">
+
+                <div className="point">
+                  <CheckCircle2 size={22} />
+                  <h3>Diversification</h3>
+                </div>
+
+                <div className="point">
+                  <CheckCircle2 size={22} />
+                  <h3>Unbiased</h3>
+                </div>
+
+                <div className="point">
+                  <CheckCircle2 size={22} />
+                  <h3>Simple & Jargon-free</h3>
+                </div>
+
+                <div className="point">
+                  <CheckCircle2 size={22} />
+                  <h3>Follow Portfolio approach</h3>
+                </div>
+
+                <div className="point">
+                  <CheckCircle2 size={22} />
+                  <h3>Constant monitoring & re-balancing</h3>
+                </div>
+
+                <div className="point">
+                  <CheckCircle2 size={22} />
+                  <h3>Regular Hypothesis testing</h3>
+                </div>
+
+              </div>
+
+            </div>
+
+            <div className="bottomBar">
+
+              <h2>For more information</h2>
+
+              <div className="btns">
+
+                <button
+                    className="navBtn s"
+                    onClick={() => window.location.href = "/blogs"}
+                >
+                  Read More
+                </button>
+
+                <button
+                    className="navBtn s"
+                    onClick={() => window.location.href = "/connect"}
+                >
+                  Contact Us
+                </button>
+
+              </div>
 
             </div>
 
@@ -272,10 +264,8 @@ const Bp = () => {
 
         </div>
 
-      </div>
-
-      <Ql />
-    </>
+        <Ql />
+      </>
   );
 };
 

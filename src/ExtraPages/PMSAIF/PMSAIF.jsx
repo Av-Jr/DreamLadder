@@ -205,26 +205,45 @@ const AIFTypesData = {
   ]
 };
 
-const AIFRegulationData = {
-  title: "Regulatory Framework",
+  const AIFRegulationData = {
+    title: "Regulatory Framework",
 
-  image: "PMSpgfive",
+    image: "PMSpgfive",
 
-  description:
-    "AIFs in India operate under the SEBI (Alternative Investment Funds) Regulations, 2012, ensuring a sophisticated environment for private capital.",
+    description:
+        "AIFs in India operate under the SEBI (Alternative Investment Funds) Regulations, 2012, ensuring a sophisticated environment for private capital.",
 
-  points: [
-    "Mandatory SEBI Registration: All AIFs must be registered with SEBI.",
+    points: [
+      {
+        title: "Mandatory SEBI Registration",
+        description: "All AIFs must be registered with SEBI."
+      },
 
-    "Minimum Investment Threshold: To ensure sophisticated participation, a minimum ticket size of ₹1 crore is required from investors.",
+      {
+        title: "Minimum Investment Threshold",
+        description:
+            "To ensure sophisticated participation, a minimum ticket size of ₹1 crore is required from investors."
+      },
 
-    "Leverage Restrictions: Category I & II AIFs cannot use leverage except for temporary needs; Category III can, within limits.",
+      {
+        title: "Leverage Restrictions",
+        description:
+            "Category I & II AIFs cannot use leverage except for temporary needs; Category III can, within limits."
+      },
 
-    "Transparency & Disclosure: Fund managers must report performance, valuation, and risks transparently.",
+      {
+        title: "Transparency & Disclosure",
+        description:
+            "Fund managers must report performance, valuation, and risks transparently."
+      },
 
-    "Eligible Investor Profile: Participation is strictly limited to High-Net-Worth Individuals (HNIs) and Institutional Investors who meet the criteria."
-  ]
-};
+      {
+        title: "Eligible Investor Profile",
+        description:
+            "Participation is strictly limited to High-Net-Worth Individuals (HNIs) and Institutional Investors who meet the criteria."
+      }
+    ]
+  };
 
 const WhyAIFData = {
   title: "Why AIF?",
@@ -235,10 +254,9 @@ const WhyAIFData = {
 
   return (
     <div id={"PMSAIFMC"}>
-      <NavBar />
-
-      <div className="headTit">
-        <h1>PMS / AIF</h1>
+      <div className="titleHeadZ">
+        <NavBar></NavBar>
+        <span className="titleZ">PMS / AIF</span>
       </div>
 
       <div className="PMSone">
@@ -291,36 +309,56 @@ const WhyAIFData = {
       </div>
 
       <div className="PMSthree">
+
         <div className="left">
+
           <h1>{PMSRegulationData.title}</h1>
 
-          {
-            PMSRegulationData.points.map((item, index) => (
-              <div className="timelineCard" key={index}>
-                <h2>{item.title}</h2>
+          <div className="RegTimeline">
 
-                <h3>{item.description}</h3>
-              </div>
-            ))
-          }
+            {PMSRegulationData.points.map((item, index) => (
+                <div
+                    className="RegItem"
+                    key={index}
+                >
+
+                  <div className="diamond"></div>
+
+                  <div className="stepContent">
+                    <h2>{item.title}</h2>
+                    <h3>{item.description}</h3>
+                  </div>
+
+                </div>
+            ))}
+
+          </div>
+
         </div>
 
         <div className="right">
+
           <h3 className="quoteEle">
             {PMSRegulationData.quote}
           </h3>
 
-          <img loading="lazy" src={`${img(PMSRegulationData.image)}`} alt="" />
+          <img
+              loading="lazy"
+              src={`${img(PMSRegulationData.image)}`}
+              alt=""
+          />
+
         </div>
+
       </div>
 
       <div className="endingStatement">
 
         <h1>{WhyPMSData.title}</h1>
 
-        <h3>
+        <h2>
           {WhyPMSData.description}
-        </h3>
+        </h2>
 
       </div>
 
@@ -362,19 +400,19 @@ const WhyAIFData = {
                   {item.title}
                 </h1>
 
-                <h3>{item.description}</h3>
+                <h3 className={'descAIF'}>{item.description}</h3>
 
                 <div className="bottom">
 
-                  <span>
+                  <span className={"it"}>
                     <h3>OBJECTIVE</h3>
-                    <h3>{item.objective}</h3>
+                    <h3 className={"it"}>{item.objective}</h3>
                   </span>
 
-                  <h3>
+                  <span>
                     <h3>EXAMPLES</h3>
-                    <h3>{item.examples}</h3>
-                  </h3>
+                    <h3 className={"it"}>{item.examples}</h3>
+                  </span>
 
                 </div>
 
@@ -413,7 +451,7 @@ const WhyAIFData = {
               <div className="regCard" key={index}>
                 <h1>0{index + 1}</h1>
 
-                <h3>{item}</h3>
+                <h3><span className="titleH3">{item.title}</span> : <span className="descH3">{item.description}</span></h3>
               </div>
             ))
           }
@@ -425,9 +463,9 @@ const WhyAIFData = {
 
         <h1>{WhyAIFData.title}</h1>
 
-        <h3>
+        <h2>
           {WhyAIFData.description}
-        </h3>
+        </h2>
 
       </div>
 

@@ -10,6 +10,7 @@ import {
   Activity,
   Layers3
 } from "lucide-react";
+import React from "react";
 
 const StructProd = () => {
 
@@ -110,11 +111,9 @@ const StructProd = () => {
 
   return (
     <div id={"StructuredProductsMC"}>
-
-      <NavBar/>
-
-      <div className={"headTit"}>
-        <h1>{StructuredProductsHeroData.title}</h1>
+      <div className="titleHeadZ">
+        <NavBar></NavBar>
+        <span className="titleZ">Structured<br></br>Products</span>
       </div>
 
       <div className={"SPone"}>
@@ -218,13 +217,13 @@ const StructProd = () => {
 
       </div>
 
-      <div className={"SPfour"}>
+      <div className={"endingStatement"}>
 
         <h1>{WhyStructuredProductsData.title}</h1>
 
-        <h3>
+        <h2>
           {WhyStructuredProductsData.description}
-        </h3>
+        </h2>
 
       </div>
 

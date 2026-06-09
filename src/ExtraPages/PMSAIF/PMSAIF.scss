@@ -112,44 +112,134 @@ $colorRed : #E53935;
       }
     }
   }
-
+  
   .PMSthree{
-    display : grid;
-    grid-template-columns : repeat(2,1fr);
-    gap : 60px;
-    place-items : center;
-
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:80px;
+    place-items:center;
+    
     .left{
-      height : 80%;
-      display : flex;
-      flex-direction : column;
-      justify-content : space-around;
-      gap : 30px;
+      width:100%;
       
       h1{
-        font-family : Genos;
+        font-family:Genos;
+        font-size:clamp(0px,5vh,50px);
+        margin-bottom:40px;
       }
       
-      .timelineCard{
-        font-family : SyneMono;
-        padding : 25px;
-        box-shadow: 0 15px 40px rgba(0,0,0,0.12);
-        border-radius : 10px;
-        display : flex;
-        flex-direction : column;
-        gap : 10px;
+      .RegTimeline{
+        display:flex;
+        flex-direction:column;
         
-        h2{
-          font-family : SyneMono;
-          font-size : clamp(0px, 3vh, 30px);
+        .RegItem{
+          position:relative;
+          
+          display:flex;
+          gap:30px;
+          
+          padding-bottom:40px;
+          
+          cursor:pointer;
+          
+          .diamond{
+            width:12px;
+            height:12px;
+            
+            border:2px solid $colorRed;
+            background:white;
+            
+            transform:rotate(45deg);
+            
+            margin-top:10px;
+            
+            transition:.3s ease;
+            
+            flex-shrink:0;
+            z-index:2;
+          }
+          
+          &::after{
+            content:"";
+            
+            position:absolute;
+            
+            left:5px;
+            top:22px;
+            
+            width:2px;
+            height:100%;
+            
+            background:#d7dde7;
+            
+            transition:.3s ease;
+          }
+          
+          &:last-child::after{
+            display:none;
+          }
+          
+          .stepContent{
+            
+            h2{
+              font-family:SyneMono;
+              font-size:clamp(0px,3.2vh,32px);
+              margin-bottom:10px;
+              transition:.3s ease;
+            }
+            
+            h3{
+              color:#5d6778;
+              line-height:1.8;
+              font-size:clamp(0px,2.1vh,22px);
+            }
+          }
+          
+          &:hover{
+            
+            .diamond{
+              background:$colorRed;
+            }
+            
+            .stepContent h2{
+              color:$colorRed;
+            }
+            
+            &::after{
+              background:$colorRed;
+            }
+          }
         }
         
-        span{
-          font-family : Genos;
-          font-size : clamp(0px, 2vh, 20px);
-        }
+
       }
     }
+    
+    .right{
+      width:100%;
+      
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      align-items:center;
+      gap:40px;
+      
+      .quoteEle{
+        max-width:90%;
+        line-height:2;
+        font-weight:600;
+      }
+      
+      img{
+        width:75%;
+        height:auto;
+        
+        border-radius:30px;
+        
+        box-shadow:0 15px 40px rgba(0,0,0,0.12);
+      }
+    }
+  
     
 
     .right{
@@ -204,8 +294,9 @@ $colorRed : #E53935;
       display : flex;
       flex-direction : column;
       justify-content : center;
-      align-items : center;
+      align-items : start;
       gap : 35px;
+      max-width : 80%;
 
       h1{
         font-size : clamp(0px, 5vh, 50px);
@@ -241,7 +332,6 @@ $colorRed : #E53935;
     }
 
     .aifCard{
-      
       transition : 0.3s ease;
       &:hover{
         background: rgba(255, 192, 203, 0.2);
@@ -252,13 +342,19 @@ $colorRed : #E53935;
       box-shadow : 0 10px 25px rgba(0,0,0,0.08);
       display : flex;
       flex-direction : column;
-      gap : 20px;
+      
+      .descAIF{
+        color : black;
+        font-weight : 100;
+      }
 
       h1{
         display : flex;
         align-items : center;
         gap : 35px;
         font-size : clamp(0px, 3vh, 30px);
+        font-weight : 900;
+        font-family : SyneMono;
 
         span{
           color : $colorRed;
@@ -275,6 +371,7 @@ $colorRed : #E53935;
       p{
         font-size : clamp(0px, 2.2vh, 22px);
         color : #5d6778;
+        font-family : Genos;
       }
 
       .bottom{
@@ -287,10 +384,16 @@ $colorRed : #E53935;
           display : flex;
           flex-direction : column;
           gap : 20px;
-        }
-
-        h3{
-          font-family : SyneMono;
+          
+          .it{
+            font-style : italic;
+            color : black;
+            font-weight : 100;
+          }
+          
+          h3{
+            font-family : Genos;
+          }
         }
       }
     }
@@ -313,6 +416,7 @@ $colorRed : #E53935;
         color : #5d6778;
         line-height : 1.7;
         max-width : 60%;
+        font-family : Genos;
       }
 
       img{
@@ -374,63 +478,81 @@ $colorRed : #E53935;
         color : #bcc5d3;
         font-size : clamp(0px, 4vh, 40px);
       }
-
-      span{
-        font-size : clamp(0px, 2.5vh, 24px);
-        color : #4f596b;
-        line-height : 1.7;
-        font-weight : 600;
+      
+      h3{
+        .titleH3{
+          font-size : clamp(0px, 2.5vh, 24px);
+          color : black;
+          font-weight : 2000;
+        }
+        .descH3{
+          font-size : clamp(0px, 2vh, 20px);
+          color : rgba(0, 0, 0, 0.8);
+          font-weight : 100;
+        }
       }
     }
   }
 
-  .endingStatement{
-    min-height : 30vh;
-    background-image: img("flexBack");
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-
-    display : flex;
-    flex-direction : column;
-    justify-content : center;
-    align-items : center;
-    gap : 20px;
-
-    padding : 40px;
-    
-    
-  }
 
 
 @include mediaDevice(mobile){
-
-  #PMSAIFMC{
-
+  
+  #PMSAIFMC {
+    
     .PMSone,
     .PMStwo,
     .PMSthree,
     .PMSfour,
     .PMSfive,
     .PMSsix,
-    .PMSseven{
-      grid-template-columns : 1fr;
-      padding : 40px 15px;
+    .PMSseven {
+      grid-template-columns: 1fr;
+      padding: 40px 15px;
     }
-
-    .endingStatement{
-      span{
-        max-width : 90%;
+    
+    .PMSthree {
+      grid-template-columns: 1fr;
+      gap: 50px;
+      
+      .left {
+        order: 2;
+      }
+      
+      .right {
+        order: 1;
+        
+        img {
+          width: 100%;
+        }
+      }
+      
+      .RegTimeline {
+        
+        .RegItem {
+          gap: 15px;
+          
+          .stepContent {
+            
+            h2 {
+              font-size: 1.2rem;
+            }
+            
+            h3 {
+              font-size: .95rem;
+            }
+          }
+        }
       }
     }
-
-    .PMSfive{
-
-      .aifCard{
-
-        .bottom{
-          flex-direction : column;
-          gap : 20px;
+    
+    .PMSfive {
+      
+      .aifCard {
+        
+        .bottom {
+          flex-direction: column;
+          gap: 20px;
         }
       }
     }

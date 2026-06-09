@@ -3,6 +3,7 @@ import "./LEP.scss";
 import NavBar from "../../LandingPage/1.NavBar/NavBar.jsx";
 import Ql from "../../LandingPage/9.QuickLinks/Ql.jsx";
 import {img} from "../../utils/image.js";
+import React from "react";
 
 const LEP = () => {
 
@@ -111,11 +112,9 @@ const LEP = () => {
 
   return (
     <div id={"LegacyEstatePlanningMC"}>
-
-      <NavBar/>
-
-      <div className={"headTit"}>
-        <h1>{LegacyEstateHeroData.title}</h1>
+      <div className="titleHeadZ">
+        <NavBar></NavBar>
+        <span className="titleZ">Legacy and<br></br>Estate Planning</span>
       </div>
 
       <div className={"LEPone"}>
@@ -176,9 +175,9 @@ const LEP = () => {
 
               <div className={"textCont"}>
 
-                <h3>{item.expertise}</h3>
+                <h3 className={"SM"}>{item.expertise}</h3>
 
-                <h1>{item.title}</h1>
+                <h1 className={"SM"}>{item.title}</h1>
 
                 <h3>{item.description}</h3>
 

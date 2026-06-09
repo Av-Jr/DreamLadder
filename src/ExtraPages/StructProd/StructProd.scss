@@ -7,7 +7,6 @@ $darkBlue : #17233d;
   position : relative;
   min-height : 100vh;
   width : 100%;
-  overflow-x : hidden;
   background : #f7f7f7;
 
   *{
@@ -91,8 +90,9 @@ $darkBlue : #17233d;
     background-repeat: no-repeat;
     display : flex;
     flex-direction : column;
+    justify-content : center;
     align-items : center;
-    gap : 25px;
+    gap : 10px;
     
 
     > h3{
@@ -107,9 +107,8 @@ $darkBlue : #17233d;
       margin-top : 30px;
       display : grid;
       grid-template-columns : repeat(2, auto);
-      align-items : center;
-      justify-content : center;
-      gap : 30px;
+      place-items : center;
+      gap : 10px;
 
       .cardEle{
         background : rgba(255,255,255,0.75);
@@ -117,9 +116,9 @@ $darkBlue : #17233d;
         border-radius : 20px;
         display : flex;
         flex-direction : column;
-        gap : 25px;
+        gap : 15px;
 		height : auto;
-		padding : 40px;
+		padding : 20px;
         max-width : 700px;
         box-shadow :
         0 5px 10px rgba(0,0,0,0.06),
@@ -129,6 +128,10 @@ $darkBlue : #17233d;
           display : flex;
           align-items : center;
           gap : 18px;
+          h1{
+            font-family : SyneMono;
+            font-size : clamp(0px, 3vh, 30px);
+          }
 
           svg{
             width : 32px;
@@ -147,7 +150,7 @@ $darkBlue : #17233d;
 
         h3{
           color : #5f697d;
-          line-height : 1.7;
+          line-height : 1.4;
           font-weight : 700;
         }
       }
@@ -235,45 +238,37 @@ $darkBlue : #17233d;
     justify-content : center;
     align-items : center;
     gap : 20px;
-
     text-align : center;
-
+}
 }
 
 @include mediaDevice(mobile){
-
   #StructuredProductsMC{
-
-    .SPone,
-    .SPthree{
-      grid-template-columns : 1fr;
-
-      padding : 30px 30px;
+    .quoteEle{
+      padding : 0;
     }
-
+    
+    .SPone, .SPtwo, .SPthree, .SPfour{
+      padding : 3px;
+      margin : 0 5px 100px 5px;
+    }
+    
+    .SPone, .SPthree{
+      grid-template-columns : 1fr;
+      grid-template-rows : 1fr;
+      gap  : 100px;
+    }
+    
     .SPtwo{
-      padding : 30px 30px;
-
+      gap : 30px;
+      
+      
       .cardsCont{
         grid-template-columns : 1fr;
-      }
-    }
-
-    .SPthree{
-
-      .left{
-
-        img{
-          width : 100%;
-        }
-      }
-    }
-
-    .SPfour{
-	  padding : 30px 30px;
-      span{
-        max-width : 100%;
+        grid-template-rows : 1fr;
+        width : 80%;
+        gap : 20px;
       }
     }
   }
-}}
+}

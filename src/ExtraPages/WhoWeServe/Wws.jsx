@@ -45,8 +45,11 @@ const wwsData = [
 ];
     return(
         <div id={"WwsMC"}>
-            <NavBar></NavBar>
-            <h1 className="titleHead">Who We Serve</h1>
+            <div className="titleHeadZ">
+                <NavBar></NavBar>
+                <span className="titleZ">Who We Serve</span>
+            </div>
+
             <div className="WwsCardsCon">
                 {wwsData.map((item, index) => (
                     <div className={`WwsCards ${index % 2 === 0 ? "rev" : ""}`} key={index}>

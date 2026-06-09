@@ -3,6 +3,7 @@ import "./Bonds.scss";
 import NavBar from "../../LandingPage/1.NavBar/NavBar.jsx";
 import Ql from "../../LandingPage/9.QuickLinks/Ql.jsx";
 import { img } from "../../utils/image.js";
+import React from "react";
 
 const Bonds = () => {
 
@@ -182,11 +183,9 @@ const WhyFixedIncomeData = {
 
 return (
 <div id={"BondsMC"}>
-
-    <NavBar />
-
-    <div className="headTit">
-        <h1>{BondsHeroData.title}</h1>
+    <div className="titleHeadZ">
+        <NavBar></NavBar>
+        <span className="titleZ">Bonds</span>
     </div>
 
     <div className="Bondsone">
@@ -245,11 +244,11 @@ return (
 
     </div>
 
-    <div className="Bondsthree">
+    <div className="endingStatement">
 
         <h1>{WhyBondsData.title}</h1>
 
-        <h3>{WhyBondsData.description}</h3>
+        <h2>{WhyBondsData.description}</h2>
 
     </div>
 

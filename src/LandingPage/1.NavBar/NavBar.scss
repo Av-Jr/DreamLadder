@@ -30,16 +30,16 @@ button {
 // ─── NavBar Container ────────────────────────────────────────────────────────
 
 #NavBarMC {
-  position : absolute;
+  position : relative;
   z-index: 20;
   display: flex;
+  margin : 0 auto;
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
   width: 100vw;
   max-width : 2000px;
   height: 100px;
-  margin : auto;
   left : 0;
   right : 0;
   
@@ -330,7 +330,6 @@ button {
 @include mediaDevice(mobile) {
   
   #NavBarMC {
-    position : relative;
     justify-content: space-between;
     width : 90vw;
   }

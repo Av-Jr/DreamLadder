@@ -29,10 +29,95 @@ body{
   #AboutMC, #ReturnSliderMC, #CalculatorMC, #InsightsMC, #PowMC, #FooterMC{
     padding : 60px 60px;
   }
+  
+  .endingStatement{
+    min-height : 30vh;
+    background-image: img("endStat");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display : flex;
+    flex-direction : column;
+    justify-content : center;
+    align-items : center;
+    gap : 20px;
+    
+    h1{
+      font-family : SyneMono !important;
+      font-size : clamp(0px, 5vh, 50px) !important;
+    }
+    
+    h2{
+      font-family : Genos !important;
+      max-width : 50%;
+      text-align : center;
+      font-size : clamp(0px, 2vh, 20px)!important;
+    }
+  }
+  
+  .titleHeadZ{
+    position : relative;
+    height : 200px;
+    width: 100%;
+    background-image: img("HP56");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content : space-between;
+    flex-direction : column;
+    text-align: center;
+    
+    &::after{
+      content: "";
+      
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      
+      width: 100%;
+      height: 40px;
+      background: linear-gradient(
+              to bottom,
+              transparent,
+              rgba(255,255,255,0.3),
+              rgba(255,255,255,0.8),
+              white
+      );
+      pointer-events : none;
+    }
+    
+    .titleZ{
+      font-family: SyneMono;
+      font-size : 35px;
+      margin-bottom : 50px;
+      white-space : normal;
+      word-break : normal;
+    }
+  }
 }
 
 @include mediaDevice(mobile){
   #AboutMC, #NavBar, #ReturnSliderMC, #CalculatorMC, #InsightsMC, #PowMC, #FooterMC{
     margin-bottom: 50px;
   }
+  
+  #MFsMC, #PMSAIFMC, #BondsMC, #StructuredProductsMC, #LegacyEstatePlanningMC, #insuranceMC, .bespokePage, #BlogsMC, #MediaMC, .calc-root, .connectPage{
+    .titleHeadZ{
+      .titleZ{
+        font-size :25px;
+      }
+    }
+    
+    .endingStatement{
+      padding : 0;
+      width : 100%;
+      text-align : center;
+      
+      span{
+        width : 100%;
+      }
+    }
+  }
+  
 }

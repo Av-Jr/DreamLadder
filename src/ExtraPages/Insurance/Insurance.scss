@@ -7,54 +7,54 @@ $darkBlue : #17233d;
   position : relative;
   min-height : 100vh;
   width : 100%;
-  overflow-x : hidden;
   background : #f7f7f7;
-
+  
   *{
     box-sizing : border-box;
   }
   
-
+  
   p{
     margin : 0;
   }
-
+  
   span,p{
     font-family : Genos;
   }
   
-
+  
   .quoteEle{
     border-left : 4px $colorRed solid;
     padding-left : 25px;
     color : #778196;
     font-style : italic;
-    line-height : 1.8;
-    font-weight : 700;
+    line-height : 1.3;
+    font-weight : 400;
+    font-size : 1vh;
   }
-
+  
   .headTit{
     width : 100%;
     height : 20vh;
-
+    
     background-image: img("HP56");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-
+    
     display : flex;
     justify-content : center;
     align-items : center;
     
   }
-
+  
   .INSone,
   .INStwo,
   .INSthree,
   .INSfour{
     padding : 80px 200px;
   }
-
+  
   .INSone,
   .INSthree{
     width : 100%;
@@ -63,119 +63,119 @@ $darkBlue : #17233d;
     gap : 60px;
     place-items : center;
   }
-
+  
   .INSone{
-
+    
     .heroText{
       display : flex;
       flex-direction : column;
-      gap : 35px;
+      gap : 25px;
       justify-content : center;
-
+      
       h3{
-        font-weight : 300;
+        font-weight : 700;
         color : black;
       }
-
+      
       .quoteEle{
         color : #5e687b;
         max-width : 90%;
-        font-size : clamp(0px, 2.5vh, 28px);
+        font-size : clamp(0px, 2vh, 20px);
       }
     }
-
+    
     .heroImg{
-
+      
       img{
         width : 100%;
       }
     }
   }
-
+  
   .INStwo{
     width : 100%;
     min-height : 100vh;
-
+    
     background-image: img("flexBack");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-
+    
     display : flex;
     flex-direction : column;
     align-items : center;
     gap : 25px;
     
-
+    
     > span{
       max-width : 70%;
-
+      
       font-size : clamp(0px, 2.5vh, 25px);
-
+      
       color : #5f697d;
       line-height : 1.7;
       font-weight : 700;
       text-align : center;
     }
-
+    
     .cardsCont{
       width : 100%;
-
+      
       margin-top : 30px;
-
+      
       display : grid;
       grid-template-columns : repeat(2, auto);
-
+      
       align-items : center;
       justify-content : center;
-
+      
       gap : 30px;
-
+      
       .cardEle{
         background : rgba(255,255,255,0.75);
-
+        
         backdrop-filter : blur(8px);
-
+        
         border-radius : 20px;
-
+        
         display : flex;
         flex-direction : column;
-
+        
         gap : 25px;
-
+        
         height : auto;
-
+        
         padding : 40px;
-
+        
         max-width : 700px;
-
+        
         box-shadow :
-        0 5px 10px rgba(0,0,0,0.06),
-        0 20px 40px rgba(0,0,0,0.08);
-
+                0 5px 10px rgba(0,0,0,0.06),
+                0 20px 40px rgba(0,0,0,0.08);
+        
         .cardTop{
           display : flex;
           align-items : center;
           gap : 18px;
-
+          
           svg{
             width : 32px;
             height : 32px;
-
+            
             padding : 5px;
-
+            
             background : rgb(255, 225, 225);
-
+            
             border-radius : 10px;
-
+            
             color : $colorRed;
           }
-
+          
           h2{
             font-family : Genos;
           }
         }
-
+        
         h3{
           color : #5f697d;
           line-height : 1.7;
@@ -184,151 +184,151 @@ $darkBlue : #17233d;
       }
     }
   }
-
+  
   .INSthree{
-
+    
     .left{
       display : flex;
       flex-direction : column;
       gap : 35px;
-
+      
       .line{
         width : 80px;
         height : 4px;
         background : $colorRed;
       }
-
+      
       span{
         font-size : clamp(0px, 2.6vh, 26px);
-
+        
         color : #5f697d;
         line-height : 1.7;
         font-weight : 700;
       }
-
+      
       img{
         width : 90%;
       }
     }
-
+    
     .right{
       display : flex;
       flex-direction : column;
       gap : 40px;
-
+      
       .pointEle{
         display : flex;
         align-items : flex-start;
         gap : 25px;
-
+        
         h2{
           color : #9ba7ba;
           font-size : clamp(0px, 4vh, 38px);
         }
-
+        
         p{
           font-size : clamp(0px, 2.5vh, 25px);
-
+          
           color : #5f697d;
           line-height : 1.8;
           font-weight : 700;
-
+          
           text-align : left;
         }
       }
     }
   }
-
+  
   .INSfour{
     width : 100%;
     min-height : 100vh;
-
+    
     display : flex;
     flex-direction : column;
     align-items : center;
-
+    
     position : relative;
-
+    
     h1{
       font-size : clamp(0px, 6vh, 60px);
       margin-bottom : 80px;
     }
-
+    
     > img{
       width : 100%;
     }
-
+    
     .whyGrid{
       width : 100%;
       height : 100%;
-
+      
       position : absolute;
       top : 0;
       left : 0;
-
+      
       .whyEle{
         position : absolute;
-
+        
         display : flex;
         flex-direction : column;
         align-items : center;
-
+        
         gap : 20px;
-
+        
         width : 280px;
-
+        
         text-align : center;
-
+        
         .num{
           width : 55px;
           height : 55px;
-
+          
           border : 3px #5f697d solid;
           border-radius : 50%;
-
+          
           display : flex;
           justify-content : center;
           align-items : center;
-
+          
           font-size : clamp(0px, 2.4vh, 24px);
-
+          
           font-family : SyneMono;
           font-weight : 700;
-
+          
           color : #5f697d;
-
+          
           background : white;
         }
-
+        
         span{
           font-size : clamp(0px, 2.2vh, 22px);
-
+          
           color : #5f697d;
           line-height : 1.7;
           font-weight : 700;
         }
       }
-
+      
       .whyEle1{
         top : 18%;
         left : 2%;
       }
-
+      
       .whyEle2{
         bottom : 10%;
         left : 22%;
       }
-
+      
       .whyEle3{
         top : 18%;
         left : 42%;
       }
-
+      
       .whyEle4{
         bottom : 10%;
         right : 18%;
       }
-
+      
       .whyEle5{
         top : 18%;
         right : 0%;
@@ -338,62 +338,62 @@ $darkBlue : #17233d;
 }
 
 @include mediaDevice(mobile){
-
+  
   #InsuranceMC{
-
+    
     .INSone,
     .INSthree{
       grid-template-columns : 1fr;
       padding : 30px 30px;
     }
-
+    
     .INStwo,
     .INSfour{
       padding : 30px 30px;
     }
-
+    
     .INStwo{
-
+      
       > span{
         max-width : 100%;
       }
-
+      
       .cardsCont{
         grid-template-columns : 1fr;
       }
     }
-
+    
     .INSthree{
-
+      
       .left{
-
+        
         img{
           width : 100%;
         }
       }
     }
-
+    
     .INSfour{
       min-height : auto;
       gap : 50px;
-
+      
       h1{
         margin-bottom : 0;
       }
-
+      
       > img{
         position : static;
       }
-
+      
       .whyGrid{
         position : static;
-
+        
         display : flex;
         flex-direction : column;
         align-items : center;
-
+        
         gap : 35px;
-
+        
         .whyEle{
           position : static;
           width : 100%;

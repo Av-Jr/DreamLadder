@@ -11,6 +11,7 @@ import {
 import Ql from "../../LandingPage/9.QuickLinks/Ql.jsx";
 import NavBar from "../../LandingPage/1.NavBar/NavBar.jsx";
 import {img} from "../../utils/image.js"
+import {useState} from "react";
 
 import React from 'react'
 
@@ -156,11 +157,14 @@ const MFAssistData = {
     }
   ]
 };
+    const [activeStep, setActiveStep] = useState(0);
 
     return (
         <div id={"MFsMC"}>
-            <NavBar></NavBar>
-            <div className="headTit"><h1>Mutual-Funds</h1></div>
+            <div className="titleHeadZ">
+                <NavBar></NavBar>
+                <span className="titleZ">Mutual Funds</span>
+            </div>
 
             <div className="MFone">
                 <img loading="lazy" className={"heroImg"} src={`${img(MFHeroData.image)}`} alt=""/>
@@ -177,21 +181,43 @@ const MFAssistData = {
 
             <div className="MFtwo">
                 <h1 className="titleHead">{MFBenefitsData.title}</h1>
-                <h3 className="titleDesc">{MFBenefitsData.description}</h3>
+
+                <h3 className="titleDesc">
+                    {MFBenefitsData.description}
+                </h3>
+
                 <div className="twoMC">
-                    <img loading="lazy" src={`${img(MFBenefitsData.image)}`} alt=""/>
+
+                    <img
+                        loading="lazy"
+                        src={img(MFBenefitsData.image)}
+                        alt=""
+                    />
+
                     <div className="heroText">
                         {
-                            MFBenefitsData.cards.map((item, index) =>{
+                            MFBenefitsData.cards.map((item, index) => {
                                 const Icon = item.icon;
-                              return (
-                                <div className={'MFtwoCards'} key={index}>
-                                    <h1><Icon className={"cardIconMF"}/>{item.title}</h1>
-                                    <h3 id={"CardsMean"}>{item.description}</h3>
-                                </div>
-                            )})
+
+                                return (
+                                    <div
+                                        className={`MFtwoCards card${index + 1}`}
+                                        key={index}
+                                    >
+                                        <h1>
+                                            <Icon className="cardIconMF" />
+                                            {item.title}
+                                        </h1>
+
+                                        <h3 id="CardsMean">
+                                            {item.description}
+                                        </h3>
+                                    </div>
+                                )
+                            })
                         }
                     </div>
+
                 </div>
             </div>
 
@@ -219,23 +245,38 @@ const MFAssistData = {
             </div>
 
             <div className="MFfour">
+
                 <div className="heroText">
                     <h1>{MFAssistData.title}</h1>
+
                     <div className="AssistDataCardCon">
                         {
                             MFAssistData.steps.map((item, index) => (
-                                <div className={"ADC"}>
-                                    <h1>{item.step}. </h1>
-                                    <span>
-                                        <h1>{item.title}</h1>
+                                <div
+                                    key={index}
+                                    className={`ADC ${activeStep === index ? "active" : ""}`}
+                                    onMouseEnter={() => setActiveStep(index)}
+                                >
+                                    <div className="stepCircle">
+                                        {item.step}
+                                    </div>
+
+                                    <div className="stepContent">
+                                        <h2>{item.title}</h2>
                                         <h3>{item.description}</h3>
-                                    </span>
+                                    </div>
                                 </div>
                             ))
                         }
                     </div>
                 </div>
-                <img loading="lazy" src={img("MFpg7")} alt=""/>
+
+                <img
+                    loading="lazy"
+                    src={img("MFpg7")}
+                    alt=""
+                />
+
             </div>
 
             <div className={"endingStatement"}>

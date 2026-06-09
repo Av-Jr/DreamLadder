@@ -1,4 +1,4 @@
-import { useState, useCallback } from "react";
+import React, { useState, useCallback } from "react";
 import { useSearchParams} from "react-router-dom";
 import NavBar from "../../LandingPage/1.NavBar/NavBar.jsx"
 import Ql from "../../LandingPage/9.QuickLinks/Ql.jsx";
@@ -1411,7 +1411,10 @@ export default function CalcGraph() {
       <>
 
     <div className="calc-root">
-      <NavBar></NavBar>
+      <div className="titleHeadZ">
+        <NavBar></NavBar>
+        <span className="titleZ">Calculator</span>
+      </div>
       <div className="calc-tabs">
         <div className="calc-tabs__inner">
           {TABS.map(({ id, label, Icon }) => (

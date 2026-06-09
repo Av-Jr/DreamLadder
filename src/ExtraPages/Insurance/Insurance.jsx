@@ -9,6 +9,7 @@ import {
   Wallet,
   Users
 } from "lucide-react";
+import React from "react";
 
 const Insurance = () => {
 
@@ -144,11 +145,9 @@ const Insurance = () => {
 
   return (
     <div id={"InsuranceMC"}>
-
-      <NavBar/>
-
-      <div className={"headTit"}>
-        <h1>{InsuranceHeroData.title}</h1>
+      <div className="titleHeadZ">
+        <NavBar></NavBar>
+        <span className="titleZ">Insurance</span>
       </div>
 
       <div className={"INSone"}>

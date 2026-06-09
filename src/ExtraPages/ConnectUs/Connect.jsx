@@ -53,20 +53,11 @@ ${formData.message}
 
   return (
     <>
-      <NavBar />
-
       <div className="connectPage">
-
-        <div className="connectHero">
-
-          <div className="overlay"></div>
-
-          <div className="heroContent">
-            <h1>Contact Us</h1>
-          </div>
-
+        <div className="titleHeadZ">
+          <NavBar></NavBar>
+          <span className="titleZ">Connect With Us</span>
         </div>
-
         <div className="connectContainer">
 
           <div className="topSection">
