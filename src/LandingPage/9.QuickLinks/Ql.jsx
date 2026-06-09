@@ -114,25 +114,25 @@ const footerSections = [
         label: "Education",
         className: "FGe",
         type: "internal",
-        path: "/calc"
+        path: "/calc?tab=education"
       },
       {
         label: "Marriage",
         className: "FGm",
         type: "internal",
-        path: "/calc"
+        path: "/calc?tab=marriage"
       },
       {
         label: "Retirement",
         className: "FGr",
         type: "internal",
-        path: "/calc"
+        path: "/calc?tab=retirement"
       },
       {
         label: "SIP",
         className: "FGs",
         type: "internal",
-        path: "/calc"
+        path: "/calc?tab=sip"
       }
     ]
   },
