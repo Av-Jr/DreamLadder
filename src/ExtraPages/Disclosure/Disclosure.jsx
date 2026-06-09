@@ -56,17 +56,9 @@ export default function Disclosure() {
 
   return (
     <div id="DisclosureMC">
-      <NavBar />
-
-      <div className="heroSec">
-        <div className="heroOverlay" />
-
-        <div className="heroContent">
-
-          <h1>Disclosure</h1>
-
-        </div>
-
+      <div className="titleHeadZ">
+        <NavBar></NavBar>
+        <span className="titleZ">Disclosure</span>
       </div>
 
       <div className="tableSec">

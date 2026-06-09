@@ -88,7 +88,7 @@ body{
     }
     
     .titleZ{
-      font-family: SyneMono;
+      font-family: SyneMono !important;
       font-size : 35px;
       margin-bottom : 50px;
       white-space : normal;
@@ -102,7 +102,7 @@ body{
     margin-bottom: 50px;
   }
   
-  #MFsMC, #PMSAIFMC, #BondsMC, #StructuredProductsMC, #LegacyEstatePlanningMC, #insuranceMC, .bespokePage, #BlogsMC, #MediaMC, .calc-root, .connectPage{
+  #MFsMC, #PMSAIFMC, #BondsMC, #StructuredProductsMC, #LegacyEstatePlanningMC, #insuranceMC, .bespokePage, #BlogsMC, #MediaMC, .calc-root, .connectPage, #DisclaimerMC, #DisclosureMC{
     .titleHeadZ{
       .titleZ{
         font-size :25px;

@@ -25,16 +25,10 @@ export default function Disclaimer() {
 
   return (
     <div id="DisclaimerMC">
-        <NavBar />
-      <div className="heroSec">
-
-        <div className="heroContent">
-
-          <h1>Disclaimer</h1>
-
+        <div className="titleHeadZ">
+            <NavBar></NavBar>
+            <span className="titleZ">Disclaimer</span>
         </div>
-
-      </div>
 
       <div className="contentSec">
 
