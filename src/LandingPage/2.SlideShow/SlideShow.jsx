@@ -70,12 +70,12 @@ const SlideShow = () => {
           <div className="SlideTwo">
             <div className="heroCon">
               <h1>
-                Smart Investing -
+                Smarter Investing -
                 <br />
                 Right in your pocket.
               </h1>
 
-              <h2>Download the App right now.</h2>
+              <h2 className={'lessWeight'}>Download the App right now.</h2>
 
               <div className="heroActions pas">
                 <button className="navBtn s ps" onClick={() => window.open("https://play.google.com/store/search?q=dreamladder+capital&c=apps&hl=en_IN", "_blank")}>
@@ -130,9 +130,24 @@ const SlideShow = () => {
             </div>
           </div>
         </div>
-
-
       </div>
+      <button
+          className="slideArrow left"
+          onClick={() =>
+              setActiveSlide((prev) => (prev === 0 ? 1 : prev - 1))
+          }
+      >
+        <ChevronLeft size={30} />
+      </button>
+
+      <button
+          className="slideArrow right"
+          onClick={() =>
+              setActiveSlide((prev) => (prev === 1 ? 0 : prev + 1))
+          }
+      >
+        <ChevronRight size={30} />
+      </button>
     </div>
   );
 };

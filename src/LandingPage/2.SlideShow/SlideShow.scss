@@ -8,6 +8,47 @@
   overflow-x : hidden;
   overflow-y : hidden;
   
+  .slideArrow{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 100;
+    
+    width: 40px;
+    height: 40px;
+    
+    display: grid;
+    place-items: center;
+    
+    border: none;
+    border-radius: 50%;
+    
+    background: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    
+    color: white;
+    cursor: pointer;
+    
+    transition: all .3s ease;
+    
+    &:hover{
+      transform: translateY(-50%) scale(1.1);
+      background: rgba(255,255,255,0.4);
+    }
+    
+    &.left{
+      left: 20px;
+    }
+    
+    &.right{
+      right: 20px;
+    }
+  }
+  
+  .lessWeight{
+    font-weight : 300!important;
+  }
+  
   
   
   .ss {
@@ -42,7 +83,7 @@
   
   .ps, .as{
     width : auto;
-    max-width : 400px;
+    max-width : 150px;
     display : flex;
     justify-content : center;
     align-items : center;
@@ -210,6 +251,10 @@
 @include mediaDevice(mobile) {
   #SlideShowMC {
     padding : 0;
+    
+    .slideArrow{
+      display : none;
+    }
     
     .SlideTwo{
       .heroImg{
