@@ -88,21 +88,18 @@ const SlideShow = () => {
 
               <div className="infoDis">
                 <div className="conInfo">
-                  500+
-                  <br />
-                  Families
+                  <span className="num">500+</span>
+                  <span className="label">Families</span>
                 </div>
 
                 <div className="conInfo">
-                  12+
-                  <br />
-                  Countries
+                  <span className="num">12+</span>
+                  <span className="label">Countries</span>
                 </div>
 
                 <div className="conInfo">
-                  25+
-                  <br />
-                  Experience
+                  <span className="num">25+</span>
+                  <span className="label">Experience</span>
                 </div>
               </div>
             </div>

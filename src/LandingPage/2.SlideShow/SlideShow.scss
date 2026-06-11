@@ -8,6 +8,8 @@
   overflow-x : hidden;
   overflow-y : hidden;
   
+  
+  
   .ss {
     width : auto;
     display: flex;
@@ -143,21 +145,48 @@
         &.pas{width : auto}
       }
       
-      .infoDis {
-        display: flex;
+      .infoDis{
         width: 100%;
-        max-height : 100px;
+        height: fit-content;
+        padding :10px;
+        
+        display: flex;
         align-items: center;
-        line-height: 2;
-        font-family: Genos;
-        font-size: clamp(0px, 3vh, 30px);
-        background: rgba(255, 255, 255, 0.7);
-        border: 2px solid #E53935;
-        border-radius: 20px;
-        overflow : hidden;
-        .conInfo {
-          padding: 5px;
-          border: 0.3px solid grey;
+        justify-content: space-evenly;
+        
+        border: 2px solid #e32929;
+        border-radius: 30px;
+        
+        background: rgba(255, 255, 255, 0.2);
+        
+        .conInfo{
+          flex: 1;
+          height: 80%;
+          
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          
+          &:not(:last-child){
+            border-right: 2px solid rgba(0,0,0,0.12);
+          }
+          
+          .num{
+            font-size: 25px;
+            font-weight: 500;
+            font-family : Genos;
+            line-height: 1;
+            color: black;
+          }
+          
+          .label{
+            font-family : Genos;
+            font-size: 25px;
+            font-weight: 500;
+            line-height: 1;
+            color: black;
+          }
         }
       }
       
@@ -181,13 +210,20 @@
 @include mediaDevice(mobile) {
   #SlideShowMC {
     padding : 0;
+    
+    .SlideTwo{
+      .heroImg{
+        display : none !important;
+      }
+    }
     .SlideOne, .SlideTwo {
-      grid-template-columns: 1fr;
-      grid-template-rows: 1fr 1fr;
+      grid-template-columns: repeat(1, auto);
+      grid-template-rows: repeat(2, auto);
       padding : 0;
       
       .heroCon {
         justify-items: center;
+        margin-top : 100px;
         gap: 14px;
         padding: 22px 24px 10px;
         
