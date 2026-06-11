@@ -88,11 +88,14 @@ body{
     }
     
     .titleZ{
+      position : relative;
       font-family: SyneMono !important;
       font-size : 35px;
       margin-bottom : 50px;
       white-space : normal;
       word-break : normal;
+      bottom : 0;
+      top : 50%;
     }
   }
 }

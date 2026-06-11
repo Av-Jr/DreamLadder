@@ -19,22 +19,13 @@ import Disclaimer from "./ExtraPages/Disclaimer/Disclaimer.jsx";
 import PrivacyPolicy from "./ExtraPages/PrivacyPolicy/PrivacyPolicy.jsx";
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
-function ScrollToTop() {
-
-  const { pathname } = useLocation();
-
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [pathname]);
-
-  return null;
-}
-
+ import ScrollToTop from "./ExtraPages/ScrollToTop.jsx";
 
 const App = () => {
   return(
       <>
           <BrowserRouter>
+              <ScrollToTop></ScrollToTop>
               <Routes>
                   <Route path={"/"} element={<Home />}></Route>
                   <Route path={'/faqs'} element={<Faqs />}></Route>

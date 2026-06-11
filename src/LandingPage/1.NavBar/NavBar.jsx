@@ -1,24 +1,18 @@
-import "./NavBar.scss"
-import { useState, useEffect } from 'react';
-import {useNavigate} from "react-router-dom";
-import {img} from "../../utils/image.js"
+import "./NavBar.scss";
+import {useState, useEffect} from "react"
+import { useNavigate} from "react-router-dom";
+import { img } from "../../utils/image.js";
 
 const NavBar = () => {
-
-    const [hamAct, setHam] = useState(false);
-
-    const [mobileOpen, setMobileOpen] = useState(null);
-    const [mobileSubOpen, setMobileSubOpen] = useState(null);
-
-    useEffect(() => {
-        document.body.style.overflow = hamAct ? "hidden" : "auto";
-    }, [hamAct]);
-
     const navigate = useNavigate();
+    const [menuOpen, setMenuOpen] = useState(false);
+    const [openSection, setOpenSection] = useState(null);
+    const [openSubSection, setOpenSubSection] = useState(null);
 
     const navData = [
         {
             title: "We",
+            className: "navBtn",
             dropdown: [
                 {
                     title: "About Us",
@@ -33,6 +27,7 @@ const NavBar = () => {
 
         {
             title: "Services",
+            className: "navBtn",
             dropdown: [
                 {
                     title: "What we Offer",
@@ -59,7 +54,7 @@ const NavBar = () => {
                         },
                         {
                             title: "Insurance",
-                            path: "/Insurance"
+                            path: "/insurance"
                         }
                     ]
                 },
@@ -73,236 +68,231 @@ const NavBar = () => {
 
         {
             title: "Insights",
+            className: "navBtn",
             dropdown: [
                 {
                     title: "Blogs",
-                    path : "/blogs"
+                    path: "/blogs"
                 },
                 {
                     title: "Media",
-                    path : "/media"
+                    path: "/media"
                 },
                 {
                     title: "Calculator",
                     path: "/calc"
                 }
             ]
+        },
+
+        {
+            title: "Connect",
+            className: "navBtn",
+            path: "/connect"
+        },
+
+        {
+            title: "Log-In",
+            className: "navBtn s",
+            isExternal: true,
+            path: "https://dreamladdercapital.my-portfolio.co.in/app/#/login"
+        },
+
+        {
+            title: "Sign-Up",
+            className: "navBtn s",
+            isExternal: true,
+            path: "https://dreamladdercapital.my-portfolio.co.in/app/#/kycOnBoarding/mobileSignUp"
         }
     ];
 
     return (
-        <>
-            <div
-                className={`backdrop ${hamAct ? "A" : ""}`}
-                onClick={() => setHam(false)}
-            />
+        <div id="NavBarMC">
+            <div className="logo">
+                <img src={img("logo")} alt="" className="imgLogo" onClick={() => {navigate("/")}}/>
+            </div>
 
-            <div id="NavBarMC">
+            <button
+                className="hamBtn navBtn"
+                onClick={() => setMenuOpen(!menuOpen)}
+            >
+                {menuOpen ? "✕" : "☰"}
+            </button>
 
-                <div
-                    className="IL1"
-                    onClick={() => {
-                        navigate('/')
-                    }}
-                >
-                    <img
-                        fetchPriority={"high"}
-                        src={img("logo")}
-                        alt=""
-                        className="logo"
-                    />
-                </div>
+            {
+                menuOpen && (
+                    <div className="mobileMenu">
+                        {
+                            navData.map((item, index) => (
+                                <div className="mobileItem" key={index}>
 
-                <button
-                    className={`HamBtn ${hamAct ? "HamActive" : ""}`}
-                    onClick={() => setHam(!hamAct)}
-                >
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
+                                    <button
+                                        className={`mobileBtn ${item.className?.includes("s") ? "mobileActionBtn" : ""}`}
+                                        onClick={() => {
 
-                <div className={`IL1 toBeInvis ${hamAct ? "open" : ""}`}>
+                                            if(item.dropdown){
 
-                    {
-                        navData.map((item, index) => (
+                                                setOpenSection(
+                                                    openSection === item.title
+                                                        ? null
+                                                        : item.title
+                                                );
 
-                            <div
-                                className={`navItem ${mobileOpen === item.title ? "mobileActive" : ""}`}
-                                key={index}
-                            >
+                                                return;
+                                            }
 
-                                <button
-                                    className="navBtn"
-                                    onClick={() => {
+                                            if(item.isExternal){
+                                                window.open(item.path, "_blank");
+                                            }
+                                            else{
+                                                navigate(item.path);
+                                            }
 
-                                        if(window.innerWidth <= 768){
-
-                                            setMobileOpen(
-                                                mobileOpen === item.title
-                                                    ? null
-                                                    : item.title
-                                            )
-
-                                        }
-
-                                    }}
-                                >
-
-                                    {item.title}
-
-                                    <svg
-                                        viewBox="0 0 24 24"
-                                        fill="none"
-                                        xmlns="http://www.w3.org/2000/svg"
+                                            setMenuOpen(false);
+                                        }}
                                     >
-                                        <path
-                                            d="M6 9L12 15L18 9"
-                                            stroke="currentColor"
-                                            strokeWidth="2"
-                                            strokeLinecap="round"
-                                            strokeLinejoin="round"
-                                        />
-                                    </svg>
-
-                                </button>
-
-                                <div className="dropDown">
+                                        {item.title}
+                                    </button>
 
                                     {
-                                        item.dropdown.map((dropItem, dropIndex) => (
+                                        openSection === item.title &&
+                                        item.dropdown && (
 
-                                            <div
-                                                className={`
-                                                    dropItem
-                                                    ${dropItem.children ? "hasChild" : ""}
-                                                    ${mobileSubOpen === dropItem.title ? "mobileSubActive" : ""}
-                                                `}
-                                                key={dropIndex}
-                                            >
-
-                                                <button
-                                                    className="dropBtn"
-                                                    onClick={() => {
-
-                                                        if(dropItem.children && window.innerWidth <= 768){
-
-                                                            setMobileSubOpen(
-                                                                mobileSubOpen === dropItem.title
-                                                                    ? null
-                                                                    : dropItem.title
-                                                            )
-
-                                                        }
-
-                                                        else if(dropItem.path){
-
-                                                            navigate(dropItem.path)
-                                                            setHam(false)
-
-                                                        }
-
-                                                    }}
-                                                >
-
-                                                    {dropItem.title}
-
-                                                    {
-                                                        dropItem.children && (
-
-                                                            <svg
-                                                                viewBox="0 0 24 24"
-                                                                fill="none"
-                                                                xmlns="http://www.w3.org/2000/svg"
-                                                            >
-                                                                <path
-                                                                    d="M9 6L15 12L9 18"
-                                                                    stroke="currentColor"
-                                                                    strokeWidth="2"
-                                                                    strokeLinecap="round"
-                                                                    strokeLinejoin="round"
-                                                                />
-                                                            </svg>
-
-                                                        )
-                                                    }
-
-                                                </button>
+                                            <div className="mobileSubMenu">
 
                                                 {
-                                                    dropItem.children && (
+                                                    item.dropdown.map((dropItem, dropIndex) => (
 
-                                                        <div className="subDropDown">
+                                                        <div key={dropIndex}>
+
+                                                            <button
+                                                                className="mobileSubBtn"
+                                                                onClick={() => {
+
+                                                                    if(dropItem.children){
+
+                                                                        setOpenSubSection(
+                                                                            openSubSection === dropItem.title
+                                                                                ? null
+                                                                                : dropItem.title
+                                                                        );
+
+                                                                        return;
+                                                                    }
+
+                                                                    navigate(dropItem.path);
+                                                                    setMenuOpen(false);
+
+                                                                }}
+                                                            >
+                                                                {dropItem.title}
+                                                            </button>
 
                                                             {
-                                                                dropItem.children.map((subItem, subIndex) => (
+                                                                openSubSection === dropItem.title &&
+                                                                dropItem.children && (
 
-                                                                    <button
-                                                                        className="subDropBtn"
-                                                                        key={subIndex}
-                                                                        onClick={() => {
+                                                                    <div className="mobileThirdMenu">
 
-                                                                            navigate(subItem.path)
-                                                                            setHam(false)
+                                                                        {
+                                                                            dropItem.children.map((child, childIndex) => (
 
-                                                                        }}
-                                                                    >
-                                                                        {subItem.title}
-                                                                    </button>
+                                                                                <button
+                                                                                    key={childIndex}
+                                                                                    className="mobileThirdBtn"
+                                                                                    onClick={() => {
 
-                                                                ))
+                                                                                        navigate(child.path);
+
+                                                                                        setMenuOpen(false);
+                                                                                        setOpenSection(null);
+                                                                                        setOpenSubSection(null);
+
+                                                                                    }}
+                                                                                >
+                                                                                    {child.title}
+                                                                                </button>
+
+                                                                            ))
+                                                                        }
+
+                                                                    </div>
+
+                                                                )
                                                             }
 
                                                         </div>
 
-                                                    )
+                                                    ))
                                                 }
 
                                             </div>
 
-                                        ))
+                                        )
                                     }
 
                                 </div>
+                            ))
+                        }
 
+                    </div>
+                )
+            }
+            {
+                menuOpen &&
+                <div
+                    className="overlay"
+                    onClick={() => setMenuOpen(false)}
+                />
+            }
+
+
+            <div className="navLinks">
+                {navData.map((item, index) => (
+                    <div className="navItem" key={index}>
+                        <button
+                            className={item.className}
+                            onClick={() => {
+                                if (item.dropdown) return;
+
+                                if (item.isExternal) {
+                                    window.open(item.path, "_blank");
+                                } else {
+                                    navigate(item.path);
+                                }
+                            }}
+                        >
+                            {item.title}
+                        </button>
+
+                        {item.dropdown && (
+                            <div className="dropDown">
+                                {item.dropdown.map((it, ind) => (
+                                    <div className={"btnWrap"}>
+                                        <button
+                                            className="dropB"
+                                            key={ind}
+                                            onClick={() => navigate(it.path)}
+                                        >
+                                            {it.title}
+                                        </button>
+
+                                        {it.children && (
+                                            <div className={"subDrop"}>
+                                                {it.children.map((iiit, inddd) => (
+                                                    <button className={"dropB"} key={inddd} onClick={() => {navigate(iiit.path)}}>{iiit.title}</button>
+                                                ))}
+                                            </div>
+                                        )}
+                                    </div>
+                                ))}
                             </div>
-
-                        ))
-                    }
-
-                    <button className="navBtn" onClick={() => {navigate("/connect")}}>
-                        Connect
-                    </button>
-
-                    <button
-                        className="navBtn s"
-                        onClick={() =>
-                            window.open(
-                                "https://dreamladdercapital.my-portfolio.co.in/app/#/login",
-                                "_blank"
-                            )
-                        }
-                    >
-                        Log-In
-                    </button>
-
-                    <button
-                        className="navBtn s"
-                        onClick={() =>
-                            window.open(
-                                "https://dreamladdercapital.my-portfolio.co.in/app/#/kycOnBoarding/mobileSignUp",
-                                "_blank"
-                            )
-                        }
-                    >
-                        Sign-Up
-                    </button>
-
-                </div>
-
+                        )}
+                    </div>
+                ))}
             </div>
-        </>
-    )
-}
+        </div>
+    );
+};
 
 export default NavBar;
