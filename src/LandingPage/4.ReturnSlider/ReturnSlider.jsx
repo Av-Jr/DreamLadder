@@ -1,7 +1,6 @@
 import "./ReturnSlider.scss";
-import {useState, useEffect} from 'react';
-import {img} from "../../utils/image.js"
-
+import { useState } from "react";
+import { img } from "../../utils/image.js";
 
 const ReturnSlider = () => {
     const calculateReturn = (amount, rate, state) => {
@@ -22,58 +21,109 @@ const ReturnSlider = () => {
     const formatAmount = (value) => {
         return (value / 10000000).toFixed(2) + " CR";
     };
+
     const [state, setState] = useState("Monthly");
     const [valS, changeVal] = useState(50000);
+
     const returnsData = [
-      { id: 1, img: "one", amt: 4.07, tag: "FD", rate: 7 },
-      { id: 2, img: "two", amt: 4.79, tag: "Bonds", rate: 8 },
-      { id: 3, img: "three", amt: 6.69, tag: "Real Estate", rate: 10 },
-      { id: 4, img: "four", amt: 7.95, tag: "Gold", rate: 11 },
-      { id: 5, img: "five", amt: 16.42, tag: "Equity", rate: 15 }
+        { id: 1, img: "one", tag: "FD", rate: 7 },
+        { id: 2, img: "two", tag: "Bonds", rate: 8 },
+        { id: 3, img: "three", tag: "Real Estate", rate: 10 },
+        { id: 4, img: "four", tag: "Gold", rate: 11 },
+        { id: 5, img: "five", tag: "Equity", rate: 15 }
     ];
 
     const ChangeState = (stateC) => {
-        if (stateC == "Yearly") {
+        if (stateC === "Yearly") {
             changeVal(1000000);
+        } else {
+            changeVal(50000);
         }
-        else{changeVal(50000)}
+
         setState(stateC);
-    }
-
-
+    };
 
     return (
-        <div id={"ReturnSliderMC"}>
+        <div id="ReturnSliderMC">
+
             <div className="childsR one">
-                    <h1>Time Reveals the True Wealth Builder</h1>
-                    <h2>Compounding Power over 25 years.</h2>
+                <h1>Time Reveals the True Wealth Builder</h1>
+                <h2>Compounding Power over 25 years.</h2>
+
                 <div className="SliderCon">
+
                     <div className="stateBtns">
-                        <button className={` ${state === "Monthly" ? "navBtn s" : ""}`}
-                                onClick={() => ChangeState("Monthly")}>Monthly (SIP)
+                        <button
+                            className={`navBtn ${state === "Monthly" ? "s" : ""}`}
+                            onClick={() => ChangeState("Monthly")}
+                        >
+                            Monthly (SIP)
                         </button>
-                        <button className={` ${state === "Yearly" ? "navBtn s" : ""}`}
-                                onClick={() => ChangeState("Yearly")}>One-Time
+
+                        <button
+                            className={`navBtn ${state === "Yearly" ? "s" : ""}`}
+                            onClick={() => ChangeState("Yearly")}
+                        >
+                            One-Time
                         </button>
                     </div>
-                    <div id={"SCMC"}>{`₹ ${valS.toLocaleString("en-IN")}`}</div>
-                    <input type="range" min="500" value={valS} max={state === "Monthly" ? "500000" : "10000000"}
-                           className="SliderInp" onChange={(e) => {
-                        changeVal(Number(e.target.value))
-                    }}/>
-                    <span><p>Rs 500</p><p>{(state === "Monthly") ? "Rs 5 Lakh" : "Rs 1 Cr"}</p></span>
+
+                    <div className="inputWrap">
+                        <span>₹</span>
+
+                        <input
+                            id="SCMC"
+                            type="number"
+                            min={500}
+                            max={state === "Monthly" ? 500000 : 10000000}
+                            value={valS}
+                            onChange={(e) => {
+                                changeVal(Number(e.target.value));
+                            }}
+                        />
+                    </div>
+
+                    <input
+                        type="range"
+                        min="500"
+                        value={valS}
+                        max={state === "Monthly" ? "500000" : "10000000"}
+                        className="SliderInp"
+                        onChange={(e) => {
+                            changeVal(Number(e.target.value));
+                        }}
+                    />
+
+                    <span>
+                        <p>Rs 500</p>
+                        <p>
+                            {state === "Monthly"
+                                ? "Rs 5 Lakh"
+                                : "Rs 1 Cr"}
+                        </p>
+                    </span>
+
                 </div>
             </div>
 
             <div className="childsR two">
-              <h2>After 25 years, it would have accumulated to</h2>
+                <h2>After 25 years, it would have accumulated to</h2>
 
                 <div className="retElesCon">
                     {returnsData.map((item) => (
                         <div className="retEle" key={item.id}>
+
                             <div className="retCircle">
+
                                 <h2>
-                                    ₹{formatAmount(calculateReturn(valS, item.rate, state))}
+                                    ₹
+                                    {formatAmount(
+                                        calculateReturn(
+                                            valS,
+                                            item.rate,
+                                            state
+                                        )
+                                    )}
                                 </h2>
 
                                 <div className="imgPart">
@@ -85,18 +135,20 @@ const ReturnSlider = () => {
                                 </div>
 
                                 <h3>{item.tag}</h3>
+
                             </div>
 
                             <div className="retBadge">
                                 @{item.rate}% Return
                             </div>
+
                         </div>
                     ))}
                 </div>
             </div>
 
         </div>
-    )
-}
+    );
+};
 
 export default ReturnSlider;

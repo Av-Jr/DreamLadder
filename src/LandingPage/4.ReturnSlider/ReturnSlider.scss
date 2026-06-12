@@ -57,19 +57,54 @@
         font-family: Genos;
 
         box-shadow: 0 8px 30px rgba(0,0,0,0.06);
-
-        #SCMC {
-          width: fit-content;
+        
+        .inputWrap{
+          display: flex;
+          flex-direction : row;
+          justify-content : center;
+          align-items : center;
           margin: 0 auto;
-
+          border : 2px solid #E53935;
           padding: 10px 18px;
-
-          border: 2px solid #E53935;
+          
           border-radius: 10px;
-
-          color: #E53935;
-          font-size : clamp(0px, 2vh, 20px);
-          font-weight: 1000;
+          
+          gap : 0;
+          
+          span{
+            color: #E53935;
+            font-size: clamp(20px, 2.5vh, 30px);
+            font-weight: bold;
+            width : fit-content;
+            margin-right: 0;
+            background: white;
+          }
+          
+          #SCMC{
+            width: fit-content;
+            border: none;
+            outline: none;
+            
+            
+            color: #E53935;
+            font-size: clamp(20px, 2.5vh, 30px);
+            font-weight: bold;
+            
+            text-align: center;
+            
+            padding: 0;
+            margin: 0;
+            
+            &::-webkit-outer-spin-button,
+            &::-webkit-inner-spin-button{
+              -webkit-appearance: none;
+              margin: 0;
+            }
+            
+            &[type="number"]{
+              -moz-appearance: textfield;
+            }
+          }
         }
 
         .stateBtns {
@@ -83,6 +118,8 @@
           background: #FAF9F6;
           width : fit-content;
           border-radius: 9999px;
+          
+          
         }
 
         .StateBtnC {

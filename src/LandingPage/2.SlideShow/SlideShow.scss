@@ -198,7 +198,7 @@
         border: 2px solid #e32929;
         border-radius: 30px;
         
-        background: rgba(255, 255, 255, 0.2);
+        background: rgba(255, 255, 255, 0.7);
         
         .conInfo{
           flex: 1;
@@ -215,7 +215,7 @@
           
           .num{
             font-size: 25px;
-            font-weight: 500;
+            font-weight: bold;
             font-family : Genos;
             line-height: 1;
             color: black;
@@ -224,7 +224,7 @@
           .label{
             font-family : Genos;
             font-size: 25px;
-            font-weight: 500;
+            font-weight: bold;
             line-height: 1;
             color: black;
           }

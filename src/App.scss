@@ -16,6 +16,35 @@ body{
   overflow : visible;
   background : white;
   
+  .navBtn {
+    background: transparent;
+    border: none;
+    
+    font-family: Genos;
+    font-size: 20px;
+    font-weight: bold;
+    
+    color: black;
+    
+    transition: color 0.15s ease;
+    
+    cursor: pointer;
+    
+    &.s {
+      padding: 4px 12px;
+      background: #dc2626;
+      border: 2px solid #dc2626;
+      
+      color: white;
+      border-radius: 9999px;
+      
+      &:hover {
+        background: #434242;
+        border-color: #434242;
+      }
+    }
+  }
+  
   h1{
     font-size : clamp(0px, 4vh, 50px);
   }

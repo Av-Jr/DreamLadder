@@ -2,6 +2,7 @@ import "./NavBar.scss";
 import {useState, useEffect} from "react"
 import { useNavigate} from "react-router-dom";
 import { img } from "../../utils/image.js";
+import {ChevronDown} from "lucide-react";
 
 const NavBar = () => {
     const navigate = useNavigate();
@@ -264,6 +265,11 @@ const NavBar = () => {
                         >
                             {item.title}
                         </button>
+                        {
+                            item.dropdown && (
+                                <ChevronDown className={'downSVG'} size={20}></ChevronDown>
+                            )
+                        }
 
                         {item.dropdown && (
                             <div className="dropDown">

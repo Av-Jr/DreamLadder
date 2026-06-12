@@ -13,6 +13,12 @@
     background-size: cover;
     background-repeat: no-repeat;
   
+  h1{
+    font-weight : bold;
+    font-family : Genos;
+    font-size : clamp(0px, 6vh, 70px);
+  }
+  
   .topicEles{
     display : grid;
     grid-template-columns : 1fr 1fr 1fr 1fr;
@@ -20,6 +26,7 @@
     justify-content : center;
     align-items : center;
     div{
+      font-size : 20px;
       height : auto;
       width : auto;
       border-radius : 20px;

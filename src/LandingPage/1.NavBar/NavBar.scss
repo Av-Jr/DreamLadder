@@ -12,40 +12,6 @@
   justify-content: space-around;
   padding: 20px;
   
-  .navBtn {
-    padding: 4px 12px;
-    
-    background: transparent;
-    border: none;
-    
-    font-family: Genos;
-    font-size: 20px;
-    font-weight: bold;
-    
-    color: black;
-    
-    transition: color 0.15s ease;
-    
-    cursor: pointer;
-    
-    &:hover {
-      color: #e31e24;
-    }
-    
-    &.s {
-      background: #dc2626;
-      border: 2px solid #dc2626;
-      
-      color: white;
-      border-radius: 9999px;
-      
-      &:hover {
-        background: #434242;
-        border-color: #434242;
-      }
-    }
-  }
-  
   .hamBtn{
     display : none;
   }
@@ -65,10 +31,50 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    gap: 10px;
+    gap: 20px;
     
     .navItem {
       position: relative;
+      display : flex;
+      flex-direction : row;
+      justify-content : center;
+      align-items : center;
+      gap : 0;
+      
+      .navBtn {
+        background: transparent;
+        border: none;
+        
+        font-family: Genos;
+        font-size: 20px;
+        font-weight: bold;
+        
+        color: black;
+        
+        transition: color 0.15s ease;
+        
+        cursor: pointer;
+        
+        &.s {
+          padding: 4px 12px;
+          background: #dc2626;
+          border: 2px solid #dc2626;
+          
+          color: white;
+          border-radius: 9999px;
+          
+          &:hover {
+            background: #434242;
+            border-color: #434242;
+          }
+        }
+      }
+      
+      .downSVG{
+        border : none;
+        margin : 0;
+        transition: all 0.3s ease;
+      }
       
       .subDrop{
         position : absolute;
@@ -85,6 +91,15 @@
       &:hover {
         .dropDown {
           display: flex;
+        }
+        
+        .downSVG{
+          transform : rotate(180deg);
+          color: #e31e24;
+        }
+        
+        .navBtn{
+          color: #e31e24;
         }
       }
       
@@ -106,9 +121,8 @@
         box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
         
         .btnWrap{
-            &:hover .subDrop{
-              display : flex;
-            
+          &:hover .subDrop{
+            display : flex;
           }
         }
       }
@@ -117,7 +131,7 @@
         font-family: Genos;
         text-align: left;
         border-radius : 10px;
-        padding: 8px 12px;
+        padding: 4px 12px;
         
         border: none;
         background: transparent;
@@ -134,8 +148,6 @@
         }
       }
     }
-    
-
   }
 }
 

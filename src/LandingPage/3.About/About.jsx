@@ -16,9 +16,9 @@ const About = () => {
           <div className="Con ACone">
             <img src={img("InvestInsight")} loading="lazy" alt=""/>
 
-            <h3>Your legacy deserves a solid foundation. DreamLadder Capital helps you build lasting wealth through smart,
+            <h3 className={"TextLeftAligned"}>Your legacy deserves a solid foundation. DreamLadder Capital helps you build lasting wealth through smart,
               diversified strategies.</h3>
-            <img loading="lazy" src={img("tele")} alt=""/>
+            <img onClick={() => {window.location.href = "tel:+918908082222";}} className={"tele"} loading="lazy" src={img("tele")} alt=""/>
           </div>
           <div className="Con ACtwo">
             <div className="ContwoEles">
@@ -54,15 +54,15 @@ const About = () => {
           <div className="Con ACthree"><img loading="lazy" src={img("profileDashboard")} alt=""/></div>
 
           <div className="Con ACfour">
-            <h2>All Your Family Investments, One Simple App</h2>
-            <h3>Easily view portfolio performance, transactions and reports for every family member - anytime, anywhere</h3>
+            <h2 className={"TextLeftAligned conHead"}>All Your Family Investments, One Simple App</h2>
+            <h3 className={"TextLeftAligned"}>Easily view portfolio performance, transactions and reports for every family member - anytime, anywhere</h3>
             <button className="navBtn s" onClick={() => window.open("https://dreamladdercapital.my-portfolio.co.in/app/#/login", "_blank")}>Start now</button>
           </div>
 
           <div className="Con ACfive">
-            <h2>Setup SIP in 2 Minutes</h2>
-            <h3>Setup SIP in Mutual Funds and diversify your portfolio to grow your net worth</h3>
-            <div className="IL1">
+            <h2 className={"TextLeftAligned conHead"}>Setup SIP in 2 Minutes</h2>
+            <h3 className={"TextLeftAligned"}>Setup SIP in Mutual Funds and diversify your portfolio to grow your net worth</h3>
+            <div id={"buttonWrapCon"}>
               <button className="navBtn s" onClick={() => window.open("https://dreamladdercapital.my-portfolio.co.in/app/#/login", "_blank")}>Setup SIP</button>
               <button className="navBtn s" onClick={() => window.location.href = "/calc"}>SIP Calculator</button>
             </div>
