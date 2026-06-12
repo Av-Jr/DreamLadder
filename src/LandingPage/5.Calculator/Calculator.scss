@@ -16,6 +16,7 @@
   
   h2{
     font-family: SyneMono;
+    font-size : 5vh;
   }
   
   .CalcEleCon{
@@ -57,6 +58,10 @@
       h3{
         font-family: Genos;
         text-align: center;
+        color : black;
+        font-weight : bold;
+        -webkit-text-stroke: 0.5px currentColor;
+        letter-spacing : 1px;
       }
     }
   }

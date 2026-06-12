@@ -115,7 +115,7 @@ const ReturnSlider = () => {
 
                             <div className="retCircle">
 
-                                <h2>
+                                <h2 className={"priceTag"}>
                                     ₹
                                     {formatAmount(
                                         calculateReturn(

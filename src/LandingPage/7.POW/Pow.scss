@@ -2,14 +2,14 @@
 
 #PowMC {
   height : auto;
-  width: 100%;
+  width: 80%;
   
   display: flex;
   justify-content: center;
   align-items: center;
   
   
-  background: #f8f8f8;
+  background: transparent;
   
   * {
     box-sizing: border-box;
@@ -136,10 +136,12 @@
           align-items: center;
           
           gap: 20px;
+          overflow : hidden;
+          max-height : 300px;
           
           img {
             width: 100%;
-            height: auto;
+            height: 100%;
             
             object-fit: contain;
             
@@ -160,17 +162,18 @@
 @include mediaDevice(mobile) {
   #PowMC {
     min-height: auto;
-    
+    width : 100vw;
     padding: 0;
     
     align-items: flex-start;
     
     .containingCon {
+      width : 100vw;
       gap: 20px;
       
       .contentRow {
         flex-direction: column;
-        
+        width : 90vw;
         align-items: flex-start;
         
         gap: 16px;
@@ -195,7 +198,7 @@
             height : 100%;
             align-items: flex-start;
             
-            padding: 30px;
+            padding: 5px;
             
             gap: 18px;
             grid-template-columns : 1fr;

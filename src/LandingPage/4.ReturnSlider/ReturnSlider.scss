@@ -119,7 +119,11 @@
           width : fit-content;
           border-radius: 9999px;
           
-          
+          button{
+            &:hover{
+              font-weight : bold !important;
+            }
+          }
         }
 
         .StateBtnC {
@@ -257,7 +261,7 @@
           gap: 0;
           background: transparent;
           &:hover img {
-            transform: scale(1.15);
+            transform: scale(1.1);
           }
 
           .retBadge {
@@ -271,7 +275,7 @@
 
           .retCircle {
             width : auto;
-            max-width : 300px;
+            max-width : 200px;
             aspect-ratio: 1 / 1;
             display: grid;
             place-items: center;
@@ -279,9 +283,20 @@
             border-radius: 50%;
             border: 3px solid #f9f9fa;
             background: #f1f2f4;
+            padding : 25px;
+            
+            .priceTag{
+              font-weight : bold;
+              -webkit-text-stroke: 0.5px currentColor;
+            }
+            
+            h3{
+              font-weight : 600!important;
+            }
             img {
               object-fit: cover;
               transition: 0.4s ease;
+              padding : 10px;
             }
           }
         }
