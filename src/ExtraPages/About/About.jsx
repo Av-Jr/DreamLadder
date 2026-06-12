@@ -188,12 +188,25 @@ export default function About() {
         <div id={"About2MC"}>
             <NavBar></NavBar>
             <div className="firstPage">
-                <span className={"main"}>
-                    <h1>"Wealth is not built overnight, its crafted through</h1>
-                    <h1 className={'toEdit'}> Clarity, Courage and Consistency."</h1>
-                    <h2 className={"Intro"}>Mr. Saday Sinha<br/><span className={'title'}>CEO & Founder</span></h2>
-                 </span>
-                <img loading="lazy" src={img("AboutSaday")} alt=""/>
+                <div className="section1">
+                    <img
+                        src={img("tree")}
+                        alt="Contact"
+                        loading="lazy"
+                    />
+                </div>
+                <div className="section2">
+                    <p>"Wealth is not built overnight; it’s crafted through <p className={"redText"}>clarity, courage, and consistency. "</p></p>
+                    <span className={"Name"}>Mr. Saday Sinha</span>
+                    <span className={"title"}>FOUNDER & CEO</span>
+                </div>
+                <div className="section3">
+                    <img
+                        src={img("AboutSaday")}
+                        alt="Contact"
+                        loading="lazy"
+                    />
+                </div>
             </div>
 
             <div className="secondPage">
@@ -235,12 +248,13 @@ export default function About() {
                         >
 
                             <div className="year">
-                                {item.year}
+                                <span className={"yt"}>YEAR</span>
+                                <span className={"yy"}>{item.year}</span>
                             </div>
 
                             <div className="dot"></div>
 
-                            <div className="timelineCard">
+                            <div className={`timelineCard ${index % 2 !== 0 ? "" : "rightHead"}`}>
                                 <h2>{item.title}</h2>
                                 <p>{item.text}</p>
                             </div>
@@ -263,7 +277,7 @@ export default function About() {
                             const Txt = item.ts;
 
                             return(
-                                <div className={"cardEle"}>
+                                <div className={`cardEle`}>
                                     <Icon color={"#E53935"} size={40} className={"cardIcon"}></Icon>
                                     <h2>{Tit}</h2>
                                     <h3>{Txt}</h3>

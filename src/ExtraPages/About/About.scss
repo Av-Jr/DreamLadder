@@ -15,7 +15,7 @@ $redCol : #E53935;
 	align-items: center;
 	
 	h1{
-	  font-family: SyneMono;
+	  font-family: Genos;
 	  margin-bottom: 80px;
 	}
   }
@@ -65,13 +65,19 @@ $redCol : #E53935;
 	
 	display: flex;
 	
-	margin-bottom: 140px;
+	margin-bottom: 40px;
 	
 	&.left{
 	  justify-content: flex-start;
 	  
 	  .timelineCard{
 		margin-right: calc(50% + 80px);
+		&.rightHead{
+		  text-align : right;
+		}
+		@include mediaDevice(mobile){
+		  &.rightHead{text-align : left;}
+		}
 	  }
 	}
 	
@@ -80,6 +86,7 @@ $redCol : #E53935;
 	  
 	  .timelineCard{
 		margin-left: calc(50% + 80px);
+		
 	  }
 	}
   }
@@ -102,12 +109,24 @@ $redCol : #E53935;
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	
-	font-family: SyneMono;
+	flex-direction : column;
+	font-family: Genos;
 	
 	box-shadow: 0 10px 25px rgba(0,0,0,.1);
 	
 	z-index: 3;
+	
+	.yt{
+	  font-size : 13px;
+	  color : #E53935;
+	  font-weight : 1000;
+	  -webkit-text-stroke: 0.5px currentColor;
+	}
+	
+	.yy{
+	  font-size : 25px;
+	  -webkit-text-stroke: 0.5px currentColor;
+	}
   }
   
   .dot{
@@ -123,7 +142,16 @@ $redCol : #E53935;
 	
 	padding: 40px;
 	
-	box-shadow: 0 10px 25px rgba(0,0,0,.08);
+	border : 1px solid rgba(0, 0, 0, 0.2);
+	transition : all 0.3s ease, box-shadow 0.2s ease;
+	transform : translateY(0px);
+	
+	&:hover{
+	  h2{
+		color : red;
+	  }
+	  box-shadow: 0 10px 25px rgba(0,0,0,.08);
+	}
 	
 	h2{
 	  font-family: SyneMono;
@@ -132,9 +160,10 @@ $redCol : #E53935;
 	
 	p{
 	  font-family: Genos;
-	  font-size: 20px;
-	  line-height: 1.8;
-	  color: grey;
+	  font-size: 18px;
+	  line-height: 1.2;
+	  color: rgba(0, 0, 0, 0.7);
+	  font-weight : 600;
 	}
   }
   
@@ -209,8 +238,9 @@ $redCol : #E53935;
   }
   .sixthPage{
 	height : auto;
-	width : 100%;
+	width : 80%;
 	padding : 100px;
+	margin : auto;
 	
 	display : grid;
 	grid-template-columns : auto auto;
@@ -269,8 +299,10 @@ $redCol : #E53935;
   }
   
   .fifthPage{
+	display : grid;
+	margin : auto;
 	min-height: 100vh;
-	width: 100%;
+	width: 80%;
 	
 	display: grid;
 	grid-template-columns: 0.9fr 1fr 1fr;
@@ -285,7 +317,7 @@ $redCol : #E53935;
 	  align-items: flex-start;
 	  
 	  h1{
-		font-family: SyneMono;
+		font-family: Genos;
 		font-size: clamp(0px, 3vh, 30px);
 		margin-bottom: 20px;
 	  }
@@ -294,7 +326,7 @@ $redCol : #E53935;
 		font-family: Genos;
 		font-size: clamp(0px, 2vh, 25px);
 		line-height: 1.8;
-		color: rgba(0,0,0,.6);
+		color: rgba(0,0,0,0.9);
 		font-weight: 600;
 		max-width: 500px;
 	  }
@@ -323,6 +355,7 @@ $redCol : #E53935;
 		
 		border-radius:20px;
 		border:1px solid rgba(0,0,0,.05);
+		background: #F8F9FA;
 	  }
 	}
 	
@@ -344,6 +377,7 @@ $redCol : #E53935;
 		font-family: SyneMono;
 		font-size: clamp(0px, 3vh, 30px);
 		margin-bottom:25px;
+		color: rgba(0,0,0,0.9);
 	  }
 	  
 	  h3{
@@ -352,6 +386,7 @@ $redCol : #E53935;
 		line-height:1.8;
 		color:rgba(0,0,0,.65);
 		font-weight:600;
+		color: rgba(0,0,0,0.9);
 	  }
 	}
   }
@@ -363,14 +398,14 @@ $redCol : #E53935;
 	padding : 20px;
 	h1{
 	  font-weight : 800;
+	  font-family : Genos!important;
 	}
 	
 	.cardElesfP{
 	  display : grid;
-	  grid-template-columns : repeat(4, auto);
-	  place-items :center;
+	  grid-template-columns : repeat(4, 1fr);
 	  gap : 20px;
-	  padding : 100px;
+	  
 	  
 	  .cardEle{
 		background: white;
@@ -378,10 +413,11 @@ $redCol : #E53935;
 		flex-direction : column;
 		justify-content : space-around;
 		align-items : center;
-		min-height : 300px;
 		padding : 30px;
 		text-align : center;
 		border-radius : 20px;
+		aspect-ratio : 12/16;
+		max-height : 400px;
 		
 		.cardIcon{
 		  background: pink;
@@ -395,8 +431,8 @@ $redCol : #E53935;
 		  font-family : SyneMono;
 		}
 		
-		span{
-		  font-family : Genos;
+		h3{
+		  color : rgba(0, 0, 0, 0.7)
 		}
 	  }
 	}
@@ -418,6 +454,7 @@ $redCol : #E53935;
 	  width : 60%;
 	  height : auto;
 	  font-family : SyneMono;
+	  font-weight : 100;
 	  line-height : 2;
 	  display : grid;
 	  place-items : center;
@@ -428,12 +465,12 @@ $redCol : #E53935;
 	
 	.Intro{
 	  width : 60%;
-	  height : auto;
 	  font-family : Genos;
+	  font-weight : 900;
+	  font-size : 20px;
+	  color : black;
 	  text-align : center;
-	  line-height : 1.5;
-	  font-weight : 800;
-	  padding : 0 10%;
+	  -webkit-text-stroke: 0.5px currentColor;
 	  
 	  
 	  .title{
@@ -452,6 +489,11 @@ $redCol : #E53935;
 	place-items : center;
 	padding : 40px;
 	
+	h1{
+	  text-align : left;
+	  width : 100%;
+	}
+	
 	img{
 	  width : 100%;
 	  height : 100%;
@@ -461,6 +503,7 @@ $redCol : #E53935;
 	
 	.text{
 	  width : 90%;
+	  max-width : 400px;
 	  padding : 20px;
 	  display : grid;
 	  place-items : center;
@@ -474,6 +517,15 @@ $redCol : #E53935;
 		margin-top : 20px;
 		color : grey;
 		
+		h2{
+		  font-size : clamp(0px, 3vh, 20px);
+		  width : 100%;
+		  span{
+			font-size : clamp(0px, 4vh, 40px);
+			text-align : left;
+			width : 100%;
+		  }
+		}
 		.changeC{
 		  color : #E53935;
 		  font-weight : bold;
@@ -484,53 +536,60 @@ $redCol : #E53935;
   }
   
   .firstPage{
-	min-height : 100vh;
+	padding-top : 100px;
+	display : grid;
+	grid-template-columns : repeat(3, auto);
+	place-items : center;
 	width : 100%;
-	background : img("AboutFirstbg") center/cover no-repeat;
+	min-height : 100vh;
+	background : img("aboutBack") center/cover no-repeat;
+	gap  : 30px;
+  }
+  
+  .section3{
+	img{
+	  object-fit : contain;
+	  width : 70%;
+	  object-position : center;
+
+	}
+  }
+  
+  .section2{
+	max-width : 250px;
 	display : flex;
-	padding : 100px;
+	flex-direction : column;
 	justify-content : center;
 	align-items : center;
 	gap : 20px;
-	
-	img{
-	  object-fit : contain;
-	  width : 30%;
-	  object-position : center;
-	  max-width : 385px;
-	}
-	
-	.main{
-	  display : flex;
-	  flex-direction : column;
-	  gap : 10px;
-	}
-	
-	.Intro{
-	  font-family : Genos;
-	  text-align : end;
-	  line-height : 1;
-	  font-weight : bold;
-	  margin-top : 20px;
+	p{
+	  font-family : SyneMono;
 	  
-	  
-	  
-	  .title{
-		color : grey;
-		font-family : inherit;
-		line-height : inherit;
-	  }
-	}
-	
-	h1{
-	  font-family : Genos;
-	  line-height : 1;
+	  font-size : 30px;
 	  text-align : center;
+	  border-bottom : 2px solid #E53935;
 	}
 	
-	.toEdit{
+	.redText{
+	  color : #E53935;
 	  font-style : italic;
-	  color : red;
+	  
+	  padding-bottom : 20px;
+	}
+	
+	.Name{
+	  font-family : Genos;
+	  font-weight : 900;
+	  font-size : 20px;
+	  color : black;
+	  text-align : center;
+	  -webkit-text-stroke: 0.5px currentColor;
+	}
+	
+	.title{
+	  font-family : Genos;
+	  letter-spacing : 2px;
+	  text-align : center;
 	}
   }
 }
@@ -545,7 +604,6 @@ $redCol : #E53935;
 	  
 	  h1{
 		margin-bottom: 50px;
-		text-align: center;
 	  }
 	}
 	
@@ -585,14 +643,22 @@ $redCol : #E53935;
 	  margin-right: 0 !important;
 	  
 	  padding: 20px;
+	  text-align : left;
+	  
+	  .rightHead{
+		text-align : left!important;
+		h2{
+		  text-align : left;
+		}
+	  }
 	  
 	  h2{
-		font-size: 12px;
+		font-size: 18px;
 		margin-bottom: 10px;
 	  }
 	  
 	  p{
-		font-size: 8px;
+		font-size: 13px;
 		line-height: 1.6;
 	  }
 	}
@@ -719,16 +785,19 @@ $redCol : #E53935;
 	
 	.thirdPage{
 	  align-items : center;
+	  justify-content : flex-end;
 	  gap : 20px;
-	  background-position : left;
+	  object-fit : cover;
+	  background-position : 40% center;
 	  
 	  .textLeft{
-		padding : 0;
+		padding : 5px;
 		width : 100%;
 		height : 100%;
 		background : rgba(255, 255, 255, 0.5);
 		border-radius : 10px;
 		text-align : center;
+		backdrop-filter : blur(2px);
 	  }
 	  
 	  .Intro{
@@ -737,6 +806,7 @@ $redCol : #E53935;
 		background : rgba(255, 255, 255, 0.5);
 		text-align : center;
 		border-radius : 10px;
+		backdrop-filter : blur(2px);
 	  }
 	}
 	
@@ -750,7 +820,7 @@ $redCol : #E53935;
 		width : 100%;
 		padding : 0;
 		grid-row : 2;
-		text-align : center;
+		text-align : left;
 	  }
 	  
 	  img{
