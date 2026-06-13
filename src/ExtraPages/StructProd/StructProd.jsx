@@ -122,13 +122,13 @@ const StructProd = () => {
 
           {
             StructuredProductsHeroData.description.map((item, index) => (
-              <h3 key={index}>{item.text}</h3>
+              <span className={"Gen dark"} key={index}>{item.text}</span>
             ))
           }
 
-          <h3 className={"quoteEle"}>
+          <span className={"quote"}>
             {StructuredProductsHeroData.quote}
-          </h3>
+          </span>
 
         </div>
 
@@ -143,9 +143,9 @@ const StructProd = () => {
 
       <div className={"SPtwo"}>
 
-        <h1>{StructuredProductsTypesData.title}</h1>
+        <h2 className={"Gen dark"}>{StructuredProductsTypesData.title}</h2>
 
-        <h3>{StructuredProductsTypesData.description}</h3>
+        <span className={"Gen light"}>{StructuredProductsTypesData.description}</span>
 
         <div className={"cardsCont"}>
 
@@ -158,15 +158,13 @@ const StructProd = () => {
                 <div className={"cardEle"} key={index}>
 
                   <div className={"cardTop"}>
-
                     <Icon/>
-
-                    <h1>{item.title}</h1>
-
                   </div>
 
-                  <h3>{item.description}</h3>
-
+                  <div className={"textElll"}>
+                    <h3 className={"Syn bold"}>{item.title}</h3>
+                    <span className={"Gen light bold"}>{item.description}</span>
+                  </div>
                 </div>
               );
             })
@@ -180,13 +178,13 @@ const StructProd = () => {
 
         <div className={"left"}>
 
-          <h1>{StructuredProductsRegulationData.title}</h1>
+          <h2 className={"Gen bold"}>{StructuredProductsRegulationData.title}</h2>
 
           <div className={"line"}></div>
 
-          <h3>
+          <span className={"Gen light"}>
             {StructuredProductsRegulationData.description}
-          </h3>
+          </span>
 
           <img loading="lazy"
             alt=""
@@ -201,17 +199,17 @@ const StructProd = () => {
             StructuredProductsRegulationData.points.map((item, index) => (
               <div className={"pointEle"} key={index}>
 
-                <h3>{`0${index + 1}`}</h3>
+                <span className={"Gen light"}>{`0${index + 1}`}</span>
 
-                <h3>{item}</h3>
+                <span className={"Gen dark"}>{item}</span>
 
               </div>
             ))
           }
 
-          <h3 className={"quoteEle"}>
+          <span className={"quote"}>
             {StructuredProductsRegulationData.quote}
-          </h3>
+          </span>
 
         </div>
 

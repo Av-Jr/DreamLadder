@@ -259,7 +259,7 @@ const WhyAIFData = {
         <span className="titleZ">PMS / AIF</span>
       </div>
 
-      <div className="PMSone">
+      <div className="PMSone rev">
         <img loading="lazy"
           className={"heroImg"}
           src={`${img(PMSHeroData.image)}`}
@@ -268,22 +268,22 @@ const WhyAIFData = {
 
         <div className="heroText">
           {PMSHeroData.description.map((item, index) => (
-            <h3 className="descEles" key={index}>
+            <span className="Gen" key={index}>
               {item.text}
-            </h3>
+            </span>
           ))}
 
-          <h3 className="quoteEle">
+          <span className="quote">
             {PMSHeroData.quote}
-          </h3>
+          </span>
         </div>
       </div>
 
       <div className="PMStwo">
         <div className="left">
-          <h1>{PMSFeatureData.title}</h1>
+          <h2 className={"Gen bold"}>{PMSFeatureData.title}</h2>
 
-          <h3>{PMSFeatureData.description}</h3>
+          <span className={"Gen"}>{PMSFeatureData.description}</span>
 
           <img loading="lazy" src={`${img(PMSFeatureData.image)}`} alt="" />
         </div>
@@ -295,12 +295,10 @@ const WhyAIFData = {
 
               return (
                 <div className="featureCard" key={index}>
-                  <h1>
+                  <div className={"exp"}>
                     <Icon className={"cardIcon"} size={32}/>
-                    {item.title}
-                  </h1>
-
-                  <h3>{item.description}</h3>
+                  </div>
+                  <span className={"Gen"}><h3 className={"Gen bold"}>{item.title}</h3><br/>{item.description}</span>
                 </div>
               );
             })
@@ -312,7 +310,7 @@ const WhyAIFData = {
 
         <div className="left">
 
-          <h1>{PMSRegulationData.title}</h1>
+          <h2 className={"Gen bold"}>{PMSRegulationData.title}</h2>
 
           <div className="RegTimeline">
 
@@ -325,8 +323,8 @@ const WhyAIFData = {
                   <div className="diamond"></div>
 
                   <div className="stepContent">
-                    <h2>{item.title}</h2>
-                    <h3>{item.description}</h3>
+                    <h3 className={"Syn"}>{item.title}</h3>
+                    <span className={"Gen light"}>{item.description}</span>
                   </div>
 
                 </div>
@@ -338,9 +336,9 @@ const WhyAIFData = {
 
         <div className="right">
 
-          <h3 className="quoteEle">
+          <span className="quote">
             {PMSRegulationData.quote}
-          </h3>
+          </span>
 
           <img
               loading="lazy"
@@ -370,19 +368,19 @@ const WhyAIFData = {
 
         <div className="heroText">
 
-          <h1>{AIFIntroData.title}</h1>
+          <h2 className={"Gen bold"}>{AIFIntroData.title}</h2>
 
           {
             AIFIntroData.description.map((item, index) => (
-              <h3 key={index}>
+              <span className={"Gen"} key={index}>
                 {item.text}
-              </h3>
+              </span>
             ))
           }
 
-          <h3 className="quoteEle">
+          <span className="quote">
             {AIFIntroData.quote}
-          </h3>
+          </span>
 
         </div>
 
@@ -395,23 +393,23 @@ const WhyAIFData = {
             AIFTypesData.cards.map((item, index) => (
               <div className="aifCard" key={index}>
 
-                <h1>
-                  <span>{item.number}</span>
+                <h3 className={"Syn"}>
+                  <span className={"Gen dark"}>{item.number}</span>
                   {item.title}
-                </h1>
+                </h3>
 
-                <h3 className={'descAIF'}>{item.description}</h3>
+                <span className={'Gen light'}>{item.description}</span>
 
                 <div className="bottom">
 
                   <span className={"it"}>
-                    <h3>OBJECTIVE</h3>
-                    <h3 className={"it"}>{item.objective}</h3>
+                    <h3 className={"Gen darl"}>OBJECTIVE</h3>
+                    <span className={"Gen italic light"}>{item.objective}</span>
                   </span>
 
                   <span>
-                    <h3>EXAMPLES</h3>
-                    <h3 className={"it"}>{item.examples}</h3>
+                    <h3 className={"Gen dark"}>EXAMPLES</h3>
+                    <span className={"Gen italic light"}>{item.examples}</span>
                   </span>
 
                 </div>
@@ -422,9 +420,9 @@ const WhyAIFData = {
         </div>
 
         <div className="right">
-          <h1>{AIFTypesData.title}</h1>
+          <h2 className={"Gen dark bold"}>{AIFTypesData.title}</h2>
 
-          <span>
+          <span className={"Gen light"}>
             SEBI classifies Alternative Investment Funds into three distinct categories based on investment objectives and asset classes.
           </span>
 
@@ -436,11 +434,11 @@ const WhyAIFData = {
       <div className="PMSseven">
 
         <div className="left">
-          <h1>{AIFRegulationData.title}</h1>
+          <h2 className={"Gen bold dark"}>{AIFRegulationData.title}</h2>
 
-          <h3>
+          <span className={"Gen light"}>
             {AIFRegulationData.description}
-          </h3>
+          </span>
 
           <img loading="lazy" src={`${img(AIFRegulationData.image)}`} alt="" />
         </div>
@@ -449,9 +447,9 @@ const WhyAIFData = {
           {
             AIFRegulationData.points.map((item, index) => (
               <div className="regCard" key={index}>
-                <h1>0{index + 1}</h1>
+                <span className={"Syn light"}>0{index + 1}</span>
 
-                <h3><span className="titleH3">{item.title}</span> : <span className="descH3">{item.description}</span></h3>
+                <span className={"Gen light"}><h3 className="Gen dark bold">{item.title} : </h3><span className="descH3">{item.description}</span></span>
               </div>
             ))
           }

@@ -10,7 +10,8 @@ $colorRed : #E53935;
 
   
   .MFfour{
-	width:100%;
+	width:80%;
+	margin : auto;
 	
 	display:grid;
 	grid-template-columns:1fr 1fr;
@@ -19,7 +20,7 @@ $colorRed : #E53935;
 	
 	padding:100px 80px;
 	
-	gap:80px;
+	gap:100px;
 	
 	.heroText{
 	  width:100%;
@@ -148,10 +149,12 @@ $colorRed : #E53935;
   }
   
   .MFthree{
-	width : 100%;
+	width : 80%;
+	margin : auto;
 	background: white;
 	padding : 80px 30px;
 	display : grid;
+	gap : 100px;
 	grid-template-columns : repeat(2, 1fr);
 	place-items : center;
 	
@@ -179,7 +182,6 @@ $colorRed : #E53935;
 	  gap : 20px;
 	  font-family : Genos;
 	  justify-content : center;
-	  max-width : 70%;
 	  
 	  .thirdCardEles{
 		display : flex;
@@ -187,8 +189,7 @@ $colorRed : #E53935;
 		 
 		.threeIcon{
 		  aspect-ratio : 1;
-		  color : red;
-		  height : 20px;
+		  color : #475569;
 		}
 	  }
 
@@ -196,9 +197,10 @@ $colorRed : #E53935;
   }
   
   .MFtwo{
+	padding-top : 100px;
 	min-height : 100vh;
 	width : 100%;
-	
+	margin : auto;
 	background-image: img("flexBack");
 	background-position: center;
 	background-size: cover;
@@ -208,7 +210,6 @@ $colorRed : #E53935;
 	flex-direction : column;
 	align-items : center;
 	
-	padding : 80px 30px;
 	
 	gap : 40px;
 	
@@ -250,7 +251,7 @@ $colorRed : #E53935;
 		.MFtwoCards{
 		  position : absolute;
 		  
-		  width : 360px;
+		  width : 300px;
 		  
 		  background : #182338;
 		  
@@ -272,8 +273,7 @@ $colorRed : #E53935;
 			align-items : center;
 			
 			gap : 10px;
-			
-			font-size : 2.5vh;
+			font-size : 4vh!important;
 			font-weight : 900;
 			
 			.cardIconMF{

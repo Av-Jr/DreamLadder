@@ -191,16 +191,15 @@ return (
     <div className="Bondsone">
 
         <div className="heroText">
-
             {
                 BondsHeroData.description.map((item, index) => (
-                    <h3 key={index}>
+                    <span className={"Gen dark"} key={index}>
                         {item.text}
-                    </h3>
+                    </span>
                 ))
             }
 
-            <span className={"quoteEle"}>
+            <span className={"Gen quote"}>
                 {BondsHeroData.quote}
             </span>
 
@@ -216,16 +215,13 @@ return (
 
         <div className="left">
 
-            <h1>{BondsRegulationData.title}</h1>
+            <h2 className={"Gen"}>{BondsRegulationData.title}</h2>
 
             {
                 BondsRegulationData.points.map((item, index) => (
                     <div className={"timelineCard"} key={index}>
-
-                        <h2>{item.title}</h2>
-
-                        <h3>{item.description}</h3>
-
+                        <h3 className={"Syn dark"}>{item.title}</h3>
+                        <span className={"Gen light"}>{item.description}</span>
                     </div>
                 ))
             }
@@ -234,7 +230,7 @@ return (
 
         <div className="right">
 
-            <span className={"quoteEle"}>
+            <span className={"quote"}>
                 {BondsRegulationData.quote}
             </span>
 
@@ -260,17 +256,17 @@ return (
 
         <div className="heroText">
 
-            <h1>{FixedIncomeIntroData.title}</h1>
+            <h2 className={"Gen"}>{FixedIncomeIntroData.title}</h2>
 
             {
                 FixedIncomeIntroData.description.map((item, index) => (
-                    <h2 key={index}>
+                    <span className={"Gen dark"} key={index}>
                         {item.text}
-                    </h2>
+                    </span>
                 ))
             }
 
-            <span className={"quoteEle"}>
+            <span className={"quote"}>
                 {FixedIncomeIntroData.quote}
             </span>
 
@@ -280,9 +276,9 @@ return (
 
     <div className="Bondsfive">
 
-        <h1>{FixedIncomeTypesData.title}</h1>
+        <h2 className={"Syn"}>{FixedIncomeTypesData.title}</h2>
 
-        <h3>{FixedIncomeTypesData.description}</h3>
+        <span className={"Gen light"}>{FixedIncomeTypesData.description}</span>
 
         <div className="middleSection">
 
@@ -290,14 +286,13 @@ return (
 
                 {
                     FixedIncomeTypesData.cards.slice(0,3).map((item, index) => (
-                        <div className={"typeCard"} key={index}>
+                        <div className={`typeCard ${index % 2 !== 0 ? "start" : ""}`} key={index}>
 
-                            <h2>
-                                <span>{item.number}</span>
-                                {item.title}
-                            </h2>
+                            <h3 className={"Gen bold dark"}>
+                                <span className={"Gen light"}>{item.number}</span> {item.title}
+                            </h3>
 
-                            <p>{item.description}</p>
+                            <span className={"Gen light"}>{item.description}</span>
 
                         </div>
                     ))
@@ -313,14 +308,13 @@ return (
 
                 {
                     FixedIncomeTypesData.cards.slice(3,6).map((item, index) => (
-                        <div className={"typeCard"} key={index}>
+                        <div className={`typeCard ${index % 2 !== 0 ? "end" : ""}`} key={index}>
 
-                            <h2>
-                                <span>{item.number}</span>
-                                {item.title}
-                            </h2>
+                            <h3 className={"Gen bold dark"}>
+                                <span className={"Gen light"}>{item.number}</span> {item.title}
+                            </h3>
 
-                            <p>{item.description}</p>
+                            <span className={"Gen light"}>{item.description}</span>
 
                         </div>
                     ))
@@ -338,7 +332,7 @@ return (
 
             <img loading="lazy" src={img(WhyFixedIncomeData.image)} alt=""/>
 
-            <span className={"quoteEle"}>
+            <span className={"quote"}>
                 {WhyFixedIncomeData.quote}
             </span>
 
@@ -346,15 +340,15 @@ return (
 
         <div className="right">
 
-            <h1>{WhyFixedIncomeData.title}</h1>
+            <h2 className={"Gen dark"}>{WhyFixedIncomeData.title}</h2>
 
             <div className="line"></div>
 
             {
                 WhyFixedIncomeData.points.map((item, index) => (
-                    <h3 key={index}>
+                    <span className={"Gen dark"} key={index}>
                         {index + 1}. {item}
-                    </h3>
+                    </span>
                 ))
             }
 
