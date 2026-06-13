@@ -89,10 +89,13 @@
         top : 0;
         left : 100%;
         min-width : 150px;
-        border-radius : 20px;
+        border-radius : 5px;
         display : none;
         flex-direction : column;
         overflow : hidden;
+        align-items : center;
+        justify-content : start;
+        gap : 8px;
       }
       
       &:hover {
@@ -122,10 +125,12 @@
         min-width: 150px;
         
         background: white;
-        border-radius: 10px;
+        border-radius: 5px;
         overflow: visible;
         
         box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+        gap : 8px;
+        align-items : stretch;
         
         .btnWrap{
           &:hover .subDrop{
@@ -137,9 +142,9 @@
       .dropB {
         font-family: Genos;
         text-align: left;
-        border-radius : 10px;
+        border-radius : 5px;
         padding: 4px 12px;
-        
+        width : 100%;
         border: none;
         background: transparent;
         
@@ -147,7 +152,6 @@
         font-weight: bold;
         
         cursor: pointer;
-        width: 100%;
         
         &:hover {
           background: rgba(0, 0, 0, 0.08);
