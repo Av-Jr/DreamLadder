@@ -48,11 +48,11 @@ const SlideShow = () => {
         <div className="SlideItem">
           <div className="SlideOne">
             <div className="heroCon">
-              <h1>
+              <h2 className={"Syn dark"}>
                 Building Wealth,
                 <br />
                 Preserving Legacies
-              </h1>
+              </h2>
 
               <div className="heroActions">
                 <button className="ss" onClick={() => {nav("/blogs")}}><BookOpen size={16}/>Learning</button>
@@ -69,13 +69,13 @@ const SlideShow = () => {
         <div className="SlideItem">
           <div className="SlideTwo">
             <div className="heroCon">
-              <h1>
+              <h2 className={"Syn dark"}>
                 Smarter Investing -
                 <br />
                 Right in your pocket.
-              </h1>
+              </h2>
 
-              <h2 className={'lessWeight'}>Download the App right now.</h2>
+              <h2 className={'Syn dark small'}>Download the App right now.</h2>
 
               <div className="heroActions pas">
                 <button className="navBtn s ps" onClick={() => window.open("https://play.google.com/store/search?q=dreamladder+capital&c=apps&hl=en_IN", "_blank")}>
@@ -88,18 +88,18 @@ const SlideShow = () => {
 
               <div className="infoDis">
                 <div className="conInfo">
-                  <span className="num">500+</span>
-                  <span className="label">Families</span>
+                  <span className="Gen light">500+</span>
+                  <span className="Gen small">Families</span>
                 </div>
 
                 <div className="conInfo">
-                  <span className="num">12+</span>
-                  <span className="label">Countries</span>
+                  <span className="Gen light">12+</span>
+                  <span className="Gen light small">Countries</span>
                 </div>
 
                 <div className="conInfo">
-                  <span className="num">25+</span>
-                  <span className="label">Experience</span>
+                  <span className="Gen light">25+</span>
+                  <span className="Gen light small">Experience</span>
                 </div>
               </div>
             </div>
@@ -113,11 +113,11 @@ const SlideShow = () => {
         <div className="SlideItem">
           <div className="SlideOne">
             <div className="heroCon">
-              <h1>
+              <h2 className={"Syn dark"}>
                 Building Wealth,
                 <br />
                 Preserving Legacies
-              </h1>
+              </h2>
 
               <div className="heroActions">
                 <button className="ss" onClick={() => {window.location.href = "/blogs"}}><BookOpen size={16}/>Learning</button>

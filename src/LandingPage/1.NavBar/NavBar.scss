@@ -47,6 +47,7 @@
       justify-content : center;
       align-items : center;
       gap : 0;
+      padding-bottom : 15px;
       
       .navBtn {
         background: transparent;
@@ -117,7 +118,7 @@
         display: none;
         
         position: absolute;
-        top: 100%;
+        top: calc(100%);
         left: 0;
         
         flex-direction: column;
@@ -133,6 +134,14 @@
         align-items : stretch;
         
         .btnWrap{
+          &::after{
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 100%;
+            width: 15px;
+            height: 100%;
+          }
           &:hover .subDrop{
             display : flex;
           }

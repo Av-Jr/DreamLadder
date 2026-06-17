@@ -1,5 +1,4 @@
 @use "./mixins" as  *;
-
 @include InitialSetup;
 
 @include CustomFont("Genos", "/Fonts/Genos.woff");
@@ -15,6 +14,130 @@ body{
   height : 100vh;
   overflow : visible;
   background : white;
+  
+  span{
+    text-align : center;
+    font-size : clamp(0px, 3vh, 30px);
+    
+    -webkit-text-stroke:0.5px currentColor;
+    letter-spacing : 1px;
+    line-height : 1.4;
+    font-weight : normal;
+    
+    &.small{
+      font-size : clamp(0px, 2vh, 20px);
+      -webkit-text-stroke: 0 currentColor;
+    }
+    &.Gen{
+      font-family : Genos;
+    }
+    
+    &.quote{
+      font-family : Genos;
+      font-style : italic;
+      border-left : 4px solid #E53A36;
+      padding-left : 20px;
+      color : #64748B;
+      font-size : clamp(0px, 3vh, 18px);
+    }
+    
+    &.italic{
+      font-style : italic;
+    }
+    
+    &.light{
+      color : #475569;
+    }
+    
+    &.dark{
+      color : black;
+    }
+  }
+  
+  h1{
+    text-align : center;
+    font-weight : normal;
+    font-size : clamp(0px, 7vh, 70px) !important;
+    color : black;
+    
+    &.small{
+      font-size : clamp(0px, 5vh, 60px) !important;
+    }
+    
+    &.Gen{
+      font-family : Genos;
+    }
+    &.Syn{
+      font-family : SyneMono;
+    }
+    &.bold{
+      -webkit-text-stroke: 0.5px currentColor;
+      font-weight : bold;
+    }
+    &.light{
+      color : #475569;
+    }
+    
+    &.dark{
+      color : black;
+    }
+  }
+  
+  h2{
+    text-align : center;
+    font-weight : normal;
+    color : black;
+    font-size : clamp(0px, 3.5vh, 35px) !important;
+    
+    &.small{
+      font-size : clamp(0px, 2.5vh, 25px) !important;
+    }
+    
+    &.Gen{
+      font-family : Genos;
+      font-size : clamp(0px, 4vh, 40px);
+    }
+    &.Syn{
+      font-family : SyneMono;
+    }
+    &.bold{
+      -webkit-text-stroke: 0.5px currentColor;
+      font-weight : bold;
+    }
+    &.light{
+      color : #475569;
+    }
+    
+    &.dark{
+      color : black;
+    }
+  }
+  
+  h3{
+    text-align : center;
+    font-weight : normal;
+    
+    color : black;
+    font-size : clamp(0px, 3vh, 20px) !important;
+    
+    &.Gen{
+      font-family : Genos;
+    }
+    &.Syn{
+      font-family : SyneMono;
+    }
+    &.bold{
+      -webkit-text-stroke: 0.5px currentColor;
+      font-weight : bold;
+    }
+    &.light{
+      color : #475569;
+    }
+    
+    &.dark{
+      color : black;
+    }
+  }
   
   .navBtn {
     background: transparent;
@@ -45,16 +168,8 @@ body{
     }
   }
   
-  h1{
-    font-size : clamp(0px, 4vh, 50px);
-  }
+
   
-  h2{
-    font-size : clamp(0px, 3vh, 40px);
-  }
-  h3{
-    font-size : clamp(15px, 2.5vh, 40px);
-  }
   #AboutMC, #ReturnSliderMC, #CalculatorMC, #InsightsMC, #PowMC, #FooterMC{
     padding : 60px 60px;
   }

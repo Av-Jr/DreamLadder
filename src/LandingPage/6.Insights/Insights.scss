@@ -1,84 +1,71 @@
 @use "../../mixins" as *;
 
 #InsightsMC{
-  
+  min-height : 100vh;
   width : 80%;
   background: white;
   display : flex;
   flex-direction : column;
-  justify-content : center;
   align-items : center;
-  gap : 10px;
-}
-
-h1{
-  font-family : "Genos";
-  font-weight : bold;
-  font-size : 5vh!important;
-  color : black;
-}
-
-h3{
-  font-family : "Genos";
-  color : rgba(0, 0, 0);
-  word-spacing : 1px;
-}
-
-.iframeElesCon{
-  display : grid;
-  grid-template-columns : repeat(4, 1fr);
-  grid-template-rows : auto;
-  gap : 20px;
-  width : 100%;
-  padding : 20px;
+  justify-content : center;
+  gap : 30px;
+  max-width : 1300px;
   
-  h3{
-    grid-column : span 4;
-    border-left : 5px solid red;
-    padding-left : 10px;
-    letter-spacing : 1px;
-    font-weight : bold;
-  }
-}
-
-.ifEle{
-  border : none;
-  width : 100%;
-  aspect-ratio : 16/9;
-  border-radius : 20px;
-  cursor : pointer;
-}
-
-.blogs{
-  display : grid;
-  width : 100%;
-  height : auto;
-  place-items : start;
-  white-space : normal;
-  gap : 15px;
-  font-family : Genos;
-  color : grey;
-  grid-template-columns : 1fr 1fr;
-  border: 3px solid #f9f9fa;
-  aspect-ratio : auto;
-  padding : 10px;
-  
-  &:hover{
-    img{
-      transform : scale(1.1);
+  .iframeElesCon, .blogsEle{
+    display : flex;
+    flex-direction: column;
+    gap : 20px;
+    align-items : flex-start;
+    h3{
+      border-left : 4px solid #E53A36;
+      padding-left : 10px;
+    }
+    
+    .itsChild{
+      display : grid;
+      grid-template-columns : repeat(4, auto);
+      gap : 20px;
+      
+      .blogs{
+        border : 1px #F3F4F6 solid;
+        border-radius : 20px;
+        padding : 10px;
+      }
+      
+      .ifEle, .blogs{
+        cursor : pointer;
+        transition : all 0.2s ease;
+        &:hover{
+          transform : scale(1.1);
+        }
+        
+        display : grid;
+        grid-template-rows : repeat(3,auto);
+        align-items : center;
+        gap : 10px;
+        
+        .DateBlog{
+          width : 100%;
+          display : flex;
+          justify-content : space-between;
+        }
+        
+        span{
+          text-align : left;
+        }
+      }
+      
+      .ifEle{
+        width: 100%;
+        aspect-ratio: 16 / 9;
+        border: none;
+        border-radius : 20px;
+      }
     }
   }
-  
-  img, span:nth-child(4){grid-column : span 2;
-    object-fit : contain;
-    object-position : center;
-    color : black;
-    transition : 0.3s ease;
-    overflow : hidden;
-
-  };
-  
 }
+  
+
 
 @include mediaDevice(mobile){
   #InsightsMC{
@@ -93,10 +80,6 @@ h3{
       grid-template-rows : auto;
       gap : 20px;
       
-      h3{
-        grid-column : span 1;
-        font-size : 20px;
-      }
     }
     
   }

@@ -1,6 +1,7 @@
 import "./Pow.scss"
 import { useState, useEffect } from "react"
 import { img } from "../../utils/image.js"
+import { Quote } from "lucide-react";
 
 const Pow = () => {
   const [activeSlide, setActiveSlide] = useState(0)
@@ -33,7 +34,7 @@ const Pow = () => {
   return (
       <div id="PowMC">
         <div className="containingCon">
-          <h1>What Clients say about us</h1>
+          <h1 className={"Gen dark small"}>What Clients say about us</h1>
 
           <div className="contentRow">
             <img
@@ -54,13 +55,14 @@ const Pow = () => {
                     <div key={index} className="slideEE">
                       <div className="cardEE">
                         <div className="textEE">
-                          <h2 className="statementEE">
+                          <Quote size={48} color="#D8C2F0" />
+                          <span className="statementEE Gen small bold">
                             "{item.statement}"
-                          </h2>
+                          </span>
 
-                          <h2>{item.name}</h2>
+                          <h2 className={"Gen bold dark"}>{item.name}</h2>
 
-                          <h3>{item.position}</h3>
+                          <h3 className={"Gen"}>{item.position}</h3>
                         </div>
 
                         <div className="imageEE">

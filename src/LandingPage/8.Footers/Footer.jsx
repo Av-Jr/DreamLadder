@@ -26,8 +26,8 @@ const titles = [
 
     return(
         <div id={"FooterMC"}>
-            <h1>Frequently Asked Questions</h1>
-            <h3>Select a topic below to find quick answers.</h3>
+            <h1 className={"Syn dark small"}>Frequently Asked Questions</h1>
+            <h2 className={"Gen light small"}>Select a topic below to find quick answers.</h2>
             <div className="topicEles">
                 {titles.map((item, index) => (
                 <div
@@ -36,7 +36,7 @@ const titles = [
                     window.location.href = "/faqs";
                   }}
                 >
-                  {item}
+                  <span className={"Gen dark small"}>{item}</span>
                 </div>
                 ))}
             </div>

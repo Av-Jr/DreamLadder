@@ -8,6 +8,10 @@
   overflow-x : hidden;
   overflow-y : hidden;
   
+  h1, h2, h3{
+    text-align : left;
+  }
+  
   .slideArrow{
     position: absolute;
     top: 50%;
@@ -61,12 +65,10 @@
     justify-content : center;
     background-color: #dc2626; /* red-600 */
     border: 2px solid #dc2626;
+    font-family : Genos;
     
     color: #ffffff;
     border-radius: 9999px; /* rounded-full */
-    
-    font-weight: 1000;
-    font-size: clamp(0px, 2vh, 25px);
     
     box-shadow:
             0 20px 25px -5px rgba(127, 29, 29, 0.2),
@@ -85,12 +87,15 @@
     width : auto;
     max-width : 150px;
     display : flex;
-    justify-content : center;
+    flex-direction : row;
+    justify-content : flex-start;
     align-items : center;
     border : none;
     padding : 0;
     margin : 0;
+    flex : 1 1 0;
     background: transparent;
+
     transition : all 0.3s ease;
     &:hover{transform : scale(0.9)}
     box-shadow : none;
@@ -148,40 +153,31 @@
   
   
   .SlideOne, .SlideTwo {
+    h2{
+      width : 100%;
+      text-align : left;
+    }
     display: grid;
     width: 100%;
     height: 100%;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
     padding: 10px;
-    place-items : center;
+    justify-content : start;
     
     .heroCon {
       display: grid;
-      align-content: center;
+      align-items : center;
       justify-items: start;
       gap: clamp(1rem, 2vw, 2rem);
       padding: clamp(40px, 8vw, 120px);
       
-      h1, h2 {
-        font-family: SyneMono;
-        width: 100%;
-        text-align: left;
-        overflow: visible;
-        white-space: nowrap
-      }
-      
-      
       .heroActions {
-        font-family: Genos;
         width: 100%;
         display: flex;
         justify-content: flex-start;
-        gap: 10px;
-        
-        button {
-          flex: 1 1 0;
-        }
+        gap : 5px;
+        padding-right : 20px;
         
         &.pas{width : auto}
       }
@@ -196,7 +192,7 @@
         justify-content: space-evenly;
         
         border: 2px solid #e32929;
-        border-radius: 30px;
+        border-radius: 10px;
         
         background: rgba(255, 255, 255, 0.7);
         
@@ -214,17 +210,11 @@
           }
           
           .num{
-            font-size: 25px;
-            font-weight: bold;
-            font-family : Genos;
             line-height: 1;
             color: black;
           }
           
           .label{
-            font-family : Genos;
-            font-size: 25px;
-            font-weight: bold;
             line-height: 1;
             color: black;
           }
@@ -272,23 +262,11 @@
         gap: 14px;
         padding: 22px 24px 10px;
         
-        h1 {
-          text-align: center;
-          font-size: clamp(0px, 9vw, 35px);
-          white-space: normal;
-        }
-        
-        h2 {
-          font-size: clamp(0px, 5vw, 20px);
-          text-align: center;
-        }
-        
         .heroActions {
           padding: 5px;
         }
         
         .infoDis {
-          font-size: clamp(0px, 5vw, 20px);
           flex-wrap: wrap;
           height: auto;
           

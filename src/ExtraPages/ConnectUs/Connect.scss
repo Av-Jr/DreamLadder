@@ -29,13 +29,7 @@
       height : 20vh;
       display : grid;
       place-items : center;
-
-      h1 {
-        font-family: Genos;
-        font-weight: bold;
-        color: #111;
-		text-align : center;
-      }
+      
     }
   }
 
@@ -95,15 +89,7 @@
 
           .text {
             width: 100%;
-
-            p {
-              font-family: Genos;
-              font-size: clamp(0px, 2.5vh, 30px);
-              line-height: 1.5;
-              font-weight: 500;
-
-              color: #1d1d1d;
-            }
+            
           }
         }
       }
@@ -123,17 +109,7 @@
       width: 100%;
       margin-bottom: 100px;
 	  padding : 50px;
-
-      h2 {
-        text-align: center;
-		font-family : Genos;
-        font-size: clamp(0px, 6vh, 60px);
-        font-weight: bold;
-
-        color: #111;
-
-        margin-bottom: 60px;
-      }
+      
 
       form {
 		font-family : Genos;
@@ -212,11 +188,7 @@
 
       .heroContent {
         
-
-        h1 {
-          font-size: 34px;
-          text-align: center;
-        }
+      
       }
     }
 

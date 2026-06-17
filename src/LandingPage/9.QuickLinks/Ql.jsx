@@ -260,7 +260,7 @@ export default function Ql() {
             className={`QLeles ${section.className}`}
           >
 
-            <h2>{section.title}</h2>
+            <h2 className={"Gen"}>{section.title}</h2>
 
             <div className="items">
 
@@ -273,7 +273,7 @@ export default function Ql() {
                     href={item.path}
                     className={`linkItem ${item.className}`}
                   >
-                    {item.label}
+                    <span className={"Gen small light"}>{item.label}</span>
                   </a>
 
                 ) : (
@@ -289,7 +289,7 @@ export default function Ql() {
                       )
                     }
                   >
-                    {item.label}
+                    <span className={"Gen light small"}>{item.label}</span>
                   </button>
 
                 )
@@ -308,11 +308,11 @@ export default function Ql() {
 
       <div className="riskFactors">
 
-        <span className="riskTitle">
+        <span className="Gen dark bold small">
           Risk Factors –
         </span>
 
-        <span className="riskText">
+        <span className="Gen small light">
           Investments in Mutual Funds are subject to Market Risks. Read all
           scheme related documents carefully before investing. Mutual Fund
           Schemes do not assure or guarantee any returns. Past performances
@@ -337,23 +337,23 @@ export default function Ql() {
 
       <div className="registrationInfo">
 
-        <p>
+        <span className={"Gen small bold dark"}>
           AMFI Registered Mutual Funds Distributor | ARN-143182 |
           Initial Date of Registration: 04/04/2018 |
           Validity: 03/04/2027
-        </p>
+        </span>
 
-        <p>
+        <span className={"Gen small bold dark"}>
           APRN Code: APRN05201 | Validity: 06/04/2028
-        </p>
+        </span>
 
       </div>
 
       <div className="bottomLegal">
 
-        <p className="copyright">
+        <span className="bold Gen">
           ©2026 DreamLadder Capital.
-        </p>
+        </span>
 
         <div className="legalLinks">
 
@@ -367,7 +367,7 @@ export default function Ql() {
                   href={item.path}
                   className="legalLink"
                 >
-                  {item.label}
+                  <span className={"Gen small light"}>{item.label}</span>
                 </a>
 
               )}
@@ -380,21 +380,21 @@ export default function Ql() {
                   rel="noopener noreferrer"
                   className="legalLink"
                 >
-                  {item.label}
+                  <span className={"Gen small"}>{item.label}</span>
                 </a>
 
               )}
 
               {item.type === "none" && (
 
-                <span className="legalLink">
+                <span className="Gen small light">
                   {item.label}
                 </span>
 
               )}
 
               {index !== legalLinks.length - 1 && (
-                <span className="separator">|</span>
+                <span className="separator Gen bold">|</span>
               )}
 
             </React.Fragment>

@@ -32,37 +32,46 @@ const Insights = () => {
 
     return(
         <div id={"InsightsMC"}>
-            <h1>Latest Insights</h1>
-            <h3>Market perspective and Financial wisdom to keep you ahead.</h3>
+            <h1 className={"Gen"}>Latest Insights</h1>
+            <h2 className={"Gen light small"}>Market perspective and Financial wisdom to keep you ahead.</h2>
 
             <div className={"iframeElesCon"}>
-                <h3>Featured Videos</h3>
-                {
-                    ytUrls.map((item, index) => (
-                        <iframe
-                            src={item}
-                            className = "ifEle"
-                            key={index}
-                            title="YouTube video player"
-                            frameBorder="0"
-                            referrerPolicy="strict-origin-when-cross-origin"
-                            allowFullScreen>
-                        </iframe>
+                <h3 className={"Gen light"}>Featured Videos</h3>
+                <div className={"itsChild"}>
+                    {
+                        ytUrls.map((item, index) => (
+                                <iframe
+                                    src={item}
+                                    className = "ifEle"
+                                    key={index}
+                                    title="YouTube video player"
+                                    frameBorder="0"
+                                    referrerPolicy="strict-origin-when-cross-origin"
+                                    allowFullScreen>
+                                </iframe>
+                            )
                         )
-                    )
-                }
+                    }
+                </div>
 
-                <h3>Latest Blogs</h3>
+            </div>
+            <div className={"blogsEle"}>
+
+                <h3 className={"Gen light"}>Latest Blogs</h3>
+                <div className={"itsChild"}>
                 {
                     blogData.map((item, index) => (
-                        <div className={"ifEle blogs"} key={index}>
+                        <div className={"blogs"} key={index}>
                             <img loading="lazy" src={img(item.image)} alt=""/>
-                             <span>{item.date}</span>
-                             <span>{item.type}</span>
-                             <span>{item.title}</span>
+                            <div className={"DateBlog"}>
+                                <span className={"Gen light small"}>{item.date}</span>
+                                <span className={"Gen light small"}>{item.type}</span>
+                            </div>
+                             <span className={"Gen small dark"}>{item.title}</span>
                         </div>
                     ))
                 }
+                </div>
             </div>
         </div>
     )

@@ -81,7 +81,7 @@ ${formData.message}
                 </div>
 
                 <div className="text">
-                  <p>+91 89-0808-2222</p>
+                  <span className={"Gen dark"}>+91 89-0808-2222</span>
                 </div>
 
               </div>
@@ -93,7 +93,7 @@ ${formData.message}
                 </div>
 
                 <div className="text">
-                  <p>info@dreamladdercapital.com</p>
+                  <span className={"Gen dark"}>info@dreamladdercapital.com</span>
                 </div>
 
               </div>
@@ -105,11 +105,11 @@ ${formData.message}
                 </div>
 
                 <div className="text">
-                  <p>
+                  <span className={"Gen dark"}>
                     #20, 10th floor, R. City Offices,
                     LBS Marg, Ghatkopar (west),
                     Mumbai - 400086
-                  </p>
+                  </span>
                 </div>
 
               </div>
@@ -128,7 +128,7 @@ ${formData.message}
 
           <div className="formSection">
 
-            <h2>Have a Question?</h2>
+            <h2 className={"Gen bold dark"}>Have a Question?</h2>
 
             <form onSubmit={handleSubmit}>
 

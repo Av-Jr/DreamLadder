@@ -102,11 +102,11 @@
     gap: 22px;
 
     h2 {
+      text-align : left;
       margin: 0;
       font-weight: 700;
       line-height: 1;
       color: #111111;
-      font-family: Genos;
       white-space: nowrap;
     }
 
@@ -124,8 +124,7 @@
       margin: 0;
       text-align: left;
       cursor: pointer;
-
-      font-family: Genos;
+      
       font-weight: 500;
       line-height: 1.4;
 
@@ -172,8 +171,6 @@
   .riskFactors {
     width: 100%;
     max-width: 1440px;
-
-    font-family: Genos;
     font-weight: 500;
     line-height: 1.8;
 
@@ -198,12 +195,11 @@
     align-items: center;
     gap: 10px;
 
-    p {
+    span {
       margin: 0;
 
       text-align: center;
-
-      font-family: Genos;
+      
       font-weight: 600;
       line-height: 1.5;
 
@@ -225,8 +221,6 @@
 
   .copyright {
     margin: 0;
-
-    font-family: Genos;
     font-weight: 500;
     line-height: 1;
 
@@ -249,8 +243,6 @@
     margin: 0;
 
     cursor: pointer;
-
-    font-family: Genos;
     font-weight: 500;
     line-height: 1.4;
 
@@ -264,7 +256,6 @@
   }
 
   .separator {
-    font-family: Genos;
     font-weight: 500;
     color: #9a9a9a;
   }
@@ -337,7 +328,7 @@
 
     .registrationInfo {
 
-      p {
+      span {
         line-height: 1.6;
       }
     }
@@ -349,7 +340,6 @@
 
     .copyright {
       text-align: center;
-      font-size: 14px;
     }
 
     .legalLinks {

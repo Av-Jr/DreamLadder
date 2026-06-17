@@ -20,12 +20,12 @@ const Calculator = () => {
 
     return(
         <div id={"CalculatorMC"}>
-            <h2>Calculators</h2>
+            <h2 className={"Syn dark"}>Calculators</h2>
             <div className="CalcEleCon">
                 {retData.map((item, index) => (
                     <div key={index} className="CalcEle" onClick={() => {window.location.href = `/calc?tab=${item.id}`}}>
                         <img loading="lazy" src={img(`Calc${item.i}`)} alt={item.i} />
-                        <h3>{item.t}</h3>
+                        <h3 className={"Gen light"}>{item.t}</h3>
                     </div>
                 ))}
             </div>

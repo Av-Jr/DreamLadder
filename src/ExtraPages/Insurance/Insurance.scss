@@ -14,14 +14,6 @@ $darkBlue : #17233d;
   }
   
   
-  p{
-    margin : 0;
-  }
-  
-  span,p{
-    font-family : Genos;
-  }
-  
   
   .quoteEle{
     border-left : 4px $colorRed solid;
@@ -72,16 +64,6 @@ $darkBlue : #17233d;
       gap : 25px;
       justify-content : center;
       
-      h3{
-        font-weight : 700;
-        color : black;
-      }
-      
-      .quoteEle{
-        color : #5e687b;
-        max-width : 90%;
-        font-size : clamp(0px, 2vh, 20px);
-      }
     }
     
     .heroImg{
@@ -106,17 +88,6 @@ $darkBlue : #17233d;
     align-items : center;
     gap : 25px;
     
-    
-    > span{
-      max-width : 70%;
-      
-      font-size : clamp(0px, 2.5vh, 25px);
-      
-      color : #5f697d;
-      line-height : 1.7;
-      font-weight : 700;
-      text-align : center;
-    }
     
     .cardsCont{
       width : 100%;
@@ -171,16 +142,8 @@ $darkBlue : #17233d;
             color : $colorRed;
           }
           
-          h2{
-            font-family : Genos;
-          }
         }
         
-        h3{
-          color : #5f697d;
-          line-height : 1.7;
-          font-weight : 200;
-        }
       }
     }
   }
@@ -198,14 +161,6 @@ $darkBlue : #17233d;
         background : $colorRed;
       }
       
-      span{
-        font-size : clamp(0px, 2.6vh, 26px);
-        
-        color : #5f697d;
-        line-height : 1.7;
-        font-weight : 700;
-      }
-      
       img{
         width : 90%;
       }
@@ -221,20 +176,6 @@ $darkBlue : #17233d;
         align-items : flex-start;
         gap : 25px;
         
-        h2{
-          color : #9ba7ba;
-          font-size : clamp(0px, 4vh, 38px);
-        }
-        
-        p{
-          font-size : clamp(0px, 2.5vh, 25px);
-          
-          color : #5f697d;
-          line-height : 1.8;
-          font-weight : 700;
-          
-          text-align : left;
-        }
       }
     }
   }
@@ -249,10 +190,6 @@ $darkBlue : #17233d;
     
     position : relative;
     
-    h1{
-      font-size : clamp(0px, 6vh, 60px);
-      margin-bottom : 80px;
-    }
     
     > img{
       width : 100%;
@@ -300,13 +237,6 @@ $darkBlue : #17233d;
           background : white;
         }
         
-        span{
-          font-size : clamp(0px, 2.2vh, 22px);
-          
-          color : #5f697d;
-          line-height : 1.7;
-          font-weight : 700;
-        }
       }
       
       .whyEle1{

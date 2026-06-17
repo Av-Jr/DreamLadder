@@ -47,8 +47,8 @@ const ReturnSlider = () => {
         <div id="ReturnSliderMC">
 
             <div className="childsR one">
-                <h1>Time Reveals the True Wealth Builder</h1>
-                <h2>Compounding Power over 25 years.</h2>
+                <h2 className={"Syn"}>Time Reveals the True Wealth Builder</h2>
+                <h3 className={"Syn"}>Compounding Power over 25 years.</h3>
 
                 <div className="SliderCon">
 
@@ -69,7 +69,7 @@ const ReturnSlider = () => {
                     </div>
 
                     <div className="inputWrap">
-                        <span>₹</span>
+                        <span className={"Gen bold dark"}>₹</span>
 
                         <input
                             id="SCMC"
@@ -94,20 +94,20 @@ const ReturnSlider = () => {
                         }}
                     />
 
-                    <span>
-                        <p>Rs 500</p>
-                        <p>
+                    <span  className={"Gen dark eleList"}>
+                        <h3 className={"Gen light"}>Rs 500</h3>
+                        <h3>
                             {state === "Monthly"
                                 ? "Rs 5 Lakh"
                                 : "Rs 1 Cr"}
-                        </p>
+                        </h3>
                     </span>
 
                 </div>
             </div>
 
             <div className="childsR two">
-                <h2>After 25 years, it would have accumulated to</h2>
+                <h3 className={"Gen"}>After 25 years, it would have accumulated to</h3>
 
                 <div className="retElesCon">
                     {returnsData.map((item) => (
@@ -115,7 +115,7 @@ const ReturnSlider = () => {
 
                             <div className="retCircle">
 
-                                <h2 className={"priceTag"}>
+                                <h3 className={"Gen bold light"}>
                                     ₹
                                     {formatAmount(
                                         calculateReturn(
@@ -124,7 +124,7 @@ const ReturnSlider = () => {
                                             state
                                         )
                                     )}
-                                </h2>
+                                </h3>
 
                                 <div className="imgPart">
                                     <img
@@ -134,12 +134,12 @@ const ReturnSlider = () => {
                                     />
                                 </div>
 
-                                <h3>{item.tag}</h3>
+                                <h3 className={"Gen light"}>{item.tag}</h3>
 
                             </div>
 
                             <div className="retBadge">
-                                @{item.rate}% Return
+                                <h3 className={"Gen dark"}>@{item.rate}% Return</h3>
                             </div>
 
                         </div>

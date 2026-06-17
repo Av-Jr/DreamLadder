@@ -1,12 +1,12 @@
 @use "../../mixins" as *;
 
 #PowMC {
-  height : auto;
+  min-height : 60vh;
+  max-width : 1300px;
   width: 80%;
   
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: grid;
+  place-items : center;
   
   
   background: transparent;
@@ -16,6 +16,7 @@
   }
   
   .containingCon {
+    
     width: 100%;
     
     display: flex;
@@ -24,13 +25,6 @@
     align-items: center;
     
     gap: 20px;
-    
-    h1 {
-      text-align: center;
-      font-weight: bold;
-      margin: 0;
-      font-size : clamp(0px, 7vh, 70px);
-    }
     
     .contentRow {
       width: 100%;
@@ -99,11 +93,13 @@
           flex-direction: column;
           gap: 24px;
           padding : 0;
+          align-items : flex-start;
+          
+          span{
+            text-align : left;
+          }
           
           .statementEE{
-            font-family: Genos;
-            font-size: clamp(0px, 2.5vh, 25px);
-            line-height: 1.8;
             
             color: #4b5563;
             
@@ -112,19 +108,11 @@
           }
           
           h2:not(.statementEE){
-            font-family: Genos;
-            font-size : clamp( 0px, 3vh, 30px);
-            font-weight: 600;
             
             color: #111827;
           }
           
           h3{
-            font-family: Genos;
-            font-size: clamp(0px, 2vh, 25px);
-            font-weight: 500;
-            letter-spacing: 1px;
-            text-transform: uppercase;
             
             color: #8b3cf6;
           }
@@ -142,8 +130,8 @@
           img {
             width: 100%;
             height: 100%;
-            
-            object-fit: contain;
+            overflow : hidden;
+            object-fit: cover;
             
             border-radius: 18px;
             
