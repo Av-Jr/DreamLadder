@@ -1,510 +1,211 @@
-
 @use "../../mixins" as *;
-$colorRed : #E53935;
+$colorRed : #ef3b3b;
+$darkBlue : #17233d;
 
-#MFsMC{
-  min-height : 100vh;
-  width : 100%;
-  position : relative;
+//grid 2cols
+.MFone, .MFtwoCards, .MFthree, .MFfour{
+  display : grid;
+  grid-template-columns : repeat(2, auto);
   
+  gap : 20px;
+}
 
+//flex-cols
+.innerMFtwo, .itemDesc, .leftColl, .rightColl, .heroText, .heroImg, .AssistDataCardCon, .stepContent{
+  display : flex;
+  flex-direction : column;
+  justify-content : center;
+  align-items : center;
+  gap : 40px;
   
-  .MFfour{
-	width:80%;
-	margin : auto;
-	
-	display:grid;
-	grid-template-columns:1fr 1fr;
-	
-	place-items:center;
-	
-	padding:100px 80px;
-	
-	gap:100px;
-	
-	.heroText{
-	  width:100%;
-	  
-	  display:flex;
-	  flex-direction:column;
-	  
-	  gap:50px;
-	  
-	  h1{
-		font-family:Genos;
-		font-size:clamp(32px,3vw,52px);
-	  }
-	  
-	  .AssistDataCardCon{
-		display:flex;
-		flex-direction:column;
-		
-		.ADC{
-		  position:relative;
-		  
-		  display:flex;
-		  align-items:flex-start;
-		  
-		  gap:25px;
-		  
-		  padding-bottom:45px;
-		  
-		  cursor:pointer;
-		  
-		  .stepCircle{
-			width:42px;
-			height:42px;
-			
-			display:flex;
-			justify-content:center;
-			align-items:center;
-			
-			border-radius:50%;
-			
-			border:3px solid #4b5a70;
-			
-			background:white;
-			
-			color:#4b5a70;
-			
-			font-family:Genos;
-			font-weight:700;
-			
-			flex-shrink:0;
-			
-			transition:.3s ease;
-			
-			z-index:2;
-		  }
-		  
-		  &::before{
-			content:"";
-			
-			position:absolute;
-			
-			left:20px;
-			top:42px;
-			
-			width:2px;
-			height:calc(100% + 5px);
-			
-			background:#4b5a70;
-		  }
-		  
-		  &:last-child::before{
-			display:none;
-		  }
-		  
-		  .stepContent{
-			display:flex;
-			flex-direction:column;
-			
-			gap:10px;
-			
-			h2{
-			  margin:0;
-			  
-			  font-family:Genos;
-			  
-			  color:#1c2638;
-			  
-			  transition:.3s ease;
-			}
-			
-			h3{
-			  margin:0;
-			  
-			  font-family:Genos;
-			  
-			  color:#5f6f86;
-			  
-			  line-height:1.8;
-			  
-			  font-size:1.2rem;
-			}
-		  }
-		  
-		  &.active{
-			
-			.stepCircle{
-			  background:$colorRed;
-			  border-color:$colorRed;
-			  color:white;
-			}
-			
-			.stepContent h2{
-			  color:$colorRed;
-			}
-		  }
-		}
-	  }
-	}
-	
-	img{
-	  width:100%;
-	  max-width:700px;
-	  
-	  object-fit:contain;
-	}
+}
+
+//flex-rows
+.thirdCardEles, .ADC{
+  display : flex;
+  flex-direction : row;
+  justify-content : flex-start;
+  align-items : flex-start;
+  gap : 20px;
+}
+
+//center text align
+.heroText, .MFtwoCards{
+  h1, h2, h3{
+	text-align : left;
+	width : 100%;
   }
   
-  .MFthree{
-	width : 80%;
-	margin : auto;
-	background: white;
-	padding : 80px 30px;
-	display : grid;
-	gap : 100px;
-	grid-template-columns : repeat(2, 1fr);
-	place-items : center;
-	
-	.heroImg{
-	  padding : 30px;
-	  display : flex;
-	  flex-direction : column;
-	  justify-content : center;
-	  gap : 30px;
-	  h1{
-		font-style : Italic;
-		color : grey;
-		padding-left : 20px;
-		border-left : 2px $colorRed solid;
-	  }
-	  
-	  h3{
-		font-style : italic;
-	  }
-	}
-	
-	.heroText{
-	  display : flex;
-	  flex-direction : column;
-	  gap : 20px;
-	  font-family : Genos;
-	  justify-content : center;
-	  
-	  .thirdCardEles{
-		display : flex;
-		gap : 20px;
-		 
-		.threeIcon{
-		  aspect-ratio : 1;
-		  color : #475569;
-		}
-	  }
+  span{
+	text-align : left;
+  }
+}
 
-	}
+//max-width
+.MFone, .innerMFtwo, .MFthree, .MFfour{
+  max-width : 1300px;
+}
+
+//padding
+.MFone, .innerMFtwo, .MFthree, .MFfour{
+  padding : 100px 50px;
+}
+
+//innerPadding
+.heroImg, .heroText, .MFtwoCards, .heroImg{
+  padding : 20px;
+}
+
+#MFsMC{
+  display : grid;
+  place-items : center;
+  
+  .MFone{
+    place-items : center;
   }
   
   .MFtwo{
-	padding-top : 100px;
-	min-height : 100vh;
-	width : 100%;
-	margin : auto;
-	background-image: img("flexBack");
-	background-position: center;
-	background-size: cover;
-	background-repeat: no-repeat;
-	
-	display : flex;
-	flex-direction : column;
-	align-items : center;
-	
-	
-	gap : 40px;
-	
-	.titleHead{
-	  text-align : center;
-	}
-	
-	.titleDesc{
-	  color : grey;
-	  max-width : 70%;
-	  text-align : center;
-	}
-	
-	.twoMC{
-	  position : relative;
-	  
-	  width : 100%;
-	  min-height : 850px;
-	  
-	  display : flex;
-	  justify-content : center;
-	  align-items : center;
-	  
-	  img{
-		width : 500px;
-		max-width : 40vw;
-		
-		object-fit : contain;
-		object-position : center;
-		
-		z-index : 1;
-	  }
-	  
-	  .heroText{
-		position : absolute;
-		
-		inset : 0;
-		
-		.MFtwoCards{
-		  position : absolute;
-		  
-		  width : 300px;
-		  
-		  background : #182338;
-		  
-		  border-radius : 18px;
-		  
-		  padding : 24px;
-		  
-		  box-shadow : 0 10px 25px rgba(0,0,0,0.15);
-		  
-		  display : flex;
-		  flex-direction : column;
-		  
-		  gap : 12px;
-		  
-		  h1{
-			color : white;
-			
-			display : flex;
-			align-items : center;
-			
-			gap : 10px;
-			font-size : 4vh!important;
-			font-weight : 900;
-			
-			.cardIconMF{
-			  color : $colorRed;
-			  flex-shrink : 0;
-			}
-		  }
-		  
-		  h3{
-			font-size : 2vh;
-		  }
-		  
-		  #CardsMean{
-			color : white;
-			font-weight : normal;
-			line-height : 1.6;
-		  }
-		}
-		
-		.card1{
-		  left : 5%;
-		  top : 35%;
-		}
-		
-		.card2{
-		  left : 50%;
-		  top : 2%;
-		  
-		  transform : translateX(-50%);
-		}
-		
-		.card3{
-		  right : 6%;
-		  top : 35%;
-		}
-		
-		.card4{
-		  left : 12%;
-		  bottom : 8%;
-		}
-		
-		.card5{
-		  right : 12%;
-		  bottom : 8%;
-		}
-	  }
-	}
+    min-height : 100vh;
+    display : grid;
+    place-items : center;
+    width : 100%;
+    background: img("flexBack") center/cover no-repeat;
+    
+    .MFtwoCards{
+      max-width :300px;
+      background: $darkBlue;
+      border-radius : 20px;
+      .cardIconMF{
+        color : $colorRed;
+      }
+      .itemDesc{
+        gap : 10px;
+        h3{
+          color : white;
+        }
+        span{
+          color : #CBD5E1;
+        }
+      }
+      
+      &.card1, &.card3{
+        align-self : flex-end;
+      }
+    }
+    
+    .twoMC{
+      display : grid;
+      grid-template-columns : repeat(3, 1fr);
+      place-items : center;
+      gap : 20px;
+      
+      .leftColl, .rightColl{
+        min-width : 400px;
+        width : 100%;
+        height : 100%;
+      }
+    }
+    
   }
   
-  
-  .headTit{
-	width : 100%;
-	height : 20vh;
-	text-align : center;
-	display : grid;
-	place-items : center;
-    background-image: img("HP56");
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-	h1{
-	  font-family : Genos;
-	}
+  .MFthree{
+    place-items : center;
+    .heroText{
+      .thirdCardEles{
+        width : 100%;
+        span{
+          width : 100%;
+        }
+      }
+    }
   }
   
-  .MFone{
-	display : grid;
-	grid-template-columns : repeat(2, auto);
-	grid-template-rows : 1fr;
-	
-	img{
-	  grid-column : 2;
-	  grid-row : 1;
-	  padding : 50px;
-	  width : 80%;
-	  object-fit : contain;
-	  object-position : center;
-	}
-	
-	.heroText{
-	  grid-column : 1;
-	  grid-row : 1;
-	  display : flex;
-	  flex-direction : column;
-	  justify-content : center;
-	  align-items : center;
-	  gap : 35px;
-	  .descEles, .quoteEle{
-		max-width : 70%;
-		padding-left : 30px;
-	  }
-	  
-	  .quoteEle{
-		border-left : 3px $colorRed solid;
-		font-style : italic;
-		color : grey;
-	  }
-	}
+  .MFfour{
+    place-items : center;
+    .heroText{
+      .AssistDataCardCon{
+        position : relative;
+        &::before{
+          content: "";
+          position: absolute;
+          z-index : 1;
+          
+          left: 19px;      // center of 40px circle
+          top: 20px;       // center of first circle
+          bottom: 20px;    // center of last circle
+          
+          width: 2px;
+          background: $darkBlue;
+        }
+        
+        .ADC{
+          &:hover{
+            .stepCircle{
+              background: $colorRed;
+              border : none;
+              color : white;
+            }
+            
+            .stepContent{
+              h3{
+                color : $colorRed;
+              }
+            }
+          }
+        }
+        .stepCircle{
+          transition : all 0.3s ease;
+          background: white;
+          position : relative;
+          z-index : 2;
+          width: 40px;
+          height: 40px;
+          min-width: 40px;
+          min-height: 40px;
+          
+          flex-shrink: 0;
+          
+          border-radius: 50%;
+          border: 2px solid grey;
+          
+          display: grid;
+          place-items : center !important;
+          span{
+            text-align : center !important;
+          }
+        }
+        .stepContent{
+          transition : all 0.3s ease;
+          gap : 10px;
+        }
+      }
+    }
   }
 }
 
 @include mediaDevice(mobile){
+  .MFone, .MFtwoCards, .MFthree, .MFfour{
+    grid-template-columns : 1fr;
+    grid-template-rows : repeat(2,auto);
+  }
+  .heroImg, .heroText, .MFtwoCards, .heroImg{
+    padding : 5px;
+  }
+  
+  .MFone, .innerMFtwo, .MFthree, .MFfour{
+    padding : 10px;
+    margin-top : 50px;
+    margin-bottom : 50px;
+  }
+  
   #MFsMC{
-	
-	.MFfour{
-	  padding:60px 20px;
-	  
-	  grid-template-columns:1fr;
-	  grid-template-rows:auto auto;
-	  
-	  gap:40px;
-	  
-	  img{
-		grid-row:1;
-		
-		width:100%;
-		max-width:450px;
-	  }
-	  
-	  .heroText{
-		grid-row:2;
-		
-		h1{
-		  text-align:center;
-		}
-		
-		.AssistDataCardCon{
-		  
-		  .ADC{
-			gap:15px;
-			
-			.stepContent{
-			  
-			  h2{
-				font-size:1rem;
-			  }
-			  
-			  h3{
-				font-size:1rem;
-				line-height:1.6;
-			  }
-			}
-		  }
-		}
-	  }
-	}
-	.MFthree{
-	  padding : 40px 5px;
-	  grid-template-columns : 1fr;
-	  grid-template-rows : repeat(2, auto);
-	  
-	  .heroImg{
-		padding : 40px 10px;
-		
-		h1{
-		  max-width : 100%;
-		  padding-left : 5px;
-		}
-	  }
-	  
-	}
-	.MFtwo{
-	  padding : 50px 20px;
-	  
-	  .titleHead,
-	  .titleDesc{
-		max-width : 100%;
-		padding : 0;
-	  }
-	  
-	  .twoMC{
-		min-height : auto;
-		
-		display : flex;
-		flex-direction : column;
-		
-		gap : 20px;
-		
-		img{
-		  width : 280px;
-		  max-width : 100%;
-		}
-		
-		.heroText{
-		  position : static;
-		  
-		  width : 100%;
-		  
-		  display : flex;
-		  flex-direction : column;
-		  
-		  gap : 15px;
-		  
-		  .MFtwoCards{
-			position : static;
-			
-			width : 100%;
-			
-			transform : none !important;
-		  }
-		}
-	  }
-	}
-	
-	.MFone{
-	  grid-template-columns : 1fr;
-	  grid-template-rows : repeat(2, auto);
-	  gap : 70px;
-	  margin-top : 20px;
-	  
-	  img{
-		grid-column : 1;
-		grid-row : 1;
-		padding : 5px;
-		width : 100%;
-	  }
-	  
-	  .heroText{
-		grid-column : 1;
-		grid-row : 2;
-		padding : 0;
-		
-		.descEles, .quoteEle{
-		  max-width : none;
-		  width : 90%;
-		}
-		
-		span{
-		  padding-left : 10px;
-		}
-	  }
-	}
+    .MFtwo{
+        .twoMC{
+          grid-template-columns : 1fr;
+          grid-template-rows : repeat(3, auto);
+          .leftColl, .rightColl{
+            min-width : auto;}
+        }
+    }
   }
 }

@@ -3,332 +3,251 @@
 $colorRed : #ef3b3b;
 $darkBlue : #17233d;
 
+
+//grid 2cols
+.INSone, .cardsCont, .INSthree{
+  display : grid;
+  grid-template-columns : repeat(2, auto);
+  place-items : center;
+  gap : 20px;
+}
+
+//flex-cols
+.innerTWO, .cardEle, .right, .left{
+  display : flex;
+  flex-direction : column;
+  justify-content : center;
+  align-items : center;
+  gap : 40px;
+  
+}
+
+//flex-rows
+.cardTop{
+  display : flex;
+  flex-direction : row;
+  justify-content : center;
+  align-items :center;
+  gap : 20px;
+}
+
+//center text align
+.cardEle, .cardTop, .INSthree{
+  h1, h2, h3{
+    text-align : left;
+    width : 100%;
+  }
+  
+  span{
+    text-align : left;
+  }
+}
+
+//max-width
+.INSone, .innerTWO, .INSthree{
+  max-width : 1300px;
+}
+
+//padding
+.INSone, .innerTWO, .INSthree{
+  padding : 100px 50px;
+}
+
 #InsuranceMC{
-  position : relative;
-  min-height : 100vh;
-  width : 100%;
-  background : #f7f7f7;
-  
-  *{
-    box-sizing : border-box;
-  }
-  
-  
-  
-  .quoteEle{
-    border-left : 4px $colorRed solid;
-    padding-left : 25px;
-    color : #778196;
-    font-style : italic;
-    line-height : 1.3;
-    font-weight : 400;
-    font-size : 1vh;
-  }
-  
-  .headTit{
-    width : 100%;
-    height : 20vh;
-    
-    background-image: img("HP56");
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    
-    display : flex;
-    justify-content : center;
-    align-items : center;
-    
-  }
-  
-  .INSone,
-  .INStwo,
-  .INSthree,
-  .INSfour{
-    padding : 80px 200px;
-  }
-  
-  .INSone,
-  .INSthree{
-    width : 100%;
-    display : grid;
-    grid-template-columns : repeat(2,1fr);
-    gap : 60px;
-    place-items : center;
-  }
-  
-  .INSone{
-    
-    .heroText{
-      display : flex;
-      flex-direction : column;
-      gap : 25px;
-      justify-content : center;
-      
-    }
-    
-    .heroImg{
-      
-      img{
-        width : 100%;
-      }
-    }
-  }
+  display : grid;
+  place-items : center;
   
   .INStwo{
+    display : grid;
+    place-items : center;
+    background: img("flexBack") center/cover no-repeat;
     width : 100%;
     min-height : 100vh;
     
-    background-image: img("flexBack");
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    
-    display : flex;
-    flex-direction : column;
-    align-items : center;
-    gap : 25px;
-    
-    
-    .cardsCont{
-      width : 100%;
-      
-      margin-top : 30px;
-      
-      display : grid;
-      grid-template-columns : repeat(2, auto);
-      
-      align-items : center;
-      justify-content : center;
-      
-      gap : 30px;
-      
-      .cardEle{
-        background : rgba(255,255,255,0.75);
-        
-        backdrop-filter : blur(8px);
-        
-        border-radius : 20px;
-        
-        display : flex;
-        flex-direction : column;
-        
-        gap : 25px;
-        
-        height : auto;
-        
-        padding : 40px;
-        
-        max-width : 700px;
-        
-        box-shadow :
-                0 5px 10px rgba(0,0,0,0.06),
-                0 20px 40px rgba(0,0,0,0.08);
-        
-        .cardTop{
-          display : flex;
-          align-items : center;
-          gap : 18px;
+    .innerTWO{
+      .cardsCont{
+        .cardEle{
+          background: white;
+          max-width : 500px;
+          min-height : 200px;
+          border-radius : 20px;
+          padding : 20px;
+          align-items : flex-start;
           
-          svg{
-            width : 32px;
-            height : 32px;
-            
-            padding : 5px;
-            
-            background : rgb(255, 225, 225);
-            
-            border-radius : 10px;
-            
-            color : $colorRed;
+          .cardTop{
+            .IconCard{
+              color:$colorRed;
+            }
           }
-          
         }
-        
       }
     }
   }
   
   .INSthree{
-    
-    .left{
-      display : flex;
-      flex-direction : column;
-      gap : 35px;
-      
-      .line{
-        width : 80px;
-        height : 4px;
-        background : $colorRed;
-      }
-      
-      img{
-        width : 90%;
-      }
-    }
-    
-    .right{
-      display : flex;
-      flex-direction : column;
-      gap : 40px;
-      
-      .pointEle{
-        display : flex;
-        align-items : flex-start;
-        gap : 25px;
-        
-      }
-    }
+    gap : 100px;
   }
   
-  .INSfour{
-    width : 100%;
-    min-height : 100vh;
+  .INSfour {
+    width: 100%;
+    max-width: 1500px;
+    padding: 100px 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     
-    display : flex;
-    flex-direction : column;
-    align-items : center;
-    
-    position : relative;
-    
-    
-    > img{
-      width : 100%;
+    h2 {
+      margin-bottom: 60px;
+      text-align: center;
     }
     
-    .whyGrid{
-      width : 100%;
-      height : 100%;
+    .whyWrapper {
+      position: relative;
+      width: 100%;
+      padding : 20px;
       
-      position : absolute;
-      top : 0;
-      left : 0;
+      img {
+        width: 100%;
+        display: block;
+        object-fit: contain;
+        object-position : center;
+      }
       
-      .whyEle{
-        position : absolute;
+      .whyGrid {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
         
-        display : flex;
-        flex-direction : column;
-        align-items : center;
-        
-        gap : 20px;
-        
-        width : 280px;
-        
-        text-align : center;
-        
-        .num{
-          width : 55px;
-          height : 55px;
+        .whyEle {
+          position: absolute;
+          width: 240px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 18px;
+          text-align: center;
           
-          border : 3px #5f697d solid;
-          border-radius : 50%;
+          .num {
+            width: 55px;
+            height: 55px;
+            border: 2px solid grey;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #fff;
+            font-size: 22px;
+            font-weight: 700;
+          }
           
-          display : flex;
-          justify-content : center;
-          align-items : center;
-          
-          font-size : clamp(0px, 2.4vh, 24px);
-          
-          font-family : SyneMono;
-          font-weight : 700;
-          
-          color : #5f697d;
-          
-          background : white;
+          span {
+            line-height: 1.7;
+            color: $darkBlue;
+          }
         }
         
-      }
-      
-      .whyEle1{
-        top : 18%;
-        left : 2%;
-      }
-      
-      .whyEle2{
-        bottom : 10%;
-        left : 22%;
-      }
-      
-      .whyEle3{
-        top : 18%;
-        left : 42%;
-      }
-      
-      .whyEle4{
-        bottom : 10%;
-        right : 18%;
-      }
-      
-      .whyEle5{
-        top : 18%;
-        right : 0%;
+        // Top Left
+        .whyEle1 {
+          top: 13%;
+          left: 6%;
+        }
+        
+        // Bottom Left
+        .whyEle2 {
+          bottom: 8%;
+          left: 27%;
+        }
+        
+        // Top Center
+        .whyEle3 {
+          top: 13%;
+          left: 50%;
+          transform: translateX(-50%);
+        }
+        
+        // Bottom Right
+        .whyEle4 {
+          bottom: 8%;
+          right: 27%;
+        }
+        
+        // Top Right
+        .whyEle5 {
+          top: 13%;
+          right: 6%;
+        }
       }
     }
   }
 }
 
 @include mediaDevice(mobile){
+  .INSone, .cardsCont, .INSthree{
+    grid-template-columns : 1fr;
+    grid-template-rows : repeat(2, auto);
+  }
+  
+  .INSone, .innerTWO, .INSthree{
+    padding : 50px 20px;
+  }
   
   #InsuranceMC{
-    
-    .INSone,
-    .INSthree{
-      grid-template-columns : 1fr;
-      padding : 30px 30px;
-    }
-    
-    .INStwo,
-    .INSfour{
-      padding : 30px 30px;
-    }
-    
-    .INStwo{
       
-      > span{
-        max-width : 100%;
-      }
-      
-      .cardsCont{
-        grid-template-columns : 1fr;
-      }
-    }
-    
-    .INSthree{
-      
-      .left{
+      .INSfour {
+        padding: 60px 20px;
         
-        img{
-          width : 100%;
+        h2 {
+          margin-bottom: 40px;
+          text-align: center;
+        }
+        
+        .whyWrapper {
+          
+          img {
+            display: none;
+          }
+          
+          .whyGrid {
+            position: static;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 30px;
+            width: 100%;
+            height: auto;
+            
+            .whyEle {
+              position: static;
+              transform: none;
+              width: 100%;
+              max-width: 320px;
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              gap: 15px;
+              text-align: center;
+              
+              .num {
+                width: 50px;
+                height: 50px;
+                border: 2px solid $darkBlue;
+                border-radius: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background: #fff;
+                color: $darkBlue;
+                font-size: 20px;
+                font-weight: 700;
+              }
+              
+              span {
+                line-height: 1.7;
+              }
+            }
+          }
         }
       }
-    }
-    
-    .INSfour{
-      min-height : auto;
-      gap : 50px;
-      
-      h1{
-        margin-bottom : 0;
-      }
-      
-      > img{
-        position : static;
-      }
-      
-      .whyGrid{
-        position : static;
-        
-        display : flex;
-        flex-direction : column;
-        align-items : center;
-        
-        gap : 35px;
-        
-        .whyEle{
-          position : static;
-          width : 100%;
-        }
-      }
-    }
   }
 }

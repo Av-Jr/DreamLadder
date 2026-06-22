@@ -134,6 +134,7 @@
         align-items : stretch;
         
         .btnWrap{
+          position : relative;
           &::after{
             content: "";
             position: absolute;

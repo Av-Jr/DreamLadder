@@ -107,7 +107,57 @@ $RedW : #E53935;
             display : flex;
             justify-content : space-between;
             padding-right : 20px;
+            
+            button{
+              white-space: nowrap;
+            }
           }
+        }
+      }
+    }
+  }
+}
+
+@include mediaDevice(mobile){
+  
+  .AbPgOne,
+  .AbPgTwo{
+    width: 100%;
+    padding: 0;
+    
+    img{
+      width: 100%;
+    }
+  }
+  
+  .GridCon{
+    grid-template-columns: 1fr;
+    gap : 100px;
+    width: 100%;
+    padding: 50px 0;
+  }
+  
+  #AboutMC{
+    .AbPgOne,
+    .AbPgTwo{
+      .GridCon{
+        .Con{
+          
+          &.ACone,
+          &.ACfour,
+          &.ACfive{
+            width: 100%;
+            max-width: none;
+            padding: 0;
+          }
+          
+          &.ACtwo{
+            width: 100%;
+          }
+        }
+        
+        img{
+          width: 100%;
         }
       }
     }

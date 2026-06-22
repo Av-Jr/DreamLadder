@@ -55,17 +55,17 @@ const wwsData = [
                     <div className={`WwsCards ${index % 2 === 0 ? "" : "rev"}`} key={index}>
                         <img loading="lazy" src={`${img(item.image)}`} alt=""/>
                         <div className={"heroText"}>
-                            <h1>{item.title}</h1>
-                            <h3>{item.description}</h3>
-                            <div className={"stLine"}></div>
+                            <h2 className={"Syn"}>{item.title}</h2>
+                            <span className={"dark small Gen dark bold"}>{item.description}</span>
+                            <div className={"line"}></div>
                         </div>
                     </div>
                     )
                 )}
             </div>
             <div className="connectMe">
-                <h1>Lets Build Your Financial Roadmap</h1>
-                <h3>Engage with our team to discuss asset allocation and suitable investment solutions designed for long-term wealth continuity</h3>
+                <h2 className={"Syn"}>Lets Build Your Financial Roadmap</h2>
+                <span className={"Gen dark small"}>Engage with our team to discuss asset allocation and suitable investment solutions designed for long-term wealth continuity</span>
                 <button className="navBtn s" onClick={() => {window.location.href="/connect"}}>Connect with us</button>
             </div>
 

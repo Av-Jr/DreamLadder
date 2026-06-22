@@ -10,13 +10,14 @@ import {
   Users
 } from "lucide-react";
 import React from "react";
+import { img } from "../../utils/image.js";
 
 const Insurance = () => {
 
   const InsuranceHeroData = {
     title: "Insurance",
 
-    image: "INSpgone",
+    image: img("INSpgone"),
 
     description: [
       {
@@ -82,7 +83,7 @@ const Insurance = () => {
   const InsuranceRegulationData = {
     title: "Regulatory Framework",
 
-    image: "INSpgtwo",
+    image: img("INSpgtwo"),
 
     description:
       "Insurance in India is governed by a rigorous statutory framework designed to protect policyholders and maintain market integrity.",
@@ -103,7 +104,7 @@ const Insurance = () => {
   const WhyInsuranceData = {
     title: "Why Insurance Matters",
 
-    image: "INSpgthree",
+    image: img("INSpgthree"),
 
     points: [
       {
@@ -156,11 +157,11 @@ const Insurance = () => {
 
           {
             InsuranceHeroData.description.map((item, index) => (
-              <span className={"Gen dark"} key={index}>{item.text}</span>
+              <span className={"Gen dark small"} key={index}>{item.text}</span>
             ))
           }
 
-          <span className={"quote"}>
+          <span className={"quote small"}>
             {InsuranceHeroData.strategicSignificance}
           </span>
 
@@ -168,7 +169,7 @@ const Insurance = () => {
 
         <div className={"heroImg"}>
           <img loading="lazy"
-            src={`https://dreamladder-assets.s3.ap-south-1.amazonaws.com/public/${InsuranceHeroData.image}.webp`}
+            src={InsuranceHeroData.image}
             alt=""
           />
         </div>
@@ -176,38 +177,38 @@ const Insurance = () => {
       </div>
 
       <div className={"INStwo"}>
+        <div className="innerTWO">
+          <h2 className={"Gen dark"}>{InsuranceTypesData.title}</h2>
+          <span className={"Gen light small"}>{InsuranceTypesData.description}</span>
 
-        <h2 className={"Gen bold dark"}>{InsuranceTypesData.title}</h2>
+          <div className={"cardsCont"}>
 
-        <span className={"Gen light"}>{InsuranceTypesData.description}</span>
+            {
+              InsuranceTypesData.cards.map((item, index) => {
 
-        <div className={"cardsCont"}>
+                const Icon = item.icon;
 
-          {
-            InsuranceTypesData.cards.map((item, index) => {
+                return(
+                    <div className={"cardEle"} key={index}>
 
-              const Icon = item.icon;
+                      <div className={"cardTop"}>
 
-              return(
-                <div className={"cardEle"} key={index}>
+                        <Icon className={"IconCard"}/>
 
-                  <div className={"cardTop"}>
+                        <h2 className={"Syn dark small"}>{item.title}</h2>
 
-                    <Icon/>
+                      </div>
 
-                    <h2 className={"Gen dark"}>{item.title}</h2>
+                      <span className={"Gen light small"}>{item.description}</span>
 
-                  </div>
+                    </div>
+                );
+              })
+            }
 
-                  <span className={"Gen light"}>{item.description}</span>
-
-                </div>
-              );
-            })
-          }
+          </div>
 
         </div>
-
       </div>
 
       <div className={"INSthree"}>
@@ -216,14 +217,14 @@ const Insurance = () => {
 
           <h2 className={"Gen bold dark"}>{InsuranceRegulationData.title}</h2>
 
-          <div className={"line"}></div>
+          <span className={"lineRed"}></span>
 
-          <span className={"Gen dark"}>
+          <span className={"Gen dark small"}>
             {InsuranceRegulationData.description}
           </span>
 
           <img loading="lazy"
-            src={`https://dreamladder-assets.s3.ap-south-1.amazonaws.com/public/${InsuranceRegulationData.image}.webp`}
+            src={`${InsuranceRegulationData.image}`}
             alt=""
           />
 
@@ -237,7 +238,7 @@ const Insurance = () => {
 
                 <h2 className={"Gen light"}>{`0${index + 1}`}</h2>
 
-                <span className={"Gen dark"}>{item}</span>
+                <span className={"Gen dark small"}>{item}</span>
 
               </div>
             ))
@@ -247,30 +248,35 @@ const Insurance = () => {
 
       </div>
 
-      <div className={"INSfour"}>
+      <div className="INSfour">
 
-        <h2 className={"Gen bold dark"}>{WhyInsuranceData.title}</h2>
+        <h2 className="Gen bold dark">
+          {WhyInsuranceData.title}
+        </h2>
 
-        <img loading="lazy"
-          src={`https://dreamladder-assets.s3.ap-south-1.amazonaws.com/public/${WhyInsuranceData.image}.webp`}
-          alt=""
-        />
+        <div className="whyWrapper">
 
-        <div className={"whyGrid"}>
+          <img
+              loading="lazy"
+              src={WhyInsuranceData.image}
+              alt=""
+          />
 
-          {
-            WhyInsuranceData.points.map((item, index) => (
-              <div className={`whyEle whyEle${index + 1}`} key={index}>
+          <div className="whyGrid">
+            {WhyInsuranceData.points.map((item, index) => (
+                <div className={`whyEle whyEle${index + 1}`} key={index}>
 
-                <div className={"num"}>
-                  {item.number}
+                  <span className="Gen dark num">
+                    {item.number}
+                  </span>
+
+                  <span className="Gen dark small">
+            {item.text}
+          </span>
+
                 </div>
-
-                <span className={"Gen dark"}>{item.text}</span>
-
-              </div>
-            ))
-          }
+            ))}
+          </div>
 
         </div>
 

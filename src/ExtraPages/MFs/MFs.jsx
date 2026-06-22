@@ -38,7 +38,6 @@ description: [
 
 const MFBenefitsData = {
   title: "Why Invest in Mutual Funds?",
-
   description:
     "A mutual fund is a professionally managed investment vehicle that pools money from multiple investors to invest in a diversified portfolio of stocks, bonds, or other securities. Investors in mutual funds can earn returns in the following ways:",
 
@@ -47,7 +46,7 @@ const MFBenefitsData = {
   cards: [
     {
       title: "Professional Management",
-
+        col : "left",
       description:
         "Experienced fund managers handle research, selection, and monitoring of the portfolio.",
 
@@ -56,7 +55,7 @@ const MFBenefitsData = {
 
     {
       title: "Diversification",
-
+        col : "left",
       description:
         "Your investment is spread across multiple securities, helping reduce the impact of market volatility.",
 
@@ -65,7 +64,7 @@ const MFBenefitsData = {
 
     {
       title: "Flexibility",
-
+        col : "left",
       description:
         "Choose from a wide range of fund categories based on your goals and risk appetite.",
 
@@ -74,7 +73,7 @@ const MFBenefitsData = {
 
     {
       title: "Accessibility",
-
+        col : "right",
       description:
         "Start with smaller amounts through SIPs or lumpsum investments.",
 
@@ -83,7 +82,7 @@ const MFBenefitsData = {
 
     {
       title: "Transparency",
-
+        col : "right",
       description:
         "Regular disclosures and portfolio updates help you stay informed.",
 
@@ -170,73 +169,102 @@ const MFAssistData = {
                 <img loading="lazy" className={"heroImg"} src={`${img(MFHeroData.image)}`} alt=""/>
                 <div className="heroText">
                     {MFHeroData.description.map((item, index) => (
-                        <h3 className="descEles" key={index}>{item.text}</h3>
+                        <span className="Gen small dark" key={index}>{item.text}</span>
                     ),
                     )}
-                    <h3 className="quoteEle">
+                    <span className="quote Gen small">
                         {MFHeroData.quote}
-                    </h3>
+                    </span>
                 </div>
             </div>
 
             <div className="MFtwo">
-                <h1 className="titleHead">{MFBenefitsData.title}</h1>
+                <div className="innerMFtwo">
 
-                <h3 className="titleDesc">
+
+                <h2 className="Gen">{MFBenefitsData.title}</h2>
+
+                <span className="Gen light small">
                     {MFBenefitsData.description}
-                </h3>
+                </span>
 
                 <div className="twoMC">
+                    <div className="leftColl">
+                        {
+                            MFBenefitsData.cards.map((item, index) => {
+                                if(item.col === "left"){
+                                    const Icon = item.icon;
+                                    return(
+                                        <div
+                                            className={`MFtwoCards card${index + 1}`}
+                                            key={index}
+                                        >
+                                            <Icon className="cardIconMF" size={25} />
+
+                                            <div className="itemDesc">
+                                                <h3 className={"Gen bold"}>{item.title}</h3>
+                                                <span className="Gen small light">
+                                            {item.description}
+                                        </span>
+                                            </div>
+                                        </div>
+                                    )
+                                }
+                            })
+                        }
+                    </div>
 
                     <img
                         loading="lazy"
                         src={img(MFBenefitsData.image)}
                         alt=""
                     />
-
-                    <div className="heroText">
+                    <div className="rightColl">
                         {
                             MFBenefitsData.cards.map((item, index) => {
-                                const Icon = item.icon;
+                                if(item.col === "right"){
+                                    const Icon = item.icon;
+                                    return(
+                                        <div
+                                            className={`MFtwoCards card${index + 1}`}
+                                            key={index}
+                                        >
+                                            <Icon className="cardIconMF" size={25} />
 
-                                return (
-                                    <div
-                                        className={`MFtwoCards card${index + 1}`}
-                                        key={index}
-                                    >
-                                        <h1>
-                                            <Icon className="cardIconMF" />
-                                            {item.title}
-                                        </h1>
-
-                                        <h3 id="CardsMean">
+                                            <div className="itemDesc">
+                                                <h3 className={"Gen bold"}>{item.title}</h3>
+                                                <span className="Gen small light">
                                             {item.description}
-                                        </h3>
-                                    </div>
-                                )
+                                        </span>
+                                            </div>
+                                        </div>
+                                    )
+                                }
                             })
                         }
                     </div>
 
+
+                </div>
                 </div>
             </div>
 
             <div className="MFthree">
                 <div className="heroImg">
                     <img loading="lazy" src={img(MFInvestorData.image)} />
-                    <h3>{MFInvestorData.quote}</h3>
+                    <span className={"Gen quote small"}>{MFInvestorData.quote}</span>
                 </div>
 
                 <div className="heroText">
-                    <h1>{MFInvestorData.title}</h1>
+                    <h1 className={"Gen dark"}>{MFInvestorData.title}</h1>
                     {
                         MFInvestorData.points.map((item, index) => {
                             const Icon = MFInvestorData.icon;
 
                             return(
                                 <div className={"thirdCardEles"}>
-                                    <Icon size={30} className={"threeIcon"}/>
-                                    <h3 key={index}>{item}</h3>
+                                    <Icon size={20} className={"threeIcon"}/>
+                                    <span className={"Gen dark small"} key={index}>{item}</span>
                                 </div>
                             )
                         })
@@ -247,7 +275,7 @@ const MFAssistData = {
             <div className="MFfour">
 
                 <div className="heroText">
-                    <h1>{MFAssistData.title}</h1>
+                    <h1 className={"Gen dark"}>{MFAssistData.title}</h1>
 
                     <div className="AssistDataCardCon">
                         {
@@ -258,12 +286,12 @@ const MFAssistData = {
                                     onMouseEnter={() => setActiveStep(index)}
                                 >
                                     <div className="stepCircle">
-                                        {item.step}
+                                        <span className={"Gen small bold"}>{item.step}</span>
                                     </div>
 
                                     <div className="stepContent">
-                                        <h2>{item.title}</h2>
-                                        <h3>{item.description}</h3>
+                                        <h3 className={"Gen dark bold"}>{item.title}</h3>
+                                        <span className={"Gen small light"}>{item.description}</span>
                                     </div>
                                 </div>
                             ))

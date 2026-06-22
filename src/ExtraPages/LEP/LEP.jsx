@@ -121,7 +121,7 @@ const LEP = () => {
 
         <div className={"left"}>
 
-          <h2 className={"Gen bold"}>Building a Complete Legacy Plan</h2>
+          <h1 className={"Gen small"}>Building a Complete Legacy Plan</h1>
 
           <div className={"pointsCont"}>
 
@@ -129,7 +129,7 @@ const LEP = () => {
               LegacyEstateHeroData.points.map((item, index) => (
                 <div className={"pointEle"} key={index}>
 
-                  <span className={"Gen light"}>{item}</span>
+                  <span className={"Gen dark small"}>{item}</span>
 
                 </div>
               ))
@@ -137,7 +137,7 @@ const LEP = () => {
 
           </div>
 
-          <span className={"quote"}>
+          <span className={"quote small Gen"}>
             {LegacyEstateHeroData.strategicSignificance}
           </span>
 
@@ -175,17 +175,17 @@ const LEP = () => {
 
               <div className={"textCont"}>
 
-                <span className={"Syn light"}>{item.expertise}</span>
+                <span className={"Syn light small"}>{item.expertise}</span>
 
                 <h2 className={"Syn dark"}>{item.title}</h2>
 
-                <span className={"Gen light"}>{item.description}</span>
+                <span className={"Gen light small"}>{item.description}</span>
 
                 <div className={"quoteBox"}>
 
-                  <span className={"Gen"}>STRATEGIC SIGNIFICANCE</span>
+                  <span className={"Gen esmall light bold"}>STRATEGIC SIGNIFICANCE</span>
 
-                  <span className={"quote"}>
+                  <span className={"Gen emsmall dark italic"}>
                     “{item.strategicSignificance}”
                   </span>
 

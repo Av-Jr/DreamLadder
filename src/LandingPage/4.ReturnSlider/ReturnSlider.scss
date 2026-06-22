@@ -110,6 +110,7 @@
             &:hover{
               font-weight : bold !important;
             }
+            white-space : nowrap;
           }
         }
 
@@ -275,16 +276,57 @@
     }
   }
 }
-
-/* MOBILE */
 @include mediaDevice(mobile){
-
+  
   #ReturnSliderMC{
     min-height: 100dvh;
-    padding: 0;
+    padding: 20px 0;
+    gap: 30px;
     
-    .retElesCon{
-      flex-wrap : wrap;
+    .childsR{
+      
+      &.one{
+        
+        .SliderCon{
+          width: 100%;
+          padding: 15px;
+          
+          .eleList{
+            flex-direction: column;
+            gap: 10px;
+          }
+          
+          .inputWrap{
+            width: 50%;
+          }
+          
+          .stateBtns{
+            width: 100%;
+            overflow-x: auto;
+          }
+        }
+      }
+      
+      &.two{
+        
+        .retElesCon{
+          display: flex;
+          flex-direction : column;
+          flex-wrap: nowrap;
+          overflow-x: auto;
+          
+          gap: 20px;
+          .retEle{
+            width: 100%;
+            
+            .retCircle{
+              width: 100%;
+              max-width: 140px;
+              margin: 0 auto;
+            }
+          }
+        }
+      }
     }
   }
 }

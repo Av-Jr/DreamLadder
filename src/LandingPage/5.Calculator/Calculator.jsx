@@ -16,7 +16,6 @@ const Calculator = () => {
             { i: "eight", t: "EMI / Loan",  id: "sip" } // only if you create this tab
 
     ]
-    const nt = useNavigate();
 
     return(
         <div id={"CalculatorMC"}>

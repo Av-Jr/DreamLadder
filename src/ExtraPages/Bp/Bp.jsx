@@ -37,40 +37,32 @@ const Bp = () => {
   ];
 
   return (
-      <>
-        <div className="bespokePage">
+        <div id="bespokePage">
           <div className="titleHeadZ">
             <NavBar></NavBar>
             <span className="titleZ">Bespoke Portfolio</span>
           </div>
-          <div className="mainContainer">
             <div className="heroContainer">
 
               <div className="heroText">
 
-                <h3>
+                <span className={"Gen small dark"}>
                   Every financial journey is distinct. A bespoke portfolio begins
                   with a clear understanding of your risk appetite, liquidity
                   priorities, and long-term objectives.
-                </h3>
+                </span>
 
-                <h3>
+                <span className={"Gen small dark"}>
                   Rather than applying standard allocation models, exposure should
                   be structured across suitable investment avenues in alignment
                   with one’s financial landscape — balancing growth, preservation,
                   and continuity with discipline.
-                </h3>
+                </span>
 
-                <div className="quoteBox">
-
-                  <span></span>
-
-                  <h3 className={"quoteT"}>
+                  <span className={"quote Gen small light"}>
                     Disciplined allocation. Continuous monitoring.
                     Balanced growth.
-                  </h3>
-
-                </div>
+                  </span>
 
               </div>
 
@@ -98,30 +90,24 @@ const Bp = () => {
 
               <div className="philosophyText">
 
-                <h2>Core Philosophy</h2>
+                <h2 className={"Gen bold"}>Core Philosophy</h2>
 
-                <h3>
+                <span className={"Gen small dark"}>
                   Enduring wealth is shaped by suitability-driven allocation
                   aligned with risk capacity, financial priorities, and long-term
                   objectives.
-                </h3>
+                </span>
 
-                <h3>
+                <span className={"Gen small dark"}>
                   Short-term narratives do not define long-term outcomes.
                   The emphasis remains on governance, consistency, and
                   measured progression across market environments.
-                </h3>
+                </span>
 
-                <div className="quoteBox">
-
-                  <span></span>
-
-                  <h3 className={"quoteT"}>
+                  <span className={"quote Gen small light"}>
                     Disciplined allocation. Continuous monitoring.
                     Balanced growth.
-                  </h3>
-
-                </div>
+                  </span>
 
               </div>
 
@@ -131,9 +117,9 @@ const Bp = () => {
 
               <div className="approachLeft">
 
-                <h2>Our Approach</h2>
+                <h2 className={"Gen bold dark"}>Our Approach</h2>
 
-                <h3>
+                <h3 className={"Gen small light bold"}>
                   Significant wealth requires more than product selection.
                   It demands structure, discipline, and clarity of purpose.
                 </h3>
@@ -148,13 +134,9 @@ const Bp = () => {
 
                       <div className="approachCard" key={index}>
 
-                    <span className={"matchCol"}>
-                    <div className="line"></div>
+                    <h2 className={"Syn small"}>{item.title}</h2>
 
-                    <h2>{item.title}</h2>
-                    </span>
-
-                        <p>{item.desc}</p>
+                        <span className={"Gen small dark"}>{item.desc}</span>
 
                       </div>
                   ))
@@ -167,7 +149,7 @@ const Bp = () => {
             <div
                 className="ctaSection"
                 style={{
-                  background: `url(${img("HP4")}) center/cover no-repeat`,
+                  background: `url(${img("bespokeLastBack")}) center/cover no-repeat`,
                 }}
             >
 
@@ -182,7 +164,7 @@ const Bp = () => {
 
               <div className="ctaContent">
 
-                <h2>
+                <h2 className={"Syn"}>
                   “Hi, I am your trusted friend and financial co-pilot.”
                 </h2>
 
@@ -203,33 +185,33 @@ const Bp = () => {
               <div className="ctaPoints">
 
                 <div className="point">
-                  <CheckCircle2 size={22} />
-                  <h3>Diversification</h3>
+                  <CheckCircle2 size={22} className={"cardII"} />
+                  <span className={"Gen light"}>Diversification</span>
                 </div>
 
                 <div className="point">
-                  <CheckCircle2 size={22} />
-                  <h3>Unbiased</h3>
+                  <CheckCircle2 size={22} className={"cardII"}/>
+                  <span className={"Gen light"}>Unbiased</span>
                 </div>
 
                 <div className="point">
-                  <CheckCircle2 size={22} />
-                  <h3>Simple & Jargon-free</h3>
+                  <CheckCircle2 size={22} className={"cardII"} />
+                  <span className={"Gen light"}>Simple & Jargon-free</span>
                 </div>
 
                 <div className="point">
-                  <CheckCircle2 size={22} />
-                  <h3>Follow Portfolio approach</h3>
+                  <CheckCircle2 size={22} className={"cardII"} />
+                  <span className={"Gen light"}>Follow Portfolio approach</span>
                 </div>
 
                 <div className="point">
-                  <CheckCircle2 size={22} />
-                  <h3>Constant monitoring & re-balancing</h3>
+                  <CheckCircle2 size={22} className={"cardII"} />
+                  <span className={"Gen light"}>Constant monitoring & re-balancing</span>
                 </div>
 
                 <div className="point">
-                  <CheckCircle2 size={22} />
-                  <h3>Regular Hypothesis testing</h3>
+                  <CheckCircle2 size={22} className={"cardII"} />
+                  <span className={"Gen light"}>Regular Hypothesis testing</span>
                 </div>
 
               </div>
@@ -238,7 +220,7 @@ const Bp = () => {
 
             <div className="bottomBar">
 
-              <h2>For more information</h2>
+              <h2 className={"Gen bold"}>For more information</h2>
 
               <div className="btns">
 
@@ -259,13 +241,10 @@ const Bp = () => {
               </div>
 
             </div>
-
-          </div>
-
+          <Ql />
         </div>
 
-        <Ql />
-      </>
+
   );
 };
 

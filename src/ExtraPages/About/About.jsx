@@ -1,7 +1,10 @@
 import NavBar from "../../LandingPage/1.NavBar/NavBar.jsx";
 import {useState, useEffect} from "react";
 import "./About.scss"
-import { Shield, Search, Briefcase, Handshake, TrendingUp, LayoutGrid, ChartColumn, MonitorSmartphone, Zap, Lock, Smartphone} from "lucide-react";
+import {
+    Shield, Search, Briefcase, Handshake, TrendingUp, LayoutGrid, ChartColumn, MonitorSmartphone, Zap, Lock, Smartphone,
+    Quote
+} from "lucide-react";
 import Ql from "../../LandingPage/9.QuickLinks/Ql.jsx";
 import { img } from "../../utils/image.js";
 import gsap from "gsap";
@@ -10,7 +13,6 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import React from 'react'
 
 export default function About() {
-    const [activeCard, setActiveCard] = useState(null);
     gsap.registerPlugin(ScrollTrigger);
 
     useEffect(() => {
@@ -188,46 +190,52 @@ export default function About() {
         <div id={"About2MC"}>
             <NavBar></NavBar>
             <div className="firstPage">
-                <div className="section1">
-                    <img
-                        src={img("tree")}
-                        alt="Contact"
-                        loading="lazy"
-                    />
-                </div>
-                <div className="section2">
-                    <p>"Wealth is not built overnight; it’s crafted through <p className={"redText"}>clarity, courage, and consistency. "</p></p>
-                    <span className={"Name"}>Mr. Saday Sinha</span>
-                    <span className={"title"}>FOUNDER & CEO</span>
-                </div>
-                <div className="section3">
-                    <img
-                        src={img("AboutSaday")}
-                        alt="Contact"
-                        loading="lazy"
-                    />
+                <div className="conSecFP">
+                    <div className="section1">
+                        <img
+                            src={img("tree")}
+                            alt="Contact"
+                            loading="lazy"
+                        />
+                    </div>
+                    <div className="section2">
+                        <h2 className={"Syn"}>"Wealth is not built overnight; it’s crafted through<br/><span className={"redText Syn italic"}>clarity, courage, and consistency."</span></h2>
+                        <h2 className={"Gen bold dark small"}>Mr. Saday Sinha</h2>
+                        <span className={"Gen light small"}>FOUNDER & CEO</span>
+                    </div>
+                    <div className="section3">
+                        <img
+                            src={img("AboutSaday")}
+                            alt="Contact"
+                            loading="lazy"
+                        />
+                    </div>
                 </div>
             </div>
 
             <div className="secondPage">
-                <div className="text">
-                    <h1>Our Story</h1><br/><br/>
-                    <h3>
+                <div className="text innerPadding">
+                    <h1 className={"Gen dark small"}>Our Story</h1><br/><br/>
+                    <span className={"Gen dark small"}>
                         Every great journey begins with a simple belief. Ours began in 2018 with the conviction that investing should be transparent, straightforward, and built on trust.<br/><br/>
                         What started as a focused effort in Mutual Funds has expanded into a comprehensive wealth management suite, including Corporate FDs, Protection Solutions, and Structured Products.<br/><br/>
                         Today, we serve over 500+ families across 12 countries, achieving milestones driven by the same purpose: helping people grow their wealth with clarity.<br/><br/>
-                    </h3>
+                    </span>
                     <div className="toShow">
-                        <h2><span className={"changeC"}>25+</span><br/>YEARS EXPERTISE</h2>
-                        <h2><span className={"changeC"}>500+</span><br/>FAMILIES SERVED</h2>
+                        <span className={"changeC Gen bold"}>25+<br/><span className={"Gen small light"}>YEARS EXPERTISE</span></span>
+                        <span className={"changeC Gen bold"}>500+<br/><span className={"Gen small light"}>FAMILIES SERVED</span></span>
                     </div>
                 </div>
                 <img loading="lazy" src={img("AboutTwo")} alt=""/>
             </div>
 
             <div className="thirdPage">
-                <h2 className={"textLeft"}>“Our mission is to be one of India’s most trusted partners in building long-term wealth. Every solution we create is designed to be simple, transparent, and effective.”</h2>
-                <h3 className={"Intro"}>- Mr. Saday Sinha<br/><span className={'title'}>Founder & CEO, DreamLadder Capital</span></h3>
+                <div className="conSecTP innerPadding">
+                    <Quote size={48} color="#E53935" />
+                    <span className={"textLeft Syn italic"}>“Our mission is to be one of India’s most trusted partners in building long-term wealth. Every solution we create is designed to be simple, transparent, and effective.”</span>
+                    <h2 className={"Gen small bold"}>- Mr. Saday Sinha<br/><span className={'Gen small'}>Founder & CEO, DreamLadder Capital</span></h2>
+                </div>
+
             </div>
 
             <div className="journeyPage">
@@ -268,60 +276,65 @@ export default function About() {
             </div>
 
             <div className="fourthPage">
-                <h1>Our Core Values</h1>
-                <div className="cardElesfP">
-                    {
-                        cardElesData.map((item, index) => {
-                            const Icon = item.icon;
-                            const Tit = item.title;
-                            const Txt = item.ts;
+                <div className="conSecFoP innerPadding">
+                    <h1 className={"Gen"}>Our Core Values</h1>
+                    <div className="cardElesfP">
+                        {
+                            cardElesData.map((item, index) => {
+                                const Icon = item.icon;
+                                const Tit = item.title;
+                                const Txt = item.ts;
 
-                            return(
-                                <div className={`cardEle`}>
-                                    <Icon color={"#E53935"} size={40} className={"cardIcon"}></Icon>
-                                    <h2>{Tit}</h2>
-                                    <h3>{Txt}</h3>
-                                </div>
-                            )
-                        })
-                    }
+                                return(
+                                    <div className={`cardEle`}>
+                                        <Icon size={45} className={"cardIcon"}></Icon>
+                                        <h2 className={"Syn small"}>{Tit}</h2>
+                                        <span className={"Gen small light"}>{Txt}</span>
+                                    </div>
+                                )
+                            })
+                        }
+                    </div>
                 </div>
             </div>
 
             <div className="fifthPage">
 
                 <div className="teamIntro">
-                    <h1>{teamIntro.title}</h1>
-                    <h3>{teamIntro.description}</h3>
+                    <h1 className="Gen">{teamIntro.title}</h1>
+                    <span className={"lineRed"}></span>
+                    <span className={"Gen light small"}>{teamIntro.description}</span>
                 </div>
 
-                <div className="heroImg">
-                    <img src={teamData[0].image} alt="" />
-                </div>
+                <div className="teamMembers">
+                    {
+                        teamData.map((item, index) => (
+                            <div className={"memC"} key={index}>
+                                <div className="heroImg">
+                                    <img
+                                        loading="lazy"
+                                        className="sideImg"
+                                        src={item.image}
+                                        alt=""
+                                    />
+                                </div>
 
-                <div className="heroText">
-                    <h2>{teamData[0].role}</h2>
-                    <h1>{teamData[0].name}</h1>
-                    <h3>{teamData[0].description}</h3>
-                </div>
-
-                <div></div>
-
-                <div className="heroImg">
-                    <img src={teamData[1].image} alt="" />
-                </div>
-
-                <div className="heroText">
-                    <h2>{teamData[1].role}</h2>
-                    <h1>{teamData[1].name}</h1>
-                    <h3>{teamData[1].description}</h3>
+                                <div className="heroText">
+                                    <h2 className={"redText Gen small bold"}>{item.role}</h2>
+                                    <h1 className={"Gen bold small"}>{item.name}</h1>
+                                    <span className={"Gen small bold desc"}>{item.description}</span>
+                                </div>
+                            </div>
+                        ))
+                    }
                 </div>
 
             </div>
 
-            <div className="sixthPage">
+            <div className="sixthPage innerPadding">
                 <div className="heroImg">
-                    <h1>What helps us do well</h1>
+                    <h1 className={"Gen"}>What helps us do well</h1>
+                    <span className={"lineRed"}></span>
                     <img loading="lazy" src={img("sixthPG")} alt=""/>
                 </div>
                 <div className="heroText">
@@ -330,33 +343,16 @@ export default function About() {
                             const Icon = item.icon;
                             const txt = item.text;
                             return(
-                                <div className={'sixthPgCard'}>
-                                    <Icon className="PgCardSixth" size={40}></Icon>
-                                    <span>{txt}</span>
+                                <div className={'sixthPgCard innerPadding'}>
+                                    <Icon className="cardIcon" size={40}></Icon>
+                                    <span className={"Gen small dark"}>{txt}</span>
                                 </div>
                             )})
                     }
                 </div>
             </div>
 
-            <div className="seventhPage">
-                <h1>Why Us</h1>
-                <div className="seventhCardCon">
-                    {
-                        WhyUsData.map((item, index) => {
-                            const Icon = item.icon;
 
-                            return(
-                                <div className={"seventhCard"} key={index}>
-                                    <div className={"desc"}>{item.description}</div>
-                                    <Icon className={"cardIcon"} size={45}></Icon>
-                                    <span>{item.title}</span>
-                                </div>
-                            )
-                        })
-                    }
-                </div>
-            </div>
 
             <Ql></Ql>
         </div>

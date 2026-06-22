@@ -1,6 +1,6 @@
 import "./Faqs.scss";
 import NavBar from "../../LandingPage/1.NavBar/NavBar.jsx";
-import { useState } from "react";
+import React, { useState } from "react";
 
 const dataQ = [
 {
@@ -421,15 +421,16 @@ const Faqs = () => {
 
     return (
         <>
-          <NavBar></NavBar>
         <div id={"FaqsMC"}>
-
-            <h1>FAQ</h1>
+          <div className="titleHeadZ">
+            <NavBar></NavBar>
+            <span className="titleZ">FAQ</span>
+          </div>
             {
                 dataQ.map((item, index) => (
                     <div className={"QuestCon"} key={index}>
 
-                        <h2>{item.title}</h2>
+                        <h2 className={"Syn small"}>{item.title}</h2>
 
                         {
                             item.qa.map((it, ind) => {
@@ -455,7 +456,7 @@ const Faqs = () => {
                                         </div>
 
                                         <div className={"AnswerWrap"}>
-                                            <span className={"aa"}>
+                                            <span className={"Gen small light"}>
                                                 {it.a}
                                             </span>
                                         </div>

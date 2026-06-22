@@ -2,854 +2,588 @@
 
 $redCol : #E53935;
 
-#About2MC{
-  position : relative;
-  width : 100%;
+//Red Line
+.lineRed{
+  display : block;
+  width : 50px;
+  height : 2px;
+  background : $redCol;
+  align-self : flex-start;
+}
+
+//icon
+.cardIcon{
+  background: #FEF2F2;
+  padding : 10px;
+  border-radius : 10px;
+  color : $redCol;
+}
+
+.cardIc{
+  background: $redCol;
+  padding : 10px;
+  border-radius : 50%;
+  color : white;
+}
+
+//maxWidth
+.conSecFP, .secondPage, .conSecTP, .conSecFoP, .fifthPage, .sixthPage, .conSecSeP{
+  max-width : 1300px;
+}
+
+//grid;
+ .firstPage, .section2, .secondPage, .conSecFoP, .fourthPage, .cardEle, .conSecFP, .memC, .sixthPage, .seventhPage{
+  display : grid;
+  place-items : center;
+}
+
+//padding
+.firstPage, .thirdPage, .fourthPage, .fifthPage, .sixthPage, .seventhPage{
+  padding : 100px 0;
+}
+
+//innerPadding
+.innerPadding{
+  padding-left : 50px;
+  padding-right : 50px;
+}
+
+#About2MC, .firstPage, .secondPage, .thirdPage, .fourthPage, .journeyPage, .fifthPage{
   min-height : 100vh;
-  .journeyPage{
-	width: 100%;
-	padding: 120px 40px;
-	
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	
-	h1{
-	  font-family: Genos;
-	  margin-bottom: 80px;
-	}
-  }
+  width : 100%;
+}
+
+#About2MC{
+  display : grid;
+  justify-items  : center;
   
-  .timeline{
-	position: relative;
-	
-	width: 100%;
-	max-width: 1200px;
-	
-	&::before{
-	  content: "";
-	  
-	  position: absolute;
-	  
-	  left: 50%;
-	  top: 0;
-	  bottom: 0;
-	  
-	  width: 2px;
-	  
-	  background: #e5e5e5;
-	  
-	  transform: translateX(-50%);
-	}
-  }
-  
-  .progressLine{
-	position: absolute;
-	
-	left: 50%;
-	top: 0;
-	
-	width: 2px;
-	height: 100%;
-	
-	background: #E53935;
-	
-	transform: translateX(-50%) scaleY(0);
-	transform-origin: top;
-  }
-  
-  .timelineItem{
-	position: relative;
-	
-	width: 100%;
-	
-	display: flex;
-	
-	margin-bottom: 40px;
-	
-	&.left{
-	  justify-content: flex-start;
-	  
-	  .timelineCard{
-		margin-right: calc(50% + 80px);
-		&.rightHead{
-		  text-align : right;
-		}
-		@include mediaDevice(mobile){
-		  &.rightHead{text-align : left;}
-		}
-	  }
-	}
-	
-	&.right{
-	  justify-content: flex-end;
-	  
-	  .timelineCard{
-		margin-left: calc(50% + 80px);
-		
-	  }
-	}
-  }
-  
-  .year{
-	position: absolute;
-	
-	left: 50%;
-	top: 30px;
-	
-	transform: translateX(-50%);
-	
-	width: 90px;
-	height: 90px;
-	
-	border-radius: 50%;
-	
-	background: white;
-	
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	flex-direction : column;
-	font-family: Genos;
-	
-	box-shadow: 0 10px 25px rgba(0,0,0,.1);
-	
-	z-index: 3;
-	
-	.yt{
-	  font-size : 13px;
-	  color : #E53935;
-	  font-weight : 1000;
-	  -webkit-text-stroke: 0.5px currentColor;
-	}
-	
-	.yy{
-	  font-size : 25px;
-	  -webkit-text-stroke: 0.5px currentColor;
-	}
-  }
-  
-  .dot{
-	display: none;
-  }
-  
-  .timelineCard{
-	width: 500px;
-	
-	background: white;
-	
-	border-radius: 20px;
-	
-	padding: 40px;
-	
-	border : 1px solid rgba(0, 0, 0, 0.2);
-	transition : all 0.3s ease, box-shadow 0.2s ease;
-	transform : translateY(0px);
-	
-	&:hover{
-	  h2{
-		color : red;
-	  }
-	  box-shadow: 0 10px 25px rgba(0,0,0,.08);
-	}
-	
-	h2{
-	  font-family: SyneMono;
-	  margin-bottom: 15px;
-	}
-	
-	p{
-	  font-family: Genos;
-	  font-size: 18px;
-	  line-height: 1.2;
-	  color: rgba(0, 0, 0, 0.7);
-	  font-weight : 600;
-	}
-  }
-  
-  .seventhPage{
-	padding : 100px;
-	height : auto;
-	width : 100%;
-	background: img("seventhBg") center/cover no-repeat;
-	display : grid;
-	grid-template-rows : auto auto;
-	place-items : center;
-	gap : 50px;
-	
-	.seventhCardCon{
-	  display : grid;
-	  grid-template-columns : repeat(3, 1fr);
-	  grid-template-rows : repeat(2, 1fr);
-	  place-items : center;
-	  padding : 20px;
-	  gap : 30px;
-	  .seventhCard{
-		position : relative;
-		min-width : 250px;
-		background: transparent;
-		font-family : SyneMono;
-		font-weight : normal;
-		place-items : center;
-		gap : 0;
-		aspect-ratio : 16/9;
-		display : grid;
-		border-radius : 20px;
-		border : 1px solid white;
-		box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-		overflow : hidden;
-		transition : 0.8s ease;
-		transform-style : preserve-3d;
-		&:hover{
-		  transform : rotateY(180deg);
-		  .desc{
-			opacity : 1;
-			transform : rotateY(180deg);
-		  }
-		}
-		
-		.desc{
-		  position : absolute;
-		  width : 100%;
-		  height : 100%;
-		  background : white;
-		  transition : 0.3s ease;
-		  opacity : 0;
-		  color : black;
-		  display : grid;
-		  place-items : center;
-		  text-align : center;
-		  padding : 10px;
-		}
-		.cardIcon{
-		  padding : 10px;
-		  border-radius : 50%;
-		  background: $redCol;
-		  color : white;
-		}
-	  }
-	}
-	
-	h1{
-	  font-family : SyneMono;
-	  text-align : center;
-	  font-weight : 800;
-	}
-  }
-  .sixthPage{
-	height : auto;
-	width : 80%;
-	padding : 100px;
-	margin : auto;
-	
-	display : grid;
-	grid-template-columns : auto auto;
-	grid-template-rows : auto;
-	place-items : center;
-	gap : 100px;
-	
-	.heroImg{
-	  display : grid;
-	  grid-template-rows : auto auto;
-	  place-items : center;
-	  h1{
-		width : 100%;
-		text-align : center;
-	  }
-	  
-	  img{
-		width : 100%;
-		height : 100%;
-		object-fit : contain;
-		padding : 20px;
-	  }
-	}
-	
-	.heroText{
-	  display : grid;
-	  grid-template-rows : auto auto auto;
-	  place-items : center;
-	  gap : 10px;
-	  font-family : Genos;
-	  font-weight : 600;
-	  
-	  .sixthPgCard{
-		border : 1px solid white;
-		min-height : 100px;
-		border-radius : 10px;
-		padding : 10px;
-		display : grid;
-		grid-template-columns : auto auto;
-		grid-template-rows : auto;
-		place-items : center;
-		gap : 20px;
-		box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-		
-		.PgCardSixth{
-		  background: pink;
-		  width : 50px;
-		  aspect-ratio : 1;
-		  padding : 5px;
-		  border-radius : 10px;
-		  color : $redCol;
-		  font-family : Genos;
-		}
-	  }
-	}
-  }
-  
-  .fifthPage{
-	display : grid;
-	margin : auto;
-	min-height: 100vh;
-	width: 80%;
-	
-	display: grid;
-	grid-template-columns: 0.9fr 1fr 1fr;
-	gap: 50px;
-	
-	padding: 100px;
-	
-	.teamIntro{
-	  display: flex;
-	  flex-direction: column;
-	  justify-content: flex-start;
-	  align-items: flex-start;
-	  
-	  h1{
-		font-family: Genos;
-		font-size: clamp(0px, 3vh, 30px);
-		margin-bottom: 20px;
-	  }
-	  
-	  h3{
-		font-family: Genos;
-		font-size: clamp(0px, 2vh, 25px);
-		line-height: 1.8;
-		color: rgba(0,0,0,0.9);
-		font-weight: 600;
-		max-width: 500px;
-	  }
-	  
-	  &::after{
-		content:"";
-		width:70px;
-		height:3px;
-		background:#E53935;
-		margin:25px 0;
-	  }
-	}
-	
-	.MemberCard{
-	  display: contents;
-	}
-	
-	.heroImg{
-	  width: 100%;
-	  max-width: 400px;
-	  
-	  img{
-		width:80%;
-		height:auto;
-		object-fit:contain;
-		
-		border-radius:20px;
-		border:1px solid rgba(0,0,0,.05);
-		background: #F8F9FA;
-	  }
-	}
-	
-	.heroText{
-	  display:flex;
-	  flex-direction:column;
-	  justify-content:center;
-	  align-items:flex-start;
-	  
-	  h2{
-		font-family: Genos;
-		color:#E53935;
-		letter-spacing:4px;
-		font-size:14px;
-		margin-bottom:10px;
-	  }
-	  
-	  h1{
-		font-family: SyneMono;
-		font-size: clamp(0px, 3vh, 30px);
-		margin-bottom:25px;
-		color: rgba(0,0,0,0.9);
-	  }
-	  
-	  h3{
-		font-family: Genos;
-		font-size: clamp(0px, 2vh, 25px);
-		line-height:1.8;
-		color:rgba(0,0,0,.65);
-		font-weight:600;
-		color: rgba(0,0,0,0.9);
-	  }
-	}
-  }
-  .fourthPage{
-	min-height : 100vh;
-	display : grid;
-	place-items : center;
-	background: img("flexBack") center/cover no-repeat;
-	padding : 20px;
-	h1{
-	  font-weight : 800;
-	  font-family : Genos!important;
-	}
-	
-	.cardElesfP{
-	  display : grid;
-	  grid-template-columns : repeat(4, 1fr);
-	  gap : 20px;
-	  
-	  
-	  .cardEle{
-		background: white;
-		display : flex;
-		flex-direction : column;
-		justify-content : space-around;
-		align-items : center;
-		padding : 30px;
-		text-align : center;
-		border-radius : 20px;
-		aspect-ratio : 12/16;
-		max-height : 400px;
-		
-		.cardIcon{
-		  background: pink;
-		  width : 50px;
-		  aspect-ratio : 1;
-		  padding : 5px;
-		  border-radius : 10px;
-		}
-		
-		h2{
-		  font-family : SyneMono;
-		}
-		
-		h3{
-		  color : rgba(0, 0, 0, 0.7)
-		}
-	  }
-	}
-  }
-  
-  .thirdPage{
-	min-height : 100vh;
-	width : 100%;
-	background: img("AboutThreebg") center/cover no-repeat;
-	display : flex;
-	flex-direction : column;
-	justify-content : center;
-	align-items : end;
-	padding : 5%;
-	gap : 50px;
-	overflow : hidden;
-	
-	.textLeft{
-	  width : 60%;
-	  height : auto;
-	  font-family : SyneMono;
-	  font-weight : 100;
-	  line-height : 2;
-	  display : grid;
-	  place-items : center;
-	  text-align : right;
-	  font-style : italic;
-	  padding : 0 10%;
-	}
-	
-	.Intro{
-	  width : 60%;
-	  font-family : Genos;
-	  font-weight : 900;
-	  font-size : 20px;
-	  color : black;
-	  text-align : center;
-	  -webkit-text-stroke: 0.5px currentColor;
-	  
-	  
-	  .title{
-		color : #E53935;
-		font-family : inherit;
-		line-height : inherit;
-	  }
-	}
+  .firstPage{
+    background : img("aboutBack") center/cover no-repeat;
+    .conSecFP{
+      padding : 0 50px;
+      grid-template-columns : repeat(3, auto);
+      img{
+      }
+      
+      .section2{
+        gap : 20px;
+        max-width : 300px;
+        
+        .redText{
+          color: $redCol;
+        }
+      }
+      
+      .section3{
+        img{
+          width : 300px;
+        }
+      }
+    }
   }
   
   .secondPage{
-	height : auto;
-	width : 100%;
-	display : grid;
-	grid-template-columns : 1fr 1fr;
-	place-items : center;
-	padding : 40px;
-	
-	h1{
-	  text-align : left;
-	  width : 100%;
-	}
-	
-	img{
-	  width : 100%;
-	  height : 100%;
-	  object-fit : contain;
-	  object-position : center;
-	}
-	
-	.text{
-	  width : 90%;
-	  max-width : 400px;
-	  padding : 20px;
-	  display : grid;
-	  place-items : center;
-	  font-family : Genos;
-	  
-	  .toShow{
-		width : 100%;
-		display : flex;
-		justify-content : space-between;
-		text-align : center;
-		margin-top : 20px;
-		color : grey;
-		
-		h2{
-		  font-size : clamp(0px, 3vh, 20px);
-		  width : 100%;
-		  span{
-			font-size : clamp(0px, 4vh, 40px);
-			text-align : left;
-			width : 100%;
-		  }
-		}
-		.changeC{
-		  color : #E53935;
-		  font-weight : bold;
-		}
-	  }
-	}
-	
+    grid-template-columns : repeat(2, 1fr);
+    .text{
+      max-width : 500px;
+      h1, span{
+        text-align : left;
+      }
+      .toShow{
+        display : grid;
+        width : 100%;
+        grid-template-columns : repeat(2, 1fr);
+        justify-content : stretch;
+        align-items : stretch;
+        .changeC{
+          color: $redCol;
+          text-align : left;
+        }
+      }
+    }
   }
   
-  .firstPage{
-	padding-top : 100px;
-	display : grid;
-	grid-template-columns : repeat(3, auto);
-	place-items : center;
-	width : 100%;
-	min-height : 100vh;
-	background : img("aboutBack") center/cover no-repeat;
-	gap  : 30px;
-  }
-  
-  .section3{
-	img{
-	  object-fit : contain;
-	  width : 70%;
-	  object-position : center;
+  .thirdPage{
+    background: img("AboutThreebg") center/contain no-repeat;
+    display : flex;
+    flex-direction : column;
+    justify-content : center;
+    align-items : flex-end;
+    
+    .conSecTP{
+      width : 50%;
+      display : flex;
+      flex-direction : column;
+      justify-content : center;
+      align-items : flex-end;
+      gap : 20px;
+      max-width : 800px;
+      
+      h2{
+        span{
+          color : $redCol;
+        }
+      }
 
-	}
+    }
+  }
+  .journeyPage{
+    width: 100%;
+    padding: 120px 40px;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    h1{
+      font-family: Genos;
+      margin-bottom: 80px;
+    }
   }
   
-  .section2{
-	max-width : 250px;
-	display : flex;
-	flex-direction : column;
-	justify-content : center;
-	align-items : center;
-	gap : 20px;
-	p{
-	  font-family : SyneMono;
-	  
-	  font-size : 30px;
-	  text-align : center;
-	  border-bottom : 2px solid #E53935;
-	}
-	
-	.redText{
-	  color : #E53935;
-	  font-style : italic;
-	  
-	  padding-bottom : 20px;
-	}
-	
-	.Name{
-	  font-family : Genos;
-	  font-weight : 900;
-	  font-size : 20px;
-	  color : black;
-	  text-align : center;
-	  -webkit-text-stroke: 0.5px currentColor;
-	}
-	
-	.title{
-	  font-family : Genos;
-	  letter-spacing : 2px;
-	  text-align : center;
-	}
+  .timeline{
+    position: relative;
+    
+    width: 100%;
+    max-width: 1200px;
+    
+    &::before{
+      content: "";
+      
+      position: absolute;
+      
+      left: 50%;
+      top: 0;
+      bottom: 0;
+      
+      width: 2px;
+      
+      background: #e5e5e5;
+      
+      transform: translateX(-50%);
+    }
   }
+  
+  .progressLine{
+    position: absolute;
+    
+    left: 50%;
+    top: 0;
+    
+    width: 2px;
+    height: 100%;
+    
+    background: #E53935;
+    
+    transform: translateX(-50%) scaleY(0);
+    transform-origin: top;
+  }
+  
+  .timelineItem{
+    position: relative;
+    
+    width: 100%;
+    
+    display: flex;
+    
+    margin-bottom: 40px;
+    
+    &.left{
+      justify-content: flex-start;
+      
+      .timelineCard{
+        margin-right: calc(50% + 80px);
+        &.rightHead{
+          text-align : right;
+        }
+        @include mediaDevice(mobile){
+          &.rightHead{text-align : left;}
+        }
+      }
+    }
+    
+    &.right{
+      justify-content: flex-end;
+      
+      .timelineCard{
+        margin-left: calc(50% + 80px);
+        
+      }
+    }
+  }
+  
+  .year{
+    position: absolute;
+    
+    left: 50%;
+    top: 30px;
+    
+    transform: translateX(-50%);
+    
+    width: 90px;
+    height: 90px;
+    
+    border-radius: 50%;
+    
+    background: white;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction : column;
+    font-family: Genos;
+    
+    box-shadow: 0 10px 25px rgba(0,0,0,.1);
+    
+    z-index: 3;
+    
+    .yt{
+      font-size : 13px;
+      color : #E53935;
+      font-weight : 1000;
+      -webkit-text-stroke: 0.5px currentColor;
+    }
+    
+    .yy{
+      font-size : 25px;
+      -webkit-text-stroke: 0.5px currentColor;
+    }
+  }
+  
+  .dot{
+    display: none;
+  }
+  
+  .timelineCard{
+    width: 500px;
+    
+    background: white;
+    
+    border-radius: 20px;
+    
+    padding: 40px;
+    
+    border : 1px solid rgba(0, 0, 0, 0.2);
+    transition : all 0.3s ease, box-shadow 0.2s ease;
+    transform : translateY(0px);
+    
+    &:hover{
+      h2{
+        color : red;
+      }
+      box-shadow: 0 10px 25px rgba(0,0,0,.08);
+    }
+    
+    h2{
+      font-family: SyneMono;
+      margin-bottom: 15px;
+    }
+    
+    p{
+      font-family: Genos;
+      font-size: 18px;
+      line-height: 1.2;
+      color: rgba(0, 0, 0, 0.7);
+      font-weight : 600;
+    }
+  }
+  
+  .fourthPage{
+    background : img("flexBack") center/cover no-repeat;
+    
+    .conSecFoP{
+      gap : 100px;
+      .cardElesfP{
+        display : grid;
+        grid-template-columns : repeat(4, 1fr);
+        gap : 20px;
+      }
+    }
+    .cardEle{
+      grid-template-rows : repeat(3, 1fr);
+      max-width : 250px;
+      background: white;
+      border-radius : 20px;
+      padding : 20px;
+      
+
+    }
+  }
+  
+  .fifthPage{
+    display : flex;
+    flex-direction: row;
+    gap : 100px;
+    
+    .teamIntro{
+      display : flex;
+      flex-direction : column;
+      gap : 20px;
+      
+
+      h1, span{
+        text-align : left;
+      }
+    }
+    
+    .teamMembers{
+      display : grid;
+      grid-template-rows: repeat(2, auto);
+      gap : 100px;
+      
+      .memC{
+        display : flex;
+        flex-direction : row;
+        gap : 50px;
+        
+        .heroImg{
+          background: #F8F9FA;
+          height : 100%;
+          width : 40%;
+          padding : 30px;
+          img{
+            object-fit : contain;
+            width : 100%;
+            height : 100%;
+            object-position : center;
+          }
+        }
+        
+        .heroText{
+          width : 40%;
+          height : 100%;
+          display : flex;
+          flex-direction : column;
+          gap : 20px;
+          justify-content : space-between;
+          
+          h1{
+            white-space : nowrap;
+          }
+          
+          h1, h2, span{
+            text-align : left;
+          }
+          
+          h2{
+            color : $redCol;
+          }
+        }
+      }
+    }
+  }
+  
+  .sixthPage{
+    min-height : 100vh;
+    grid-template-columns : repeat(2,1fr);
+    gap : 50px;
+    
+    .heroImg{
+      display : flex;
+      flex-direction : column;
+      gap : 20px;
+      
+      h1, span{
+        text-align : left;
+      }
+      
+      img{
+        padding : 20px;
+      }
+    }
+    
+    .heroText{
+      display : grid;
+      grid-template-rows : repeat(3, 1fr);
+      height : 100%;
+      gap : 10px;
+      
+      .sixthPgCard{
+        background: white;
+        display : grid;
+        place-items : center;
+        grid-template-columns : repeat(2, auto);
+        gap : 30px;
+        
+        border : 1px solid #F1F5F9;
+        border-radius : 20px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        
+        span{
+          text-align : left;
+        }
+      }
+    }
+  }
+  
+
+  
+  
+  
+  
+  
 }
 
 @include mediaDevice(mobile){
-  #About2MC{
-	width : 100%;
-	padding : 0;
-	
-	.journeyPage{
-	  padding: 80px 20px;
-	  
-	  h1{
-		margin-bottom: 50px;
-	  }
-	}
-	
-	.timeline{
-	  max-width: 100%;
-	  
-	  &::before{
-		left: 35px;
-	  }
-	}
-	
-	.progressLine{
-	  left: 35px;
-	}
-	
-	.timelineItem{
-	  margin-bottom: 60px;
-	  
-	  justify-content: flex-start !important;
-	}
-	
-	.year{
-	  left: 35px;
-	  
-	  width: 70px;
-	  height: 70px;
-	  
-	  font-size: 14px;
-	  
-	  z-index: 10;
-	}
-	
-	.timelineCard{
-	  width: calc(100% - 110px);
-	  
-	  margin-left: 90px !important;
-	  margin-right: 0 !important;
-	  
-	  padding: 20px;
-	  text-align : left;
-	  
-	  .rightHead{
-		text-align : left!important;
-		h2{
-		  text-align : left;
-		}
-	  }
-	  
-	  h2{
-		font-size: 18px;
-		margin-bottom: 10px;
-	  }
-	  
-	  p{
-		font-size: 13px;
-		line-height: 1.6;
-	  }
-	}
-	
-	.seventhPage, .sixthPage, .fifthPage, .fourthPage, .thirdPage, .secondPage, .firstPage{
-	  padding : 70px 30px;
-	}
-	
-	.seventhPage{
-	  padding : 50px 0;
-	  
-	  .seventhCardCon{
-		grid-template-columns : 1fr;
-		grid-template-rows : repeat(6, 1fr);
-	  }
-	}
-	
-	.sixthPage{
-	  grid-template-columns : auto;
-	  grid-template-rows : auto auto;
-	  padding: 50px 10px;
-	  
-	  .heroText{
-		gap : 50px;
-		.sixthPgCard{
-		  width : auto;
-		  max-width : 60%;
-		  height : auto;
-		  grid-template-columns : auto;
-		  grid-template-rows : auto auto;
-		  padding : 10px;
-		  gap : 10px;
-		  font-weight : normal;
-		  span{
-			padding : 10px;
-			text-align : center;
-		  }
-		}
-	  }
-	}
-	
-	.fifthPage{
-	  width: 100%;
-	  min-height: auto;
-	  
-	  display: grid;
-	  grid-template-columns: 1fr;
-	  
-	  gap: 40px;
-	  
-	  
-	  place-items: center;
-	  
-	  .teamIntro{
-		width: 100%;
-		max-width: 100%;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
-		text-align: center;
-		gap: 20px;
-		grid-column: auto;
-		
-		h1{
-		  text-underline-offset: 8px;
-		}
-		
-		span{
-		  width: 100%;
-		  line-height: 1.6;
-		  color: grey;
-		  font-weight: 100;
-		}
-	  }
-	  
-	  .MemberCard{
-		width: 100%;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		gap: 20px;
-		text-align: center;
-		img{
-		  width: 100%;
-		  max-width: 300px;
-		  height: auto;
-		  border-radius: 10px;
-		  object-fit: cover;
-		}
-		
-		.heroText{
-		  width: 100%;
-		  display: flex;
-		  flex-direction: column;
-		  gap: 15px;
-		  padding: 10px;
-		  align-items: center;
-		  
-		  span{
-			font-family: Genos;
-			font-weight: 700;
-			line-height: 1.5;
-		  }
-		}
-	  }
-	}
-	
-	.fourthPage{
-	  justify-content : flex-start;
-	  gap : 30px;
-	  
-	  .cardElesfP{
-		padding : 50px;
-		grid-template-columns : auto;
-		grid-template-rows : repeat(4, 1fr);
-		gap : 30px;
-		
-		.cardEle{
-		  min-width :0;
-		}
-	  }
-	}
-	
-	.thirdPage{
-	  align-items : center;
-	  justify-content : flex-end;
-	  gap : 20px;
-	  object-fit : cover;
-	  background-position : 40% center;
-	  
-	  .textLeft{
-		padding : 5px;
-		width : 100%;
-		height : 100%;
-		background : rgba(255, 255, 255, 0.5);
-		border-radius : 10px;
-		text-align : center;
-		backdrop-filter : blur(2px);
-	  }
-	  
-	  .Intro{
-		padding : 5px;
-		width :  auto;
-		background : rgba(255, 255, 255, 0.5);
-		text-align : center;
-		border-radius : 10px;
-		backdrop-filter : blur(2px);
-	  }
-	}
-	
-	.secondPage{
-	  grid-template-columns : 1fr;
-	  grid-template-rows : auto auto;
-	  
-	  .text{
-		min-height : auto;
-		height : auto;
-		width : 100%;
-		padding : 0;
-		grid-row : 2;
-		text-align : left;
-	  }
-	  
-	  img{
-		height : auto;
-		grid-row : 1;
-	  }
-	}
-	
-	.firstPage{
-	  display : grid;
-	  grid-template-columns : 1fr;
-	  grid-template-rows : auto auto;
-	  place-items : center;
-	  width : 100%;
-	  justify-items : center;
-	  
-	  img{
-		width : 100%;
-		height : auto;
-		padding : 20px;
-	  }
-	  span{
-		width : 100%;
-		white-space : normal;
-	  }
-	  
-	  .Intro{
-		font-size : inherit;
-	  }
-	}
+
+#About2MC{
+  .conSecFP{
+
   }
+  
+  .firstPage{
+    .conSecFP{
+      grid-template-columns : 1fr;
+      gap : 100px;
+      padding : 100px 10px;
+      grid-template-rows : repeat(3, auto);
+    }
+  }
+  
+  .secondPage{
+    grid-template-columns : 1fr;
+    grid-template-rows : repeat(2, auto);
+    gap : 100px;
+    padding : 100px 10px;
+  }
+  
+  .thirdPage{
+    justify-content : center;
+    align-items : center;
+    background-size : cover;
+    padding : 100px 10px;
+    .conSecTP{
+      width : 100%;
+      background: rgba(255, 255, 255, 0.3);
+      backdrop-filter : blur(10px);
+      border-radius : 10px;
+      padding : 50px 50px;
+      span, h2, h1{
+        text-align : right;
+        width : 100%;
+      }
+    }
+  }
+  
+  .journeyPage{
+    padding: 80px 20px;
+    
+    h1{
+      margin-bottom: 50px;
+    }
+  }
+  
+  .timeline{
+    max-width: 100%;
+    
+    &::before{
+      left: 35px;
+    }
+  }
+  
+  .progressLine{
+    left: 35px;
+  }
+  
+  .timelineItem{
+    margin-bottom: 60px;
+    
+    justify-content: flex-start !important;
+  }
+  
+  .year{
+    left: 35px;
+    
+    width: 70px;
+    height: 70px;
+    
+    font-size: 14px;
+    
+    z-index: 10;
+  }
+  
+  .timelineCard{
+    width: calc(100% - 110px);
+    
+    margin-left: 90px !important;
+    margin-right: 0 !important;
+    
+    padding: 20px;
+    text-align : left;
+    
+    .rightHead{
+      text-align : left!important;
+      h2{
+        text-align : left;
+      }
+    }
+    
+    h2{
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+    
+    p{
+      font-size: 13px;
+      line-height: 1.6;
+    }
+  }
+  
+  .fourthPage{
+    .conSecFoP{
+      gap : 10px;
+      .cardElesfP{
+        grid-template-columns : 1fr;
+        grid-template-rows : repeat(2, auto);
+        gap : 50px;
+        padding : 100px 10px;
+        
+        .cardEle{
+          min-height : 300px;
+        }
+      }
+    }
+  }
+  
+  .fifthPage{
+    flex-direction: column;
+    gap: 50px;
+    padding: 100px 10px;
+    
+    .teamMembers{
+      .memC{
+        flex-direction : column;
+        align-items : flex-end;
+        .heroText{
+          width : 100%;
+          h1{
+            white-space : normal;
+          }
+        }
+        
+        .heroImg{
+          padding : 0;
+          height : fit-content;
+        }
+      }
+    }
+  }
+  
+  .sixthPage{
+    grid-template-columns : 1fr;
+    grid-template-rows : repeat(2, auto);
+    
+    .heroText{
+      .sixthPgCard{
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+        
+        gap: 15px;
+        
+        padding: 20px;
+      }
+    }
+  }
+  
+}
 }

@@ -1,5 +1,6 @@
 @use "./mixins" as  *;
 @include InitialSetup;
+$colorRed : #ef3b3b;
 
 @include CustomFont("Genos", "/Fonts/Genos.woff");
 @include CustomFont("SyneMono", "/Fonts/SyneMono.woff");
@@ -14,6 +15,19 @@ body{
   height : 100vh;
   overflow : visible;
   background : white;
+  overflow-x : clip;
+  
+  .cardIcon{
+    padding : 7px !important;
+    flex-shrink : 0;
+  }
+  
+  .line{
+    width : 100px;
+    height : 3px;
+    background: $colorRed;
+    align-self : flex-start;
+  }
   
   span{
     text-align : center;
@@ -24,21 +38,40 @@ body{
     line-height : 1.4;
     font-weight : normal;
     
+    &.conTact{
+      font-size : clamp(0px, 2.5vh, 25px) !important;
+      text-align : center;
+      font-weight : normal;
+      color : black;
+      -webkit-text-stroke: 0.5px currentColor;
+    }
+    
     &.small{
       font-size : clamp(0px, 2vh, 20px);
       -webkit-text-stroke: 0 currentColor;
+    }
+    
+    &.emsmall{
+      font-size : clamp(0px, 1.8vh, 19px);
+    }
+    
+    &.esmall{
+      font-size : clamp(0px, 1.5vh, 18px);
     }
     &.Gen{
       font-family : Genos;
     }
     
+    &.Syn{
+      font-family : SyneMono;
+    }
     &.quote{
       font-family : Genos;
       font-style : italic;
       border-left : 4px solid #E53A36;
       padding-left : 20px;
       color : #64748B;
-      font-size : clamp(0px, 3vh, 18px);
+      
     }
     
     &.italic{
@@ -102,7 +135,7 @@ body{
     }
     &.bold{
       -webkit-text-stroke: 0.5px currentColor;
-      font-weight : bold;
+      
     }
     &.light{
       color : #475569;
@@ -175,6 +208,7 @@ body{
   }
   
   .endingStatement{
+    width : 100%;
     min-height : 30vh;
     background-image: img("endStat");
     background-position: center;
@@ -213,6 +247,11 @@ body{
     justify-content : space-between;
     flex-direction : column;
     text-align: center;
+    white-space : nowrap;
+    
+    span{
+      white-space : nowrap !important;
+    }
     
     &::after{
       content: "";
@@ -238,10 +277,10 @@ body{
       font-family: SyneMono !important;
       font-size : 35px;
       margin-bottom : 50px;
-      white-space : normal;
       word-break : normal;
       bottom : 0;
       top : 50%;
+      white-space : nowrap !important;
     }
   }
 }
@@ -251,7 +290,7 @@ body{
     margin-bottom: 50px;
   }
   
-  #MFsMC, #PMSAIFMC, #BondsMC, #StructuredProductsMC, #LegacyEstatePlanningMC, #insuranceMC, .bespokePage, #BlogsMC, #MediaMC, .calc-root, .connectPage, #DisclaimerMC, #DisclosureMC{
+  #MFsMC, #PMSAIFMC, #BondsMC, #StructuredProductsMC, #LegacyEstatePlanningMC, #insuranceMC, #bespokePage, #BlogsMC, #MediaMC, .calc-root, .connectPage, #DisclaimerMC, #DisclosureMC, #WwsMC{
     .titleHeadZ{
       .titleZ{
         font-size :25px;

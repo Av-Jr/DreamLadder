@@ -193,13 +193,13 @@ return (
         <div className="heroText">
             {
                 BondsHeroData.description.map((item, index) => (
-                    <span className={"Gen dark"} key={index}>
+                    <span className={"Gen dark small bold"} key={index}>
                         {item.text}
                     </span>
                 ))
             }
 
-            <span className={"Gen quote"}>
+            <span className={"Gen quote small"}>
                 {BondsHeroData.quote}
             </span>
 
@@ -215,13 +215,13 @@ return (
 
         <div className="left">
 
-            <h2 className={"Gen"}>{BondsRegulationData.title}</h2>
+            <h2 className={"Gen bold"}>{BondsRegulationData.title}</h2>
 
             {
                 BondsRegulationData.points.map((item, index) => (
                     <div className={"timelineCard"} key={index}>
-                        <h3 className={"Syn dark"}>{item.title}</h3>
-                        <span className={"Gen light"}>{item.description}</span>
+                        <h3 className={"Syn dark small"}>{item.title}</h3>
+                        <span className={"Gen light small"}>{item.description}</span>
                     </div>
                 ))
             }
@@ -230,7 +230,7 @@ return (
 
         <div className="right">
 
-            <span className={"quote"}>
+            <span className={"quote Gen small"}>
                 {BondsRegulationData.quote}
             </span>
 
@@ -256,17 +256,17 @@ return (
 
         <div className="heroText">
 
-            <h2 className={"Gen"}>{FixedIncomeIntroData.title}</h2>
+            <h2 className={"Gen bold"}>{FixedIncomeIntroData.title}</h2>
 
             {
                 FixedIncomeIntroData.description.map((item, index) => (
-                    <span className={"Gen dark"} key={index}>
+                    <span className={"Gen light small"} key={index}>
                         {item.text}
                     </span>
                 ))
             }
 
-            <span className={"quote"}>
+            <span className={"quote Gen small"}>
                 {FixedIncomeIntroData.quote}
             </span>
 
@@ -276,52 +276,53 @@ return (
 
     <div className="Bondsfive">
 
-        <h2 className={"Syn"}>{FixedIncomeTypesData.title}</h2>
+        <div className="conSecBF">
+            <h2 className={"Syn"}>{FixedIncomeTypesData.title}</h2>
+            <span className={"Gen light"}>{FixedIncomeTypesData.description}</span>
 
-        <span className={"Gen light"}>{FixedIncomeTypesData.description}</span>
+            <div className="middleSection">
 
-        <div className="middleSection">
+                <div className="left">
 
-            <div className="left">
+                    {
+                        FixedIncomeTypesData.cards.slice(0,3).map((item, index) => (
+                            <div className={`typeCard ${index % 2 !== 0 ? "start" : "end"}`} key={index}>
 
-                {
-                    FixedIncomeTypesData.cards.slice(0,3).map((item, index) => (
-                        <div className={`typeCard ${index % 2 !== 0 ? "start" : ""}`} key={index}>
+                                <h3 className={"Gen dark bold"}>
+                                    <span className={"Gen bold"}>{item.number}</span> {item.title}
+                                </h3>
 
-                            <h3 className={"Gen bold dark"}>
-                                <span className={"Gen light"}>{item.number}</span> {item.title}
-                            </h3>
+                                <span className={"Gen small"}>{item.description}</span>
 
-                            <span className={"Gen light"}>{item.description}</span>
+                            </div>
+                        ))
+                    }
 
-                        </div>
-                    ))
-                }
+                </div>
+
+                <div className="centerImg">
+                    <img loading="lazy" src={img(FixedIncomeTypesData.image)} alt=""/>
+                </div>
+
+                <div className="right">
+
+                    {
+                        FixedIncomeTypesData.cards.slice(3,6).map((item, index) => (
+                            <div className={`typeCard ${index % 2 !== 0 ? "end" : ""}`} key={index}>
+
+                                <h3 className={"Gen bold"}>
+                                    <span className={"Gen bold"}>{item.number}</span> {item.title}
+                                </h3>
+
+                                <span className={"Gen small"}>{item.description}</span>
+
+                            </div>
+                        ))
+                    }
+
+                </div>
 
             </div>
-
-            <div className="centerImg">
-                <img loading="lazy" src={img(FixedIncomeTypesData.image)} alt=""/>
-            </div>
-
-            <div className="right">
-
-                {
-                    FixedIncomeTypesData.cards.slice(3,6).map((item, index) => (
-                        <div className={`typeCard ${index % 2 !== 0 ? "end" : ""}`} key={index}>
-
-                            <h3 className={"Gen bold dark"}>
-                                <span className={"Gen light"}>{item.number}</span> {item.title}
-                            </h3>
-
-                            <span className={"Gen light"}>{item.description}</span>
-
-                        </div>
-                    ))
-                }
-
-            </div>
-
         </div>
 
     </div>
@@ -332,7 +333,7 @@ return (
 
             <img loading="lazy" src={img(WhyFixedIncomeData.image)} alt=""/>
 
-            <span className={"quote"}>
+            <span className={"quote Gen small"}>
                 {WhyFixedIncomeData.quote}
             </span>
 
@@ -340,13 +341,15 @@ return (
 
         <div className="right">
 
-            <h2 className={"Gen dark"}>{WhyFixedIncomeData.title}</h2>
+            <h2 className={"Gen dark bold"}>{WhyFixedIncomeData.title}</h2>
 
             <div className="line"></div>
 
+            <h3 className={"Gen dark"}>Fixed income products play a pivotal role in a well-constructed portfolio by offering:</h3>
+
             {
                 WhyFixedIncomeData.points.map((item, index) => (
-                    <span className={"Gen dark"} key={index}>
+                    <span className={"Gen dark small"} key={index}>
                         {index + 1}. {item}
                     </span>
                 ))

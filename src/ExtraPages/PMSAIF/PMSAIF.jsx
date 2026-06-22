@@ -259,50 +259,51 @@ const WhyAIFData = {
         <span className="titleZ">PMS / AIF</span>
       </div>
 
-      <div className="PMSone rev">
-        <img loading="lazy"
-          className={"heroImg"}
-          src={`${img(PMSHeroData.image)}`}
-          alt=""
-        />
-
+      <div className="PMSone">
         <div className="heroText">
           {PMSHeroData.description.map((item, index) => (
-            <span className="Gen" key={index}>
+              <span className="Gen small dark" key={index}>
               {item.text}
             </span>
           ))}
 
-          <span className="quote">
-            {PMSHeroData.quote}
-          </span>
+
         </div>
+
+        <img loading="lazy"
+             className={"heroImg"}
+             src={`${img(PMSHeroData.image)}`}
+             alt=""
+        />
       </div>
 
       <div className="PMStwo">
-        <div className="left">
-          <h2 className={"Gen bold"}>{PMSFeatureData.title}</h2>
+        <div className="innerPMStwo">
+          <div className="left">
+            <h2 className={"Gen bold"}>{PMSFeatureData.title}</h2>
 
-          <span className={"Gen"}>{PMSFeatureData.description}</span>
+            <span className={"Gen small light"}>{PMSFeatureData.description}</span>
 
-          <img loading="lazy" src={`${img(PMSFeatureData.image)}`} alt="" />
-        </div>
+            <img loading="lazy" src={`${img(PMSFeatureData.image)}`} alt="" />
+          </div>
 
-        <div className="right">
-          {
-            PMSFeatureData.cards.map((item, index) => {
-              const Icon = item.icon;
+          <div className="right">
+            {
+              PMSFeatureData.cards.map((item, index) => {
+                const Icon = item.icon;
 
-              return (
-                <div className="featureCard" key={index}>
-                  <div className={"exp"}>
-                    <Icon className={"cardIcon"} size={32}/>
-                  </div>
-                  <span className={"Gen"}><h3 className={"Gen bold"}>{item.title}</h3><br/>{item.description}</span>
-                </div>
-              );
-            })
-          }
+                return (
+                    <div className="featureCard" key={index}>
+                      <Icon className={"cardIcon"} size={32}/>
+                      <div className={"textElePMStwo"}>
+                        <h3 className={"Gen bold"}>{item.title}</h3>
+                        <span className={"Gen small light"}>{item.description}</span>
+                      </div>
+                    </div>
+                );
+              })
+            }
+          </div>
         </div>
       </div>
 
@@ -323,8 +324,8 @@ const WhyAIFData = {
                   <div className="diamond"></div>
 
                   <div className="stepContent">
-                    <h3 className={"Syn"}>{item.title}</h3>
-                    <span className={"Gen light"}>{item.description}</span>
+                    <h2 className={"Syn small"}>{item.title}</h2>
+                    <span className={"Gen light small"}>{item.description}</span>
                   </div>
 
                 </div>
@@ -336,9 +337,9 @@ const WhyAIFData = {
 
         <div className="right">
 
-          <span className="quote">
-            {PMSRegulationData.quote}
-          </span>
+    <span className="quote Gen small">
+      {PMSRegulationData.quote}
+    </span>
 
           <img
               loading="lazy"
@@ -372,15 +373,15 @@ const WhyAIFData = {
 
           {
             AIFIntroData.description.map((item, index) => (
-              <span className={"Gen"} key={index}>
-                {item.text}
-              </span>
+                <span className={"Gen small light"} key={index}>
+          {item.text}
+        </span>
             ))
           }
 
-          <span className="quote">
-            {AIFIntroData.quote}
-          </span>
+          <span className="quote Gen small">
+      {AIFIntroData.quote}
+    </span>
 
         </div>
 
@@ -391,30 +392,29 @@ const WhyAIFData = {
         <div className="left">
           {
             AIFTypesData.cards.map((item, index) => (
-              <div className="aifCard" key={index}>
+                <div className="aifCard" key={index}>
+                  <div className="firstRow">
+                    <span className={"Gen dark small bold"}>{item.number}</span>
+                    <h2 className={"Syn small"}>{item.title}</h2>
+                  </div>
 
-                <h3 className={"Syn"}>
-                  <span className={"Gen dark"}>{item.number}</span>
-                  {item.title}
-                </h3>
+                  <span className={'Gen light small'}>{item.description}</span>
 
-                <span className={'Gen light'}>{item.description}</span>
+                  <div className="thirdRow">
 
-                <div className="bottom">
+                    <div className={"it"}>
+                      <h3 className={"Gen dark"}>OBJECTIVE</h3>
+                      <span className={"Gen italic light small"}>{item.objective}</span>
+                    </div>
 
-                  <span className={"it"}>
-                    <h3 className={"Gen darl"}>OBJECTIVE</h3>
-                    <span className={"Gen italic light"}>{item.objective}</span>
-                  </span>
+                    <div className={"it"}>
+                      <h3 className={"Gen dark"}>EXAMPLES</h3>
+                      <span className={"Gen light small"}>{item.examples}</span>
+                    </div>
 
-                  <span>
-                    <h3 className={"Gen dark"}>EXAMPLES</h3>
-                    <span className={"Gen italic light"}>{item.examples}</span>
-                  </span>
+                  </div>
 
                 </div>
-
-              </div>
             ))
           }
         </div>
@@ -422,9 +422,9 @@ const WhyAIFData = {
         <div className="right">
           <h2 className={"Gen dark bold"}>{AIFTypesData.title}</h2>
 
-          <span className={"Gen light"}>
-            SEBI classifies Alternative Investment Funds into three distinct categories based on investment objectives and asset classes.
-          </span>
+          <span className={"Gen light small"}>
+      SEBI classifies Alternative Investment Funds into three distinct categories based on investment objectives and asset classes. Each category serves specific investor needs, ranging from social impact and infrastructure to complex trading strategies.
+    </span>
 
           <img loading="lazy" src={`${img(AIFTypesData.image)}`} alt="" />
         </div>
@@ -436,21 +436,23 @@ const WhyAIFData = {
         <div className="left">
           <h2 className={"Gen bold dark"}>{AIFRegulationData.title}</h2>
 
-          <span className={"Gen light"}>
-            {AIFRegulationData.description}
-          </span>
+          <span className={"Gen light small"}>
+      {AIFRegulationData.description}
+    </span>
 
           <img loading="lazy" src={`${img(AIFRegulationData.image)}`} alt="" />
         </div>
 
-        <div className="right">
+        <div className="rightPMS">
           {
             AIFRegulationData.points.map((item, index) => (
-              <div className="regCard" key={index}>
-                <span className={"Syn light"}>0{index + 1}</span>
-
-                <span className={"Gen light"}><h3 className="Gen dark bold">{item.title} : </h3><span className="descH3">{item.description}</span></span>
-              </div>
+                <div className="regCard" key={index}>
+                  <span className={"Syn light small"}>0{index + 1}</span>
+                  <div className="eleregCard">
+                    <h3 className="Gen dark bold">{item.title} : </h3>
+                    <span className={"Gen light small"}>{item.description}</span>
+                  </div>
+                </div>
             ))
           }
         </div>
@@ -469,6 +471,8 @@ const WhyAIFData = {
 
 
       <Ql />
+
+
     </div>
   );
 }

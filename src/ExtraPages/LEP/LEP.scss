@@ -1,207 +1,115 @@
 @use "../../mixins" as *;
-
 $colorRed : #ef3b3b;
-$darkBlue : #17233d;
+
+//grid 2cols
+.LEPone{
+  display : grid;
+  grid-template-columns : repeat(2, auto);
+  place-items : center;
+  gap : 20px;
+}
+
+//flex-cols
+.pointsCont, .left, .right, .LEPtwo, .textCont, .quoteBox{
+  display : flex;
+  flex-direction : column;
+  justify-content : center;
+  align-items : flex-start;
+  gap : 20px;
+  
+}
+
+//flex-rows
+.e{
+  display : flex;
+  flex-direction : row;
+  justify-content : center;
+  align-items :center;
+  gap : 40px;
+}
+
+//center text align
+.LEPone, .pointsCont, .textCont{
+  h1, h2, h3{
+    text-align : left;
+    width : 100%;
+  }
+  
+  span{
+    text-align : left;
+  }
+}
+
+//max-width
+.LEPone, .LEPtwo{
+  max-width : 1300px;
+}
+
+//padding
+.LEPone, .LEPtwo{
+  padding : 100px 50px;
+}
+
+//innerPadding
+.left, .right, .expertiseRow{
+  padding : 40px;
+}
 
 #LegacyEstatePlanningMC{
-  .LEPone, .LEPtwo{
-    width : 100%;
-    margin-top : 50px;
-    margin-bottom : 50px;
-    img{
-      width : 80%;
-      height : 100%;
-      object-fit : contain;
-      object-position : right;
-    }
-    
-    span{
-      font-size : clamp(0px, 3vh, 20px);
-      
-      -webkit-text-stroke: 0.5px currentColor;
-      letter-spacing : 1px;
-      line-height : 1.4;
-      font-weight : normal;
-      &.Gen{
-        font-family : Genos;
-      }
-      
-      &.Syn{
-        font-family : SyneMono;
-      }
-      
-      &.quote{
-        font-family : Genos;
-        font-style : italic;
-        border-left : 4px solid #E53A36;
-        padding-left : 20px;
-        color : #64748B;
-        font-size : clamp(0px, 3vh, 18px);
-      }
-      
-      &.italic{
-        font-style : italic;
-      }
-      
-      &.light{
-        color : #475569;
-      }
-      
-      &.dark{
-        color : black;
-      }
-    }
-    
-    h1{
-      font-weight : normal;
-      font-size : clamp(0px, 6vh, 50px) !important;
-      color : black;
-      
-      &.Gen{
-        font-family : Genos;
-      }
-      &.Syn{
-        font-family : SyneMono;
-      }
-      &.bold{
-        -webkit-text-stroke: 0.5px currentColor;
-        font-weight : bold;
-      }
-      &.light{
-        color : #475569;
-      }
-      
-      &.dark{
-        color : black;
-      }
-    }
-    
-    h2{
-      font-weight : normal;
-      -webkit-text-stroke: 0.5px currentColor;
-      color : black;
-      font-size : clamp(0px, 5vh, 40px) !important;
-      
-      &.Gen{
-        font-family : Genos;
-      }
-      &.Syn{
-        font-family : SyneMono;
-      }
-      &.bold{
-        -webkit-text-stroke: 0.5px currentColor;
-        font-weight : bold;
-      }
-      &.light{
-        color : #475569;
-      }
-      
-      &.dark{
-        color : black;
-      }
-    }
-    
-    h3{
-      font-weight : normal;
-      
-      color : black;
-      font-size : clamp(0px, 3vh, 20px) !important;
-      
-      &.Gen{
-        font-family : Genos;
-      }
-      &.Syn{
-        font-family : SyneMono;
-      }
-      &.bold{
-        -webkit-text-stroke: 0.5px currentColor;
-        font-weight : bold;
-      }
-      &.light{
-        color : #475569;
-      }
-      
-      &.dark{
-        color : black;
-      }
-    }
-    
-  }
+  width : 100vw;
+  overflow-x : clip;
+  display : grid;
+  place-items : center;
+  
   .LEPone{
-    display : grid;
-    grid-template-columns : repeat(2, auto);
-    place-items : center;
-    padding : 0 150px 0 150px;
-    gap : 100px;
-    
-    .right{
-      display : flex;
-      width : 100%;
-      justify-content : center;
-      align-items : center;
-    }
-    
     .left{
+      align-items : flex-start;
       .pointsCont{
-        margin-top : 20px;
-        display : flex;
-        flex-direction : column;
         gap : 20px;
+        align-items : flex-start;
         .pointEle{
+          display : grid;
+          place-items : start;
+          border-bottom : 1px solid #F1F5F9;
           width : 100%;
-          border-bottom : 1px solid rgba(0, 0, 0, 0.1);
         }
       }
     }
   }
+  
   .LEPtwo{
-    display : grid;
-    grid-template-rows : repeat(6, auto);
-    gap : 100px;
-    margin-top : 100px;
-    
     .expertiseRow{
       display : grid;
       grid-template-columns : repeat(2, auto);
       gap : 50px;
-      padding : 0 150px 0 150px;
+      background: #F9FAFC;
+      
+      &.reverse{
+        background: transparent;
+        .imgCont{
+          grid-row : 1;
+          grid-column : 2;
+        }
+        
+        .textCont{
+          grid-row : 1;
+          grid-column : 1;
+        }
+      }
+      
       .imgCont{
-        display : flex;
-        width : 100%;
-        justify-content : center;
-        align-items : center;
+        display : grid;
+        place-items : center;
       }
       
       .textCont{
-        display : flex;
-        flex-direction : column;
-        align-items : flex-start;
-        gap : 10px;
-        
-        
         .quoteBox{
-          margin-top : 40px;
-          padding : 20px;
-          display : flex;
-          flex-direction : column;
-          align-items : flex-start;
-          gap : 10px;
+          gap : 5px;
           background: white;
-          width : 100%;
-          border-radius : 15px;
-        }
-      }
-      &.reverse{
-        padding-top : 30px;
-        padding-bottom : 30px;
-        background: #f1f2f4;
-        .imgCont{
-          grid-column : 2;
-          grid-row : 1;
-        }
-        .textCont{
-          grid-column : 1;
-          grid-row : 1;
+          margin-top : 20px;
+          padding : 20px;
+          border-left : 3px solid $colorRed;
+          box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         }
       }
     }
@@ -209,54 +117,46 @@ $darkBlue : #17233d;
 }
 
 @include mediaDevice(mobile){
+  .LEPone{
+    grid-template-columns : 1fr;
+    grid-template-rows : repeat(2, auto);
+  }
+  
+  .LEPone, .LEPtwo{
+    padding : 10px;
+    margin-top : 50px;
+    margin-bottom : 50px;
+  }
+  
+  .left, .right, .expertiseRow{
+    padding : 10px;
+  }
+  
   #LegacyEstatePlanningMC{
-    .LEPone, .LEPtwo{
-      padding : 0 10px 0 10px;
-
-    }
-    
-    .LEPone{
-      grid-template-columns : 1fr;
-      grid-template-rows : repeat(2, auto);
-      place-items : center;
-      .left{
-        grid-row : 2;
-        grid-column : 1;
-      }
-      
-      .right{
-        grid-row : 1;
-        grid-column : 1;
-      }
-      
-      .right{
-        width : 100%;
-        img{
-          object-position : center;
-          object-fit : cover;
-        }
-      }
-    }
-    
     .LEPtwo{
-      gap : 50px;
-      
       .expertiseRow{
         grid-template-columns : 1fr;
         grid-template-rows : repeat(2, auto);
-        padding : 10px;
-        border-radius : 10px;
         
-
+        .imgCont{
+          grid-column : 1;
+          grid-row : 2;
+        }
+        
+        .textCont{
+          grid-column : 1;
+          grid-row : 1;
+        }
         
         &.reverse{
           .imgCont{
-            grid-row : 1;
+            grid-row : 2;
             grid-column : 1;
           }
+          
           .textCont{
-            grid-row : 2;
-            grid-column :1;
+            grid-row : 1;
+            grid-column : 1;
           }
         }
       }

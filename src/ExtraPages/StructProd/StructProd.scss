@@ -1,299 +1,108 @@
 @use "../../mixins" as *;
-
 $colorRed : #ef3b3b;
 $darkBlue : #17233d;
 
+//grid 2cols
+.SPone, .cardsCont, .SPthree{
+  display : grid;
+  grid-template-columns : repeat(2, auto);
+  gap : 40px;
+  place-items : center;
+}
+
+//flex-cols
+.innerSPtwo, .textElll{
+  display : flex;
+  flex-direction : column;
+  justify-content : center;
+  align-items : center;
+  gap : 20px;
+  
+}
+
+//flex-rows
+.featureCard, .RegItem, .firstRow, .thirdRow, .regCard{
+  display : flex;
+  flex-direction : row;
+  justify-content : flex-start;
+  align-items : flex-start;
+  gap : 20px;
+}
+
+//center text align
+.PMSone, .heroText, .left, .rightPMS,.right{
+  h1, h2, h3{
+    text-align : left;
+    width : 100%;
+  }
+  
+  span{
+    text-align : left;
+  }
+}
+
+//max-width
+.SPone, .innerSPtwo, .SPthree{
+  max-width : 1300px;
+}
+
+//padding
+.SPone, .innerSPtwo, .SPthree{
+  padding : 100px 50px;
+}
+
+//innerPadding
+.heroText, .heroImg, .cardEle{
+  padding : 20px;
+}
+
 #StructuredProductsMC{
-  position : relative;
-  min-height : 100vh;
-  width : 100%;
-  background : #f7f7f7;
-
-  *{
-    box-sizing : border-box;
-  }
+  display : grid;
+  place-items : center;
   
-  .SPone, .SPtwo, .SPthree{
-    margin : 100px auto;
-    width : 80%;
+  .SPtwo{
+    min-height : 100vh;
+    background: img("flexBack") center/cover no-repeat;
+    width : 100%;
     display : grid;
-    grid-template-columns : repeat(2,1fr);
-    gap : 60px;
     place-items : center;
-    
-    
-    span{
-      font-size : clamp(0px, 3vh, 20px);
-      
-      -webkit-text-stroke: 0.5px currentColor;
-      letter-spacing : 1px;
-      line-height : 1.4;
-      font-weight : normal;
-      &.Gen{
-        font-family : Genos;
-      }
-      
-      &.quote{
-        font-family : Genos;
-        font-style : italic;
-        border-left : 4px solid #E53A36;
-        padding-left : 20px;
-        color : #64748B;
-        font-size : clamp(0px, 3vh, 18px);
-      }
-      
-      &.italic{
-        font-style : italic;
-      }
-      
-      &.light{
-        color : #475569;
-      }
-      
-      &.dark{
-        color : black;
-      }
-    }
-    
-    h1{
-      font-weight : normal;
-      font-size : clamp(0px, 6vh, 50px) !important;
-      color : black;
-      
-      &.Gen{
-        font-family : Genos;
-      }
-      &.Syn{
-        font-family : SyneMono;
-      }
-      &.bold{
-        -webkit-text-stroke: 0.5px currentColor;
-        font-weight : bold;
-      }
-      &.light{
-        color : #475569;
-      }
-      
-      &.dark{
-        color : black;
-      }
-    }
-    
-    h2{
-      font-weight : normal;
-      -webkit-text-stroke: 0.5px currentColor;
-      color : black;
-      font-size : clamp(0px, 5vh, 40px) !important;
-      
-      &.Gen{
-        font-family : Genos;
-      }
-      &.Syn{
-        font-family : SyneMono;
-      }
-      &.bold{
-        -webkit-text-stroke: 0.5px currentColor;
-        font-weight : bold;
-      }
-      &.light{
-        color : #475569;
-      }
-      
-      &.dark{
-        color : black;
-      }
-    }
-    
-    h3{
-      font-weight : normal;
-      
-      color : black;
-      font-size : clamp(0px, 3vh, 20px) !important;
-      
-      &.Gen{
-        font-family : Genos;
-      }
-      &.Syn{
-        font-family : SyneMono;
-      }
-      &.bold{
-        -webkit-text-stroke: 0.5px currentColor;
-        font-weight : bold;
-      }
-      &.light{
-        color : #475569;
-      }
-      
-      &.dark{
-        color : black;
-      }
-    }
-    
-  }
-  
-  .SPtwo{
-    width : 100%;
-    background-image: img("flexBack");
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    display : flex;
-    flex-direction : column;
-    justify-content : center;
-    align-items : center;
-    gap : 10px;
-    padding : 100px;
-  }
-  
-
-  .headTit{
-    width : 100%;
-    height : 20vh;
-
-    background-image: img("HP56");
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-
-    display : flex;
-    justify-content : center;
-    align-items : center;
-  }
-  
-
-  .SPone{
-
-    .heroText{
-      display : flex;
-      flex-direction : column;
-      gap : 35px;
-	  justify-content : center;
-	  align-items : center;
-    }
-
-    .heroImg{
-
-      img{
-        width : 100%;
-      }
-    }
-  }
-
-  .SPtwo{
-
-    .cardsCont{
-      width : 80%;
-      margin-top : 30px;
-      display : grid;
-      grid-template-columns : repeat(2, auto);
-      place-items : center;
-      gap : 10px;
-
-      .cardEle{
-        background : rgba(255,255,255,0.75);
-        backdrop-filter : blur(8px);
-        border-radius : 20px;
-        display : flex;
-        flex-direction : row;
-        justify-content : center;
-        align-items : center;
-        gap : 15px;
-		min-height : auto;
-		padding : 20px;
-        max-width : 700px;
-        box-shadow :
-        0 5px 10px rgba(0,0,0,0.06),
-        0 20px 40px rgba(0,0,0,0.08);
-        
-        .textElll{
+    .innerSPtwo{
+      .cardsCont{
+        margin-top : 50px;
+        gap : 40px;
+        .cardEle{
           display : flex;
-          flex-direction : column;
-          gap : 15px;
-        }
-
-        .cardTop{
-          display : flex;
+          flex-direction : row;
+          justify-content : flex-start;
           align-items : flex-start;
-          gap : 18px;
-          align-self : stretch;
-
-          svg{
-            width : 32px;
-            height : 32px;
-
-            padding : 5px;
-
-            background : rgb(255, 225, 225);
-
-            border-radius : 10px;
-
-            color : $colorRed;
-          }
+          gap : 40px;
           
+          background: white;
+          border-radius : 20px;
         }
-        
       }
     }
   }
-
+  
   .SPthree{
-
     .left{
-      display : flex;
-      flex-direction : column;
-      gap : 35px;
-      
-
-      .line{
-        width : 80px;
-        height : 4px;
-        background : $colorRed;
-      }
-
-      img{
-        width : 90%;
-      }
-    }
-
-    .right{
-      display : flex;
-      flex-direction : column;
-      gap : 40px;
-
-      .pointEle{
-        display : flex;
-        align-items : flex-start;
-        gap : 25px;
-      }
     }
   }
 }
 
 @include mediaDevice(mobile){
-  #StructuredProductsMC{
-    
-    .SPone, .SPtwo, .SPthree {
-      margin: 50px auto;
-      width: 90%;
-      grid-template-columns : 1fr;
-      grid-template-rows : 1fr;
-      gap  : 100px;
-      place-items: center;
-      
-    }
-    
-    
-    
-    .SPtwo{
-      width : 100%;
-      gap  : 20px;
-      padding : 10px;
-      .cardsCont{
-        grid-template-columns : 1fr;
-        grid-template-rows : auto;
-        width : 80%;
-        gap : 10px;
-      }
-    }
+  .SPone, .cardsCont, .SPthree{
+    grid-template-columns : 1fr;
+    grid-template-rows : repeat(2, auto);
+  }
+  
+  .SPone, .innerSPtwo, .SPthree{
+    padding : 10px;
+    margin-top : 50px;
+    margin-bottom : 50px;
+  }
+  
+  .heroText, .heroImg, .cardEle{
+    padding : 20px;
   }
 }

@@ -122,11 +122,11 @@ const StructProd = () => {
 
           {
             StructuredProductsHeroData.description.map((item, index) => (
-              <span className={"Gen dark"} key={index}>{item.text}</span>
+              <span className={"Gen dark small"} key={index}>{item.text}</span>
             ))
           }
 
-          <span className={"quote"}>
+          <span className={"quote Gen small"}>
             {StructuredProductsHeroData.quote}
           </span>
 
@@ -142,34 +142,31 @@ const StructProd = () => {
       </div>
 
       <div className={"SPtwo"}>
+        <div className="innerSPtwo">
+          <h2 className={"Gen dark"}>{StructuredProductsTypesData.title}</h2>
 
-        <h2 className={"Gen dark"}>{StructuredProductsTypesData.title}</h2>
+          <span className={"Gen light small"}>{StructuredProductsTypesData.description}</span>
 
-        <span className={"Gen light"}>{StructuredProductsTypesData.description}</span>
+          <div className={"cardsCont"}>
 
-        <div className={"cardsCont"}>
+            {
+              StructuredProductsTypesData.cards.map((item, index) => {
 
-          {
-            StructuredProductsTypesData.cards.map((item, index) => {
+                const Icon = item.icon;
 
-              const Icon = item.icon;
+                return(
+                    <div className={"cardEle"} key={index}>
+                      <Icon className={"cardIcon"} size={30}/>
+                      <div className={"textElll"}>
+                        <h3 className={"Syn bold"}>{item.title}</h3>
+                        <span className={"Gen light bold small"}>{item.description}</span>
+                      </div>
+                    </div>
+                );
+              })
+            }
 
-              return(
-                <div className={"cardEle"} key={index}>
-
-                  <div className={"cardTop"}>
-                    <Icon/>
-                  </div>
-
-                  <div className={"textElll"}>
-                    <h3 className={"Syn bold"}>{item.title}</h3>
-                    <span className={"Gen light bold"}>{item.description}</span>
-                  </div>
-                </div>
-              );
-            })
-          }
-
+          </div>
         </div>
 
       </div>
@@ -182,7 +179,7 @@ const StructProd = () => {
 
           <div className={"line"}></div>
 
-          <span className={"Gen light"}>
+          <span className={"Gen dark small"}>
             {StructuredProductsRegulationData.description}
           </span>
 
@@ -199,15 +196,15 @@ const StructProd = () => {
             StructuredProductsRegulationData.points.map((item, index) => (
               <div className={"pointEle"} key={index}>
 
-                <span className={"Gen light"}>{`0${index + 1}`}</span>
+                <span className={"Gen light small"}>{`0${index + 1}`}</span>
 
-                <span className={"Gen dark"}>{item}</span>
+                <span className={"Gen dark small"}>{item}</span>
 
               </div>
             ))
           }
 
-          <span className={"quote"}>
+          <span className={"quote Gen small"}>
             {StructuredProductsRegulationData.quote}
           </span>
 
