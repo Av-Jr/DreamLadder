@@ -10,6 +10,7 @@
   justify-content : center;
   gap : 30px;
   max-width : 1300px;
+
   
   .iframeElesCon, .blogsEle{
     display : flex;
@@ -69,6 +70,14 @@
 
 @include mediaDevice(mobile){
   #InsightsMC{
+    h1, h2, h3{
+      text-align : left;
+    }
+    
+    span{
+      width : 100%;
+      text-align : left;
+    }
     width: 100%;
     padding: 0;
     gap: 20px;

@@ -143,7 +143,6 @@ const Insurance = () => {
       }
     ]
   };
-
   return (
     <div id={"InsuranceMC"}>
       <div className="titleHeadZ">

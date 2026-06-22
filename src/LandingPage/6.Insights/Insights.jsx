@@ -32,11 +32,11 @@ const Insights = () => {
 
     return(
         <div id={"InsightsMC"}>
-            <h1 className={"Gen"}>Latest Insights</h1>
-            <h2 className={"Gen light small"}>Market perspective and Financial wisdom to keep you ahead.</h2>
+            <h2 className={"Gen dark bold"}>Latest Insights</h2>
+            <span className={"Gen light small"}>Market perspective and Financial wisdom to keep you ahead.</span>
 
             <div className={"iframeElesCon"}>
-                <h3 className={"Gen light"}>Featured Videos</h3>
+                <h3 className={"Gen light small"}>Featured Videos</h3>
                 <div className={"itsChild"}>
                     {
                         ytUrls.map((item, index) => (

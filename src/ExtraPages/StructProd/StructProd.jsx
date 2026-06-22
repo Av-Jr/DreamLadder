@@ -113,7 +113,7 @@ const StructProd = () => {
     <div id={"StructuredProductsMC"}>
       <div className="titleHeadZ">
         <NavBar></NavBar>
-        <span className="titleZ">Structured<br></br>Products</span>
+        <span className="titleZ">Structured <br id={"breakMob"} />Products</span>
       </div>
 
       <div className={"SPone"}>

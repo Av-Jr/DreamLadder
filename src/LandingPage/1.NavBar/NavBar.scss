@@ -11,7 +11,7 @@
   
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
   
   .hamBtn{
     display : none;
@@ -23,8 +23,7 @@
   .logo {
     cursor: pointer;
     display : grid;
-    place-items : center;
-    width : fit-content;
+    align-items : center;
     
     img {
       object-fit: contain;
@@ -89,14 +88,15 @@
         background : white;
         top : 0;
         left : 100%;
-        min-width : 150px;
+        min-width : 200px;
         border-radius : 5px;
         display : none;
         flex-direction : column;
         overflow : hidden;
-        align-items : center;
-        justify-content : start;
-        gap : 8px;
+        align-items : start;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+        justify-content : space-around;
+        padding : 10px;
       }
       
       &:hover {
@@ -123,15 +123,16 @@
         
         flex-direction: column;
         
-        min-width: 150px;
+        min-width: 200px;
         
         background: white;
         border-radius: 5px;
         overflow: visible;
         
         box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-        gap : 8px;
+        justify-content : space-around;
         align-items : stretch;
+        padding : 10px;
         
         .btnWrap{
           position : relative;
@@ -155,17 +156,28 @@
         border-radius : 5px;
         padding: 4px 12px;
         width : 100%;
-        border: none;
         background: transparent;
-        
         color: black;
         font-weight: bold;
-        
+        border: none;
+        background: transparent;
+        display : flex;
+        flex-direction : row;
+        align-items : flex-start;
         cursor: pointer;
+        justify-content : space-between;
+        
+        .subArrow{
+          transition : all 0.3s ease;
+        }
         
         &:hover {
           background: rgba(0, 0, 0, 0.08);
           color: #e31e24;
+          
+          .subArrow{
+            transform : rotate(180deg);
+          }
         }
       }
     }
@@ -175,17 +187,14 @@
 
 @include mediaDevice(mobile){
   #NavBarMC{
-    justify-content : space-between;
+    justify-content : space-around;
     align-items : center;
-    padding : 10px 50px;
     .logo{
       display : flex;
-      flex : 1 1 0;
-      height : 100%;
       justify-content : flex-start;
       align-items : center;
      img{
-       width : 60%;
+       width : 25%;
      }
     }
     .mobileActionBtn{
@@ -214,7 +223,6 @@
     .mobileThirdMenu{
       display:flex;
       flex-direction:column;
-      
       background:#eeeeee;
     }
     
@@ -289,9 +297,10 @@
       
       display:flex;
       flex-direction:column;
-      
       background: white;
       z-index : 101;
+      border-radius : 10px;
+      overflow: hidden;
     }
     
     .mobileBtn{

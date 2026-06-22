@@ -11,6 +11,10 @@ $colorRed : #ef3b3b;
   z-index : 0
 }
 
+#breakMob{
+  display : none;
+}
+
 body{
   height : 100vh;
   overflow : visible;
@@ -237,7 +241,7 @@ body{
   
   .titleHeadZ{
     position : relative;
-    height : 200px;
+    height : 250px;
     width: 100%;
     background-image: img("HP56");
     background-position: center;
@@ -247,11 +251,6 @@ body{
     justify-content : space-between;
     flex-direction : column;
     text-align: center;
-    white-space : nowrap;
-    
-    span{
-      white-space : nowrap !important;
-    }
     
     &::after{
       content: "";
@@ -261,7 +260,7 @@ body{
       bottom: 0;
       
       width: 100%;
-      height: 40px;
+      height: 50px;
       background: linear-gradient(
               to bottom,
               transparent,
@@ -273,27 +272,32 @@ body{
     }
     
     .titleZ{
-      position : relative;
       font-family: SyneMono !important;
-      font-size : 35px;
-      margin-bottom : 50px;
-      word-break : normal;
-      bottom : 0;
-      top : 50%;
-      white-space : nowrap !important;
+      font-size : 28px;
+      height : 100%;
+      display : grid;
+      place-items : center;
     }
   }
 }
 
 @include mediaDevice(mobile){
+  #breakMob{
+    display : block;
+  }
+  
   #AboutMC, #NavBar, #ReturnSliderMC, #CalculatorMC, #InsightsMC, #PowMC, #FooterMC{
     margin-bottom: 50px;
   }
   
-  #MFsMC, #PMSAIFMC, #BondsMC, #StructuredProductsMC, #LegacyEstatePlanningMC, #insuranceMC, #bespokePage, #BlogsMC, #MediaMC, .calc-root, .connectPage, #DisclaimerMC, #DisclosureMC, #WwsMC{
+  #MFsMC, #PMSAIFMC, #BondsMC, #StructuredProductsMC, #LegacyEstatePlanningMC, #InsuranceMC, #bespokePage, #BlogsMC, #MediaMC, .calc-root, .connectPage, #DisclaimerMC, #DisclosureMC, #WwsMC{
     .titleHeadZ{
+      height : 150px;
       .titleZ{
-        font-size :25px;
+        font-size :20px;
+        align-items : end;
+        padding-bottom : 30px;
+        white-space : wrap;
       }
     }
     

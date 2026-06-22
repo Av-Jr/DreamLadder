@@ -40,7 +40,7 @@ const Bp = () => {
         <div id="bespokePage">
           <div className="titleHeadZ">
             <NavBar></NavBar>
-            <span className="titleZ">Bespoke Portfolio</span>
+            <span className="titleZ">Bespoke <br id={"breakMob"} />Portfolio</span>
           </div>
             <div className="heroContainer">
 

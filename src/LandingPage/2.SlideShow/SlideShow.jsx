@@ -14,14 +14,15 @@ import {
 const SlideShow = () => {
     const [activeSlide, setActiveSlide] = useState(0);
     const [animate, setAnimate] = useState(true);
+    const[reset, setReset] = useState(0);
 
     useEffect(() => {
       const interval = setInterval(() => {
         setActiveSlide((prev) => prev + 1);
-      }, 5000);
+      }, 8000);
 
       return () => clearInterval(interval);
-    }, []);
+    }, [reset]);
 
     useEffect(() => {
       if (activeSlide === 2) {
@@ -134,19 +135,24 @@ const SlideShow = () => {
       <button
           className="slideArrow left"
           onClick={() =>
-              setActiveSlide((prev) => (prev === 0 ? 1 : prev - 1))
+          {
+              setActiveSlide((prev) => (prev === 0 ? 1 : prev - 1));
+              setReset(prev => prev + 1);
+          }
           }
       >
-        <ChevronLeft size={30} />
+        <ChevronLeft size={30} className={"NAVarrow"}/>
       </button>
 
       <button
           className="slideArrow right"
-          onClick={() =>
-              setActiveSlide((prev) => (prev === 1 ? 0 : prev + 1))
+          onClick={() => {
+              setActiveSlide((prev) => (prev === 1 ? 0 : prev + 1));
+              setReset(prev => prev + 1);
+          }
           }
       >
-        <ChevronRight size={30} />
+        <ChevronRight size={30} className={"NAVarrow"}/>
       </button>
     </div>
   );

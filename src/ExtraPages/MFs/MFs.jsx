@@ -162,7 +162,7 @@ const MFAssistData = {
         <div id={"MFsMC"}>
             <div className="titleHeadZ">
                 <NavBar></NavBar>
-                <span className="titleZ">Mutual Funds</span>
+                <span className="titleZ">Mutual <br id={"breakMob"} />Funds</span>
             </div>
 
             <div className="MFone">

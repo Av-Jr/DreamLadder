@@ -114,7 +114,7 @@ const LEP = () => {
     <div id={"LegacyEstatePlanningMC"}>
       <div className="titleHeadZ">
         <NavBar></NavBar>
-        <span className="titleZ">Legacy and<br></br>Estate Planning</span>
+        <span className="titleZ">Legacy and <br id={"breakMob"} />Estate Planning</span>
       </div>
 
       <div className={"LEPone"}>

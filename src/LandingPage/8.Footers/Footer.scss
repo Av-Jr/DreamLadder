@@ -50,6 +50,10 @@
 
 @include mediaDevice(mobile){
   #FooterMC{
+    
+    h1, h2{
+      text-align : left;
+    }
     padding : 0;
     margin : 0;
     .topicEles{

@@ -150,6 +150,14 @@
 @include mediaDevice(mobile){
   
   #PowMC{
+    h1, h2, h3{
+      text-align : left;
+    }
+    
+    span{
+      width : 100%;
+      text-align : left;
+    }
     width: 100%;
     min-height: auto;
     padding: 0 15px;

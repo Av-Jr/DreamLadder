@@ -281,6 +281,13 @@ const NavBar = () => {
                                             onClick={() => navigate(it.path)}
                                         >
                                             {it.title}
+                                            {
+                                                it.children &&
+                                                <ChevronDown
+                                                    className="subArrow"
+                                                    size={16}
+                                                />
+                                            }
                                         </button>
 
                                         {it.children && (
