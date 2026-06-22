@@ -1411,10 +1411,7 @@ export default function CalcGraph() {
       <>
 
     <div className="calc-root">
-      <div className="titleHeadZ">
-        <NavBar></NavBar>
-        <span className="titleZ">Calculator</span>
-      </div>
+      <NavBar></NavBar>
       <div className="calc-tabs">
         <div className="calc-tabs__inner">
           {TABS.map(({ id, label, Icon }) => (

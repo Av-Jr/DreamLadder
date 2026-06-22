@@ -266,8 +266,7 @@ const WhyAIFData = {
               {item.text}
             </span>
           ))}
-
-
+          <span className={"quote Gen small"}>{PMSHeroData.quote}</span>
         </div>
 
         <img loading="lazy"

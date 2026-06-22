@@ -116,14 +116,14 @@ $darkBlue : #17233d;
         place-items : center;
         gap : 40px;
         
-        .left, .right{
+        .leftBonds, .rightBonds{
           display : flex;
           flex-direction : column;
           gap : 30px;
           width : 100%;
           
           .start{
-            align-self : flex-start;
+            align-self : flex-start!important;
           }
           
           .end{

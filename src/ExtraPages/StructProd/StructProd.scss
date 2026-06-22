@@ -11,7 +11,7 @@ $darkBlue : #17233d;
 }
 
 //flex-cols
-.innerSPtwo, .textElll{
+.innerSPtwo, .textElll, .rightSP{
   display : flex;
   flex-direction : column;
   justify-content : center;
@@ -21,7 +21,7 @@ $darkBlue : #17233d;
 }
 
 //flex-rows
-.featureCard, .RegItem, .firstRow, .thirdRow, .regCard{
+.featureCard, .RegItem, .firstRow, .thirdRow, .regCard, .pointEle{
   display : flex;
   flex-direction : row;
   justify-content : flex-start;
@@ -30,7 +30,7 @@ $darkBlue : #17233d;
 }
 
 //center text align
-.PMSone, .heroText, .left, .rightPMS,.right{
+.PMSone, .heroText, .left, .rightPMS,.rightSP{
   h1, h2, h3{
     text-align : left;
     width : 100%;

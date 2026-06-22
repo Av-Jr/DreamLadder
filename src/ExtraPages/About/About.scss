@@ -404,7 +404,7 @@ $redCol : #E53935;
         place-items : center;
         grid-template-columns : repeat(2, auto);
         gap : 30px;
-        
+        min-height : 180px;
         border : 1px solid #F1F5F9;
         border-radius : 20px;
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);

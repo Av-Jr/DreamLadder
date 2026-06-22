@@ -184,12 +184,12 @@ $darkBlue : #17233d;
 }
 
 @include mediaDevice(mobile){
-  .MFone, .MFtwoCards, .MFthree, .MFfour{
+  .MFone, .MFthree, .MFfour{
     grid-template-columns : 1fr;
     grid-template-rows : repeat(2,auto);
   }
   .heroImg, .heroText, .MFtwoCards, .heroImg{
-    padding : 5px;
+    padding : 20px;
   }
   
   .MFone, .innerMFtwo, .MFthree, .MFfour{

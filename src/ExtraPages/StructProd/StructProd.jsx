@@ -190,7 +190,7 @@ const StructProd = () => {
 
         </div>
 
-        <div className={"right"}>
+        <div className={"rightSP"}>
 
           {
             StructuredProductsRegulationData.points.map((item, index) => (

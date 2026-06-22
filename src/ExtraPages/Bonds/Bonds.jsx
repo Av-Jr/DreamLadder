@@ -282,7 +282,7 @@ return (
 
             <div className="middleSection">
 
-                <div className="left">
+                <div className="leftBonds">
 
                     {
                         FixedIncomeTypesData.cards.slice(0,3).map((item, index) => (
@@ -304,7 +304,7 @@ return (
                     <img loading="lazy" src={img(FixedIncomeTypesData.image)} alt=""/>
                 </div>
 
-                <div className="right">
+                <div className="rightBonds">
 
                     {
                         FixedIncomeTypesData.cards.slice(3,6).map((item, index) => (
