@@ -1,5 +1,5 @@
 import "./ReturnSlider.scss";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { img } from "../../utils/image.js";
 
 const ReturnSlider = () => {
@@ -24,6 +24,7 @@ const ReturnSlider = () => {
 
     const [state, setState] = useState("Monthly");
     const [valS, changeVal] = useState(50000);
+
 
     const returnsData = [
         { id: 1, img: "one", tag: "FD", rate: 7 },
@@ -95,8 +96,8 @@ const ReturnSlider = () => {
                     />
 
                     <span  className={"Gen dark eleList"}>
-                        <h3 className={"Gen light"}>Rs 500</h3>
-                        <h3>
+                        <h3 className={"Gen light small"}>Rs 500</h3>
+                        <h3 className={"Gen light small"}>
                             {state === "Monthly"
                                 ? "Rs 5 Lakh"
                                 : "Rs 1 Cr"}
@@ -110,19 +111,17 @@ const ReturnSlider = () => {
                 <h3 className={"Gen"}>After 25 years, it would have accumulated to</h3>
 
                 <div className="retElesCon">
+
                     {returnsData.map((item) => (
+
                         <div className="retEle" key={item.id}>
 
                             <div className="retCircle">
 
-                                <h3 className={"Gen bold light"}>
+                                <h3 className="Gen bold light">
                                     ₹
                                     {formatAmount(
-                                        calculateReturn(
-                                            valS,
-                                            item.rate,
-                                            state
-                                        )
+                                        calculateReturn(valS, item.rate, state)
                                     )}
                                 </h3>
 
@@ -134,16 +133,22 @@ const ReturnSlider = () => {
                                     />
                                 </div>
 
-                                <h3 className={"Gen light"}>{item.tag}</h3>
+                                <h3 className="Gen light">
+                                    {item.tag}
+                                </h3>
 
                             </div>
 
                             <div className="retBadge">
-                                <h3 className={"Gen dark"}>@{item.rate}% Return</h3>
+                                <h3 className="Gen dark">
+                                    @{item.rate}% Return
+                                </h3>
                             </div>
 
                         </div>
+
                     ))}
+
                 </div>
             </div>
 

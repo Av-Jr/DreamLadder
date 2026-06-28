@@ -279,21 +279,20 @@
 @include mediaDevice(mobile){
   
   #ReturnSliderMC{
+    
     min-height: 100dvh;
-    padding: 20px 0;
-    gap: 30px;
+    padding: 10px 0;
+    gap: 20px;
     
     .childsR{
-      
       &.one{
         
         .SliderCon{
-          width: 100%;
-          padding: 15px;
+          width: 90vw;
+          padding: 5px;
           
           .eleList{
-            flex-direction: column;
-            gap: 10px;
+            flex-direction: row;
           }
           
           .inputWrap{
@@ -309,20 +308,43 @@
       
       &.two{
         
+        width: 100%;
+        gap : 0;
+        
         .retElesCon{
           display: flex;
-          flex-direction : column;
-          flex-wrap: nowrap;
-          overflow-x: auto;
-          
+          flex-direction: row;
           gap: 20px;
+          
+          overflow-x: auto;
+          overflow-y: hidden;
+          
+          scroll-snap-type: x mandatory;
+          -webkit-overflow-scrolling: touch;
+          
+          padding: 15px;
+          
+          &::-webkit-scrollbar{
+            display: none;
+          }
+          
           .retEle{
-            width: 100%;
+            transform : translateX(200%);
+            flex: 0 0 80%;
+            scroll-snap-align: center;
             
-            .retCircle{
-              width: 100%;
-              max-width: 140px;
-              margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+          }
+          
+          .retCircle{
+            
+            width: 170px;
+            height: 170px;
+            
+            img{
+              width: 80px;
             }
           }
         }

@@ -4,6 +4,7 @@ import { useNavigate} from "react-router-dom";
 import { img } from "../../utils/image.js";
 import {ChevronDown} from "lucide-react";
 
+
 const NavBar = () => {
     const navigate = useNavigate();
     const [menuOpen, setMenuOpen] = useState(false);
