@@ -73,10 +73,10 @@ $darkBlue : #17233d;
         .cardEle{
           display : flex;
           flex-direction : row;
-          justify-content : flex-start;
+          justify-content : center;
           align-items : flex-start;
-          gap : 40px;
-          
+          gap : 20px;
+          max-width : 80%;
           background: white;
           border-radius : 20px;
         }
@@ -85,7 +85,22 @@ $darkBlue : #17233d;
   }
   
   .SPthree{
-    .left{
+    .rightSP{
+      gap : 40px;
+      .pointEle{
+        .ind, .ite{
+          transition : color 0.3s ease;
+        }
+        &:hover{
+          .ind{
+            color : $colorRed;
+          }
+          
+          .ite{
+            color : black;
+          }
+        }
+      }
     }
   }
 }

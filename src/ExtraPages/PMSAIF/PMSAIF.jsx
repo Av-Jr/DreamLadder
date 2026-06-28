@@ -445,12 +445,10 @@ const WhyAIFData = {
         <div className="rightPMS">
           {
             AIFRegulationData.points.map((item, index) => (
-                <div className="regCard" key={index}>
+                <div className="regCardP" key={index}>
                   <span className={"Syn light small"}>0{index + 1}</span>
-                  <div className="eleregCard">
-                    <h3 className="Gen dark bold">{item.title} : </h3>
-                    <span className={"Gen light small"}>{item.description}</span>
-                  </div>
+                    <h3 className="Gen dark bold">{item.title} : <span className={"Gen light small"}>{item.description}</span></h3>
+
                 </div>
             ))
           }

@@ -13,7 +13,7 @@ $darkBlue : #17233d;
 }
 
 //flex-cols
-.innerTWO, .cardEle, .right, .left{
+.innerTWO, .right, .left, .InerC{
   display : flex;
   flex-direction : column;
   justify-content : center;
@@ -53,39 +53,57 @@ $darkBlue : #17233d;
   padding : 100px 50px;
 }
 
-#InsuranceMC{
-  display : grid;
-  place-items : center;
+#InsuranceMC {
+  display: grid;
+  place-items: center;
   
-  .INStwo{
-    display : grid;
-    place-items : center;
+  .INStwo {
+    display: grid;
+    place-items: center;
     background: img("flexBack") center/cover no-repeat;
-    width : 100%;
-    min-height : 100vh;
+    width: 100%;
+    min-height: 100vh;
     
-    .innerTWO{
-      .cardsCont{
-        .cardEle{
+    .innerTWO {
+      .cardsCont {
+        .cardEle {
+          display: flex;
+          flex-direction: row;
           background: white;
-          max-width : 500px;
-          min-height : 200px;
-          border-radius : 20px;
-          padding : 20px;
-          align-items : flex-start;
+          max-width: 500px;
+          min-height: 200px;
+          border-radius: 20px;
+          padding: 20px;
+          align-items: flex-start;
+          justify-content: flex-start;
+          gap: 40px;
           
-          .cardTop{
-            .IconCard{
-              color:$colorRed;
-            }
+          .IconCard {
+            flex-shrink: 0;
+            padding: 0;
+            color: $colorRed;
+            height: 100%;
           }
+          
         }
       }
     }
   }
   
-  .INSthree{
-    gap : 100px;
+  .INSthree {
+    gap: 100px;
+    .rightI{
+      display : grid;
+      place-items : center;
+      gap : 40px;
+      
+      .pointEleI{
+        display : flex;
+        flex-direction : row;
+        gap : 20px;
+        align-items : flex-start;
+      }
+    }
   }
   
   .INSfour {

@@ -189,17 +189,11 @@ const Insurance = () => {
 
                 return(
                     <div className={"cardEle"} key={index}>
-
-                      <div className={"cardTop"}>
-
-                        <Icon className={"IconCard"}/>
-
+                      <Icon className={"IconCard"}/>
+                      <div className={"InerC"}>
                         <h2 className={"Syn dark small"}>{item.title}</h2>
-
+                        <span className={"Gen light small"}>{item.description}</span>
                       </div>
-
-                      <span className={"Gen light small"}>{item.description}</span>
-
                     </div>
                 );
               })
@@ -229,13 +223,13 @@ const Insurance = () => {
 
         </div>
 
-        <div className={"right"}>
+        <div className={"rightI"}>
 
           {
             InsuranceRegulationData.points.map((item, index) => (
-              <div className={"pointEle"} key={index}>
+              <div className={"pointEleI"} key={index}>
 
-                <h2 className={"Gen light"}>{`0${index + 1}`}</h2>
+                <span className={"Gen light"}>{`0${index + 1}`}</span>
 
                 <span className={"Gen dark small"}>{item}</span>
 

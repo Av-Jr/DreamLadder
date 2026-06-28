@@ -196,9 +196,9 @@ const StructProd = () => {
             StructuredProductsRegulationData.points.map((item, index) => (
               <div className={"pointEle"} key={index}>
 
-                <span className={"Gen light small"}>{`0${index + 1}`}</span>
+                <span className={"Syn light small ind"}>{`0${index + 1}`}</span>
 
-                <span className={"Gen dark small"}>{item}</span>
+                <span className={"Gen light small ite"}>{item}</span>
 
               </div>
             ))
