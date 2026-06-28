@@ -3,7 +3,7 @@ import "./PrivacyPolicy.scss";
 import React from "react";
 
 import NavBar from "../../LandingPage/1.NavBar/NavBar.jsx";
-import Ql from "../../LandingPage/9.QuickLInks/Ql.jsx";
+import Ql from "../../LandingPage/9.QuickLinks/Ql.jsx";
 
 export default function PrivacyPolicy() {
 

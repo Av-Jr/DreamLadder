@@ -3,7 +3,7 @@ import "./Disclaimer.scss";
 import React from "react";
 
 import NavBar from "../../LandingPage/1.NavBar/NavBar.jsx";
-import Ql from "../../LandingPage/9.QuickLInks/Ql.jsx";
+import Ql from "../../LandingPage/9.QuickLinks/Ql.jsx";
 
 const disclaimerContent = [
   `These are our terms and conditions for usage of the website and the related services offered by DreamLadder Capital. (“Related Services” hereafter means Stock Market Trading / Mutual Funds / ULIPS / Investment Analysis given through E-Mail, Messenger, Mobile Phone, Mobile SMS, Telephone or in any other form, manner or media).`,
