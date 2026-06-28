@@ -48,6 +48,12 @@ $RedW : #E53935;
         }
       }
       .Con{
+        
+        &.ACone{
+          .fullWidth{
+            width : 90%;
+          }
+        }
         &.ACone, &.ACfour, &.ACfive{
           padding : 20px;
           max-width : clamp(500px, 25vw, 600px);
@@ -101,16 +107,18 @@ $RedW : #E53935;
             text-align : left;
             width : 100%;
           }
+          button{
+            white-space: nowrap;
+            -webkit-text-stroke:0.1px currentColor;
+            font-size : 17px;
+          }
           
           #buttonWrapCon{
             width : 100%;
             display : flex;
-            justify-content : space-between;
+            justify-content : start;
             padding-right : 20px;
-            
-            button{
-              white-space: nowrap;
-            }
+            gap : 20px;
           }
         }
       }
@@ -140,6 +148,10 @@ $RedW : #E53935;
   #AboutMC{
     .AbPgOne,
     .AbPgTwo{
+      gap : 20px;
+      h1{
+        font-size : 40px!important;
+      }
       .GridCon{
         .Con{
           

@@ -26,6 +26,16 @@ const titles = [
 
     return(
         <div id={"FooterMC"}>
+            <div className="subCon">
+                <div className="subCr">
+                    <h2 className={"Gen dark"}>Subscribe To KnowledgeBytes</h2>
+                    <div className={"input"}>
+                        <input placeholder={"Enter Email"}/>
+                        <button><span className={"Gen small"}>Subscribe</span></button>
+                    </div>
+                </div>
+            </div>
+
             <h2 className={"Syn dark"}>Frequently Asked Questions</h2>
             <h2 className={"Gen light small"}>Select a topic below to find quick answers.</h2>
             <div className="topicEles">

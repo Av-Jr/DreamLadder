@@ -6,7 +6,7 @@ const Insights = () => {
     const blogData = [
   {
     "date": "July 5, 2022",
-    "title": "Are you confused about owning Large Cap or Mid/Small Cap...",
+    "title": "Are you confused about owning Large Cap or...",
     "type": "Mutual Funds",
     "image": "blogImg1"
   },
@@ -32,7 +32,7 @@ const Insights = () => {
 
     return(
         <div id={"InsightsMC"}>
-            <h2 className={"Gen dark bold"}>Latest Insights</h2>
+            <h1 className={"Gen dark small"}>Latest Insights</h1>
             <span className={"Gen light small"}>Market perspective and Financial wisdom to keep you ahead.</span>
 
             <div className={"iframeElesCon"}>

@@ -2,7 +2,7 @@
 
 #NavBarMC {
   position: absolute;
-  width: 80%;
+  width: 85%;
   left : 0;
   right : 0;
   margin : auto;
@@ -28,7 +28,7 @@
     img {
       object-fit: contain;
       height : auto;
-      width : 20%;
+      width : 22%;
     }
   }
   
@@ -51,9 +51,8 @@
       .navBtn {
         background: transparent;
         border: none;
-        
         font-family: Genos;
-        font-size: 20px;
+        font-size: 17px;
         font-weight: bold;
         
         color: black;
@@ -63,12 +62,14 @@
         cursor: pointer;
         
         &.s {
-          padding: 4px 12px;
+          padding: 4px 15px;
+          -webkit-text-stroke:0.1px currentColor;
+          letter-spacing : 1px;
           background: #dc2626;
           border: 2px solid #dc2626;
-          
+          box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
           color: white;
-          border-radius: 9999px;
+          border-radius : 9999px;
           
           &:hover {
             background: #434242;

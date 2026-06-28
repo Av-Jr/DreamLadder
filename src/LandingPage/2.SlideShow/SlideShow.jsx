@@ -49,11 +49,11 @@ const SlideShow = () => {
         <div className="SlideItem">
           <div className="SlideOne">
             <div className="heroCon">
-              <h2 className={"Syn dark"}>
+              <h1 className={"Syn dark exsmall"}>
                 Building Wealth,
                 <br />
                 Preserving Legacies
-              </h2>
+              </h1>
 
               <div className="heroActions">
                 <button className="ss" onClick={() => {nav("/blogs")}}><BookOpen size={16}/>Learning</button>
@@ -70,11 +70,11 @@ const SlideShow = () => {
         <div className="SlideItem">
           <div className="SlideTwo">
             <div className="heroCon">
-              <h2 className={"Syn dark"}>
+              <h1 className={"Syn dark exsmall"}>
                 Smarter Investing -
                 <br />
                 Right in your pocket.
-              </h2>
+              </h1>
 
               <h2 className={'Syn dark small'}>Download the App right now.</h2>
 
@@ -114,11 +114,11 @@ const SlideShow = () => {
         <div className="SlideItem">
           <div className="SlideOne">
             <div className="heroCon">
-              <h2 className={"Syn dark"}>
+              <h1 className={"Syn dark exsmall"}>
                 Building Wealth,
                 <br />
                 Preserving Legacies
-              </h2>
+              </h1>
 
               <div className="heroActions">
                 <button className="ss" onClick={() => {window.location.href = "/blogs"}}><BookOpen size={16}/>Learning</button>

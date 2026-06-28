@@ -101,6 +101,10 @@ body{
       font-size : clamp(0px, 5vh, 60px) !important;
     }
     
+    &.exsmall{
+      font-size : clamp(0px, 4.2vh, 40px)!important;
+    }
+    
     &.Gen{
       font-family : Genos;
     }

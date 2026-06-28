@@ -35,6 +35,7 @@ const Pow = () => {
       <div id="PowMC">
         <div className="containingCon">
           <h1 className={"Gen dark small"}>What Clients say about us</h1>
+          <div className={'purpleLine'}></div>
 
           <div className="contentRow">
             <img

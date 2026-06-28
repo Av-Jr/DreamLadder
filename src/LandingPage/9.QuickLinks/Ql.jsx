@@ -236,19 +236,13 @@ export default function Ql() {
 
           </div>
 
-          <div className="downloadsSec">
-
-            {downloadLinks.map((item) => (
-              <a
-                key={item.id}
-                href={item.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label={item.ariaLabel}
-                className={`downloadBtn ${item.id}`}
-              />
-            ))}
-
+          <div className="heroActions pas">
+            <button className="navBtn s ps" onClick={() => window.open("https://play.google.com/store/search?q=dreamladder+capital&c=apps&hl=en_IN", "_blank")}>
+              <img src={img("gplay")} alt=""/>
+            </button>
+            <button className="navBtn s as" onClick={() => window.open("https://apps.apple.com/in/app/dreamladder-capital/id1527793478", "_blank")}>
+              <img  src={img("appStore")} alt=""/>
+            </button>
           </div>
 
         </div>

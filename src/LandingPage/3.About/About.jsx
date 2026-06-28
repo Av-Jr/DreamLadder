@@ -14,34 +14,34 @@ const About = () => {
         <h1 className={"Gen dark bold"}>What We Offer</h1>
         <div className="GridCon">
           <div className="Con ACone">
-            <img src={img("InvestInsight")} loading="lazy" alt=""/>
+            <img className={"fullWidth"} src={img("InvestInsight")} loading="lazy" alt=""/>
 
-            <span className={"TextLeftAligned Gen light"}>Your legacy deserves a solid foundation. DreamLadder Capital helps you build lasting wealth through smart,
+            <span className={"TextLeftAligned Gen light small"}>Your legacy deserves a solid foundation. DreamLadder Capital helps you build lasting wealth through smart,
               diversified strategies.</span>
             <img onClick={() => {window.location.href = "tel:+918908082222";}} className={"tele"} loading="lazy" src={img("tele")} alt=""/>
           </div>
           <div className="Con ACtwo">
-            <div className="ContwoEles">
+            <div className="ContwoEles" onClick={() => {window.location.href="/pms"}}>
               <h2 className={"Syn dark small"}>PMS / AIF</h2>
               <span className={"Gen dark small"}>Access Curated Portfolios from top Fund Managers</span>
             </div>
-            <div className="ContwoEles">
+            <div className="ContwoEles" onClick={() => {window.location.href="/mutual-funds"}}>
               <h2 className={"Syn dark small"}>Mutual Fund</h2>
               <span className={"Gen dark small"}>Choose and Invest Through Leading Funds</span>
             </div>
-            <div className="ContwoEles">
+            <div className="ContwoEles" onClick={() => {window.location.href="/bonds"}}>
               <h2 className={"Syn dark small"}>Bond / Corporate FD</h2>
               <span className={"Gen dark small"}>Invest in High-Quality Products</span>
             </div>
-            <div className="ContwoEles">
+            <div className="ContwoEles" onClick={() => {window.location.href="/structured-products"}}>
               <h2 className={"Syn dark small"}>Structured Products</h2>
               <span className={"Gen dark small"}>Facilitated Access to Market-Linked Solutions</span>
             </div>
-            <div className="ContwoEles">
+            <div className="ContwoEles" onClick={() => {window.location.href="/legacy-estate-planning"}}>
               <h2 className={"Syn dark small"}>Legacy & Estate Planning</h2>
               <span className={"Gen dark small"}>Curated Solutions for Wealth Transfer</span>
             </div>
-            <div className="ContwoEles">
+            <div className="ContwoEles" onClick={() => {window.location.href="/insurance"}}>
               <h2 className={"Syn dark small"}>Insurance</h2>
               <span className={"Gen dark small"}>Access Life, Health, and Asset Coverage</span>
             </div>

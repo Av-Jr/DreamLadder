@@ -13,9 +13,8 @@
     top: 50%;
     transform: translateY(-50%);
     z-index: 100;
-    
-    width: 10px;
-    height: 1s0px;
+    width : 2px;
+    height : 2px;
     border: none;
     border-radius: 50%;
     display : grid;
@@ -38,11 +37,11 @@
     }
     
     &.left{
-      left: 20px;
+      left: 10px;
     }
     
     &.right{
-      right: 20px;
+      right: 10px;
     }
   }
   
@@ -152,7 +151,7 @@
     display: grid;
     width: 100%;
     height: 100%;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, auto);
     grid-template-rows: 1fr;
     padding: 10px;
     place-items : center;
@@ -239,7 +238,7 @@
       
       .BigImg{
         width : 100%;
-        height : 70%;
+        height : 80%;
         object-fit : contain;
       }
     }

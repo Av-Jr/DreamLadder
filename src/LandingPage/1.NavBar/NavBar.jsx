@@ -93,14 +93,14 @@ const NavBar = () => {
         },
 
         {
-            title: "Log-In",
+            title: "Login",
             className: "navBtn s",
             isExternal: true,
             path: "https://dreamladdercapital.my-portfolio.co.in/app/#/login"
         },
 
         {
-            title: "Sign-Up",
+            title: "Sign Up",
             className: "navBtn s",
             isExternal: true,
             path: "https://dreamladdercapital.my-portfolio.co.in/app/#/kycOnBoarding/mobileSignUp"
