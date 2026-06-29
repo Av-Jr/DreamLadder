@@ -124,8 +124,6 @@
         
         .ifEle,
         .blogs{
-          
-          flex: 0 0 85%;
           scroll-snap-align: center;
           
           transition: .2s ease;
@@ -133,21 +131,16 @@
         }
         
         .ifEle{
-          
           aspect-ratio: 16/9;
           border-radius: 20px;
         }
         
         .blogs{
-          height : 200px;
-          width : 50px;
-          display: flex;
-          flex-direction: column;
-          gap: 12px;
-          padding: 12px;
-          
+          flex: 0 0 250px;
+          width: 250px;
           img{
-            border-radius: 12px;
+            background: #000;
+            max-width : 200px;
           }
           
           .DateBlog{
