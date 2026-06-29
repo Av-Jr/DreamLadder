@@ -74,7 +74,6 @@
 }
 
 
-
 @include mediaDevice(mobile){
   
   #InsightsMC{
@@ -104,8 +103,9 @@
       
       .itsChild{
         
+        width: 100%;
         display: flex;
-        flex-direction: row;
+        flex-wrap: nowrap;
         gap: 18px;
         
         overflow-x: auto;
@@ -113,37 +113,54 @@
         
         scroll-snap-type: x mandatory;
         -webkit-overflow-scrolling: touch;
+        touch-action: pan-x;
         
         padding: 10px 15px;
+        
+        scrollbar-width: none;
         
         &::-webkit-scrollbar{
           display: none;
         }
         
-        scrollbar-width: none;
-        
         .ifEle,
         .blogs{
-          scroll-snap-align: center;
+          flex: 0 0 250px;
+          min-width: 250px;
+          max-width: 250px;
           
+          scroll-snap-align: start;
           transition: .2s ease;
-          
+          flex-shrink: 0;
         }
         
         .ifEle{
-          aspect-ratio: 16/9;
+          width: 250px;
+          aspect-ratio: 16 / 9;
+          border: none;
           border-radius: 20px;
         }
         
         .blogs{
-          flex: 0 0 250px;
-          width: 250px;
+          
+          border: 1px #F3F4F6 solid;
+          border-radius: 20px;
+          padding: 10px;
+          box-shadow: 0 4px 10px rgba(0,0,0,.15);
+          
+          display: grid;
+          grid-template-rows: repeat(3, auto);
+          gap: 10px;
+          align-items: center;
+          
           img{
-            background: #000;
-            max-width : 200px;
+            width: 100%;
+            height: auto;
+            object-fit: contain;
           }
           
           .DateBlog{
+            width: 100%;
             display: flex;
             justify-content: space-between;
           }
@@ -156,4 +173,5 @@
       }
     }
   }
+  
 }
