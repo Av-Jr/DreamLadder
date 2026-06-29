@@ -16,7 +16,8 @@
   .hamBtn{
     display : none;
     flex : 1 1 0;
-    height : 100%;
+    height : 30px;
+    font-size : 25px;
     justify-content : flex-end;
   }
   
@@ -252,14 +253,16 @@
     .mobileSubMenu{
       display:flex;
       flex-direction:column;
-      
+      gap : 10px;
       background:#f7f7f7;
+      padding : 5px 0;
+      transition : 0.3s ease;
     }
     
     .mobileSubBtn{
       width:100%;
       
-      padding:14px 20px 14px 40px;
+      padding-left : 60px;
       
       border:none;
       background: #f7f7f7;
@@ -292,22 +295,24 @@
     .mobileMenu{
       position:absolute;
       top:100%;
-      left:0;
+      right:0;
       
-      width:100%;
+      width:70%;
       
       display:flex;
       flex-direction:column;
       background: white;
       z-index : 101;
       border-radius : 10px;
-      overflow: hidden;
+      height : 300px;
+      overflow : hidden;
+      transition : 0.3s ease;
     }
     
     .mobileBtn{
       width:100%;
       
-      padding:16px;
+      padding-left : 50px;
       
       border:none;
       background:white;

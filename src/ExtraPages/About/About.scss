@@ -2,6 +2,20 @@
 
 $redCol : #E53935;
 
+@keyframes slideCard{
+  
+  from{
+    opacity: 0;
+    transform: translateX(var(--slideX));
+  }
+  
+  to{
+    opacity: 1;
+    transform: translateX(0);
+  }
+  
+}
+
 //Red Line
 .lineRed{
   display : block;
@@ -32,14 +46,14 @@ $redCol : #E53935;
 }
 
 //grid;
- .firstPage, .section2, .secondPage, .conSecFoP, .fourthPage, .cardEle, .conSecFP, .memC, .sixthPage, .seventhPage{
+ .firstPage, .secondPage, .conSecFoP, .fourthPage, .cardEle, .conSecFP, .memC, .sixthPage, .seventhPage{
   display : grid;
   place-items : center;
 }
 
 //padding
 .firstPage, .thirdPage, .fourthPage, .fifthPage, .sixthPage, .seventhPage{
-  padding : 100px 0;
+  padding : 50px 0;
 }
 
 //innerPadding
@@ -58,41 +72,63 @@ $redCol : #E53935;
   justify-items  : center;
   
   .firstPage{
+    padding : 50px 0!important;
     background : img("aboutBack") center/cover no-repeat;
     .conSecFP{
       padding : 0 50px;
-      grid-template-columns : repeat(3, auto);
-      gap : 50px;
-      img{
+      grid-template-columns : repeat(2, 1fr);
+      gap : 100px;
+      
+      .section1{
         width : 100%;
         height : 100%;
-        object-fit : cover;
-      }
-      
-      .section2{
-        gap : 20px;
-        max-width : 300px;
-        
-        .redText{
-          color: $redCol;
+        display : grid;
+        place-items : start;
+        img{
+          overflow : visible;
+          height : 450px;
+          object-fit : cover;
         }
       }
       
-      .section3{
+      .section2{
+        display : flex;
+        gap : 20px;
+        align-items : center;
+        .sec2F{
+          display : flex;
+          flex-direction : column;
+          width : 100%;
+          height : 100%;
+          justify-content : center;
+          align-items : center;
+          min-width : 300px;
+          gap : 20px;
+          
+          span{
+            text-align : center;
+            width : 100%;
+          }
+        }
         img{
-          width : 300px;
+          width : 350px;
+        }
+        
+        .redText{
+          color: $redCol;
         }
       }
     }
   }
   
   .secondPage{
-    grid-template-columns : repeat(2, 1fr);
+    grid-template-columns : 0.4fr 0.6fr;
     .text{
       max-width : 500px;
       h1, span{
         text-align : left;
       }
+      
       .toShow{
         display : grid;
         width : 100%;
@@ -104,6 +140,9 @@ $redCol : #E53935;
           text-align : left;
         }
       }
+    }
+    img{
+      width : 90%;
     }
   }
   
@@ -193,9 +232,14 @@ $redCol : #E53935;
     margin-bottom: 40px;
     
     &.left{
-      justify-content: flex-start;
+      --slideX: -200px;
+      justify-content: flex-end;
       
       .timelineCard{
+        h2{
+          text-align : right
+        }
+        
         margin-right: calc(50% + 80px);
         &.rightHead{
           text-align : right;
@@ -207,6 +251,7 @@ $redCol : #E53935;
     }
     
     &.right{
+      --slideX: 200px;
       justify-content: flex-end;
       
       .timelineCard{
@@ -267,9 +312,15 @@ $redCol : #E53935;
     
     padding: 40px;
     
-    border : 1px solid rgba(0, 0, 0, 0.2);
-    transition : all 0.3s ease, box-shadow 0.2s ease;
-    transform : translateY(0px);
+    border: 1px solid rgba(0,0,0,.2);
+    
+    opacity: 0;
+    
+    transition: box-shadow .3s;
+    
+    animation: slideCard both;
+    animation-timeline: view();
+    animation-range: entry 20% cover 40%;
     
     &:hover{
       h2{
@@ -438,17 +489,47 @@ $redCol : #E53935;
   .firstPage{
     .conSecFP{
       grid-template-columns : 1fr;
-      gap : 100px;
+      gap : 50px;
       padding : 100px 10px;
       grid-template-rows : repeat(3, auto);
+      
+      .section1{
+        img{
+          height : 100%;
+        }
+        width : 100%;
+      }
+      
+      .section2{
+        flex-direction : column;
+        gap : 50px;
+        
+        .sec2F{
+          justify-content : flex-start;
+          align-items : flex-start;
+          
+          h2{
+            text-align : left;
+          }
+          
+          span, .toRight{
+            text-align : right;
+            width : 100%;
+          }
+        }
+        
+        img{
+          width : 70%;
+        }
+      }
     }
   }
   
   .secondPage{
     grid-template-columns : 1fr;
     grid-template-rows : repeat(2, auto);
-    gap : 100px;
-    padding : 100px 10px;
+    gap : 20px;
+    padding : 10px 10px;
   }
   
   .thirdPage{
@@ -535,15 +616,26 @@ $redCol : #E53935;
   
   .fourthPage{
     .conSecFoP{
+      margin-top : 0;
+      padding : 0;
       gap : 10px;
       .cardElesfP{
         grid-template-columns : 1fr;
         grid-template-rows : repeat(2, auto);
-        gap : 50px;
-        padding : 100px 10px;
+        gap : 20px;
+        padding : 10px 10px;
         
         .cardEle{
-          min-height : 300px;
+          display : grid;
+          place-items : center;
+          grid-template-columns : repeat(2, auto);
+          gap : 10px;
+          height : fit-content;
+          max-height : 150px;
+          
+          span{
+            grid-column : span 2;
+          }
         }
       }
     }
@@ -552,7 +644,7 @@ $redCol : #E53935;
   .fifthPage{
     flex-direction: column;
     gap: 50px;
-    padding: 100px 10px;
+    padding: 10px 10px;
     
     .teamMembers{
       .memC{
@@ -566,6 +658,7 @@ $redCol : #E53935;
         }
         
         .heroImg{
+          align-self : center;
           padding : 0;
           height : fit-content;
         }
@@ -576,15 +669,19 @@ $redCol : #E53935;
   .sixthPage{
     grid-template-columns : 1fr;
     grid-template-rows : repeat(2, auto);
+    padding : 50px 10px;
     
     .heroText{
+      padding : 0;
       .sixthPgCard{
+        max-width : 100%;
+        width : 100%;
         grid-template-columns: 1fr;
         grid-template-rows: auto auto;
         
         gap: 15px;
         
-        padding: 20px;
+        padding: 10px;
       }
     }
   }

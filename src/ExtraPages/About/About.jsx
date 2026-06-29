@@ -199,11 +199,12 @@ export default function About() {
                         />
                     </div>
                     <div className="section2">
-                        <h2 className={"Syn"}>"Wealth is not built overnight; it’s crafted through<br/><span className={"redText Syn italic"}>clarity, courage, and consistency."</span></h2>
-                        <h2 className={"Gen bold dark small"}>Mr. Saday Sinha</h2>
-                        <span className={"Gen light small"}>FOUNDER & CEO</span>
-                    </div>
-                    <div className="section3">
+                        <div className="sec2F">
+                            <h2 className={"Syn"}>"Wealth is not built overnight; it’s crafted through<br/><span className={"redText Syn italic"}>clarity, courage, and consistency."</span></h2>
+                            <h2 className={"Gen bold dark small toRight"}>Mr. Saday Sinha</h2>
+                            <span className={"Gen light small"}>FOUNDER & CEO</span>
+                        </div>
+
                         <img
                             src={img("AboutSaday")}
                             alt="Contact"
@@ -263,8 +264,8 @@ export default function About() {
                             <div className="dot"></div>
 
                             <div className={`timelineCard ${index % 2 !== 0 ? "" : "rightHead"}`}>
-                                <h2>{item.title}</h2>
-                                <p>{item.text}</p>
+                                <h2 className={"Syn"}>{item.title}</h2>
+                                <span className={"Gen small"}>{item.text}</span>
                             </div>
 
                         </div>
