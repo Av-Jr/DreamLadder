@@ -87,6 +87,9 @@ $darkBlue : #17233d;
   .SPthree{
     .rightSP{
       gap : 40px;
+      span{
+        width : fit-content;
+      }
       .pointEle{
         .ind, .ite{
           transition : color 0.3s ease;

@@ -10,23 +10,16 @@ export default function PrivacyPolicy() {
   return (
     <div id="PrivacyPolicyMC">
 
-      <div className="heroSec">
-
-        <NavBar />
-
-        <div className="heroContent">
-
-          <h1>Privacy Policy</h1>
-
-        </div>
-
+      <div className="titleHeadZ">
+        <NavBar></NavBar>
+        <span className="titleZ">Privacy Policy</span>
       </div>
 
       <div className="contentSec">
 
         <div className="contentWrap">
 
-          <p>
+          <span className={"Gen light small ju"}>
             This privacy policy sets out how DreamLadder Capital uses and
             protects any information that you share when you use this
             website. DreamLadder Capital is committed to ensuring that your
@@ -34,14 +27,14 @@ export default function PrivacyPolicy() {
             certain information by which you can be identified when using
             this website, you can be assured that it will only be used in
             accordance with this privacy statement.
-          </p>
+          </span>
 
-          <p>
+          <span className={"Gen light small ju"}>
             DreamLadder Capital may change this policy from time to time by
             updating this page. This policy is effective from 1 August 2025.
-          </p>
+          </span>
 
-          <p>
+          <span className={"Gen light small ju"}>
             DreamLadder Capital understands that our relationship is strongly
             built on trust and faith. In Course of using information on this
             website or availing the services, DreamLadder Capital may become
@@ -65,33 +58,34 @@ export default function PrivacyPolicy() {
             way or manner. DreamLadder Capital is not responsible for the
             setup of any hyperlink from a third party website to
             DreamLadder Capital.
-          </p>
+          </span>
 
           <div className="section">
 
             <h2>What we collect</h2>
 
-            <p>
+            <span className={"Gen light small ju"}>
               We may collect the following information:
-            </p>
+            </span>
 
             <ul>
 
               <li>
-                Name and contact details
+                <span className={"Gen light small ju"}>Name and contact details</span>
               </li>
 
               <li>
+                <span className={"Gen light small ju"}>
                 Personal information, including date of birth, Aadhaar
-                Number, and Permanent Account Number (PAN)
+                  Number, and Permanent Account Number (PAN)</span>
               </li>
 
               <li>
-                Demographic information such as gender and income
+                <span className={"Gen light small ju"}>Demographic information such as gender and income</span>
               </li>
 
               <li>
-                Other information that can help us improve our services
+                <span className={"Gen light small ju"}>Other information that can help us improve our services</span>
               </li>
 
             </ul>
@@ -107,38 +101,38 @@ export default function PrivacyPolicy() {
             <ul>
 
               <li>
-                To conduct Know-Your-Customer registration as required by
-                SEBI and/or other regulatory bodies
+                <span className={"Gen light small ju"}>To conduct Know-Your-Customer registration as required by
+                  SEBI and/or other regulatory bodies</span>
               </li>
 
               <li>
-                To perform compliance checks and keep/maintain internal
-                records
+                <span className={"Gen light small ju"}>To perform compliance checks and keep/maintain internal
+                  records</span>
               </li>
 
               <li>
-                To use the information to improve our products and services
+                <span className={"Gen light small ju"}>To use the information to improve our products and services</span>
               </li>
 
               <li>
-                To periodically send emails to your registered email address
+                <span className={"Gen light small ju"}>To periodically send emails to your registered email address
                 about your investments, or other information which we think
-                you may find interesting.
+                  you may find interesting.</span>
               </li>
 
               <li>
-                You will be free to unsubscribe from our mailing list at any
+                <span className={"Gen light small ju"}>You will be free to unsubscribe from our mailing list at any
                 time if you do not wish to receive such emails from us. From
                 time-to-time, we may also use your information to contact
-                you via phone or email for market research purposes.
+                  you via phone or email for market research purposes.</span>
               </li>
 
               <li>
-                We will not sell, distribute or lease your personal
+                <span className={"Gen light small ju"}>We will not sell, distribute or lease your personal
                 information to third parties unless we are required to share
                 such information under the terms and conditions of the
                 products and services you avail, or we are required to do so
-                by law.
+                  by law.</span>
               </li>
 
             </ul>
@@ -149,13 +143,13 @@ export default function PrivacyPolicy() {
 
             <h2>Security</h2>
 
-            <p>
+            <span className={"Gen light small ju"}>
               We are committed to ensuring that your information is secure.
               In order to prevent unauthorised access or disclosure, we have
               put in place suitable physical, electronic and managerial
               procedures to safeguard and secure the information we collect
               online.
-            </p>
+            </span>
 
           </div>
 
@@ -163,7 +157,7 @@ export default function PrivacyPolicy() {
 
             <h2>Links to other websites</h2>
 
-            <p>
+            <span className={"Gen light small ju"}>
               Our website may contain links to other websites of interest.
               However, once you have used these links to leave our site, you
               should note that we do not have any control over such
@@ -172,7 +166,7 @@ export default function PrivacyPolicy() {
               provide whilst visiting such sites. You should exercise
               caution and look at the privacy statement applicable to the
               website in question.
-            </p>
+            </span>
 
           </div>
 
@@ -180,11 +174,11 @@ export default function PrivacyPolicy() {
 
             <h2>Controlling your personal information</h2>
 
-            <p>
+            <span className={"Gen light small ju"}>
               If you believe that any of your information with us is
               incorrect or incomplete, please email us as soon as possible.
               We will promptly correct any information found to be incorrect.
-            </p>
+            </span>
 
           </div>
 
@@ -192,13 +186,13 @@ export default function PrivacyPolicy() {
 
             <h2>Security certificates</h2>
 
-            <p>
+            <span className={"Gen light small ju"}>
               DreamLadder Capital is an online financial services company.
               We fully recognise and understand the security implications of
               being a service provider with whom people trust their money.
               There are many safeguards we adopt in this regard – some of
               these are technical, and some are structural.
-            </p>
+            </span>
 
             <h3>
               When it comes to data security, our goal is to ensure that:
@@ -207,31 +201,31 @@ export default function PrivacyPolicy() {
             <ul>
 
               <li>
-                Your data is stored safely and securely – passwords are
+                <span className={"Gen light small ju"}>Your data is stored safely and securely – passwords are
                 one-way encrypted before being stored in the database for
-                high security.
+                  high security.</span>
               </li>
 
               <li>
-                All communication with you, or with mutual fund companies
+                <span className={"Gen light small ju"}>All communication with you, or with mutual fund companies
                 and other service providers – are encrypted using the
-                highest standards.
+                  highest standards.</span>
               </li>
 
               <li>
-                Your data is not shared with anyone, unless you have
+                <span className={"Gen light small ju"}>Your data is not shared with anyone, unless you have
                 explicitly requested us to do so to fulfil a transaction
-                request.
+                  request.</span>
               </li>
 
               <li>
-                To ensure that we achieve these goals, we have a variety of
+                <span className={"Gen light small ju"}>To ensure that we achieve these goals, we have a variety of
                 certifications/trust verifications in place for our firm,
                 both from technical and legal/operational perspectives. All
                 our communications are encrypted by 256-bit encryption, and
                 our data is hosted with top-tier hosting service providers.
                 Also, our data is continuously backed up to ensure continuity
-                of operations.
+                  of operations.</span>
               </li>
 
             </ul>

@@ -34,7 +34,20 @@ body{
   }
   
   span{
-    text-align : center;
+    width : 100%;
+    &.tcen{
+      text-align : center;
+    }
+    &.tlef{
+      text-align : left;
+    }
+    &.trig{
+      text-align : right;
+    }
+    &.ju{
+      display : block;
+      text-align : justify!important;
+    }
     font-size : clamp(0px, 3vh, 30px);
     
     -webkit-text-stroke:0.5px currentColor;
@@ -92,7 +105,19 @@ body{
   }
   
   h1{
-    text-align : center;
+    &.tcen{
+      text-align : center;
+    }
+    &.tlef{
+      text-align : left;
+    }
+    &.trig{
+      text-align : right;
+    }
+    &.ju{
+      display : block;
+      text-align : justify!important;
+    }
     font-weight : normal;
     font-size : clamp(0px, 7vh, 70px) !important;
     color : black;
@@ -125,7 +150,20 @@ body{
   }
   
   h2{
-    text-align : center;
+    &.tcen{
+      text-align : center;
+    }
+    &.tlef{
+      text-align : left;
+    }
+    &.trig{
+      text-align : right;
+    }
+    
+    &.ju{
+      display : block;
+      text-align : justify!important;
+    }
     font-weight : normal;
     color : black;
     font-size : clamp(0px, 3.5vh, 35px) !important;
@@ -155,7 +193,19 @@ body{
   }
   
   h3{
-    text-align : center;
+    &.tcen{
+      text-align : center;
+    }
+    &.tlef{
+      text-align : left;
+    }
+    &.trig{
+      text-align : right;
+    }
+    &.ju{
+      display : block;
+      text-align : justify!important;
+    }
     font-weight : normal;
     
     color : black;

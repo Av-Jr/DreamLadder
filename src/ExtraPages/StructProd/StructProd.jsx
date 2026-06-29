@@ -122,11 +122,11 @@ const StructProd = () => {
 
           {
             StructuredProductsHeroData.description.map((item, index) => (
-              <span className={"Gen dark small"} key={index}>{item.text}</span>
+              <span className={"Gen dark small ju"} key={index}>{item.text}</span>
             ))
           }
 
-          <span className={"quote Gen small"}>
+          <span className={"quote Gen small ju"}>
             {StructuredProductsHeroData.quote}
           </span>
 
@@ -143,9 +143,9 @@ const StructProd = () => {
 
       <div className={"SPtwo"}>
         <div className="innerSPtwo">
-          <h2 className={"Gen dark"}>{StructuredProductsTypesData.title}</h2>
+          <h2 className={"Gen dark tcen"}>{StructuredProductsTypesData.title}</h2>
 
-          <span className={"Gen light small"}>{StructuredProductsTypesData.description}</span>
+          <span className={"Gen light small tcen"}>{StructuredProductsTypesData.description}</span>
 
           <div className={"cardsCont"}>
 
@@ -159,7 +159,7 @@ const StructProd = () => {
                       <Icon className={"cardIcon"} size={30}/>
                       <div className={"textElll"}>
                         <h3 className={"Syn bold"}>{item.title}</h3>
-                        <span className={"Gen light bold small"}>{item.description}</span>
+                        <span className={"Gen light bold small ju"}>{item.description}</span>
                       </div>
                     </div>
                 );
@@ -198,13 +198,13 @@ const StructProd = () => {
 
                 <span className={"Syn light small ind"}>{`0${index + 1}`}</span>
 
-                <span className={"Gen light small ite"}>{item}</span>
+                <span className={"Gen light small ite ju"}>{item}</span>
 
               </div>
             ))
           }
 
-          <span className={"quote Gen small"}>
+          <span className={"quote Gen small ju"}>
             {StructuredProductsRegulationData.quote}
           </span>
 

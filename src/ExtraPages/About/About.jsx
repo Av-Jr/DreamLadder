@@ -217,7 +217,7 @@ export default function About() {
             <div className="secondPage">
                 <div className="text innerPadding">
                     <h1 className={"Gen dark small"}>Our Story</h1><br/><br/>
-                    <span className={"Gen dark small"}>
+                    <span className={"Gen dark small ju"}>
                         Every great journey begins with a simple belief. Ours began in 2018 with the conviction that investing should be transparent, straightforward, and built on trust.<br/><br/>
                         What started as a focused effort in Mutual Funds has expanded into a comprehensive wealth management suite, including Corporate FDs, Protection Solutions, and Structured Products.<br/><br/>
                         Today, we serve over 500+ families across 12 countries, achieving milestones driven by the same purpose: helping people grow their wealth with clarity.<br/><br/>
@@ -233,7 +233,7 @@ export default function About() {
             <div className="thirdPage">
                 <div className="conSecTP innerPadding">
                     <Quote size={48} color="#E53935" />
-                    <span className={"textLeft Syn italic"}>“Our mission is to be one of India’s most trusted partners in building long-term wealth. Every solution we create is designed to be simple, transparent, and effective.”</span>
+                    <span className={"textLeft Syn italic ju"}>“Our mission is to be one of India’s most trusted partners in building long-term wealth. Every solution we create is designed to be simple, transparent, and effective.”</span>
                     <h2 className={"Gen small bold"}>- Mr. Saday Sinha<br/><span className={'Gen small'}>Founder & CEO, DreamLadder Capital</span></h2>
                 </div>
 
@@ -304,7 +304,7 @@ export default function About() {
                 <div className="teamIntro">
                     <h1 className="Gen">{teamIntro.title}</h1>
                     <span className={"lineRed"}></span>
-                    <span className={"Gen light small"}>{teamIntro.description}</span>
+                    <span className={"Gen light small ju"}>{teamIntro.description}</span>
                 </div>
 
                 <div className="teamMembers">
@@ -323,7 +323,7 @@ export default function About() {
                                 <div className="heroText">
                                     <h2 className={"redText Gen small bold"}>{item.role}</h2>
                                     <h1 className={"Gen bold small"}>{item.name}</h1>
-                                    <span className={"Gen small bold desc"}>{item.description}</span>
+                                    <span className={"Gen small bold desc ju"}>{item.description}</span>
                                 </div>
                             </div>
                         ))
@@ -346,7 +346,7 @@ export default function About() {
                             return(
                                 <div className={'sixthPgCard innerPadding'}>
                                     <Icon className="cardIcon" size={40}></Icon>
-                                    <span className={"Gen small dark"}>{txt}</span>
+                                    <span className={"Gen small dark ju"}>{txt}</span>
                                 </div>
                             )})
                     }

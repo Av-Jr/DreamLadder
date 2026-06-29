@@ -199,7 +199,7 @@ return (
                 ))
             }
 
-            <span className={"Gen quote small"}>
+            <span className={"Gen quote small ju"}>
                 {BondsHeroData.quote}
             </span>
 
@@ -221,7 +221,7 @@ return (
                 BondsRegulationData.points.map((item, index) => (
                     <div className={"timelineCard"} key={index}>
                         <h3 className={"Syn dark small"}>{item.title}</h3>
-                        <span className={"Gen light small"}>{item.description}</span>
+                        <span className={"Gen light small ju"}>{item.description}</span>
                     </div>
                 ))
             }
@@ -277,8 +277,8 @@ return (
     <div className="Bondsfive">
 
         <div className="conSecBF">
-            <h2 className={"Syn"}>{FixedIncomeTypesData.title}</h2>
-            <span className={"Gen light"}>{FixedIncomeTypesData.description}</span>
+            <h2 className={"Syn tcen"}>{FixedIncomeTypesData.title}</h2>
+            <span className={"Gen light tcen"}>{FixedIncomeTypesData.description}</span>
 
             <div className="middleSection">
 
@@ -333,7 +333,7 @@ return (
 
             <img loading="lazy" src={img(WhyFixedIncomeData.image)} alt=""/>
 
-            <span className={"quote Gen small"}>
+            <span className={"quote Gen small ju"}>
                 {WhyFixedIncomeData.quote}
             </span>
 

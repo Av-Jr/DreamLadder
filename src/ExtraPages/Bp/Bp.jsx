@@ -46,20 +46,20 @@ const Bp = () => {
 
               <div className="heroText">
 
-                <span className={"Gen small dark"}>
+                <span className={"Gen small dark ju"}>
                   Every financial journey is distinct. A bespoke portfolio begins
                   with a clear understanding of your risk appetite, liquidity
                   priorities, and long-term objectives.
                 </span>
 
-                <span className={"Gen small dark"}>
+                <span className={"Gen small dark ju"}>
                   Rather than applying standard allocation models, exposure should
                   be structured across suitable investment avenues in alignment
                   with one’s financial landscape — balancing growth, preservation,
                   and continuity with discipline.
                 </span>
 
-                  <span className={"quote Gen small light"}>
+                  <span className={"quote Gen small light ju"}>
                     Disciplined allocation. Continuous monitoring.
                     Balanced growth.
                   </span>
@@ -90,15 +90,15 @@ const Bp = () => {
 
               <div className="philosophyText">
 
-                <h2 className={"Gen bold"}>Core Philosophy</h2>
+                <h2 className={"Gen bold tcen"}>Core Philosophy</h2>
 
-                <span className={"Gen small dark"}>
+                <span className={"Gen small dark ju"}>
                   Enduring wealth is shaped by suitability-driven allocation
                   aligned with risk capacity, financial priorities, and long-term
                   objectives.
                 </span>
 
-                <span className={"Gen small dark"}>
+                <span className={"Gen small dark ju"}>
                   Short-term narratives do not define long-term outcomes.
                   The emphasis remains on governance, consistency, and
                   measured progression across market environments.
@@ -119,7 +119,7 @@ const Bp = () => {
 
                 <h2 className={"Gen bold dark"}>Our Approach</h2>
 
-                <h3 className={"Gen small light bold"}>
+                <h3 className={"Gen small light bold ju"}>
                   Significant wealth requires more than product selection.
                   It demands structure, discipline, and clarity of purpose.
                 </h3>
@@ -136,7 +136,7 @@ const Bp = () => {
 
                     <h2 className={"Syn small"}>{item.title}</h2>
 
-                        <span className={"Gen small dark"}>{item.desc}</span>
+                        <span className={"Gen small dark ju"}>{item.desc}</span>
 
                       </div>
                   ))

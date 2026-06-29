@@ -430,7 +430,7 @@ const Faqs = () => {
                 dataQ.map((item, index) => (
                     <div className={"QuestCon"} key={index}>
 
-                        <h2 className={"Syn small"}>{item.title}</h2>
+                        <h2 className={"Syn small ju"}>{item.title}</h2>
 
                         {
                             item.qa.map((it, ind) => {
@@ -446,7 +446,7 @@ const Faqs = () => {
                                     >
 
                                         <div className={"QuestTop"}>
-                                            <h3 className={"qq"}>
+                                            <h3 className={"qq ju"}>
                                                 {it.q}
                                             </h3>
 
@@ -456,7 +456,7 @@ const Faqs = () => {
                                         </div>
 
                                         <div className={"AnswerWrap"}>
-                                            <span className={"Gen small light"}>
+                                            <span className={"Gen small light ju"}>
                                                 {it.a}
                                             </span>
                                         </div>

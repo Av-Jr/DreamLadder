@@ -156,11 +156,11 @@ const Insurance = () => {
 
           {
             InsuranceHeroData.description.map((item, index) => (
-              <span className={"Gen dark small"} key={index}>{item.text}</span>
+              <span className={"Gen dark small ju"} key={index}>{item.text}</span>
             ))
           }
 
-          <span className={"quote small"}>
+          <span className={"quote small ju"}>
             {InsuranceHeroData.strategicSignificance}
           </span>
 
@@ -177,8 +177,8 @@ const Insurance = () => {
 
       <div className={"INStwo"}>
         <div className="innerTWO">
-          <h2 className={"Gen dark"}>{InsuranceTypesData.title}</h2>
-          <span className={"Gen light small"}>{InsuranceTypesData.description}</span>
+          <h2 className={"Gen dark tcen"}>{InsuranceTypesData.title}</h2>
+          <span className={"Gen light small tcen"}>{InsuranceTypesData.description}</span>
 
           <div className={"cardsCont"}>
 
@@ -192,7 +192,7 @@ const Insurance = () => {
                       <Icon className={"IconCard"}/>
                       <div className={"InerC"}>
                         <h2 className={"Syn dark small"}>{item.title}</h2>
-                        <span className={"Gen light small"}>{item.description}</span>
+                        <span className={"Gen light small ju"}>{item.description}</span>
                       </div>
                     </div>
                 );
@@ -231,7 +231,7 @@ const Insurance = () => {
 
                 <span className={"Gen light"}>{`0${index + 1}`}</span>
 
-                <span className={"Gen dark small"}>{item}</span>
+                <span className={"Gen dark small ju"}>{item}</span>
 
               </div>
             ))

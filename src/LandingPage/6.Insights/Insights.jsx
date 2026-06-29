@@ -33,7 +33,7 @@ const Insights = () => {
     return(
         <div id={"InsightsMC"}>
             <h1 className={"Gen dark small"}>Latest Insights</h1>
-            <span className={"Gen light small"}>Market perspective and Financial wisdom to keep you ahead.</span>
+            <span className={"Gen light small tcen"}>Market perspective and Financial wisdom to keep you ahead.</span>
 
             <div className={"iframeElesCon"}>
                 <h3 className={"Gen light small"}>Featured Videos</h3>

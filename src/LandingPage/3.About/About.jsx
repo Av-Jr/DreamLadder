@@ -55,7 +55,7 @@ const About = () => {
 
           <div className="Con ACfour">
             <h2 className={"Gen dark"}>All Your Family Investments,<br/>One Simple App</h2>
-            <span className={"Gen dark small"}>Easily view portfolio performance, transactions and reports for every family member - anytime, anywhere</span>
+            <span className={"Gen dark small ju"}>Easily view portfolio performance, transactions and reports for every family member - anytime, anywhere</span>
             <button className="navBtn s" onClick={() => window.open("https://dreamladdercapital.my-portfolio.co.in/app/#/login", "_blank")}>Start now</button>
           </div>
 

@@ -262,7 +262,7 @@ const WhyAIFData = {
       <div className="PMSone">
         <div className="heroText">
           {PMSHeroData.description.map((item, index) => (
-              <span className="Gen small dark" key={index}>
+              <span className="Gen small dark ju" key={index}>
               {item.text}
             </span>
           ))}
@@ -281,7 +281,7 @@ const WhyAIFData = {
           <div className="left">
             <h2 className={"Gen bold"}>{PMSFeatureData.title}</h2>
 
-            <span className={"Gen small light"}>{PMSFeatureData.description}</span>
+            <span className={"Gen small light ju"}>{PMSFeatureData.description}</span>
 
             <img loading="lazy" src={`${img(PMSFeatureData.image)}`} alt="" />
           </div>
@@ -296,7 +296,7 @@ const WhyAIFData = {
                       <Icon className={"cardIcon"} size={32}/>
                       <div className={"textElePMStwo"}>
                         <h3 className={"Gen bold"}>{item.title}</h3>
-                        <span className={"Gen small light"}>{item.description}</span>
+                        <span className={"Gen small light ju"}>{item.description}</span>
                       </div>
                     </div>
                 );
@@ -324,7 +324,7 @@ const WhyAIFData = {
 
                   <div className="stepContent">
                     <h2 className={"Syn small"}>{item.title}</h2>
-                    <span className={"Gen light small"}>{item.description}</span>
+                    <span className={"Gen light small ju"}>{item.description}</span>
                   </div>
 
                 </div>
@@ -336,7 +336,7 @@ const WhyAIFData = {
 
         <div className="right">
 
-    <span className="quote Gen small">
+    <span className="quote Gen small ju">
       {PMSRegulationData.quote}
     </span>
 
@@ -372,13 +372,13 @@ const WhyAIFData = {
 
           {
             AIFIntroData.description.map((item, index) => (
-                <span className={"Gen small light"} key={index}>
+                <span className={"Gen small light ju"} key={index}>
           {item.text}
         </span>
             ))
           }
 
-          <span className="quote Gen small">
+          <span className="quote Gen small ju">
       {AIFIntroData.quote}
     </span>
 
@@ -393,8 +393,8 @@ const WhyAIFData = {
             AIFTypesData.cards.map((item, index) => (
                 <div className="aifCard" key={index}>
                   <div className="firstRow">
-                    <span className={"Gen dark small bold"}>{item.number}</span>
-                    <h2 className={"Syn small"}>{item.title}</h2>
+                    <span className={"Gen dark small bold tcen"}>{item.number}</span>
+                    <h2 className={"Syn small tcen"}>{item.title}</h2>
                   </div>
 
                   <span className={'Gen light small'}>{item.description}</span>
@@ -419,9 +419,9 @@ const WhyAIFData = {
         </div>
 
         <div className="right">
-          <h2 className={"Gen dark bold"}>{AIFTypesData.title}</h2>
+          <h2 className={"Gen dark bold tcen"}>{AIFTypesData.title}</h2>
 
-          <span className={"Gen light small"}>
+          <span className={"Gen light small ju"}>
       SEBI classifies Alternative Investment Funds into three distinct categories based on investment objectives and asset classes. Each category serves specific investor needs, ranging from social impact and infrastructure to complex trading strategies.
     </span>
 
@@ -433,7 +433,7 @@ const WhyAIFData = {
       <div className="PMSseven">
 
         <div className="left">
-          <h2 className={"Gen bold dark"}>{AIFRegulationData.title}</h2>
+          <h2 className={"Gen bold dark tcen"}>{AIFRegulationData.title}</h2>
 
           <span className={"Gen light small"}>
       {AIFRegulationData.description}
@@ -447,7 +447,7 @@ const WhyAIFData = {
             AIFRegulationData.points.map((item, index) => (
                 <div className="regCardP" key={index}>
                   <span className={"Syn light small"}>0{index + 1}</span>
-                    <h3 className="Gen dark bold">{item.title} : <span className={"Gen light small"}>{item.description}</span></h3>
+                    <h3 className="Gen dark bold">{item.title} : <span className={"Gen light small ju"}>{item.description}</span></h3>
 
                 </div>
             ))

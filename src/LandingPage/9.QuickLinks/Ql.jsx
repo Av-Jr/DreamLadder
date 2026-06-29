@@ -267,7 +267,7 @@ export default function Ql() {
                     href={item.path}
                     className={`linkItem ${item.className}`}
                   >
-                    <span className={"Gen small light"}>{item.label}</span>
+                    <span className={"Gen small light ju"}>{item.label}</span>
                   </a>
 
                 ) : (
@@ -283,7 +283,7 @@ export default function Ql() {
                       )
                     }
                   >
-                    <span className={"Gen light small"}>{item.label}</span>
+                    <span className={"Gen light small ju"}>{item.label}</span>
                   </button>
 
                 )
@@ -306,7 +306,7 @@ export default function Ql() {
           Risk Factors –
         </span>
 
-        <span className="Gen small light">
+        <span className="Gen small light ju">
           Investments in Mutual Funds are subject to Market Risks. Read all
           scheme related documents carefully before investing. Mutual Fund
           Schemes do not assure or guarantee any returns. Past performances
@@ -331,13 +331,13 @@ export default function Ql() {
 
       <div className="registrationInfo">
 
-        <span className={"Gen small bold dark"}>
+        <span className={"Gen small bold dark tcen"}>
           AMFI Registered Mutual Funds Distributor | ARN-143182 |
           Initial Date of Registration: 04/04/2018 |
           Validity: 03/04/2027
         </span>
 
-        <span className={"Gen small bold dark"}>
+        <span className={"Gen small bold dark tcen"}>
           APRN Code: APRN05201 | Validity: 06/04/2028
         </span>
 
@@ -345,7 +345,7 @@ export default function Ql() {
 
       <div className="bottomLegal">
 
-        <span className="bold Gen">
+        <span className="bold Gen tcen">
           ©2026 DreamLadder Capital.
         </span>
 

@@ -81,7 +81,7 @@ ${formData.message}
                 </div>
 
                 <div className="text">
-                  <span className={"Gen conTact"}>+91 89-0808-2222</span>
+                  <span className={"Gen conTact ju"}>+91 89-0808-2222</span>
                 </div>
 
               </div>
@@ -93,7 +93,7 @@ ${formData.message}
                 </div>
 
                 <div className="text">
-                  <span className={"Gen conTact"}>info@dreamladdercapital.com</span>
+                  <span className={"Gen conTact ju"}>info@dreamladdercapital.com</span>
                 </div>
 
               </div>
@@ -105,7 +105,7 @@ ${formData.message}
                 </div>
 
                 <div className="text">
-                  <span className={"Gen conTact"}>
+                  <span className={"Gen conTact ju"}>
                     #20, 10th floor, R. City Offices,
                     LBS Marg, Ghatkopar (west),
                     Mumbai - 400086

@@ -56,7 +56,7 @@ const wwsData = [
                         <img loading="lazy" src={`${img(item.image)}`} alt=""/>
                         <div className={"heroText"}>
                             <h2 className={"Syn"}>{item.title}</h2>
-                            <span className={"dark small Gen dark bold"}>{item.description}</span>
+                            <span className={"dark small Gen dark bold ju"}>{item.description}</span>
                             <div className={"line"}></div>
                         </div>
                     </div>
@@ -65,7 +65,7 @@ const wwsData = [
             </div>
             <div className="connectMe">
                 <h2 className={"Syn"}>Lets Build Your Financial Roadmap</h2>
-                <span className={"Gen dark small"}>Engage with our team to discuss asset allocation and suitable investment solutions designed for long-term wealth continuity</span>
+                <span className={"Gen dark small tcen"}>Engage with our team to discuss asset allocation and suitable investment solutions designed for long-term wealth continuity</span>
                 <button className="navBtn s" onClick={() => {window.location.href="/connect"}}>Connect with us</button>
             </div>
 
