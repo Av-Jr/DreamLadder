@@ -17,6 +17,42 @@ export default function About() {
 
     useEffect(() => {
 
+        gsap.utils.toArray(".jourCard").forEach((card) => {
+
+            ScrollTrigger.create({
+
+                trigger: card,
+
+                start: "top center",
+
+                onEnter: () => card.classList.add("active"),
+
+                onLeaveBack: () => card.classList.remove("active")
+
+            });
+
+        });
+
+        gsap.to(".jourFade .progressLine", {
+
+            scaleY: 1,
+
+            ease: "none",
+
+            scrollTrigger: {
+
+                trigger: ".jourFade .scrollThrough",
+
+                start: "top center",
+
+                end: "bottom center",
+
+                scrub: true
+
+            }
+
+        });
+
         gsap.to(".progressLine", {
             scaleY: 1,
             ease: "none",
@@ -257,8 +293,8 @@ export default function About() {
                         >
 
                             <div className="year">
-                                <span className={"yt"}>YEAR</span>
-                                <span className={"yy"}>{item.year}</span>
+                                <span className={"yt tcen"}>YEAR</span>
+                                <span className={"yy tcen"}>{item.year}</span>
                             </div>
 
                             <div className="dot"></div>
@@ -271,6 +307,65 @@ export default function About() {
                         </div>
 
                     ))}
+
+                </div>
+
+            </div>
+
+            <div className="jourFade">
+
+                <h1 className="Gen">Our Journey</h1>
+
+                <div className="scrollThrough">
+
+                    <div className="grayLine"></div>
+
+                    <div className="progressLine"></div>
+
+                    {
+                        journeyData.map((item,index)=>{
+
+                            return(
+
+                                <div
+                                    key={index}
+                                    className={`jourCard ${
+                                        index%2===0?"left":"right"
+                                    }`}
+                                >
+
+                                    <div className="year">
+
+                            <span className="yt tcen">
+                                YEAR
+                            </span>
+
+                                        <span className="yy tcen">
+                                {item.year}
+                            </span>
+
+                                    </div>
+
+                                    <div className={`fadeCard ${
+                                        index%2===0?"rightHead":""
+                                    }`}>
+
+                                        <h2 className="Syn tcen">
+                                            {item.title}
+                                        </h2>
+
+                                        <span className="Gen small ju">
+                                {item.text}
+                            </span>
+
+                                    </div>
+
+                                </div>
+
+                            )
+
+                        })
+                    }
 
                 </div>
 

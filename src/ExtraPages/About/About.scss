@@ -41,18 +41,18 @@ $redCol : #E53935;
 }
 
 //maxWidth
-.conSecFP, .secondPage, .conSecTP, .conSecFoP, .fifthPage, .sixthPage, .conSecSeP{
+.conSecFP, .secondPage, .conSecTP, .conSecFoP, .fifthPage, .sixthPage, .conSecSeP, .jourFade{
   max-width : 1300px;
 }
 
 //grid;
- .firstPage, .secondPage, .conSecFoP, .fourthPage, .cardEle, .conSecFP, .memC, .sixthPage, .seventhPage{
+ .firstPage, .secondPage, .conSecFoP, .fourthPage, .cardEle, .conSecFP, .memC, .sixthPage, .seventhPage, .jourFade, .scrollThrough{
   display : grid;
   place-items : center;
 }
 
 //padding
-.firstPage, .thirdPage, .fourthPage, .fifthPage, .sixthPage, .seventhPage{
+.firstPage, .thirdPage, .fourthPage, .fifthPage, .sixthPage, .seventhPage, .jourFade{
   padding : 50px 0;
 }
 
@@ -62,7 +62,7 @@ $redCol : #E53935;
   padding-right : 50px;
 }
 
-#About2MC, .firstPage, .secondPage, .thirdPage, .fourthPage, .journeyPage, .fifthPage{
+#About2MC, .firstPage, .secondPage, .thirdPage, .fourthPage, .journeyPage, .fifthPage, .jourFade{
   min-height : 100vh;
   width : 100%;
 }
@@ -343,6 +343,177 @@ $redCol : #E53935;
     }
   }
   
+  .jourFade{
+    .scrollThrough{
+      .jourCard.active{
+        
+        .year{
+          
+          .yt{
+            
+            color:#E53935;
+            
+          }
+          
+          .yy{
+            
+            color:black;
+            
+          }
+          
+        }
+        
+        .fadeCard{
+          
+          h2{
+            
+            color:black;
+            
+          }
+          
+          span{
+            
+            color:#444;
+            
+          }
+          
+        }
+        
+      }
+      .jourCard{
+        
+        .fadeCard{
+          
+          width:500px;
+          
+          background:white;
+          
+          border-radius:20px;
+          
+          padding:40px;
+          
+          border:1px solid rgba(0,0,0,.15);
+          
+          h2{
+            
+            margin-bottom:15px;
+            
+            color:#9a9a9a;
+            
+            transition:.5s;
+            
+          }
+          
+          span{
+            
+            color:#9a9a9a;
+            
+            transition:.5s;
+            
+          }
+          
+        }
+        
+        position:relative;
+        
+        width:100%;
+        
+        display:flex;
+        
+        margin-bottom:80px;
+        
+        &.left{
+          
+          justify-content:flex-end;
+          
+          .fadeCard{
+            
+            margin-right:calc(50% + 80px);
+            
+            text-align:right;
+          }
+          
+        }
+        
+        &.right{
+          
+          justify-content:flex-start;
+          
+          .fadeCard{
+            
+            margin-left:calc(50% + 80px);
+            
+          }
+          
+        }
+        
+      }
+      
+      .progressLine{
+        
+        position:absolute;
+        
+        left:50%;
+        
+        top:0;
+        
+        width:2px;
+        
+        height:100%;
+        
+        background:#E53935;
+        
+        transform-origin:top;
+        
+        transform:translateX(-50%) scaleY(0);
+        
+        z-index:2;
+        
+      }
+      
+      position:relative;
+      
+      width:100%;
+      max-width:1200px;
+      
+    }
+    
+    .scrollThrough::before{
+      
+      content:"";
+      
+      position:absolute;
+      
+      left:50%;
+      
+      top:0;
+      bottom:0;
+      
+      width:2px;
+      
+      background:#e5e5e5;
+      
+      transform:translateX(-50%);
+      
+    }
+    
+    width:100%;
+    min-height:100vh;
+    
+    padding:120px 40px;
+    
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    
+    h1{
+      
+      margin-bottom:80px;
+      
+    }
+    
+  }
+  
   .fourthPage{
     background : img("flexBack") center/cover no-repeat;
     
@@ -480,210 +651,417 @@ $redCol : #E53935;
 }
 
 @include mediaDevice(mobile){
+  
+  *{
+    box-sizing:border-box;
+  }
+  
+  .innerPadding{
+    padding-inline:15px;
+  }
+  
+  .firstPage,
+  .thirdPage,
+  .fourthPage,
+  .fifthPage,
+  .sixthPage,
+  .seventhPage,
+  .journeyPage,
+  .jourFade{
+    
+    padding:70px 15px;
+  }
 
 #About2MC{
+  overflow-x:hidden;
   .conSecFP{
 
   }
   
   .firstPage{
+    
     .conSecFP{
-      grid-template-columns : 1fr;
-      gap : 50px;
-      padding : 100px 10px;
-      grid-template-rows : repeat(3, auto);
+      
+      width:100%;
+      
+      grid-template-columns:1fr;
+      
+      gap:40px;
+      
+      padding:0;
       
       .section1{
+        
+        width:100%;
+        
         img{
-          height : 100%;
+          
+          width:100%;
+          height:auto;
+          
         }
-        width : 100%;
+        
       }
       
       .section2{
-        flex-direction : column;
-        gap : 50px;
+        
+        width:100%;
+        
+        flex-direction:column;
+        
+        gap:30px;
         
         .sec2F{
-          justify-content : flex-start;
-          align-items : flex-start;
           
-          h2{
-            text-align : left;
+          min-width:0;
+          
+          width:100%;
+          
+          align-items:flex-start;
+          
+          h2,
+          span{
+            
+            text-align:left;
+            
           }
           
-          span, .toRight{
-            text-align : right;
-            width : 100%;
-          }
         }
         
         img{
-          width : 70%;
+          
+          width:min(260px,80%);
+          
+          align-self:center;
+          
         }
+        
       }
+      
     }
+    
   }
   
   .secondPage{
-    grid-template-columns : 1fr;
-    grid-template-rows : repeat(2, auto);
-    gap : 20px;
-    padding : 10px 10px;
+    
+    width:100%;
+    
+    grid-template-columns:1fr;
+    
+    gap:40px;
+    
+    padding:0;
+    
+    .text{
+      
+      max-width:none;
+      
+    }
+    
+    img{
+      
+      width:100%;
+      
+      max-width:450px;
+      
+    }
+    
   }
   
   .thirdPage{
-    justify-content : center;
-    align-items : center;
-    background-size : cover;
-    padding : 100px 10px;
+    
+    background-size:cover;
+    
+    align-items:center;
+    
     .conSecTP{
-      width : 100%;
-      background: rgba(255, 255, 255, 0.3);
-      backdrop-filter : blur(10px);
-      border-radius : 10px;
-      padding : 50px 50px;
-      span, h2, h1{
-        text-align : right;
-        width : 100%;
+      
+      width:100%;
+      
+      max-width:none;
+      
+      padding:30px 20px;
+      
+      box-sizing:border-box;
+      
+      align-items:flex-start;
+      
+      h1,
+      h2,
+      span{
+        
+        width:100%;
+        
+        text-align:left;
+        
       }
+      
     }
+    
   }
   
   .journeyPage{
-    padding: 80px 20px;
+    
+    padding:70px 15px;
     
     h1{
-      margin-bottom: 50px;
+      
+      margin-bottom:50px;
+      
     }
+    
   }
   
   .timeline{
-    max-width: 100%;
+    
+    max-width:100%;
     
     &::before{
-      left: 35px;
+      
+      left:35px;
+      
     }
+    
   }
   
   .progressLine{
-    left: 35px;
+    
+    left:35px;
+    
   }
   
   .timelineItem{
-    margin-bottom: 60px;
     
-    justify-content: flex-start !important;
-  }
-  
-  .year{
-    left: 35px;
+    justify-content:flex-start!important;
     
-    width: 70px;
-    height: 70px;
+    margin-bottom:55px;
     
-    font-size: 14px;
-    
-    z-index: 10;
   }
   
   .timelineCard{
-    width: calc(100% - 110px);
     
-    margin-left: 90px !important;
-    margin-right: 0 !important;
+    width:calc(100% - 95px);
     
-    padding: 20px;
-    text-align : left;
+    margin-left:90px!important;
     
-    .rightHead{
-      text-align : left!important;
-      h2{
-        text-align : left;
-      }
-    }
+    margin-right:0!important;
+    
+    padding:20px;
+    
+    text-align:left;
     
     h2{
-      font-size: 18px;
-      margin-bottom: 10px;
+      
+      text-align:left!important;
+      
+      font-size:18px;
+      
     }
     
     p{
-      font-size: 13px;
-      line-height: 1.6;
+      
+      font-size:15px;
+      
     }
+    
+  }
+  
+  .year{
+    
+    left:35px;
+    
+    width:70px;
+    
+    height:70px;
+    
+    top:20px;
+    
+    .yt{
+      
+      font-size:10px;
+      
+    }
+    
+    .yy{
+      
+      font-size:18px;
+      
+    }
+    
+  }
+  
+  .jourFade{
+    
+    padding:70px 15px;
+    
+    h1{
+      
+      margin-bottom:50px;
+      
+    }
+    
+    .scrollThrough{
+      
+      width:100%;
+      
+      &::before{
+        
+        left:35px;
+        
+      }
+      
+      .progressLine{
+        
+        left:35px;
+        
+      }
+      
+      .jourCard{
+        
+        justify-content:flex-start!important;
+        
+        margin-bottom:55px;
+        
+        .fadeCard{
+          
+          width:calc(100% - 95px);
+          
+          margin-left:90px!important;
+          
+          margin-right:0!important;
+          
+          text-align:left!important;
+          
+          padding:20px;
+          
+          h2{
+            
+            text-align:left;
+            
+            font-size:18px;
+            
+          }
+          
+          span{
+            
+            font-size:15px;
+            
+          }
+          
+        }
+        
+      }
+      
+    }
+    
   }
   
   .fourthPage{
+    
     .conSecFoP{
-      margin-top : 0;
-      padding : 0;
-      gap : 10px;
+      
+      gap:30px;
+      
       .cardElesfP{
-        grid-template-columns : 1fr;
-        grid-template-rows : repeat(2, auto);
-        gap : 20px;
-        padding : 10px 10px;
         
-        .cardEle{
-          display : grid;
-          place-items : center;
-          grid-template-columns : repeat(2, auto);
-          gap : 10px;
-          height : fit-content;
-          max-height : 150px;
-          
-          span{
-            grid-column : span 2;
-          }
-        }
+        grid-template-columns:1fr;
+        
+        gap:20px;
+        
       }
+      
     }
+    
+    .cardEle{
+      
+      max-width:none;
+      
+      width:100%;
+      
+    }
+    
   }
   
   .fifthPage{
-    flex-direction: column;
-    gap: 50px;
-    padding: 10px 10px;
+    
+    flex-direction:column;
+    
+    gap:40px;
     
     .teamMembers{
+      
+      width:100%;
+      
       .memC{
-        flex-direction : column;
-        align-items : flex-end;
-        .heroText{
-          width : 100%;
-          h1{
-            white-space : normal;
-          }
-        }
+        
+        flex-direction:column;
+        
+        gap:20px;
         
         .heroImg{
-          align-self : center;
-          padding : 0;
-          height : fit-content;
+          
+          width:100%;
+          
+          padding:0;
+          
+          img{
+            
+            width:100%;
+            
+          }
+          
         }
+        
+        .heroText{
+          
+          width:100%;
+          
+          h1{
+            
+            white-space:normal;
+            
+          }
+          
+        }
+        
       }
+      
     }
+    
   }
   
   .sixthPage{
-    grid-template-columns : 1fr;
-    grid-template-rows : repeat(2, auto);
-    padding : 50px 10px;
+    
+    grid-template-columns:1fr;
+    
+    gap:40px;
+    
+    .heroImg{
+      
+      img{
+        
+        width:100%;
+        
+        padding:0;
+        
+      }
+      
+    }
     
     .heroText{
-      padding : 0;
+      
       .sixthPgCard{
-        max-width : 100%;
-        width : 100%;
-        grid-template-columns: 1fr;
-        grid-template-rows: auto auto;
         
-        gap: 15px;
+        grid-template-columns:1fr;
         
-        padding: 10px;
+        gap:15px;
+        
+        padding:20px;
+        
       }
+      
     }
+    
   }
   
 }
