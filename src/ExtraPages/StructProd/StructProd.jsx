@@ -159,7 +159,7 @@ const StructProd = () => {
                       <Icon className={"cardIcon"} size={30}/>
                       <div className={"textElll"}>
                         <h3 className={"Syn bold"}>{item.title}</h3>
-                        <span className={"Gen light bold small"}>{item.description}</span>
+                        <span className={"Gen light bold small ju"}>{item.description}</span>
                       </div>
                     </div>
                 );
@@ -198,7 +198,7 @@ const StructProd = () => {
 
                 <span className={"Syn light small ind"}>{`0${index + 1}`}</span>
 
-                <span className={"Gen light small ite"}>{item}</span>
+                <span className={"Gen light small ite ju"}>{item}</span>
 
               </div>
             ))

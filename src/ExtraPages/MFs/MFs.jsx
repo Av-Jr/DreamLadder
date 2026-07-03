@@ -169,7 +169,7 @@ const MFAssistData = {
                 <img loading="lazy" className={"heroImg"} src={`${img(MFHeroData.image)}`} alt=""/>
                 <div className="heroText">
                     {MFHeroData.description.map((item, index) => (
-                        <span className="Gen small dark" key={index}>{item.text}</span>
+                        <span className="Gen small dark ju" key={index}>{item.text}</span>
                     ),
                     )}
                     <span className="quote Gen small">
@@ -184,7 +184,7 @@ const MFAssistData = {
 
                 <h2 className="Gen">{MFBenefitsData.title}</h2>
 
-                <span className="Gen light small">
+                <span className="Gen light small smallW">
                     {MFBenefitsData.description}
                 </span>
 
@@ -291,7 +291,7 @@ const MFAssistData = {
 
                                     <div className="stepContent">
                                         <h3 className={"Gen dark bold"}>{item.title}</h3>
-                                        <span className={"Gen small light"}>{item.description}</span>
+                                        <span className={"Gen small light ju"}>{item.description}</span>
                                     </div>
                                 </div>
                             ))

@@ -231,7 +231,7 @@ const Insurance = () => {
 
                 <span className={"Gen light"}>{`0${index + 1}`}</span>
 
-                <span className={"Gen dark small"}>{item}</span>
+                <span className={"Gen dark small ju"}>{item}</span>
 
               </div>
             ))

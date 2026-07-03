@@ -57,7 +57,7 @@ const Pow = () => {
                       <div className="cardEE">
                         <div className="textEE">
                           <Quote size={48} color="#D8C2F0" />
-                          <span className="statementEE Gen small bold">
+                          <span className="statementEE Gen small bold ju">
                             "{item.statement}"
                           </span>
 

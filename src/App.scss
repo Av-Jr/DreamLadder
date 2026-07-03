@@ -42,6 +42,16 @@ body{
     line-height : 1.4;
     font-weight : normal;
     
+    &.tcen{
+      width : 100%;
+      text-align : center !important;
+    }
+    
+    &.ju{
+      display : block;
+      text-align : justify !important;
+    }
+    
     &.conTact{
       font-size : clamp(0px, 2.5vh, 25px) !important;
       text-align : center;
@@ -97,6 +107,15 @@ body{
     font-size : clamp(0px, 7vh, 70px) !important;
     color : black;
     
+    &.tcen{
+      width : 100%;
+      text-align : center !important;
+    }
+    
+    &.ju{
+      text-align : justify !important;
+    }
+    
     &.small{
       font-size : clamp(0px, 5vh, 60px) !important;
     }
@@ -130,6 +149,14 @@ body{
     color : black;
     font-size : clamp(0px, 3.5vh, 35px) !important;
     
+    &.tcen{
+      width : 100%;
+      text-align : center !important;
+    }
+    &.ju{
+      text-align : justify !important;
+    }
+    
     &.small{
       font-size : clamp(0px, 2.5vh, 25px) !important;
     }
@@ -160,6 +187,14 @@ body{
     
     color : black;
     font-size : clamp(0px, 3vh, 20px) !important;
+    
+    &.tcen{
+      width : 100%;
+      text-align : center !important;
+    }
+    &.ju{
+      text-align : justify !important;
+    }
     
     &.Gen{
       font-family : Genos;

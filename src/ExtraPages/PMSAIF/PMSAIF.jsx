@@ -262,7 +262,7 @@ const WhyAIFData = {
       <div className="PMSone">
         <div className="heroText">
           {PMSHeroData.description.map((item, index) => (
-              <span className="Gen small dark" key={index}>
+              <span className="Gen small dark ju" key={index}>
               {item.text}
             </span>
           ))}
@@ -281,7 +281,7 @@ const WhyAIFData = {
           <div className="left">
             <h2 className={"Gen bold"}>{PMSFeatureData.title}</h2>
 
-            <span className={"Gen small light"}>{PMSFeatureData.description}</span>
+            <span className={"Gen small light ju"}>{PMSFeatureData.description}</span>
 
             <img loading="lazy" src={`${img(PMSFeatureData.image)}`} alt="" />
           </div>
@@ -296,7 +296,7 @@ const WhyAIFData = {
                       <Icon className={"cardIcon"} size={32}/>
                       <div className={"textElePMStwo"}>
                         <h3 className={"Gen bold"}>{item.title}</h3>
-                        <span className={"Gen small light"}>{item.description}</span>
+                        <span className={"Gen small light ju"}>{item.description}</span>
                       </div>
                     </div>
                 );
@@ -372,13 +372,13 @@ const WhyAIFData = {
 
           {
             AIFIntroData.description.map((item, index) => (
-                <span className={"Gen small light"} key={index}>
+                <span className={"Gen small light ju"} key={index}>
           {item.text}
         </span>
             ))
           }
 
-          <span className="quote Gen small">
+          <span className="quote Gen small ju">
       {AIFIntroData.quote}
     </span>
 
@@ -421,7 +421,7 @@ const WhyAIFData = {
         <div className="right">
           <h2 className={"Gen dark bold"}>{AIFTypesData.title}</h2>
 
-          <span className={"Gen light small"}>
+          <span className={"Gen light small ju"}>
       SEBI classifies Alternative Investment Funds into three distinct categories based on investment objectives and asset classes. Each category serves specific investor needs, ranging from social impact and infrastructure to complex trading strategies.
     </span>
 
@@ -435,7 +435,7 @@ const WhyAIFData = {
         <div className="left">
           <h2 className={"Gen bold dark"}>{AIFRegulationData.title}</h2>
 
-          <span className={"Gen light small"}>
+          <span className={"Gen light small ju"}>
       {AIFRegulationData.description}
     </span>
 

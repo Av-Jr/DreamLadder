@@ -56,7 +56,7 @@ const wwsData = [
                         <img loading="lazy" src={`${img(item.image)}`} alt=""/>
                         <div className={"heroText"}>
                             <h2 className={"Syn"}>{item.title}</h2>
-                            <span className={"dark small Gen dark bold"}>{item.description}</span>
+                            <span className={"dark small Gen dark bold ju"}>{item.description}</span>
                             <div className={"line"}></div>
                         </div>
                     </div>

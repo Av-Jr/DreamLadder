@@ -71,6 +71,10 @@ $darkBlue : #17233d;
     width : 100%;
     background: img("flexBack") center/cover no-repeat;
     
+    .smallW{
+      max-width : 700px;
+    }
+    
     .MFtwoCards{
       max-width :300px;
       background: $darkBlue;

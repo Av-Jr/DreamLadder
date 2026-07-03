@@ -179,7 +179,7 @@ const LEP = () => {
 
                 <h2 className={"Syn dark"}>{item.title}</h2>
 
-                <span className={"Gen light small"}>{item.description}</span>
+                <span className={"Gen light small ju"}>{item.description}</span>
 
                 <div className={"quoteBox"}>
 

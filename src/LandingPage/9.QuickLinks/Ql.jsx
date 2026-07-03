@@ -306,7 +306,7 @@ export default function Ql() {
           Risk Factors –
         </span>
 
-        <span className="Gen small light">
+        <span className="Gen small light ju">
           Investments in Mutual Funds are subject to Market Risks. Read all
           scheme related documents carefully before investing. Mutual Fund
           Schemes do not assure or guarantee any returns. Past performances
