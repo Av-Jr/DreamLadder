@@ -44,10 +44,11 @@ export default defineType({
       title: 'Published at',
       type: 'datetime',
     }),
+    // CHANGED: Replaced 'blockContent' with 'text'
     defineField({
       name: 'body',
       title: 'Body',
-      type: 'blockContent',
+      type: 'text',
     }),
   ],
 

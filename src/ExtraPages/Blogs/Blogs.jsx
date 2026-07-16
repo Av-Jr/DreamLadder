@@ -1,15 +1,18 @@
 import React, { useEffect, useState } from 'react';
-import { PortableText } from '@portabletext/react';
-import { homepageClient } from "../../../studio-hello-world/lib/sanityClient.js";
+import { homepageClient } from "../../../dreamladder-capital-cms/lib/sanityClient.js";
+import { formatDate } from '../../utils/adminUtils';
 import "./Blogs.scss";
+import { useLocation } from 'react-router-dom';
 
 const POSTS_QUERY = `*[_type == "post"] | order(publishedAt desc) {
-    _id, title, author, publishedAt, slug, body, coverImageUrl
+    _id, title, author, _createdAt, slug, body, coverImageUrl
 }`;
 
 export default function Blogs() {
+    const location = useLocation();
     const [posts, setPosts] = useState([]);
     const [status, setStatus] = useState("loading");
+    const [selectedPost, setSelectedPost] = useState(null);
 
     useEffect(() => {
         const fetchPosts = async () => {
@@ -17,56 +20,58 @@ export default function Blogs() {
                 const data = await homepageClient.fetch(POSTS_QUERY);
                 setPosts(data || []);
                 setStatus("ready");
+
+                // Logic to check if we arrived here from Insights
+                if (location.state?.selectedPost) {
+                    setSelectedPost(location.state.selectedPost);
+                }
             } catch (err) {
                 console.error("Fetch error:", err);
                 setStatus("error");
             }
         };
         fetchPosts();
-    }, []);
-
-    const scrollToPost = (id) => {
-        const element = document.getElementById(id);
-        if (element) {
-            element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }
-    };
+    }, [location.state]); // Dependency on location.state
 
     return (
         <main className="blogsPageLayout">
             <aside className="blogsIndex">
-                <h2 className="Syn small">Index</h2>
-                {status === "ready" && posts.map((post) => (
-                    <div key={post._id} className="indexItem" onClick={() => scrollToPost(post._id)}>
-                        <span className="Gen small">{post.title}</span>
+                <span className="Syn small">Index</span>
+                {status === "ready" && posts.map((post, index) => (
+                    <div key={post._id} className="indexItem" onClick={() => setSelectedPost(post)}>
+                        <span className="Gen small number">{String(index + 1).padStart(2, '0')}</span>
+                        <span className="Gen small title">{post.title}</span>
                     </div>
                 ))}
             </aside>
 
             <section className="blogsDetail">
-                {status === "ready" && posts.map((post) => (
-// Inside your Blogs.jsx - rendering logic
-                    <article key={post._id} id={post._id} className="blogCard">
-                        {post.coverImageUrl && (
-                            <img src={post.coverImageUrl} alt={post.title} className="blogHeroImage" />
-                        )}
-                        <h1 className="Syn small">{post.title}</h1>
-                        <span className="blogAuthor Gen small light">By {post.author || 'Unknown'}</span>
-
-                        <div className="blogBody Gen medium">
-                            <PortableText
-                                value={post.body}
-                                components={{
-                                    // You can add custom styles here if needed
-                                    block: {
-                                        normal: ({children}) => <p className="blog-paragraph">{children}</p>,
-                                        h1: ({children}) => <h1 className="blog-h1">{children}</h1>,
-                                    }
-                                }}
-                            />
-                        </div>
+                {selectedPost ? (
+                    <article className="blogDetailView">
+                        <span className="btn-back Gen small" onClick={() => setSelectedPost(null)}>← Back</span>
+                        {selectedPost.coverImageUrl && <img src={selectedPost.coverImageUrl} className="blogHeroImage" alt={selectedPost.title} />}
+                        <span className="Syn medium block">{selectedPost.title}</span>
+                        <span className="Gen small light block">By {selectedPost.author} | {formatDate(selectedPost.publishedAt)}</span>
+                        <div className="blogBody Gen medium" dangerouslySetInnerHTML={{ __html: selectedPost.body }} />
                     </article>
-                ))}
+                ) : (
+// Inside Blogs.jsx - Replace the current blogs.map block:
+                    <div className="blogsGrid">
+                        {status === "ready" && posts.map((post) => (
+                            <div key={post._id} className="blogCard" onClick={() => setSelectedPost(post)}>
+                                {post.coverImageUrl && <img src={post.coverImageUrl} className="cardImage" alt={post.title} />}
+
+                                {/* Using Insights.jsx DateBlog structure */}
+                                <div className="DateBlog">
+                                    <span className="Gen small light">{formatDate(post._createdAt)}</span>
+                                    <span className="Gen small light">{post.author}</span>
+                                </div>
+
+                                <span className="Syn small block cardTitle title-truncate">{post.title}</span>
+                            </div>
+                        ))}
+                    </div>
+                )}
             </section>
         </main>
     );
