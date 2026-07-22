@@ -23,6 +23,7 @@ export default function Media() {
                 <span className="titleZ">Media</span>
             </div>
 
+            <div id={"ExtrasME"}>
             <div className="media-grid">
                 {mediaList.length > 0 ? (
                     mediaList.map((item) => (
@@ -43,6 +44,7 @@ export default function Media() {
                     <p>No media available yet.</p>
                 )}
             </div>
+        </div>
         </div>
     )
 }

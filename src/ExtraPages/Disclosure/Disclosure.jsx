@@ -100,21 +100,21 @@ export default function Disclosure() {
 
         <div className="notesSec">
 
-          <h3>
+          <span className={"Gen small ju"}>
             Details of Scheme level commission on Mutual funds are available
             with the Relationship Managers and would be produced on demand.
-          </h3>
+          </span>
 
-          <h3>
+          <span className={"Gen small ju"}>
             This is on a best effort basis and rates are updated as and when
             actual rates are received from AMCS.
-          </h3>
+          </span>
 
-          <h3>
+          <span className={"Gen small ju"}>
             We are a NISM certified / AMFI registered mutual fund
             distributor and not an RIA. We get compensated / incentivised
             by AMCS. We don&apos;t charge any fees for our services.
-          </h3>
+          </span>
 
         </div>
 

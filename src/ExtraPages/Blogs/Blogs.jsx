@@ -3,6 +3,8 @@ import { homepageClient } from "../../../dreamladder-capital-cms/lib/sanityClien
 import { formatDate } from '../../utils/adminUtils';
 import "./Blogs.scss";
 import { useLocation } from 'react-router-dom';
+import NavBar from "../../LandingPage/1.NavBar/NavBar.jsx";
+import Ql from "../../LandingPage/9.QuickLinks/Ql.jsx";
 
 const POSTS_QUERY = `*[_type == "post"] | order(publishedAt desc) {
     _id, title, author, _createdAt, slug, body, coverImageUrl
@@ -34,7 +36,12 @@ export default function Blogs() {
     }, [location.state]); // Dependency on location.state
 
     return (
-        <main className="blogsPageLayout">
+        <div className="blogsPageLayout">
+            <div className="titleHeadZ">
+                <NavBar></NavBar>
+                <span className="titleZ">Blogs</span>
+            </div>
+        <div className={"ExtrasBL"}>
             <aside className="blogsIndex">
                 <span className="Syn small">Index</span>
                 {status === "ready" && posts.map((post, index) => (
@@ -73,6 +80,7 @@ export default function Blogs() {
                     </div>
                 )}
             </section>
-        </main>
+        </div>
+        </div>
     );
 }

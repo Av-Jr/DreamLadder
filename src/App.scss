@@ -153,6 +153,11 @@ body{
       width : 100%;
       text-align : center !important;
     }
+    
+    &.tleft{
+      width : 100%;
+      text-align : left !important;
+    }
     &.ju{
       text-align : justify !important;
     }
@@ -312,7 +317,7 @@ body{
     
     .titleZ{
       font-family: SyneMono !important;
-      font-size : 28px;
+      font-size : 28px!important;
       height : 100%;
       display : grid;
       place-items : center;
@@ -329,11 +334,11 @@ body{
     margin-bottom: 50px;
   }
   
-  #MFsMC, #PMSAIFMC, #BondsMC, #StructuredProductsMC, #LegacyEstatePlanningMC, #InsuranceMC, #bespokePage, #BlogsMC, #MediaMC, .calc-root, .connectPage, #DisclaimerMC, #DisclosureMC, #WwsMC{
+  #MFsMC, #PMSAIFMC, #BondsMC, #StructuredProductsMC, #LegacyEstatePlanningMC, #InsuranceMC, #bespokePage, #BlogsMC, #MediaMC, .calc-root, .connectPage, #DisclaimerMC, #DisclosureMC, #WwsMC, .blogsPageLayout, #PrivacyPolicyMC{
     .titleHeadZ{
       height : 150px;
       .titleZ{
-        font-size :20px;
+        font-size :20px!important;
         align-items : end;
         padding-bottom : 30px;
         white-space : wrap;

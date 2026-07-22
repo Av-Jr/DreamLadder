@@ -36,9 +36,9 @@ export default function Disclaimer() {
 
           {disclaimerContent.map((item, index) => (
 
-            <h3 key={index}>
+            <span className={"Gen small ju"} key={index}>
               {item}
-            </h3>
+            </span>
 
           ))}
 
