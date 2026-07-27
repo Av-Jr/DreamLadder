@@ -7,6 +7,35 @@
   text-overflow: ellipsis;
   max-width: 100%;
 }
+.ytThumbnail {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+  overflow: hidden;
+  
+  &::before {
+    content: "▶";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.75);
+    color: white;
+    font-size: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform .2s ease;
+  }
+  
+  &:hover::before {
+    transform: translate(-50%, -50%) scale(1.1);
+  }
+}
 
 #InsightsMC {
   min-height: 100vh;
