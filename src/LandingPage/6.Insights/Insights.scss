@@ -34,11 +34,10 @@
     }
     
     .itsChild {
-      display: flex; // Using flex for alignment
-      flex-wrap: nowrap;
-      justify-content: flex-start; // CHANGED: Align items to the start (left)
-      gap: 20px;
       width: 100%;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
       
       .blogs {
         border: 1px #F3F4F6 solid;
@@ -46,10 +45,37 @@
         padding: 10px;
         width: 300px;
         
+        
         img {
           width: 100%;
           height: 100px;
           object-fit: cover;
+        }
+      }
+      
+      .blogs,
+      .ifEle {
+        width: 100%;
+      }
+      .ifEle {
+        aspect-ratio: 16 / 9;
+        border: none;
+        border-radius: 20px;
+      }
+      
+      .blogs {
+        border: 1px solid #F3F4F6;
+        border-radius: 20px;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        
+        img {
+          width: 100%;
+          aspect-ratio: 16 / 9;
+          object-fit: cover;
+          border-radius: 12px;
         }
       }
       
@@ -77,12 +103,6 @@
         }
       }
       
-      .ifEle {
-        width: 300px;
-        aspect-ratio: 16 / 9;
-        border: none;
-        border-radius: 20px;
-      }
     }
   }
 }
