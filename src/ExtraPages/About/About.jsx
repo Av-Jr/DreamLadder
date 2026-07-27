@@ -191,33 +191,63 @@ export default function About() {
             <NavBar></NavBar>
             <div className="firstPage">
                 <div className="conSecFP">
+
                     <div className="section1">
                         <img
                             src={img("tree")}
-                            alt="Contact"
+                            alt=""
                             loading="lazy"
                         />
                     </div>
-                    <div className="section2">
-                        <div className="sec2F">
-                            <h2 className={"Syn"}>"Wealth is not built overnight; it’s crafted through<br/><span className={"redText Syn italic"}>clarity, courage, and consistency."</span></h2>
-                            <h2 className={"Gen bold dark small toRight tcen"}>Mr. Saday Sinha</h2>
-                            <span className={"Gen light small tcen"}>FOUNDER & CEO</span>
-                        </div>
 
+                    <div className="section2">
+
+                        <h2 className="quote Syn">
+                            "Wealth is not
+                            <br />
+                            built overnight;
+                            <br />
+                            it's crafted
+                            <br />
+                            through
+                            <span className="redText italic">
+                    {" "}clarity,
+                    <br />
+                    courage,
+                    and
+                    <br />
+                    consistency.
+                </span>
+                            "
+                        </h2>
+
+                        <span className="redLine"></span>
+
+                        <h3 className="Gen bold">
+                            Mr. Saday Sinha
+                        </h3>
+
+                        <span className="Gen light ceo">
+                FOUNDER & CEO
+            </span>
+
+                    </div>
+
+                    <div className="section3">
                         <img
                             src={img("AboutSaday")}
-                            alt="Contact"
+                            alt=""
                             loading="lazy"
                         />
                     </div>
+
                 </div>
             </div>
 
             <div className="secondPage">
                 <div className="text innerPadding">
                     <h1 className={"Gen dark small"}>Our Story</h1><br/><br/>
-                    <span className={"Gen dark small ju"}>
+                    <span className={"Gen dark small"}>
                         Every great journey begins with a simple belief. Ours began in 2018 with the conviction that investing should be transparent, straightforward, and built on trust.<br/><br/>
                         What started as a focused effort in Mutual Funds has expanded into a comprehensive wealth management suite, including Corporate FDs, Protection Solutions, and Structured Products.<br/><br/>
                         Today, we serve over 500+ families across 12 countries, achieving milestones driven by the same purpose: helping people grow their wealth with clarity.<br/><br/>
@@ -265,7 +295,7 @@ export default function About() {
 
                             <div className={`timelineCard ${index % 2 !== 0 ? "" : "rightHead"}`}>
                                 <h2 className={"Syn"}>{item.title}</h2>
-                                <span className={"Gen small ju"}>{item.text}</span>
+                                <span className={"Gen small"}>{item.text}</span>
                             </div>
 
                         </div>
@@ -304,7 +334,7 @@ export default function About() {
                 <div className="teamIntro">
                     <h1 className="Gen">{teamIntro.title}</h1>
                     <span className={"lineRed"}></span>
-                    <span className={"Gen light small ju"}>{teamIntro.description}</span>
+                    <span className={"Gen light small"}>{teamIntro.description}</span>
                 </div>
 
                 <div className="teamMembers">
@@ -346,7 +376,7 @@ export default function About() {
                             return(
                                 <div className={'sixthPgCard innerPadding'}>
                                     <Icon className="cardIcon" size={40}></Icon>
-                                    <span className={"Gen small dark ju"}>{txt}</span>
+                                    <span className={"Gen small dark"}>{txt}</span>
                                 </div>
                             )})
                     }
