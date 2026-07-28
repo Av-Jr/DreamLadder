@@ -152,7 +152,7 @@ const Insurance = () => {
 
       <div className={"INSone"}>
 
-        <div className={"heroText"}>
+        <div className={"heroTextM"}>
 
           {
             InsuranceHeroData.description.map((item, index) => (
@@ -164,7 +164,7 @@ const Insurance = () => {
             {InsuranceHeroData.strategicSignificance}
           </span>
 
-        </div>
+        </div>z
 
         <div className={"heroImg"}>
           <img loading="lazy"

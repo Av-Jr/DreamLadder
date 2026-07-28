@@ -1,97 +1,113 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
   <url>
-    <loc>https://dreamladderongoing.web.app/</loc>
+    <loc>https://dreamladdercapital.co.in/</loc>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
 
   <url>
-    <loc>https://dreamladderongoing.web.app/about</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://dreamladderongoing.web.app/who-we-serve</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://dreamladderongoing.web.app/connect</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://dreamladderongoing.web.app/calc</loc>
+    <loc>https://dreamladdercapital.co.in/about</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://dreamladderongoing.web.app/mutual-funds</loc>
+    <loc>https://dreamladdercapital.co.in/who-we-serve</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
+
   <url>
-    <loc>https://dreamladderongoing.web.app/pms</loc>
+    <loc>https://dreamladdercapital.co.in/connect</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
+
   <url>
-    <loc>https://dreamladderongoing.web.app/bonds</loc>
+    <loc>https://dreamladdercapital.co.in/calc</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
+
   <url>
-    <loc>https://dreamladderongoing.web.app/structured-products</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://dreamladderongoing.web.app/legacy-estate-planning</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://dreamladderongoing.web.app/Insurance</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://dreamladderongoing.web.app/bespoke-portfolio</loc>
+    <loc>https://dreamladdercapital.co.in/mutual-funds</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://dreamladderongoing.web.app/blogs</loc>
+    <loc>https://dreamladdercapital.co.in/pms</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://dreamladdercapital.co.in/bonds</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://dreamladdercapital.co.in/structured-products</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://dreamladdercapital.co.in/legacy-estate-planning</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://dreamladdercapital.co.in/insurance</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://dreamladdercapital.co.in/bespoke-portfolio</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://dreamladdercapital.co.in/blogs</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
+
   <url>
-    <loc>https://dreamladderongoing.web.app/media</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://dreamladderongoing.web.app/faqs</loc>
+    <loc>https://dreamladdercapital.co.in/media</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
 
   <url>
-    <loc>https://dreamladderongoing.web.app/disclosure</loc>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
+    <loc>https://dreamladdercapital.co.in/faqs</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
+
   <url>
-    <loc>https://dreamladderongoing.web.app/disclaimer</loc>
+    <loc>https://dreamladdercapital.co.in/disclosure</loc>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
+
   <url>
-    <loc>https://dreamladderongoing.web.app/privacy-policy</loc>
+    <loc>https://dreamladdercapital.co.in/disclaimer</loc>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
+
+  <url>
+    <loc>https://dreamladdercapital.co.in/privacy-policy</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
 </urlset>

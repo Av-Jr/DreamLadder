@@ -1,34 +1,182 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta name="google-site-verification" content="1hJZy2h9rzpdzb9p78-0yIW_bYqYocec1m3TF1U6A_c" />
-    <link
-      rel="preload"
-      href="/Fonts/Genos.woff"
-      as="font"
-      type="font/woff"
-      crossorigin
-    />
-    <link
-      rel="preload"
-      href="/Fonts/SyneMono.woff"
-      as="font"
-      type="font/woff"
-      crossorigin
-    />
-    <link rel="preload" fetchPriority="high" as="image" href="https://dreamladder-assets.s3.ap-south-1.amazonaws.com/public/HP4.webp" />
-    <link rel="preload" as="image" href="https://dreamladder-assets.s3.ap-south-1.amazonaws.com/public/HP56.webp" />
-    <link rel="preload" as="image" href="https://dreamladder-assets.s3.ap-south-1.amazonaws.com/public/HP3.webp" />
-    <link rel="preload" as="image" href="https://dreamladder-assets.s3.ap-south-1.amazonaws.com/public/Slide2.webp" />
-    <link rel="preload" as="image" href="https://dreamladder-assets.s3.ap-south-1.amazonaws.com/public/flexBack.webp" />
-    <link rel="preload" as="image" href="https://dreamladder-assets.s3.ap-south-1.amazonaws.com/public/logo.webp" />
-    <meta charset="UTF-8" />
-    <link rel="icon" href="https://dreamladder-assets.s3.ap-south-1.amazonaws.com/public/favicon.ico"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>dreamladder</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+<head>
+
+  <!-- Character Encoding -->
+  <meta charset="UTF-8" />
+
+  <!-- Viewport -->
+  <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1.0"
+  />
+
+  <!-- Google Search Console -->
+  <meta
+          name="google-site-verification"
+          content="1hJZy2h9rzpdzb9p78-0yIW_bYqYocec1m3TF1U6A_c"
+  />
+
+  <!-- SEO -->
+  <title>DreamLadder Capital | Building Wealth. Preserving Legacies.</title>
+
+  <meta
+          name="description"
+          content="DreamLadder Capital is a boutique wealth management firm offering Mutual Funds, PMS, AIF, Corporate Fixed Deposits, Insurance, and personalized financial planning to help individuals and families build and preserve long-term wealth."
+  />
+
+  <meta
+          name="keywords"
+          content="DreamLadder Capital, Wealth Management, Mutual Funds, PMS, AIF, Corporate Fixed Deposit, Financial Planning, Investment Advisory, Portfolio Management, Wealth Management India"
+  />
+
+  <meta
+          name="author"
+          content="DreamLadder Capital"
+  />
+
+  <meta
+          name="robots"
+          content="index, follow"
+  />
+
+  <meta
+          name="theme-color"
+          content="#E53935"
+  />
+
+  <!-- Canonical -->
+  <link
+          rel="canonical"
+          href="https://dreamladdercapital.co.in/"
+  />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="DreamLadder Capital" />
+
+  <meta
+          property="og:title"
+          content="DreamLadder Capital | Building Wealth. Preserving Legacies."
+  />
+
+  <meta
+          property="og:description"
+          content="Professional wealth management solutions including Mutual Funds, PMS, AIF, Corporate FDs, Insurance, and financial planning."
+  />
+
+  <meta
+          property="og:url"
+          content="https://dreamladdercapital.co.in/"
+  />
+
+  <meta
+          property="og:image"
+          content="https://dreamladder-assets.s3.ap-south-1.amazonaws.com/public/HP3.webp"
+  />
+
+  <meta
+          property="og:image:alt"
+          content="DreamLadder Capital"
+  />
+
+  <meta
+          property="og:locale"
+          content="en_IN"
+  />
+
+  <!-- Twitter -->
+  <meta
+          name="twitter:card"
+          content="summary_large_image"
+  />
+
+  <meta
+          name="twitter:title"
+          content="DreamLadder Capital | Building Wealth. Preserving Legacies."
+  />
+
+  <meta
+          name="twitter:description"
+          content="Professional wealth management solutions for individuals and families."
+  />
+
+  <meta
+          name="twitter:image"
+          content="https://dreamladder-assets.s3.ap-south-1.amazonaws.com/public/HP3.webp"
+  />
+
+  <!-- Favicon -->
+  <link
+          rel="icon"
+          href="https://dreamladder-assets.s3.ap-south-1.amazonaws.com/public/favicon.ico"
+  />
+
+  <!-- Fonts -->
+  <link
+          rel="preload"
+          href="/Fonts/Genos.woff"
+          as="font"
+          type="font/woff"
+          crossorigin
+  />
+
+  <link
+          rel="preload"
+          href="/Fonts/SyneMono.woff"
+          as="font"
+          type="font/woff"
+          crossorigin
+  />
+
+  <!-- Hero Images -->
+  <link
+          rel="preload"
+          fetchpriority="high"
+          as="image"
+          href="https://dreamladder-assets.s3.ap-south-1.amazonaws.com/public/HP4.webp"
+  />
+
+  <link
+          rel="preload"
+          as="image"
+          href="https://dreamladder-assets.s3.ap-south-1.amazonaws.com/public/HP56.webp"
+  />
+
+  <link
+          rel="preload"
+          as="image"
+          href="https://dreamladder-assets.s3.ap-south-1.amazonaws.com/public/HP3.webp"
+  />
+
+  <link
+          rel="preload"
+          as="image"
+          href="https://dreamladder-assets.s3.ap-south-1.amazonaws.com/public/Slide2.webp"
+  />
+
+  <link
+          rel="preload"
+          as="image"
+          href="https://dreamladder-assets.s3.ap-south-1.amazonaws.com/public/flexBack.webp"
+  />
+
+  <link
+          rel="preload"
+          as="image"
+          href="https://dreamladder-assets.s3.ap-south-1.amazonaws.com/public/logo.webp"
+  />
+
+</head>
+
+<body>
+
+<div id="root"></div>
+
+<script
+        type="module"
+        src="/src/main.jsx"
+></script>
+
+</body>
 </html>

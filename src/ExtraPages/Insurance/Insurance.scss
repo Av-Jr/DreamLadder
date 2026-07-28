@@ -57,6 +57,19 @@ $darkBlue : #17233d;
   display: grid;
   place-items: center;
   
+  .heroTextM{
+    display : flex;
+    flex-direction : column;
+    align-items : start;
+    gap : 10px;
+    width : 60%;
+    
+    span{
+      text-align : left;
+    }
+  }
+  
+  
   .INStwo {
     display: grid;
     place-items: center;
@@ -213,6 +226,10 @@ $darkBlue : #17233d;
   }
   
   #InsuranceMC{
+    
+    .heroTextM{
+      width  : 100%;
+    }
       
       .INSfour {
         padding: 60px 20px;
