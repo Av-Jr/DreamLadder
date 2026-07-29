@@ -172,7 +172,7 @@ const MFAssistData = {
                         <span className="Gen small dark ju" key={index}>{item.text}</span>
                     ),
                     )}
-                    <span className="quote Gen small">
+                    <span className="quote Gen small tleft">
                         {MFHeroData.quote}
                     </span>
                 </div>

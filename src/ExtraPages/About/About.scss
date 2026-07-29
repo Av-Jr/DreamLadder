@@ -522,8 +522,8 @@ $redCol : #E53935;
 @include mediaDevice(mobile){
 
 #About2MC{
-  .conSecFP{
-
+  .firstPage, .secondPage, .thirdPage, .fourthPage, .fifthPage, .sixthPage, .journeyPage{
+    padding : 50px 10px!important;
   }
   
   .firstPage{
@@ -534,15 +534,12 @@ $redCol : #E53935;
       grid-template-rows : repeat(3, auto);
       
       .section1{
-        img{
-          height : 100%;
-        }
-        width : 100%;
+        display : none;
       }
       
       .section2{
         flex-direction : column;
-        gap : 50px;
+        gap : 20px;
         
         .sec2F{
           justify-content : flex-start;
@@ -562,6 +559,12 @@ $redCol : #E53935;
           width : 70%;
         }
       }
+      
+      .section3{
+        img{
+          width : 80%;
+        }
+      }
     }
   }
   
@@ -578,9 +581,10 @@ $redCol : #E53935;
     background-size : cover;
     padding : 100px 10px;
     .conSecTP{
+      font-size : 1px!important;
       width : 100%;
-      background: rgba(255, 255, 255, 0.3);
-      backdrop-filter : blur(10px);
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter : blur(5px);
       border-radius : 10px;
       padding : 50px 50px;
       span, h2, h1{

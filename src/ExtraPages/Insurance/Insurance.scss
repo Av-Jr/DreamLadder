@@ -5,7 +5,7 @@ $darkBlue : #17233d;
 
 
 //grid 2cols
-.INSone, .cardsCont, .INSthree{
+.cardsCont, .INSthree{
   display : grid;
   grid-template-columns : repeat(2, auto);
   place-items : center;
@@ -57,11 +57,15 @@ $darkBlue : #17233d;
   display: grid;
   place-items: center;
   
+  .INSone{
+    display : flex;
+  }
+  
   .heroTextM{
     display : flex;
     flex-direction : column;
     align-items : start;
-    gap : 10px;
+    gap : 30px;
     width : 60%;
     
     span{
@@ -214,7 +218,10 @@ $darkBlue : #17233d;
 }
 
 @include mediaDevice(mobile){
-  .INSone, .cardsCont, .INSthree{
+  .INSone{
+    flex-direction : column;
+  }
+  .cardsCont, .INSthree{
     grid-template-columns : 1fr;
     grid-template-rows : repeat(2, auto);
   }

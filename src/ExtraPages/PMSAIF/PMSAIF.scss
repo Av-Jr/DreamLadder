@@ -52,7 +52,7 @@ $darkBlue : #17233d;
 }
 
 //innerPadding
-.heroText, .heroImg, .left, .right, .featureCard, .aifCard, .rightPMS{
+.heroText, .heroImg, .leftPMS, .right, .featureCard, .aifCard, .rightPMS{
   padding : 20px;
 }
 
@@ -140,7 +140,10 @@ $darkBlue : #17233d;
   }
   
   .PMSsix{
-    .left{
+    .leftPMS{
+      display : flex;
+      flex-direction : column;
+      gap : 30px;
       .aifCard{
         width : 100%;
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -195,7 +198,7 @@ $darkBlue : #17233d;
     margin-bottom : 50px;
   }
   
-  .heroText, .heroImg, .left, .right, .featureCard, .aifCard{
+  .heroText, .heroImg, .leftPMS, .right, .featureCard, .aifCard{
     padding : 20px;
   }
 }

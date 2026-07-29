@@ -6,8 +6,8 @@ $darkBlue : #17233d;
 .WwsCards{
   display : grid;
   grid-template-columns : repeat(2, auto);
-  gap : 40px;
-  place-items : center;
+  gap : 100px;
+  flex-direction : column;
 }
 
 //flex-cols
@@ -42,6 +42,20 @@ $darkBlue : #17233d;
   
   .WwsCardsCon{
 	.WwsCards{
+	  .heroText{
+		display : flex;
+		flex-direction : column;
+		gap : 50px;
+		align-items : start;
+		justify-content : start;
+		h2{
+		  width : 100%;
+		  text-align : left;
+		}
+		span{
+		  width : 70%;
+		}
+	  }
 	  &.rev{
 		img{
 		  grid-column : 2;
@@ -67,11 +81,17 @@ $darkBlue : #17233d;
   .WwsCards{
 	grid-template-columns : 1fr;
 	grid-template-rows : repeat(2, auto);
+	gap : 20px;
+	
+	.heroText{
+	  span{
+		width : 100%!important;
+	  }
+	}
   }
   
   .WwsCardsCon{
 	padding : 10px;
-	margin-top : 50px;
 	margin-bottom : 50px;
   }
   

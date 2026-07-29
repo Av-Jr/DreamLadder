@@ -30,7 +30,7 @@ $darkBlue : #17233d;
 }
 
 //center text align
-.PMSone, .heroText, .left, .rightPMS,.rightSP{
+.PMSone, .heroText, .leftSP,.rightSP{
   h1, h2, h3{
     text-align : left;
     width : 100%;
@@ -85,6 +85,11 @@ $darkBlue : #17233d;
   }
   
   .SPthree{
+    .leftSP{
+      display : flex;
+      flex-direction : column;
+      gap : 30px;
+    }
     .rightSP{
       gap : 40px;
       .pointEle{

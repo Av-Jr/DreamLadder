@@ -388,7 +388,7 @@ const WhyAIFData = {
 
       <div className="PMSsix">
 
-        <div className="left">
+        <div className="leftPMS">
           {
             AIFTypesData.cards.map((item, index) => (
                 <div className="aifCard" key={index}>

@@ -164,7 +164,7 @@ const Insurance = () => {
             {InsuranceHeroData.strategicSignificance}
           </span>
 
-        </div>z
+        </div>
 
         <div className={"heroImg"}>
           <img loading="lazy"
