@@ -456,7 +456,7 @@ const Faqs = () => {
                                         </div>
 
                                         <div className={"AnswerWrap"}>
-                                            <span className={"Gen small light"}>
+                                            <span className={"Gen small light ju"}>
                                                 {it.a}
                                             </span>
                                         </div>

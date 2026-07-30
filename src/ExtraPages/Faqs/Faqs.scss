@@ -38,6 +38,7 @@
 
       letter-spacing: 1px;
       text-align : left;
+      width  : 100%;
     }
 
     .QuestEle{
@@ -72,6 +73,8 @@
         line-height: 1.5;
         color: #20293a;
         font-family : Genos;
+        width : 100%;
+        text-align : left;
       }
 
       .plus{
@@ -131,8 +134,6 @@
 @media (max-width: 768px){
 
   #FaqsMC{
-
-    padding: 50px 15px;
 
     .QuestCon{
 
