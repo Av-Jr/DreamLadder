@@ -11,6 +11,16 @@ const NavBar = () => {
     const [openSection, setOpenSection] = useState(null);
     const [openSubSection, setOpenSubSection] = useState(null);
 
+    useEffect(() => {
+
+        document.body.style.overflow = menuOpen ? "hidden" : "";
+
+        return () => {
+            document.body.style.overflow = "";
+        };
+
+    }, [menuOpen]);
+
     const navData = [
         {
             title: "We",
@@ -116,7 +126,11 @@ const NavBar = () => {
 
             <button
                 className="hamBtn navBtn"
-                onClick={() => setMenuOpen(!menuOpen)}
+                onClick={() => {
+                    setMenuOpen(!menuOpen);
+                    setOpenSection(null);
+                    setOpenSubSection(null);
+                }}
             >
                 {menuOpen ? "✕" : "☰"}
             </button>
@@ -124,117 +138,123 @@ const NavBar = () => {
             {
                 menuOpen && (
                     <div className="mobileMenu">
+
                         {
-                            navData.map((item, index) => (
-                                <div className="mobileItem" key={index}>
+                            !openSection && (
+                                <div className="mobileScreen mainScreen">
+                                    {
+                                        navData.map((item, index) => (
+                                            <div className="mobileItem" key={index}>
+                                                <button
+                                                    className={`mobileBtn ${item.className?.includes("s") ? "mobileActionBtn" : ""}`}
+                                                    onClick={() => {
+
+                                                        if(item.dropdown){
+                                                            setOpenSection(item.title);
+                                                            return;
+                                                        }
+
+                                                        if(item.isExternal){
+                                                            window.open(item.path, "_blank");
+                                                        }
+                                                        else{
+                                                            navigate(item.path);
+                                                        }
+
+                                                        setMenuOpen(false);
+                                                    }}
+                                                >
+                                                    {item.title}
+                                                </button>
+                                            </div>
+                                        ))
+                                    }
+                                </div>
+                            )
+                        }
+
+                        {
+                            openSection && !openSubSection && (
+                                <div className="mobileScreen subScreen">
 
                                     <button
-                                        className={`mobileBtn ${item.className?.includes("s") ? "mobileActionBtn" : ""}`}
-                                        onClick={() => {
-
-                                            if(item.dropdown){
-
-                                                setOpenSection(
-                                                    openSection === item.title
-                                                        ? null
-                                                        : item.title
-                                                );
-
-                                                return;
-                                            }
-
-                                            if(item.isExternal){
-                                                window.open(item.path, "_blank");
-                                            }
-                                            else{
-                                                navigate(item.path);
-                                            }
-
-                                            setMenuOpen(false);
-                                        }}
+                                        className="backBtn"
+                                        onClick={() => setOpenSection(null)}
                                     >
-                                        {item.title}
+                                        <ChevronDown className="backIcon" size={18} />
+                                        Back
                                     </button>
 
+                                    <div className="mobileScreenTitle">{openSection}</div>
+
                                     {
-                                        openSection === item.title &&
-                                        item.dropdown && (
+                                        navData
+                                            .find((item) => item.title === openSection)
+                                            ?.dropdown.map((dropItem, dropIndex) => (
+                                            <button
+                                                key={dropIndex}
+                                                className="mobileSubBtn"
+                                                onClick={() => {
 
-                                            <div className="mobileSubMenu">
+                                                    if(dropItem.children){
+                                                        setOpenSubSection(dropItem.title);
+                                                        return;
+                                                    }
 
-                                                {
-                                                    item.dropdown.map((dropItem, dropIndex) => (
+                                                    navigate(dropItem.path);
+                                                    setMenuOpen(false);
+                                                    setOpenSection(null);
 
-                                                        <div key={dropIndex}>
-
-                                                            <button
-                                                                className="mobileSubBtn"
-                                                                onClick={() => {
-
-                                                                    if(dropItem.children){
-
-                                                                        setOpenSubSection(
-                                                                            openSubSection === dropItem.title
-                                                                                ? null
-                                                                                : dropItem.title
-                                                                        );
-
-                                                                        return;
-                                                                    }
-
-                                                                    navigate(dropItem.path);
-                                                                    setMenuOpen(false);
-
-                                                                }}
-                                                            >
-                                                                {dropItem.title}
-                                                            </button>
-
-                                                            {
-                                                                openSubSection === dropItem.title &&
-                                                                dropItem.children && (
-
-                                                                    <div className="mobileThirdMenu">
-
-                                                                        {
-                                                                            dropItem.children.map((child, childIndex) => (
-
-                                                                                <button
-                                                                                    key={childIndex}
-                                                                                    className="mobileThirdBtn"
-                                                                                    onClick={() => {
-
-                                                                                        navigate(child.path);
-
-                                                                                        setMenuOpen(false);
-                                                                                        setOpenSection(null);
-                                                                                        setOpenSubSection(null);
-
-                                                                                    }}
-                                                                                >
-                                                                                    {child.title}
-                                                                                </button>
-
-                                                                            ))
-                                                                        }
-
-                                                                    </div>
-
-                                                                )
-                                                            }
-
-                                                        </div>
-
-                                                    ))
-                                                }
-
-                                            </div>
-
-                                        )
+                                                }}
+                                            >
+                                                {dropItem.title}
+                                            </button>
+                                        ))
                                     }
 
                                 </div>
-                            ))
+                            )
+                        }
+
+                        {
+                            openSection && openSubSection && (
+                                <div className="mobileScreen thirdScreen">
+
+                                    <button
+                                        className="backBtn"
+                                        onClick={() => setOpenSubSection(null)}
+                                    >
+                                        <ChevronDown className="backIcon" size={18} />
+                                        Back
+                                    </button>
+
+                                    <div className="mobileScreenTitle">{openSubSection}</div>
+
+                                    {
+                                        navData
+                                            .find((item) => item.title === openSection)
+                                            ?.dropdown.find((dropItem) => dropItem.title === openSubSection)
+                                            ?.children.map((child, childIndex) => (
+                                            <button
+                                                key={childIndex}
+                                                className="mobileThirdBtn"
+                                                onClick={() => {
+
+                                                    navigate(child.path);
+
+                                                    setMenuOpen(false);
+                                                    setOpenSection(null);
+                                                    setOpenSubSection(null);
+
+                                                }}
+                                            >
+                                                {child.title}
+                                            </button>
+                                        ))
+                                    }
+
+                                </div>
+                            )
                         }
 
                     </div>
@@ -244,7 +264,11 @@ const NavBar = () => {
                 menuOpen &&
                 <div
                     className="overlay"
-                    onClick={() => setMenuOpen(false)}
+                    onClick={() => {
+                        setMenuOpen(false);
+                        setOpenSection(null);
+                        setOpenSubSection(null);
+                    }}
                 />
             }
 

@@ -195,9 +195,9 @@
       display : flex;
       justify-content : flex-start;
       align-items : center;
-     img{
-       width : 25%;
-     }
+      img{
+        width : 25%;
+      }
     }
     .mobileActionBtn{
       width: 100% !important;
@@ -222,20 +222,60 @@
       width:100%;
     }
     
-    .mobileThirdMenu{
+    .mobileScreen{
       display:flex;
       flex-direction:column;
-      background:#eeeeee;
+      width:100%;
+      height:100%;
+      overflow-y:auto;
+    }
+    
+    .backBtn{
+      display:flex;
+      align-items:center;
+      gap:8px;
+      
+      width:100%;
+      border:none;
+      background:white;
+      
+      padding:14px 20px;
+      
+      font-family:Genos;
+      font-size:16px;
+      font-weight:bold;
+      
+      cursor:pointer;
+      border-bottom:1px solid #eee;
+      
+      .backIcon{
+        transform:rotate(90deg);
+      }
+      
+      &:hover{
+        color:#e31e24;
+      }
+    }
+    
+    .mobileScreenTitle{
+      padding:10px 20px;
+      
+      font-family:Genos;
+      font-size:15px;
+      font-weight:bold;
+      letter-spacing:1px;
+      text-transform:uppercase;
+      color:#999;
     }
     
     .mobileThirdBtn{
       width:100%;
       
-      padding:12px 20px 12px 60px;
+      padding:12px 20px;
       
       border:none;
       
-      background:#eeeeee;
+      background:white;
       
       text-align:left;
       
@@ -250,22 +290,13 @@
       }
     }
     
-    .mobileSubMenu{
-      display:flex;
-      flex-direction:column;
-      gap : 10px;
-      background:#f7f7f7;
-      padding : 5px 0;
-      transition : 0.3s ease;
-    }
-    
     .mobileSubBtn{
       width:100%;
       
-      padding-left : 60px;
+      padding:12px 20px;
       
       border:none;
-      background: #f7f7f7;
+      background: white;
       text-align:left;
       
       font-family:Genos;
