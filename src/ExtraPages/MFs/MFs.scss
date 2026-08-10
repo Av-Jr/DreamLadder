@@ -198,8 +198,8 @@ $darkBlue : #17233d;
   
   .MFone, .innerMFtwo, .MFthree, .MFfour{
     padding : 10px;
-    margin-top : 50px;
-    margin-bottom : 50px;
+    margin-top : 20px;
+    margin-bottom : 20px;
   }
   
   #MFsMC{
@@ -208,7 +208,11 @@ $darkBlue : #17233d;
           grid-template-columns : 1fr;
           grid-template-rows : repeat(3, auto);
           .leftColl, .rightColl{
-            min-width : auto;}
+            min-width : auto;
+            .card1, .card3{
+              align-self : center;
+            }
+          }
         }
     }
   }

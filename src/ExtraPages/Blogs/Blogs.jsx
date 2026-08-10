@@ -57,8 +57,8 @@ export default function Blogs() {
                     <article className="blogDetailView">
                         <span className="btn-back Gen small" onClick={() => setSelectedPost(null)}>← Back</span>
                         {selectedPost.coverImageUrl && <img src={selectedPost.coverImageUrl} className="blogHeroImage" alt={selectedPost.title} />}
-                        <span className="Syn medium block">{selectedPost.title}</span>
-                        <span className="Gen small light block">By {selectedPost.author} | {formatDate(selectedPost.publishedAt)}</span>
+                        <span className="Syn medium block tleft">{selectedPost.title}</span>
+                        <span className="Gen small light block tleft">By {selectedPost.author} | {formatDate(selectedPost.publishedAt)}</span>
                         <div className="blogBody Gen medium" dangerouslySetInnerHTML={{ __html: selectedPost.body }} />
                     </article>
                 ) : (

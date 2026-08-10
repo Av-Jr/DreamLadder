@@ -291,7 +291,7 @@ const MFAssistData = {
 
                                     <div className="stepContent">
                                         <h3 className={"Gen dark bold"}>{item.title}</h3>
-                                        <span className={"Gen small light ju"}>{item.description}</span>
+                                        <span className={"Gen small light"}>{item.description}</span>
                                     </div>
                                 </div>
                             ))

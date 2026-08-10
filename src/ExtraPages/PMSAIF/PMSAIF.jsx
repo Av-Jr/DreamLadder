@@ -262,7 +262,7 @@ const WhyAIFData = {
       <div className="PMSone">
         <div className="heroText">
           {PMSHeroData.description.map((item, index) => (
-              <span className="Gen small dark ju" key={index}>
+              <span className="Gen small dark" key={index}>
               {item.text}
             </span>
           ))}
@@ -278,7 +278,7 @@ const WhyAIFData = {
 
       <div className="PMStwo">
         <div className="innerPMStwo">
-          <div className="left">
+          <div className="leftPO">
             <h2 className={"Gen bold"}>{PMSFeatureData.title}</h2>
 
             <span className={"Gen small light ju"}>{PMSFeatureData.description}</span>
@@ -296,7 +296,7 @@ const WhyAIFData = {
                       <Icon className={"cardIcon"} size={32}/>
                       <div className={"textElePMStwo"}>
                         <h3 className={"Gen bold"}>{item.title}</h3>
-                        <span className={"Gen small light ju"}>{item.description}</span>
+                        <span className={"Gen small light"}>{item.description}</span>
                       </div>
                     </div>
                 );
@@ -432,7 +432,7 @@ const WhyAIFData = {
 
       <div className="PMSseven">
 
-        <div className="left">
+        <div className="leftPSe">
           <h2 className={"Gen bold dark"}>{AIFRegulationData.title}</h2>
 
           <span className={"Gen light small ju"}>

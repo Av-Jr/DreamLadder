@@ -262,9 +262,18 @@
       }
     }
     .SlideOne, .SlideTwo {
-      grid-template-columns: repeat(1, auto);
-      grid-template-rows: repeat(2, auto);
+      display : flex;
+      flex-direction : column;
+      justify-content : center;
+      align-items : center;
       padding : 0;
+      place-items : center;
+      gap : 30px;
+      
+      .heroImg{
+        padding : 0;
+        gap : 0;
+      }
       
       .heroCon {
         justify-items: center;

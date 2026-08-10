@@ -11,7 +11,7 @@ $darkBlue : #17233d;
 }
 
 //flex-cols
-.right, .textElePMStwo, .RegTimeline, .stepContent, .aifCard, .rightPMS{
+.right, .textElePMStwo, .RegTimeline, .stepContent, .aifCard, .rightPMS, .leftPO, .leftPSe {
   display : flex;
   flex-direction : column;
   justify-content : flex-start;
@@ -48,7 +48,7 @@ $darkBlue : #17233d;
 
 //padding
 .PMSone, .innerPMStwo, .PMSthree, .PMSfive, .PMSsix, .PMSseven{
-  padding : 100px 50px;
+  padding : 30px 50px;
 }
 
 //innerPadding
@@ -88,11 +88,18 @@ $darkBlue : #17233d;
       border-radius : 20px;
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     }
+    
+    .leftPO{
+      justify-content : center !important;
+      align-items : center !important;
+    }
   }
   
   .PMSthree{
-    
     .right{
+      justify-content : center!important;
+      align-items : center!important;
+      gap : 70px;
       img{
         max-width : 300px;
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -100,7 +107,14 @@ $darkBlue : #17233d;
       }
     }
     .left{
+      display : flex;
+      flex-direction : column;
+      gap : 20px;
       .RegTimeline{
+        gap : 40px !important;
+        .stepContent{
+          gap :10px !important;
+        }
         position : relative;
         &::before{
           content: "";
@@ -115,7 +129,7 @@ $darkBlue : #17233d;
           background: grey;
         }
         .RegItem{
-          gap : 40px;
+          gap : 20px;
           
           &:hover{
             .diamond{
@@ -143,7 +157,7 @@ $darkBlue : #17233d;
     .leftPMS{
       display : flex;
       flex-direction : column;
-      gap : 30px;
+      gap : 40px;
       .aifCard{
         width : 100%;
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -194,8 +208,8 @@ $darkBlue : #17233d;
   
   .PMSone, .innerPMStwo, .PMSthree, .PMSfive, .PMSsix, .PMSseven{
     padding : 10px;
-    margin-top : 50px;
-    margin-bottom : 50px;
+    margin-top : 10px;
+    margin-bottom : 10px;
   }
   
   .heroText, .heroImg, .leftPMS, .right, .featureCard, .aifCard{

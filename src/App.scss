@@ -49,6 +49,7 @@ body{
     
     &.tleft{
       width : 100%;
+      text-align : left!important;
     }
     
     &.ju{
@@ -333,7 +334,7 @@ body{
 
 @include mediaDevice(mobile){
   #breakMob{
-    display : block;
+    display : none;
   }
   
   #AboutMC, #NavBar, #ReturnSliderMC, #CalculatorMC, #InsightsMC, #PowMC, #FooterMC{
