@@ -142,24 +142,89 @@ $colorRed : #ef3b3b;
   .heroContainer, .philosophyContainer, .approachSection, .approachRight{
     grid-template-columns : 1fr;
     grid-template-rows : repeat(2, auto);
-    gap : 40px;
+    gap : 24px;
   }
   
   .heroContainer, .philosophyContainer, .approachSection, .ctaSection{
     padding : 10px;
   }
-  
+
   #bespokePage{
+    .heroText, .philosophyText, .approachLeft, .approachCard{
+      width : 100%;
+      gap : 16px;
+    }
+
+    .heroContainer,
+    .philosophyContainer{
+      margin-top : 20px;
+      margin-bottom : 20px;
+    }
+
+    .approachSection{
+      min-height : auto;
+      gap : 18px;
+
+      .approachRight{
+        gap : 20px;
+
+        .approachCard{
+          padding : 16px;
+
+          h2{
+            padding-left : 14px;
+          }
+        }
+      }
+    }
+    
     .ctaSection{
       background-size : contain;
       grid-template-columns : 1fr;
       grid-template-rows : repeat(3, auto);
-      gap : 50px;
+      gap : 24px;
       padding : 10px;
+
+      .ctaContent{
+        gap : 18px;
+        align-items : center;
+
+        h2{
+          text-align : center;
+        }
+
+        button{
+          width : 100%;
+          max-width : 220px;
+        }
+      }
+
+      .ctaPoints{
+        gap : 12px;
+        width : 100%;
+
+        .point{
+          gap : 8px;
+          align-items : flex-start;
+
+          span{
+            font-size : 14px;
+            line-height : 1.35;
+          }
+        }
+      }
     }
     
     .bottomBar{
       flex-direction : column;
+      text-align : center;
+      gap : 12px;
+
+      .btns{
+        width : 100%;
+        justify-content : center;
+        flex-wrap : wrap;
+      }
     }
     
   }

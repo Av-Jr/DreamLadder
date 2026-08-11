@@ -400,6 +400,23 @@ $redCol : #E53935;
       background: white;
       border-radius : 20px;
       padding : 20px;
+      transition : transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+      border : 1px solid transparent;
+
+      .cardIcon{
+        transition : transform .25s ease, color .25s ease;
+      }
+
+      &:hover{
+        transform : translateY(-6px);
+        box-shadow : 0 14px 30px rgba(229, 57, 53, 0.12);
+        border-color : rgba(229, 57, 53, 0.18);
+
+        .cardIcon{
+          color : #E53935;
+          transform : scale(1.06);
+        }
+      }
       
 
     }
@@ -523,14 +540,14 @@ $redCol : #E53935;
 
 #About2MC{
   .firstPage, .secondPage, .thirdPage, .fourthPage, .fifthPage, .sixthPage, .journeyPage{
-    padding : 50px 10px!important;
+    padding : 40px 10px!important;
   }
   
   .firstPage{
     .conSecFP{
       grid-template-columns : 1fr;
-      gap : 50px;
-      padding : 100px 10px;
+      gap : 24px;
+      padding : 70px 10px 20px;
       grid-template-rows : repeat(3, auto);
       
       .section1{
@@ -539,7 +556,9 @@ $redCol : #E53935;
       
       .section2{
         flex-direction : column;
-        gap : 20px;
+        gap : 12px;
+        align-items : center;
+        text-align : center;
         
         .sec2F{
           justify-content : flex-start;
@@ -555,14 +574,23 @@ $redCol : #E53935;
           }
         }
         
+        .quote{
+          font-size : 30px;
+          line-height : 1.18;
+        }
+
+        .redLine{
+          width : 56px;
+        }
+
         img{
-          width : 70%;
+          width : 66%;
         }
       }
       
       .section3{
         img{
-          width : 80%;
+          width : 72%;
         }
       }
     }
@@ -571,24 +599,42 @@ $redCol : #E53935;
   .secondPage{
     grid-template-columns : 1fr;
     grid-template-rows : repeat(2, auto);
-    gap : 20px;
-    padding : 10px 10px;
+    gap : 16px;
+    padding : 10px 10px 0;
+
+    .text{
+      max-width : 100%;
+
+      h1, span{
+        text-align : center;
+      }
+
+      .toShow{
+        gap : 10px;
+      }
+    }
+
+    img{
+      width : 100%;
+    }
   }
   
   .thirdPage{
     justify-content : center;
     align-items : center;
     background-size : cover;
-    padding : 100px 10px;
+    padding : 70px 10px;
+
     .conSecTP{
-      font-size : 1px!important;
       width : 100%;
       background: rgba(255, 255, 255, 0.1);
       backdrop-filter : blur(5px);
       border-radius : 10px;
-      padding : 50px 50px;
+      padding : 24px 16px;
+      gap : 14px;
+
       span, h2, h1{
-        text-align : right;
+        text-align : center;
         width : 100%;
       }
     }
@@ -676,7 +722,24 @@ $redCol : #E53935;
           gap : 10px;
           height : fit-content;
           max-height : 150px;
+          transition : transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+          border : 1px solid transparent;
           
+          .cardIcon{
+            transition : transform .25s ease, color .25s ease;
+          }
+
+          &:hover{
+            transform : translateY(-4px);
+            box-shadow : 0 12px 24px rgba(229, 57, 53, 0.12);
+            border-color : rgba(229, 57, 53, 0.18);
+
+            .cardIcon{
+              color : #E53935;
+              transform : scale(1.06);
+            }
+          }
+
           span{
             grid-column : span 2;
           }
@@ -687,17 +750,38 @@ $redCol : #E53935;
   
   .fifthPage{
     flex-direction: column;
-    gap: 50px;
+    gap: 30px;
     padding: 10px 10px;
+
+    .teamIntro{
+      gap : 10px;
+      align-items : center;
+
+      h1, span{
+        text-align : center;
+      }
+    }
     
     .teamMembers{
+      gap : 34px;
+
       .memC{
         flex-direction : column;
-        align-items : flex-end;
+        align-items : center;
+        gap : 18px;
+
         .heroText{
           width : 100%;
+          align-items : center;
+          gap : 12px;
+
           h1{
             white-space : normal;
+            text-align : center;
+          }
+
+          h2, span{
+            text-align : center;
           }
         }
         
@@ -705,6 +789,8 @@ $redCol : #E53935;
           align-self : center;
           padding : 0;
           height : fit-content;
+          width : 100%;
+          max-width : 320px;
         }
       }
     }

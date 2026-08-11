@@ -2,6 +2,8 @@ import "./Faqs.scss";
 import NavBar from "../../LandingPage/1.NavBar/NavBar.jsx";
 import React, { useState } from "react";
 
+export const faqSlug = (title) => title.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+
 const dataQ = [
 {
   title: "OUR COMPANY",
@@ -428,7 +430,7 @@ const Faqs = () => {
           </div>
             {
                 dataQ.map((item, index) => (
-                    <div className={"QuestCon"} key={index}>
+                    <div className={"QuestCon"} id={faqSlug(item.title)} key={index}>
 
                         <h2 className={"Syn small"}>{item.title}</h2>
 

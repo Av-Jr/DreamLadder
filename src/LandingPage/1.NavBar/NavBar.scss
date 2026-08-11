@@ -54,7 +54,7 @@
         border: none;
         font-family: Genos;
         font-size: 17px;
-        font-weight: bold;
+        font-weight: 600;
         
         color: black;
         
@@ -113,6 +113,10 @@
         
         .navBtn{
           color: #e31e24;
+        }
+
+        .navBtn.s{
+          color: white;
         }
       }
       
@@ -335,8 +339,9 @@
       background: white;
       z-index : 101;
       border-radius : 10px;
-      height : 300px;
-      overflow : hidden;
+      max-height : calc(100vh - 110px);
+      overflow-y : auto;
+      overflow-x : hidden;
       transition : 0.3s ease;
     }
     

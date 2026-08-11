@@ -61,13 +61,14 @@
 @include mediaDevice(mobile){
   
   #CalculatorMC{
-    min-height: 100vh;
-    padding: 0;
-    gap: 10px;
+    min-height: auto;
+    padding: 50px 0;
+    gap: 18px;
     
     .CalcEleCon{
       grid-template-columns: 1fr 1fr;
       width: 100%;
+      gap: 8px;
     }
     
     .CalcEle{
@@ -86,6 +87,10 @@
       
       &:active {
         transform: scale(0.97);
+      }
+
+      &.emiCalc{
+        display : none;
       }
     }
   }

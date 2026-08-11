@@ -78,6 +78,7 @@ const ReturnSlider = () => {
                             min={500}
                             max={state === "Monthly" ? 500000 : 10000000}
                             value={valS}
+                            onFocus={(e) => e.target.select()}
                             onChange={(e) => {
                                 changeVal(Number(e.target.value));
                             }}

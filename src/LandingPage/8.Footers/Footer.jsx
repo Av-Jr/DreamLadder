@@ -1,6 +1,8 @@
 import "./Footer.scss"
 import {useNavigate} from "react-router-dom";
 
+const faqSlug = (title) => title.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+
 const Footer = () => {
 
     const navigate = useNavigate();
@@ -42,9 +44,7 @@ const titles = [
                 {titles.map((item, index) => (
                 <div
                   key={index}
-                  onClick={() => {
-                    window.location.href = "/faqs";
-                  }}
+                  onClick={() => navigate(`/faqs#${faqSlug(item)}`)}
                 >
                   <span className={"Gen dark small"}>{item}</span>
                 </div>

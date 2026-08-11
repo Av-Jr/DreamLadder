@@ -82,24 +82,34 @@ $darkBlue : #17233d;
     min-height: 100vh;
     
     .innerTWO {
+      gap : 16px;
+
       .cardsCont {
+        gap : 28px;
+
         .cardEle {
           display: flex;
           flex-direction: row;
           background: white;
-          max-width: 500px;
-          min-height: 200px;
+          max-width: 560px;
+          min-height: 180px;
           border-radius: 20px;
           padding: 20px;
           align-items: flex-start;
           justify-content: flex-start;
-          gap: 40px;
+          gap: 20px;
           
           .IconCard {
             flex-shrink: 0;
             padding: 0;
             color: $colorRed;
-            height: 100%;
+            width: 2.5em;
+            height: 2.5em;
+          }
+
+          .InerC{
+            align-items : flex-start;
+            gap : 12px;
           }
           
         }
@@ -108,11 +118,21 @@ $darkBlue : #17233d;
   }
   
   .INSthree {
-    gap: 100px;
+    gap: 60px;
+
+    .left{
+      align-items : flex-start;
+      gap : 22px;
+
+      span{
+        width : 100%;
+      }
+    }
+
     .rightI{
       display : grid;
       place-items : center;
-      gap : 40px;
+      gap : 52px;
       
       .pointEleI{
         display : flex;
@@ -236,6 +256,36 @@ $darkBlue : #17233d;
     
     .heroTextM{
       width  : 100%;
+    }
+
+    .INStwo{
+      .innerTWO{
+        gap : 14px;
+
+        .cardsCont{
+          gap : 24px;
+
+          .cardEle{
+            gap : 16px;
+
+            .InerC{
+              gap : 10px;
+            }
+          }
+        }
+      }
+    }
+
+    .INSthree{
+      gap : 36px;
+
+      .left{
+        gap : 16px;
+      }
+
+      .rightI{
+        gap : 38px;
+      }
     }
       
       .INSfour {

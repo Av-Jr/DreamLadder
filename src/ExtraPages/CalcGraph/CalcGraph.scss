@@ -182,13 +182,38 @@ $shadow-lg: 0 8px 32px rgba(0,0,0,0.10);
   padding: 24px 22px;
 
   overflow-y: auto;
+  max-height: calc(100vh - 210px);
 
   display: flex;
   flex-direction: column;
 }
 
+.retirement-panel{
+  overflow: hidden;
+  max-height: calc(100vh - 210px);
+}
+
+@supports (height: 100dvh){
+  .retirement-panel{
+    max-height: calc(100dvh - 210px);
+  }
+}
+
+.retirement-scroll{
+  flex: 1;
+  min-height: 0;
+  max-height: 100%;
+
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  padding-right: 6px;
+  margin-right: -6px;
+}
+
 .right-panel{
   overflow-y: auto;
+  max-height: calc(100vh - 210px);
 
   display: flex;
   flex-direction: column;
@@ -384,7 +409,7 @@ $shadow-lg: 0 8px 32px rgba(0,0,0,0.10);
 
   box-shadow: $shadow-sm;
 
-  padding: 18px;
+  padding: 16px;
 
   &__label{
     color: $text-muted;
@@ -402,10 +427,10 @@ $shadow-lg: 0 8px 32px rgba(0,0,0,0.10);
     color: $text-primary;
 
     font-family: SyneMono;
-    font-size: 24px;
+    font-size: 22px;
     font-weight: 700;
 
-    line-height: 1.2;
+    line-height: 1.15;
   }
 
   &--green{
@@ -466,7 +491,7 @@ $shadow-lg: 0 8px 32px rgba(0,0,0,0.10);
 
     color: $text-secondary;
 
-    font-size: 12px;
+    font-size: 11px;
     font-weight: 700;
     letter-spacing: 0.08em;
 
@@ -488,7 +513,7 @@ $shadow-lg: 0 8px 32px rgba(0,0,0,0.10);
 
     color: $text-secondary;
 
-    font-size: 12px;
+    font-size: 11px;
     font-weight: 600;
 
     .dot-red{
@@ -657,6 +682,11 @@ $shadow-lg: 0 8px 32px rgba(0,0,0,0.10);
     .radio-dot{
       width: 18px;
       height: 18px;
+      min-width: 18px;
+      min-height: 18px;
+      flex: 0 0 18px;
+      aspect-ratio: 1 / 1;
+      box-sizing: border-box;
 
       border-radius: 50%;
 
@@ -706,4 +736,113 @@ $shadow-lg: 0 8px 32px rgba(0,0,0,0.10);
   font-family: SyneMono !important;
   font-size: 11px !important;
   fill: $text-muted !important;
+}
+
+@media(max-width: 760px){
+  .calc-root{
+    min-height : auto;
+    overflow : visible;
+  }
+
+  .calc-tabs{
+    margin-top : 90px;
+    padding : 12px 10px 0;
+
+    &__inner{
+      width : 100%;
+      justify-content : flex-start;
+      overflow-x : auto;
+      flex-wrap : nowrap;
+      border-radius : 14px;
+    }
+
+    &__btn{
+      padding : 9px 12px;
+      font-size : 12px;
+    }
+  }
+
+  .calc-body{
+    padding : 12px 10px 20px;
+    gap : 12px;
+    overflow : visible;
+  }
+
+  .input-panel{
+    border-radius : 16px;
+    padding : 16px 14px;
+    overflow-y : auto;
+    overflow-x : hidden;
+    max-height: calc(100dvh - 200px);
+  }
+
+  .retirement-scroll{
+    padding-right: 4px;
+    margin-right: -4px;
+  }
+
+  .right-panel{
+    gap : 12px;
+    overflow-y : auto;
+    overflow-x : hidden;
+    max-height: calc(100dvh - 200px);
+  }
+
+  .field{
+    &__header{
+      align-items: flex-start;
+      gap : 10px;
+      margin-bottom : 10px;
+    }
+
+    &__label{
+      flex: 1;
+      min-width: 0;
+    }
+
+    &__input-wrap{
+      min-width : 118px;
+      flex-shrink: 0;
+    }
+
+    &__prefix,
+    &__suffix{
+      padding : 8px 9px;
+    }
+
+    &__num{
+      padding : 8px 9px;
+      font-size : 14px;
+    }
+  }
+
+  .input-divider{
+    margin : 14px 0;
+  }
+
+  .summary-cards{
+    gap : 10px;
+  }
+
+.summary-card{
+    padding : 14px;
+
+    &__value{
+      font-size : 18px;
+    }
+  }
+
+  .chart-card{
+    border-radius : 16px;
+    padding : 14px;
+
+    &__header{
+      gap : 10px;
+      margin-bottom : 12px;
+    }
+
+    &__area{
+      min-height : 240px;
+    }
+  }
 }

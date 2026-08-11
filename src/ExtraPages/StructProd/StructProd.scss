@@ -76,9 +76,11 @@ $darkBlue : #17233d;
     display : grid;
     place-items : center;
     .innerSPtwo{
+      gap : 16px;
+
       .cardsCont{
-        margin-top : 50px;
-        gap : 40px;
+        margin-top : 28px;
+        gap : 28px;
         .cardEle{
           display : flex;
           flex-direction : row;
@@ -101,13 +103,15 @@ $darkBlue : #17233d;
   }
   
   .SPthree{
+    gap : 28px;
+
     .leftSP{
       display : flex;
       flex-direction : column;
-      gap : 30px;
+      gap : 20px;
     }
     .rightSP{
-      gap : 40px;
+      gap : 30px;
       .pointEle{
         .ind, .ite{
           transition : color 0.3s ease;
@@ -151,7 +155,20 @@ $darkBlue : #17233d;
           padding-right : 0;
           margin-left : calc(50% - 50vw);
           margin-right : calc(50% - 50vw);
+          gap : 24px;
         }
+      }
+    }
+
+    .SPthree{
+      gap : 28px;
+
+      .leftSP{
+        gap : 18px;
+      }
+
+      .rightSP{
+        gap : 28px;
       }
     }
   }

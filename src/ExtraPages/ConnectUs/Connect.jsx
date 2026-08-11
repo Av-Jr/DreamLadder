@@ -51,6 +51,9 @@ ${formData.message}
     )}&body=${encodeURIComponent(body)}`;
   };
 
+  const address = "#20, 10th floor, R. City Offices, LBS Marg, Ghatkopar (west), Mumbai - 400086";
+  const mapHref = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(address)}`;
+
   return (
     <>
       <div className="connectPage">
@@ -74,7 +77,7 @@ ${formData.message}
 
             <div className="right">
 
-              <div className="contactCard">
+              <a className="contactCard" href="tel:+918908082222">
 
                 <div className="iconBox">
                   <Phone size={20} />
@@ -84,9 +87,9 @@ ${formData.message}
                   <span className={"Gen conTact"}>+91 89-0808-2222</span>
                 </div>
 
-              </div>
+              </a>
 
-              <div className="contactCard">
+              <a className="contactCard" href="mailto:info@dreamladdercapital.com">
 
                 <div className="iconBox">
                   <Mail size={20} />
@@ -96,9 +99,9 @@ ${formData.message}
                   <span className={"Gen conTact"}>info@dreamladdercapital.com</span>
                 </div>
 
-              </div>
+              </a>
 
-              <div className="contactCard">
+              <a className="contactCard" href={mapHref} target="_blank" rel="noreferrer">
 
                 <div className="iconBox">
                   <MapPin size={20} />
@@ -106,23 +109,24 @@ ${formData.message}
 
                 <div className="text">
                   <span className={"Gen conTact"}>
-                    #20, 10th floor, R. City Offices,
-                    LBS Marg, Ghatkopar (west),
-                    Mumbai - 400086
+                    {address}
                   </span>
                 </div>
 
-              </div>
+              </a>
 
             </div>
 
           </div>
 
-          <div className="meetingBtnWrap">
+          <div className="calendarSection">
 
-            <button className="navBtn s" onClick={() => window.open("https://calendly.com/dreamladdercapital/portfolio-discussion-meeting", "_blank")}>
-              Schedule a Meeting
-            </button>
+            <iframe
+              src="https://calendly.com/dreamladdercapital/portfolio-discussion-meeting?hide_gdpr_banner=1&primary_color=ef3b3b"
+              title="Schedule a Meeting"
+              loading="lazy"
+              allow="camera; microphone; fullscreen; payment"
+            ></iframe>
 
           </div>
 

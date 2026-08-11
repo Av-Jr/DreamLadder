@@ -1,4 +1,4 @@
-import React, { useState, useCallback } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import { useSearchParams} from "react-router-dom";
 import NavBar from "../../LandingPage/1.NavBar/NavBar.jsx"
 import Ql from "../../LandingPage/9.QuickLinks/Ql.jsx";
@@ -14,20 +14,68 @@ import {
 
 import "./CalcGraph.scss";
 
-const fmt = (n) => {
-  if (n === undefined || n === null || isNaN(n)) return "0";
+const rupeeFmt = new Intl.NumberFormat("en-IN", {
+  maximumFractionDigits: 0,
+});
 
-  const abs = Math.abs(n);
+const fmtRupees = (n) => {
+  if (!Number.isFinite(n)) return "₹0";
 
-  if (abs >= 10000000) return `${(n / 10000000).toFixed(2)} Cr`;
-  if (abs >= 100000) return `${(n / 100000).toFixed(2)} L`;
-
-  return Math.round(n).toLocaleString("en-IN");
+  return `₹${rupeeFmt.format(Math.round(n))}`;
 };
 
-const fmtINR = (n) => `₹ ${fmt(n)}`;
-
 const toLakhs = (n) => parseFloat((n / 100000).toFixed(4));
+
+const readStoredValue = (key, fallback) => {
+  if (typeof window === "undefined") return fallback;
+
+  try {
+    const raw = window.localStorage.getItem(key);
+
+    return raw === null ? fallback : JSON.parse(raw);
+  } catch {
+    return fallback;
+  }
+};
+
+function useStoredState(key, fallback) {
+  const [value, setValue] = useState(() =>
+    readStoredValue(key, fallback)
+  );
+
+  useEffect(() => {
+    try {
+      window.localStorage.setItem(key, JSON.stringify(value));
+    } catch {
+      // Ignore storage errors and keep the in-memory state.
+    }
+  }, [key, value]);
+
+  return [value, setValue];
+}
+
+const calcMonthlyContribution = (
+  target,
+  annualRate,
+  months
+) => {
+  if (!Number.isFinite(target) || target <= 0) return 0;
+  if (!Number.isFinite(months) || months <= 0) return 0;
+
+  const r = annualRate / 100 / 12;
+
+  if (Math.abs(r) < 1e-9) {
+    return target / months;
+  }
+
+  const denominator = Math.pow(1 + r, months) - 1;
+
+  if (Math.abs(denominator) < 1e-9) {
+    return target / months;
+  }
+
+  return (target * r) / denominator;
+};
 
 const IconTrendUp = ({ size = 14 }) => (
   <svg
@@ -145,7 +193,7 @@ const CustomTooltip = ({ active, payload, label }) => {
           <span className="dot" style={{ background: p.color }} />
 
           <span>
-            {p.name}: ₹{fmt(p.value * 100000)}
+            {p.name}: {fmtRupees(p.value * 100000)}
           </span>
         </div>
       ))}
@@ -168,13 +216,13 @@ function Field({
   const minL =
     minLabel ??
     (prefix === "₹"
-      ? `₹${min.toLocaleString("en-IN")}`
+      ? fmtRupees(min)
       : `${min}${suffix ?? ""}`);
 
   const maxL =
     maxLabel ??
     (prefix === "₹"
-      ? `₹${max.toLocaleString("en-IN")}`
+      ? fmtRupees(max)
       : `${max}${suffix ?? ""}`);
 
   const pct = ((value - min) / (max - min)) * 100;
@@ -205,6 +253,7 @@ function Field({
 
               onChange(v);
             }}
+            onFocus={(e) => e.target.select()}
           />
 
           {suffix && <span className="field__suffix">{suffix}</span>}
@@ -331,7 +380,7 @@ function WealthChart({ data, lines }) {
               }}
               axisLine={false}
               tickLine={false}
-              tickFormatter={(v) => v.toFixed(1)}
+              tickFormatter={(v) => fmtRupees(v * 100000)}
             />
 
             <Tooltip content={<CustomTooltip />} />
@@ -359,10 +408,10 @@ function WealthChart({ data, lines }) {
 }
 
 function SIPTab() {
-  const [monthly, setMonthly] = useState(5000);
-  const [rate, setRate] = useState(12);
-  const [years, setYears] = useState(10);
-  const [stepUp, setStepUp] = useState(10);
+  const [monthly, setMonthly] = useStoredState("calcGraph:sip:monthly", 5000);
+  const [rate, setRate] = useStoredState("calcGraph:sip:rate", 12);
+  const [years, setYears] = useStoredState("calcGraph:sip:years", 10);
+  const [stepUp, setStepUp] = useStoredState("calcGraph:sip:stepUp", 10);
 
   const calc = useCallback(() => {
     const r = rate / 100 / 12;
@@ -426,11 +475,11 @@ function SIPTab() {
           value={monthly}
           onChange={setMonthly}
           min={500}
-          max={100000}
+          max={500000}
           step={500}
           prefix="₹"
           minLabel="₹500"
-          maxLabel="₹1,00,000"
+          maxLabel="₹5,00,000"
         />
 
         <div className="input-divider" />
@@ -483,16 +532,16 @@ function SIPTab() {
           cards={[
             {
               label: "INVESTED AMOUNT",
-              value: fmtINR(totalInvested),
+              value: fmtRupees(totalInvested),
             },
             {
               label: "EST. RETURNS",
-              value: fmtINR(returns),
+              value: fmtRupees(returns),
               green: true,
             },
             {
               label: "TOTAL VALUE",
-              value: fmtINR(corpus),
+              value: fmtRupees(corpus),
               dark: true,
             },
           ]}
@@ -518,9 +567,9 @@ function SIPTab() {
 }
 
 function OneTimeTab() {
-  const [amount, setAmount] = useState(100000);
-  const [rate, setRate] = useState(12);
-  const [years, setYears] = useState(10);
+  const [amount, setAmount] = useStoredState("calcGraph:onetime:amount", 100000);
+  const [rate, setRate] = useStoredState("calcGraph:onetime:rate", 12);
+  const [years, setYears] = useStoredState("calcGraph:onetime:years", 10);
 
   const corpus = amount * Math.pow(1 + rate / 100, years);
 
@@ -545,7 +594,7 @@ function OneTimeTab() {
           onChange={setAmount}
           min={5000}
           max={10000000}
-          step={5000}
+          step={1000}
           prefix="₹"
           minLabel="₹5,000"
           maxLabel="₹1,00,00,000"
@@ -579,16 +628,16 @@ function OneTimeTab() {
           cards={[
             {
               label: "INVESTED AMOUNT",
-              value: fmtINR(amount),
+              value: fmtRupees(amount),
             },
             {
               label: "EST. RETURNS",
-              value: fmtINR(returns),
+              value: fmtRupees(returns),
               green: true,
             },
             {
               label: "TOTAL VALUE",
-              value: fmtINR(corpus),
+              value: fmtRupees(corpus),
               dark: true,
             },
           ]}
@@ -614,18 +663,18 @@ function OneTimeTab() {
 }
 
 function SWPTab() {
-  const [initial, setInitial] = useState(1000000);
+  const [initial, setInitial] = useStoredState("calcGraph:swp:initial", 1000000);
 
-  const [withdrawal, setWithdrawal] = useState(10000);
+  const [withdrawal, setWithdrawal] = useStoredState("calcGraph:swp:withdrawal", 10000);
 
-  const [rate, setRate] = useState(8);
+  const [rate, setRate] = useStoredState("calcGraph:swp:rate", 8);
 
-  const [years, setYears] = useState(10);
+  const [years, setYears] = useStoredState("calcGraph:swp:years", 10);
 
-  const [delay, setDelay] = useState(0);
+  const [delay, setDelay] = useStoredState("calcGraph:swp:delay", 0);
 
   const calcSWP = useCallback(() => {
-    const r = rate / 100 / 12;
+    const r = Math.pow(1 + rate / 100, 1 / 12) - 1;
 
     let corpus = initial;
 
@@ -638,8 +687,10 @@ function SWPTab() {
         corpus *= 1 + r;
 
         if (y > delay) {
-          corpus -= withdrawal;
-          totalWithdrawn += withdrawal;
+          const actualWithdrawal = Math.min(withdrawal, corpus);
+
+          corpus -= actualWithdrawal;
+          totalWithdrawn += actualWithdrawal;
         }
 
         if (corpus < 0) corpus = 0;
@@ -669,7 +720,7 @@ function SWPTab() {
           onChange={setInitial}
           min={100000}
           max={50000000}
-          step={50000}
+          step={10000}
           prefix="₹"
           minLabel="₹1,00,000"
           maxLabel="₹5,00,00,000"
@@ -728,16 +779,16 @@ function SWPTab() {
           cards={[
             {
               label: "INITIAL INVESTMENT",
-              value: fmtINR(initial),
+              value: fmtRupees(initial),
             },
             {
               label: "TOTAL WITHDRAWN",
-              value: fmtINR(totalWithdrawn),
+              value: fmtRupees(totalWithdrawn),
               green: true,
             },
             {
               label: "REMAINING CORPUS",
-              value: fmtINR(corpus),
+              value: fmtRupees(corpus),
               dark: true,
             },
           ]}
@@ -757,23 +808,23 @@ function SWPTab() {
   );
 }
 function RetirementTab() {
-  const [currentAge, setCurrAge] = useState(30);
+  const [currentAge, setCurrAge] = useStoredState("calcGraph:retirement:currentAge", 30);
 
-  const [retirementAge, setRetAge] = useState(60);
+  const [retirementAge, setRetAge] = useStoredState("calcGraph:retirement:retirementAge", 60);
 
-  const [lifeExpectancy, setLifeExp] = useState(80);
+  const [lifeExpectancy, setLifeExp] = useStoredState("calcGraph:retirement:lifeExpectancy", 80);
 
-  const [hasSavings, setHasSavings] = useState(false);
+  const [hasSavings, setHasSavings] = useStoredState("calcGraph:retirement:hasSavings", false);
 
-  const [existingSavings, setExistSavings] = useState(0);
+  const [existingSavings, setExistSavings] = useStoredState("calcGraph:retirement:existingSavings", 0);
 
-  const [monthlyExpenses, setMonthExp] = useState(30000);
+  const [monthlyExpenses, setMonthExp] = useStoredState("calcGraph:retirement:monthlyExpenses", 30000);
 
-  const [inflation, setInflation] = useState(6);
+  const [inflation, setInflation] = useStoredState("calcGraph:retirement:inflation", 6);
 
-  const [returnBefore, setRetBefore] = useState(12);
+  const [returnBefore, setRetBefore] = useStoredState("calcGraph:retirement:returnBefore", 12);
 
-  const [returnAfter, setRetAfter] = useState(7);
+  const [returnAfter, setRetAfter] = useStoredState("calcGraph:retirement:returnAfter", 7);
 
   const yearsToRetire = Math.max(1, retirementAge - currentAge);
 
@@ -812,8 +863,8 @@ function RetirementTab() {
   const existingGrown = hasSavings
     ? existingSavings *
       Math.pow(
-        1 + returnBefore / 100,
-        yearsToRetire
+        1 + returnBefore / 100 / 12,
+        yearsToRetire * 12
       )
     : 0;
 
@@ -822,18 +873,17 @@ function RetirementTab() {
     corpusNeeded - existingGrown
   );
 
-  const r = returnBefore / 100 / 12;
-
   const n = yearsToRetire * 12;
 
-  const monthlyNeeded =
-    (additionalNeeded * r) /
-    (Math.pow(1 + r, n) - 1);
+  const monthlyNeeded = calcMonthlyContribution(
+    additionalNeeded,
+    returnBefore,
+    n
+  );
 
   const data = [];
 
-  let corpus =
-    existingGrown > 0 ? existingSavings : 0;
+  let corpus = hasSavings ? existingSavings : 0;
 
   const rMonthly = returnBefore / 100 / 12;
 
@@ -856,156 +906,169 @@ function RetirementTab() {
 
   return (
     <>
-      <div className="input-panel">
-        <div className="section-label section-label--blue">
-          Personal Details
-        </div>
+      <div className="input-panel retirement-panel">
+        <div className="retirement-scroll">
+          <div className="section-label section-label--blue">
+            Personal Details
+          </div>
 
-        <Field
-          label="CURRENT AGE"
-          value={currentAge}
-          onChange={(v) => {
-            setCurrAge(v);
+          <Field
+            label="CURRENT AGE"
+            value={currentAge}
+            onChange={(v) => {
+              setCurrAge(v);
 
-            if (v >= retirementAge) {
-              setRetAge(v + 1);
+              if (v >= retirementAge) {
+                setRetAge(v + 1);
+              }
+            }}
+            min={18}
+            max={70}
+            suffix="yrs"
+          />
+
+          <div className="input-divider" />
+
+          <Field
+            label="RETIREMENT AGE"
+            value={retirementAge}
+            onChange={(v) => {
+              const updated = Math.max(
+                currentAge + 1,
+                v
+              );
+
+              if (updated >= lifeExpectancy) {
+                setLifeExp(updated + 1);
+              }
+
+              setRetAge(updated);
+            }}
+            min={Math.max(31, currentAge + 1)}
+            max={80}
+            suffix="yrs"
+          />
+
+          <div className="input-divider" />
+
+          <Field
+            label="LIFE EXPECTANCY"
+            value={lifeExpectancy}
+            onChange={(v) =>
+              setLifeExp(Math.max(retirementAge + 1, v))
             }
-          }}
-          min={18}
-          max={70}
-          suffix="yrs"
-        />
+            min={Math.max(61, retirementAge + 1)}
+            max={100}
+            suffix="yrs"
+          />
 
-        <div className="input-divider" />
+          <div className="input-divider" />
 
-        <Field
-          label="RETIREMENT AGE"
-          value={retirementAge}
-          onChange={(v) =>
-            setRetAge(Math.max(currentAge + 1, v))
-          }
-          min={31}
-          max={80}
-          suffix="yrs"
-        />
-
-        <div className="input-divider" />
-
-        <Field
-          label="LIFE EXPECTANCY"
-          value={lifeExpectancy}
-          onChange={setLifeExp}
-          min={61}
-          max={100}
-          suffix="yrs"
-        />
-
-        <div className="input-divider" />
-
-        <div className="field">
-          <div className="field__header">
-            <span className="field__label">
-              EXISTING SAVINGS
-            </span>
-          </div>
-
-          <div className="radio-group">
-            <label>
-              <input
-                type="radio"
-                checked={hasSavings}
-                onChange={() => setHasSavings(true)}
-              />
-
-              <span className="radio-dot" />
-
-              Yes
-            </label>
-
-            <label>
-              <input
-                type="radio"
-                checked={!hasSavings}
-                onChange={() => setHasSavings(false)}
-              />
-
-              <span className="radio-dot" />
-
-              No
-            </label>
-          </div>
-
-          {hasSavings && (
-            <div className="existing-savings-wrap">
-              <Field
-                label="SAVINGS AMOUNT"
-                value={existingSavings}
-                onChange={setExistSavings}
-                min={0}
-                max={50000000}
-                step={10000}
-                prefix="₹"
-                minLabel="₹0"
-                maxLabel="₹5,00,00,000"
-              />
+          <div className="field">
+            <div className="field__header">
+              <span className="field__label">
+                EXISTING SAVINGS
+              </span>
             </div>
-          )}
+
+            <div className="radio-group">
+              <label>
+                <input
+                  type="radio"
+                  checked={hasSavings}
+                  onChange={() => setHasSavings(true)}
+                />
+
+                <span className="radio-dot" />
+
+                Yes
+              </label>
+
+              <label>
+                <input
+                  type="radio"
+                  checked={!hasSavings}
+                  onChange={() => setHasSavings(false)}
+                />
+
+                <span className="radio-dot" />
+
+                No
+              </label>
+            </div>
+
+            {hasSavings && (
+              <div className="existing-savings-wrap">
+                <Field
+                  label="SAVINGS AMOUNT"
+                  value={existingSavings}
+                  onChange={setExistSavings}
+                  min={0}
+                  max={50000000}
+                  step={1000}
+                  prefix="₹"
+                  minLabel="₹0"
+                  maxLabel="₹5,00,00,000"
+                />
+              </div>
+            )}
+          </div>
+
+          <div className="input-divider" />
+
+          <div className="section-label section-label--red">
+            Finances
+          </div>
+
+          <Field
+            label="MONTHLY EXPENSES"
+            value={monthlyExpenses}
+            onChange={setMonthExp}
+            min={5000}
+            max={500000}
+            step={500}
+            prefix="₹"
+            minLabel="₹5,000"
+            maxLabel="₹5,00,000"
+          />
+
+          <div className="input-divider" />
+
+          <Field
+            label="RATE OF INFLATION"
+            value={inflation}
+            onChange={setInflation}
+            min={2}
+            max={15}
+            suffix="%"
+          />
+
+          <div className="input-divider" />
+
+          <div className="section-label section-label--green">
+            Savings & Growth
+          </div>
+
+          <Field
+            label="EXPECTED RETURN OF INVESTMENT (BEFORE RETIREMENT)"
+            value={returnBefore}
+            onChange={setRetBefore}
+            min={5}
+            max={20}
+            suffix="%"
+          />
+
+          <div className="input-divider" />
+
+          <Field
+            label="EXPECTED RETURN OF INVESTMENT (AFTER RETIREMENT)"
+            value={returnAfter}
+            onChange={setRetAfter}
+            min={4}
+            max={12}
+            suffix="%"
+          />
         </div>
-
-        <div className="input-divider" />
-
-        <div className="section-label section-label--red">
-          Finances
-        </div>
-
-        <Field
-          label="MONTHLY EXPENSES"
-          value={monthlyExpenses}
-          onChange={setMonthExp}
-          min={5000}
-          max={500000}
-          step={1000}
-          prefix="₹"
-          minLabel="₹5,000"
-          maxLabel="₹5,00,000"
-        />
-
-        <div className="input-divider" />
-
-        <Field
-          label="RATE OF INFLATION"
-          value={inflation}
-          onChange={setInflation}
-          min={2}
-          max={15}
-          suffix="%"
-        />
-
-        <div className="input-divider" />
-
-        <div className="section-label section-label--green">
-          Savings & Growth
-        </div>
-
-        <Field
-          label="EXPECTED RETURN BEFORE RETIREMENT"
-          value={returnBefore}
-          onChange={setRetBefore}
-          min={5}
-          max={20}
-          suffix="%"
-        />
-
-        <div className="input-divider" />
-
-        <Field
-          label="EXPECTED RETURN AFTER RETIREMENT"
-          value={returnAfter}
-          onChange={setRetAfter}
-          min={4}
-          max={12}
-          suffix="%"
-        />
       </div>
 
       <div className="right-panel">
@@ -1015,18 +1078,17 @@ function RetirementTab() {
               label:
                 "ANNUAL INCOME REQUIRED AT " +
                 retirementAge,
-              value: fmtINR(annualAtRetirement),
+              value: fmtRupees(annualAtRetirement),
             },
             {
-              label:
-                "ADDITIONAL INCOME NEEDED",
-              value: fmtINR(additionalNeeded),
+              label: "REQUIRED RETIREMENT CORPUS",
+              value: fmtRupees(corpusNeeded),
               green: true,
             },
             {
               label:
                 "MONTHLY SAVINGS REQUIRED",
-              value: fmtINR(monthlyNeeded),
+              value: fmtRupees(monthlyNeeded),
               dark: true,
             },
           ]}
@@ -1046,19 +1108,19 @@ function RetirementTab() {
   );
 }
 function MarriageTab() {
-  const [currentCost, setCost] = useState(1000000);
+  const [currentCost, setCost] = useStoredState("calcGraph:marriage:currentCost", 1000000);
 
-  const [inflation, setInflation] = useState(6);
+  const [inflation, setInflation] = useStoredState("calcGraph:marriage:inflation", 6);
 
-  const [childAge, setChildAge] = useState(5);
+  const [childAge, setChildAge] = useStoredState("calcGraph:marriage:childAge", 5);
 
   const [marriageAge, setMarriageAge] =
-    useState(21);
+    useStoredState("calcGraph:marriage:marriageAge", 21);
 
-  const [roi, setRoi] = useState(8);
+  const [roi, setRoi] = useStoredState("calcGraph:marriage:roi", 8);
 
   const [existingSavings, setExSavings] =
-    useState(0);
+    useStoredState("calcGraph:marriage:existingSavings", 0);
 
   const yearsLeft = Math.max(
     1,
@@ -1071,20 +1133,20 @@ function MarriageTab() {
 
   const existingGrown =
     existingSavings *
-    Math.pow(1 + roi / 100, yearsLeft);
+    Math.pow(1 + roi / 100 / 12, yearsLeft * 12);
 
   const needed = Math.max(
     0,
     futureCost - existingGrown
   );
 
-  const r = roi / 100 / 12;
-
   const n = yearsLeft * 12;
 
-  const monthly =
-    (needed * r) /
-    (Math.pow(1 + r, n) - 1);
+  const monthly = calcMonthlyContribution(
+    needed,
+    roi,
+    n
+  );
 
   const data = Array.from(
     { length: yearsLeft },
@@ -1158,9 +1220,9 @@ function MarriageTab() {
         <Field
           label="MARRIAGE AGE"
           value={marriageAge}
-          onChange={setMarriageAge}
-          min={6}
-          max={30}
+          onChange={(v) => setMarriageAge(Math.max(19, v))}
+          min={19}
+          max={60}
           suffix="yrs"
         />
 
@@ -1182,11 +1244,11 @@ function MarriageTab() {
           value={existingSavings}
           onChange={setExSavings}
           min={0}
-          max={5000000}
-          step={10000}
+          max={50000000}
+          step={1000}
           prefix="₹"
           minLabel="₹0"
-          maxLabel="₹50,00,000"
+          maxLabel="₹5,00,00,000"
         />
       </div>
 
@@ -1196,12 +1258,12 @@ function MarriageTab() {
             {
               label:
                 "FUTURE COST OF MARRIAGE",
-              value: fmtINR(futureCost),
+              value: fmtRupees(futureCost),
             },
             {
               label:
                 "MONTHLY INVESTMENT REQUIRED",
-              value: fmtINR(monthly),
+              value: fmtRupees(monthly),
               dark: true,
             },
           ]}
@@ -1228,18 +1290,18 @@ function MarriageTab() {
 
 function EducationTab() {
   const [currentCost, setCost] =
-    useState(3000000);
+    useStoredState("calcGraph:education:currentCost", 3000000);
 
   const [inflation, setInflation] =
-    useState(6);
+    useStoredState("calcGraph:education:inflation", 6);
 
   const [yearsLeft, setYears] =
-    useState(10);
+    useStoredState("calcGraph:education:yearsLeft", 10);
 
-  const [roi, setRoi] = useState(12);
+  const [roi, setRoi] = useStoredState("calcGraph:education:roi", 12);
 
   const [existingSavings, setExSavings] =
-    useState(30000);
+    useStoredState("calcGraph:education:existingSavings", 30000);
 
   const futureCost =
     currentCost *
@@ -1247,20 +1309,20 @@ function EducationTab() {
 
   const existingGrown =
     existingSavings *
-    Math.pow(1 + roi / 100, yearsLeft);
+    Math.pow(1 + roi / 100 / 12, yearsLeft * 12);
 
   const needed = Math.max(
     0,
     futureCost - existingGrown
   );
 
-  const r = roi / 100 / 12;
-
   const n = yearsLeft * 12;
 
-  const monthly =
-    (needed * r) /
-    (Math.pow(1 + r, n) - 1);
+  const monthly = calcMonthlyContribution(
+    needed,
+    roi,
+    n
+  );
 
   const data = Array.from(
     { length: yearsLeft + 1 },
@@ -1344,11 +1406,11 @@ function EducationTab() {
           value={existingSavings}
           onChange={setExSavings}
           min={0}
-          max={5000000}
-          step={10000}
+          max={50000000}
+          step={1000}
           prefix="₹"
           minLabel="₹0"
-          maxLabel="₹50,00,000"
+          maxLabel="₹5,00,00,000"
         />
       </div>
 
@@ -1358,12 +1420,12 @@ function EducationTab() {
             {
               label:
                 "FUTURE COST OF EDUCATION",
-              value: fmtINR(futureCost),
+              value: fmtRupees(futureCost),
             },
             {
               label:
                 "MONTHLY INVESTMENT REQUIRED",
-              value: fmtINR(monthly),
+              value: fmtRupees(monthly),
               dark: true,
             },
           ]}

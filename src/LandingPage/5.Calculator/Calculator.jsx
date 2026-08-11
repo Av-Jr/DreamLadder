@@ -13,7 +13,7 @@ const Calculator = () => {
             { i: "five",  t: "Retirement",  id: "retirement" },
             { i: "six",   t: "Marriage",    id: "marriage" },
             { i: "seven", t: "Education",   id: "education" },
-            { i: "eight", t: "EMI / Loan",  id: "sip" } // only if you create this tab
+            { i: "eight", t: "EMI / Loan",  id: "onetime", className: "emiCalc" }
 
     ]
 
@@ -22,7 +22,7 @@ const Calculator = () => {
             <h2 className={"Syn dark"}>Calculators</h2>
             <div className="CalcEleCon">
                 {retData.map((item, index) => (
-                    <div key={index} className="CalcEle" onClick={() => {window.location.href = `/calc?tab=${item.id}`}}>
+                    <div key={index} className={`CalcEle ${item.className ?? ""}`} onClick={() => {window.location.href = `/calc?tab=${item.id}`}}>
                         <img loading="lazy" src={img(`Calc${item.i}`)} alt={item.i} />
                         <h3 className={"Gen light"}>{item.t}</h3>
                     </div>

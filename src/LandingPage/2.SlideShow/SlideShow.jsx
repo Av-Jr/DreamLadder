@@ -71,12 +71,12 @@ const SlideShow = () => {
           <div className="SlideTwo">
             <div className="heroCon">
               <h1 className={"Syn dark exsmall"}>
-                Smarter Investing -
+                Smart Investing -
                 <br />
                 Right in your pocket.
               </h1>
 
-              <h2 className={'Syn dark small'}>Download the App right now.</h2>
+              <h2 className={'Syn dark small'}>Download the App Now.</h2>
 
               <div className="heroActions pas">
                 <button className="navBtn s ps" onClick={() => window.open("https://play.google.com/store/search?q=dreamladder+capital&c=apps&hl=en_IN", "_blank")}>

@@ -57,8 +57,8 @@ const footerSections = [
       {
         label: "Download",
         className: "QLd",
-        type: "internal",
-        path: "/download"
+        type: "external",
+        path: "https://play.google.com/store/search?q=dreamladder+capital&c=apps&hl=en_IN"
       },
       {
         label: "Blogs",
@@ -144,21 +144,21 @@ const footerSections = [
       {
         label: "+91 89-0808-2222",
         className: "RUp",
-        type: "internal",
-        path: "/about"
+        type: "external",
+        path: "tel:+918908082222"
       },
       {
         label: "info@dreamladdercapital.com",
         className: "RUe",
-        type: "internal",
-        path: "/about#top"
+        type: "external",
+        path: "mailto:info@dreamladdercapital.com"
       },
       {
         label:
           "DreamLadder Capital #20, 10th Floor, R. City Offices, Ghatkopar (W), Mumbai – 86",
         className: "RUl",
-        type: "internal",
-        path: "/about"
+        type: "external",
+        path: "https://www.google.com/maps/search/?api=1&query=DreamLadder%20Capital%20R%20City%20Offices%20Ghatkopar%20West%20Mumbai"
       }
     ]
   }
@@ -187,7 +187,8 @@ const legalLinks = [
   },
   {
     label: "Code of Conduct",
-    type: "none"
+    type: "internal",
+    path: "/disclosure"
   },
   {
     label: "SEBI Circulars",
@@ -199,7 +200,7 @@ const legalLinks = [
     label: "AMFI Risk Factors",
     type: "external",
     path:
-      "https://www.amfiindia.com/investor-corner/knowledge-center/risks-in-mutual-funds.html"
+      "https://www.amfiindia.com/investor/knowledge-center-info?zoneName=riskInMutualFunds"
   }
 ];
 

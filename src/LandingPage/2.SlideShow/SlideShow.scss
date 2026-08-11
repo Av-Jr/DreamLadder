@@ -170,6 +170,16 @@
         overflow: visible;
         white-space: nowrap
       }
+
+      h1{
+        font-size: clamp(48px, 4.8vw, 82px);
+        line-height: 1.02;
+      }
+
+      h2{
+        font-size: clamp(20px, 2vw, 32px);
+        line-height: 1.15;
+      }
       
       
       .heroActions {
@@ -208,25 +218,27 @@
           flex-direction: column;
           justify-content: center;
           align-items: center;
+          gap: 4px;
           
           &:not(:last-child){
             border-right: 2px solid rgba(0,0,0,0.12);
           }
           
-          .num{
-            font-size: 25px;
+          .num, .Gen.light:first-child{
+            font-size: 32px;
             font-weight: bold;
             font-family : Genos;
             line-height: 1;
             color: black;
           }
           
-          .label{
+          .label, .Gen.small, .Gen.light.small{
             font-family : Genos;
-            font-size: 25px;
-            font-weight: bold;
-            line-height: 1;
-            color: black;
+            font-size: 15px;
+            font-weight: 700;
+            line-height: 1.1;
+            color: #1f2937;
+            letter-spacing: 0.02em;
           }
         }
       }
@@ -256,9 +268,19 @@
       display : none;
     }
     
-    .SlideTwo{
+  .SlideTwo{
       .heroImg{
-        display : none !important;
+        display : grid !important;
+        margin-top : -8px;
+
+        .BigImg{
+          width : min(86vw, 420px);
+          height : auto;
+        }
+      }
+    }
+    .SlideOne{
+      .heroImg{
       }
     }
     .SlideOne, .SlideTwo {
@@ -279,16 +301,16 @@
         justify-items: center;
         margin-top : 100px;
         gap: 14px;
-        padding: 22px 24px 10px;
+        padding: 16px 18px 8px;
         
         h1 {
           text-align: center;
-          font-size: clamp(0px, 9vw, 35px);
+          font-size: clamp(0px, 10vw, 38px);
           white-space: normal;
         }
         
         h2 {
-          font-size: clamp(0px, 5vw, 20px);
+          font-size: clamp(0px, 5.4vw, 22px);
           text-align: center;
         }
         
@@ -297,13 +319,15 @@
         }
         
         .infoDis {
-          font-size: clamp(0px, 5vw, 20px);
+          font-size: clamp(0px, 4.5vw, 18px);
           flex-wrap: wrap;
           height: auto;
+          gap: 8px;
           
           .conInfo {
             padding: 0;
             text-align: center;
+            min-width: 94px;
           }
         }
       }
