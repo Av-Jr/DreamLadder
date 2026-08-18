@@ -185,7 +185,7 @@ return (
 <div id={"BondsMC"}>
     <div className="titleHeadZ">
         <NavBar></NavBar>
-        <span className="titleZ">Bonds</span>
+        <span className="titleZ">Bonds &<br></br>Corporate FD's</span>
     </div>
 
     <div className="Bondsone">
@@ -286,7 +286,7 @@ return (
 
                     {
                         FixedIncomeTypesData.cards.slice(0,3).map((item, index) => (
-                            <div className={`typeCard ${index % 2 !== 0 ? "start" : "end"}`} key={index}>
+                            <div className={`hoverAni typeCard ${index % 2 !== 0 ? "start" : "end"}`} key={index}>
 
                                 <h3 className={"Gen dark bold"}>
                                     <span className={"Gen bold"}>{item.number}</span> {item.title}
@@ -308,7 +308,7 @@ return (
 
                     {
                         FixedIncomeTypesData.cards.slice(3,6).map((item, index) => (
-                            <div className={`typeCard ${index % 2 !== 0 ? "end" : ""}`} key={index}>
+                            <div className={`hoverAni typeCard ${index % 2 !== 0 ? "end" : ""}`} key={index}>
 
                                 <h3 className={"Gen bold"}>
                                     <span className={"Gen bold"}>{item.number}</span> {item.title}

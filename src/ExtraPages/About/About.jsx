@@ -263,7 +263,7 @@ export default function About() {
             <div className="thirdPage">
                 <div className="conSecTP innerPadding">
                     <Quote size={48} color="#E53935" />
-                    <span className={"textLeft Syn italic ju"}>“Our mission is to be one of India’s most trusted partners in building long-term wealth. Every solution we create is designed to be simple, transparent, and effective.”</span>
+                    <span className={"textLeft Syn italic"}>“Our mission is to be one of India’s most trusted partners in building long-term wealth. Every solution we create is designed to be simple, transparent, and effective.”</span>
                     <h2 className={"Gen small bold"}>- Mr. Saday Sinha<br/><span className={'Gen small'}>Founder & CEO, DreamLadder Capital</span></h2>
                 </div>
 

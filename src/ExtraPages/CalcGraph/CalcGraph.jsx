@@ -202,82 +202,164 @@ const CustomTooltip = ({ active, payload, label }) => {
 };
 
 function Field({
-  label,
-  value,
-  onChange,
-  min,
-  max,
-  step = 1,
-  prefix,
-  suffix,
-  minLabel,
-  maxLabel,
-}) {
+                 label,
+                 value,
+                 onChange,
+                 min,
+                 max,
+                 step = 1,
+                 prefix,
+                 suffix,
+                 minLabel,
+                 maxLabel,
+               }) {
+  const [inputValue, setInputValue] = useState(String(value));
+
+  useEffect(() => {
+    setInputValue(String(value));
+  }, [value]);
+
   const minL =
-    minLabel ??
-    (prefix === "₹"
-      ? fmtRupees(min)
-      : `${min}${suffix ?? ""}`);
+      minLabel ??
+      (prefix === "₹"
+          ? fmtRupees(min)
+          : `${min}${suffix ?? ""}`);
 
   const maxL =
-    maxLabel ??
-    (prefix === "₹"
-      ? fmtRupees(max)
-      : `${max}${suffix ?? ""}`);
+      maxLabel ??
+      (prefix === "₹"
+          ? fmtRupees(max)
+          : `${max}${suffix ?? ""}`);
 
-  const pct = ((value - min) / (max - min)) * 100;
+  const numericValue = Number(inputValue);
 
-  const sliderBg = `linear-gradient(to right, #e8341c ${pct}%, #e8e8e5 ${pct}%)`;
+  const pct =
+      Number.isFinite(numericValue) && max !== min
+          ? Math.min(
+              100,
+              Math.max(
+                  0,
+                  ((numericValue - min) / (max - min)) * 100
+              )
+          )
+          : ((value - min) / (max - min)) * 100;
+
+  const sliderBg = `linear-gradient(
+    to right,
+    #e8341c ${pct}%,
+    #e8e8e5 ${pct}%
+  )`;
+
+  const handleInputChange = (e) => {
+    const raw = e.target.value;
+
+    // Allow the user to type/delete freely
+    if (raw === "") {
+      setInputValue("");
+      return;
+    }
+
+    // Only allow numbers
+    if (!/^\d*\.?\d*$/.test(raw)) {
+      return;
+    }
+
+    setInputValue(raw);
+
+    const parsed = Number(raw);
+
+    if (!Number.isFinite(parsed)) {
+      return;
+    }
+
+    // Don't clamp while typing.
+    // Only update the actual calculator value when
+    // the entered value is within the allowed range.
+    if (parsed >= min && parsed <= max) {
+      onChange(parsed);
+    }
+  };
+
+  const handleBlur = () => {
+    let parsed = Number(inputValue);
+
+    if (!Number.isFinite(parsed) || inputValue === "") {
+      parsed = min;
+    }
+
+    parsed = Math.min(max, Math.max(min, parsed));
+
+    setInputValue(String(parsed));
+    onChange(parsed);
+  };
 
   return (
-    <div className="field">
-      <div className="field__header">
-        <span className="field__label">{label}</span>
+      <div className="field">
 
-        <div className="field__input-wrap">
-          {prefix && <span className="field__prefix">{prefix}</span>}
+        <div className="field__header">
+
+        <span className="field__label">
+          {label}
+        </span>
+
+          <div className="field__input-wrap">
+
+            {prefix && (
+                <span className="field__prefix">
+              {prefix}
+            </span>
+            )}
+
+            <input
+                className="field__num"
+                type="number"
+                value={inputValue}
+                min={min}
+                max={max}
+                step={step}
+                onChange={handleInputChange}
+                onBlur={handleBlur}
+                onFocus={(e) => e.target.select()}
+            />
+
+            {suffix && (
+                <span className="field__suffix">
+              {suffix}
+            </span>
+            )}
+
+          </div>
+
+        </div>
+
+        <div className="slider-wrap">
 
           <input
-            className="field__num"
-            type="number"
-            value={value}
-            min={min}
-            max={max}
-            step={step}
-            onChange={(e) => {
-              let v = parseFloat(e.target.value);
-
-              if (isNaN(v)) v = min;
-
-              v = Math.min(max, Math.max(min, v));
-
-              onChange(v);
-            }}
-            onFocus={(e) => e.target.select()}
+              className="slider"
+              type="range"
+              min={min}
+              max={max}
+              step={step}
+              value={value}
+              style={{ background: sliderBg }}
+              onChange={(e) => onChange(parseFloat(e.target.value))}
           />
 
-          {suffix && <span className="field__suffix">{suffix}</span>}
         </div>
-      </div>
 
-      <div className="slider-wrap">
-        <input
-          className="slider"
-          type="range"
-          min={min}
-          max={max}
-          step={step}
-          value={value}
-          style={{ background: sliderBg }}
-          onChange={(e) => onChange(parseFloat(e.target.value))}
-        />
-      </div>
+        <div className="field__range-row">
 
-      <div className="field__range-row">
-        <span className="field__range-label">{minL}</span>
-        <span className="field__range-label">{maxL}</span>
+        <span className="field__range-label">
+          {minL}
+        </span>
+
+          <span className="field__range-label">
+          {maxL}
+        </span>
+
+        </div>
+
       </div>
-    </div>
   );
 }
 
@@ -894,8 +976,8 @@ function RetirementTab() {
   ) {
     for (let mo = 0; mo < 12; mo++) {
       corpus =
-        (corpus + Math.max(0, monthlyNeeded)) *
-        (1 + rMonthly);
+          corpus * (1 + rMonthly) +
+          Math.max(0, monthlyNeeded);
     }
 
     data.push({

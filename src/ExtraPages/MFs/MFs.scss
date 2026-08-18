@@ -79,6 +79,13 @@ $darkBlue : #17233d;
       max-width :300px;
       background: $darkBlue;
       border-radius : 20px;
+      
+      transition : transform 0.5s ease;
+      
+      &:hover{
+        transform : scale(0.95);
+      }
+      
       .cardIconMF{
         color : $colorRed;
       }

@@ -155,12 +155,14 @@ const StructProd = () => {
                 const Icon = item.icon;
 
                 return(
-                    <div className={"cardEle"} key={index}>
-                      <Icon className={"cardIcon"} size={30}/>
+                    <div className={"cardEle hoverAni"} key={index}>
+
                       <div className={"textElll"}>
+                        <Icon className={"cardIcon"} size={30}/>
                         <h3 className={"Syn bold"}>{item.title}</h3>
-                        <span className={"Gen light bold small tleft"}>{item.description}</span>
+
                       </div>
+                      <span className={"Gen light bold small tleft"}>{item.description}</span>
                     </div>
                 );
               })

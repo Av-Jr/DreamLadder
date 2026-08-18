@@ -49,7 +49,7 @@ const ReturnSlider = () => {
 
             <div className="childsR one">
                 <h2 className={"Syn"}>Time Reveals the True Wealth Builder</h2>
-                <h3 className={"Syn"}>Compounding Power over 25 years.</h3>
+                <h2 className={"Syn"}>Compounding Power over 25 years.</h2>
 
                 <div className="SliderCon">
 
@@ -70,8 +70,7 @@ const ReturnSlider = () => {
                     </div>
 
                     <div className="inputWrap">
-                        <span className={"Gen bold dark"}>₹</span>
-
+                        <span className={"Gen tcen bold dark"}>Rs </span>
                         <input
                             id="SCMC"
                             type="number"
@@ -109,7 +108,7 @@ const ReturnSlider = () => {
             </div>
 
             <div className="childsR two">
-                <h3 className={"Gen"}>After 25 years, it would have accumulated to</h3>
+                <h2 className={"Gen"}>After 25 years, it would have accumulated to</h2>
 
                 <div className="retElesCon">
 

@@ -542,46 +542,59 @@ $shadow-lg: 0 8px 32px rgba(0,0,0,0.10);
   }
 }
 
-.custom-tooltip{
+.custom-tooltip {
   background: $dark-card;
-
-  border-radius: 12px;
-
-  padding: 12px 14px;
-
+  border-radius: 8px;
+  padding: 6px 9px;
+  
   box-shadow: $shadow-lg;
-
-  &__label{
-    margin-bottom: 8px;
-
-    color: rgba(255,255,255,0.55);
-
-    font-family: SyneMono;
-    font-size: 11px;
+  
+  font-family: SyneMono, monospace !important;
+  font-size: 10px !important;
+  line-height: 1.2 !important;
+  
+  &__label {
+    margin-bottom: 4px;
+    
+    color: rgba(255, 255, 255, 0.55);
+    
+    font-family: SyneMono, monospace !important;
+    font-size: 8px !important;
+    line-height: 1.2 !important;
+    font-weight: 400 !important;
   }
-
-  &__row{
+  
+  &__row {
     display: flex;
     align-items: center;
-
-    gap: 8px;
-
-    margin-bottom: 5px;
-
+    
+    gap: 5px;
+    margin-bottom: 2px;
+    
     color: white;
-
-    font-family: SyneMono;
-    font-size: 13px;
-
-    &:last-child{
+    
+    font-family: SyneMono, monospace !important;
+    font-size: 10px !important;
+    line-height: 1.2 !important;
+    font-weight: 400 !important;
+    
+    &:last-child {
       margin-bottom: 0;
     }
-
-    .dot{
-      width: 8px;
-      height: 8px;
-
+    
+    .dot {
+      width: 5px;
+      height: 5px;
+      
+      flex-shrink: 0;
+      
       border-radius: 50%;
+    }
+    
+    span {
+      font-family: SyneMono, monospace !important;
+      font-size: 10px !important;
+      line-height: 1.2 !important;
     }
   }
 }

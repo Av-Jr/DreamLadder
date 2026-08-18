@@ -18,7 +18,7 @@ $colorRed : #ef3b3b;
 }
 
 //text-align left
-.heroText, .philosophyText, .approachLeft, .approachRight{
+.heroText, .philosophyText{
   h1, h2, h3, span{
     width : 100%;
     text-align : left;
@@ -60,6 +60,13 @@ $colorRed : #ef3b3b;
         padding : 20px;
         border-radius : 20px;
         box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        transition : transform 0.5s ease;
+          
+        &:hover{
+          transform : scale(0.95);
+        }
+          
+        
         
         h2{
           border-left : 4px solid $colorRed;
@@ -122,14 +129,21 @@ $colorRed : #ef3b3b;
     flex-direction : row;
     justify-content : center;
     align-items : center;
-    gap : 20px;
+    gap : 100px;
     padding : 20px;
     
     .btns{
       display : flex;
-      gap : 10px;
+      gap : 40px;
       align-items : center;
       place-items : center;
+      
+      button{
+        &:hover{
+          background: white;
+          color : black;
+        }
+      }
     }
     
     h2{

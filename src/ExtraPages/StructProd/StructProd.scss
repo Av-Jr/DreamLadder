@@ -10,8 +10,17 @@ $darkBlue : #17233d;
   place-items : center;
 }
 
+.hoverAni{
+  transition : transform 0.5s ease;
+  
+  &:hover{
+    transform : scale(0.95);
+  }
+  
+}
+
 //flex-cols
-.innerSPtwo, .textElll, .rightSP{
+.innerSPtwo, .rightSP{
   display : flex;
   flex-direction : column;
   justify-content : center;
@@ -21,15 +30,22 @@ $darkBlue : #17233d;
 }
 
 //flex-rows
-.featureCard, .RegItem, .firstRow, .thirdRow, .regCard, .pointEle{
+.featureCard,.RegItem, .firstRow, .thirdRow, .regCard, .pointEle{
   display : flex;
   flex-direction : row;
   justify-content : flex-start;
   align-items : flex-start;
   gap : 20px;
 }
-
-//center text align
+.textElll{
+  display : flex;
+  flex-direction : row;
+  justify-content : flex-start;
+  align-items : center;
+  gap : 20px;
+}
+  
+  //center text align
 .PMSone, .heroText, .leftSP,.rightSP{
   h1, h2, h3{
     text-align : left;
@@ -83,7 +99,7 @@ $darkBlue : #17233d;
         gap : 28px;
         .cardEle{
           display : flex;
-          flex-direction : row;
+          flex-direction : column;
           justify-content : center;
           align-items : flex-start;
           gap : 20px;

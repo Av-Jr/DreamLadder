@@ -8,7 +8,15 @@ $colorRed : #ef3b3b;
 #AppMC{
   @include flex-center;
   position : relative;
-  z-index : 0
+  z-index : 0;
+  .hoverAni{
+    transition : transform 0.5s ease;
+    
+    &:hover{
+      transform : scale(0.95);
+    }
+    
+  }
 }
 
 #breakMob{
@@ -113,6 +121,10 @@ body{
     font-size : clamp(0px, 7vh, 70px) !important;
     color : black;
     
+    &.tleft{
+      width : 100%;
+      text-align : left!important;
+    }
     &.tcen{
       width : 100%;
       text-align : center !important;
@@ -155,6 +167,10 @@ body{
     color : black;
     font-size : clamp(0px, 3.5vh, 35px) !important;
     
+    &.tleft{
+      width : 100%;
+      text-align : left!important;
+    }
     &.tcen{
       width : 100%;
       text-align : center !important;
@@ -198,7 +214,10 @@ body{
     
     color : black;
     font-size : clamp(0px, 3vh, 20px) !important;
-    
+    &.tleft{
+      width : 100%;
+      text-align : left!important;
+    }
     &.tcen{
       width : 100%;
       text-align : center !important;
@@ -361,7 +380,8 @@ body{
       }
       
       h2{
-        max-width : 100%;
+        max-width : 70%;
+        text-align : left;
       }
       
       span{

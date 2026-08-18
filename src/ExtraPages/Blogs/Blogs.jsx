@@ -37,10 +37,12 @@ export default function Blogs() {
 
     return (
         <div className="blogsPageLayout">
-            <div className="titleHeadZ">
-                <NavBar></NavBar>
-                <span className="titleZ">Blogs</span>
-            </div>
+            {!selectedPost && (
+                <div className="titleHeadZ">
+                    <NavBar />
+                    <span className="titleZ">Blogs</span>
+                </div>
+            )}
         <div className={"ExtrasBL"}>
             <aside className="blogsIndex">
                 <span className="Syn small">Index</span>

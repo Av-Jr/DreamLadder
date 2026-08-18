@@ -97,7 +97,7 @@ const PMSRegulationData = {
       title: "Minimum Investment",
 
       description:
-        "₹50 Lakh initial ticket size as per strictly mandated SEBI guidelines."
+        "Rs 50 Lakh initial ticket size as per strictly mandated SEBI guidelines."
     },
 
     {
@@ -222,7 +222,7 @@ const AIFTypesData = {
       {
         title: "Minimum Investment Threshold",
         description:
-            "To ensure sophisticated participation, a minimum ticket size of ₹1 crore is required from investors."
+            "To ensure sophisticated participation, a minimum ticket size of Rs 1 crore is required from investors."
       },
 
       {
@@ -270,7 +270,7 @@ const WhyAIFData = {
         </div>
 
         <img loading="lazy"
-             className={"heroImg"}
+             className={"heroImg imgC"}
              src={`${img(PMSHeroData.image)}`}
              alt=""
         />
@@ -342,6 +342,7 @@ const WhyAIFData = {
 
           <img
               loading="lazy"
+              className="hoverAni"
               src={`${img(PMSRegulationData.image)}`}
               alt=""
           />
@@ -378,7 +379,7 @@ const WhyAIFData = {
             ))
           }
 
-          <span className="quote Gen small ju">
+          <span className="quote Gen small">
       {AIFIntroData.quote}
     </span>
 

@@ -2,6 +2,21 @@
 $colorRed : #ef3b3b;
 $darkBlue : #17233d;
 
+.PMSseven {
+  .regCardP {
+    
+    .Syn {
+      transition: color 0.25s ease;
+    }
+    
+    &:hover {
+      .Syn {
+        color: $colorRed;
+      }
+    }
+  }
+}
+
 //grid 2cols
 .PMSone, .innerPMStwo, .PMSthree, .PMSfive, .PMSsix, .PMSseven{
   display : grid;
@@ -174,6 +189,8 @@ $darkBlue : #17233d;
       display : flex;
       flex-direction : column;
       gap : 40px;
+      
+      span{text-align : left;}
       .aifCard{
         width : 100%;
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -201,14 +218,19 @@ $darkBlue : #17233d;
             padding : 10px;
             color : $colorRed;
             border-radius : 5px;
+            text-align : left;
           }
         }
         .thirdRow{
           width : 100%;
           justify-content : space-between !important;
+          h3{
+            text-align : left;
+          }
           
           .it{
             width : 100%;
+            text-align : left;
           }
         }
       }
@@ -220,6 +242,10 @@ $darkBlue : #17233d;
   .PMSone, .innerPMStwo, .PMSthree, .PMSfive, .PMSsix, .PMSseven{
     grid-template-columns : 1fr;
     grid-template-rows : repeat(2, auto);
+    
+    .imgC{
+      transform : translateX(-10%);
+    }
   }
   
   .PMSone, .innerPMStwo, .PMSthree, .PMSfive, .PMSsix, .PMSseven{
@@ -228,7 +254,7 @@ $darkBlue : #17233d;
     margin-bottom : 10px;
   }
   
-  .heroText, .heroImg, .leftPMS, .right, .featureCard, .aifCard{
+  .heroText, .heroImg, .leftPMS, .right, .featureCard, .aifCard, .PMSseven{
     padding : 20px;
   }
 }

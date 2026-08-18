@@ -183,10 +183,10 @@ const LEP = () => {
 
                 <div className={"quoteBox"}>
 
-                  <span className={"Gen esmall light bold"}>STRATEGIC SIGNIFICANCE</span>
+
 
                   <span className={"Gen emsmall dark italic"}>
-                    “{item.strategicSignificance}”
+                    {item.strategicSignificance}
                   </span>
 
                 </div>

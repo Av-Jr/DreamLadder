@@ -1,6 +1,11 @@
 
 @use "../../mixins" as *;
 
+.ps, .as{
+  transition : all 3s ease;
+  &:hover{transform : scale(0.9)};
+}
+
 #SlideShowMC {
   position: relative;
   height: 100vh;
@@ -263,10 +268,6 @@
 @include mediaDevice(mobile) {
   #SlideShowMC {
     padding : 0;
-    
-    .slideArrow{
-      display : none;
-    }
     
   .SlideTwo{
       .heroImg{

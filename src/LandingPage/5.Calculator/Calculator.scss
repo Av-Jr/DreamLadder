@@ -19,7 +19,7 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     justify-content: center;
-    gap: 10px;
+    gap: 50px;
     max-width : 1300px;
 
     
@@ -68,7 +68,7 @@
     .CalcEleCon{
       grid-template-columns: 1fr 1fr;
       width: 100%;
-      gap: 8px;
+      gap: 20px;
     }
     
     .CalcEle{

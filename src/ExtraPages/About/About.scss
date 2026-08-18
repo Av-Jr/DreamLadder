@@ -102,16 +102,76 @@ $redCol : #E53935;
       }
     }
     
-    .section2{
+    .section2 {
       
-      display:flex;
-      flex-direction:column;
-      justify-content:center;
-      align-items:center;
+      // =========================
+      // DESKTOP / WEB
+      // =========================
       
-      text-align:center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
       
-      gap:18px;
+      text-align: center;
+      
+      gap: 16px;
+      
+      // Quote
+      .quote {
+        
+        margin: 0;
+        
+        font-size: 58px;
+        line-height: 1.08;
+        font-weight: 400;
+        
+        letter-spacing: -0.5px;
+        
+        .redText {
+          color: $redCol;
+        }
+      }
+      
+      // Red divider
+      .redLine {
+        
+        width: 70px;
+        height: 3px;
+        
+        margin: 4px 0;
+        
+        background: $redCol;
+        border-radius: 10px;
+      }
+      
+      // Founder name
+      h3 {
+        
+        margin: 0;
+        
+        font-size: 24px;
+        line-height: 1;
+        
+        font-weight: 700;
+        
+        letter-spacing: -0.2px;
+      }
+      
+      // Designation
+      .ceo {
+        
+        margin: 0;
+        
+        font-size: 12px;
+        line-height: 1;
+        
+        font-weight: 400;
+        
+        letter-spacing: 5px;
+        
+        color: #666;
+      }
     }
     
     .quote{
@@ -186,28 +246,88 @@ $redCol : #E53935;
     }
   }
   
-  .thirdPage{
-    background: img("AboutThreebg") center/contain no-repeat;
-    display : flex;
-    flex-direction : column;
-    justify-content : center;
-    align-items : flex-end;
+  .thirdPage {
     
-    .conSecTP{
-      width : 50%;
-      display : flex;
-      flex-direction : column;
-      justify-content : center;
-      align-items : flex-end;
-      gap : 20px;
-      max-width : 800px;
+    position: relative;
+    
+    background: img("AboutThreebg") center/cover no-repeat;
+    
+    display: flex;
+    flex-direction: column;
+    
+    justify-content: center;
+    align-items: flex-end;
+    
+    padding: 80px 40px;
+    
+    // Overall veil over the image
+    &::before {
+      content: "";
+      position: absolute;
+      inset: 0;
       
-      h2{
-        span{
-          color : $redCol;
+      background: rgba(255, 255, 255, 0.18);
+      
+      pointer-events: none;
+    }
+    
+    .conSecTP {
+      
+      position: relative;
+      z-index: 1;
+      
+      width: 50%;
+      max-width: 800px;
+      
+      display: flex;
+      flex-direction: column;
+      
+      justify-content: center;
+      align-items: flex-end;
+      
+      gap: 20px;
+      
+      padding: 40px;
+      
+      // Subtle glass effect
+      background: rgba(255, 255, 255, 0.10);
+      
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      
+      border-radius: 20px;
+      
+      box-shadow:
+              0 10px 35px rgba(0, 0, 0, 0.08);
+      
+      h2,
+      span {
+        margin: 0;
+      }
+      
+      h2 {
+        font-size: 18px;
+        line-height: 1.4;
+        
+        text-align: right;
+        
+        span {
+          color: #666;
         }
       }
-
+      
+      .textLeft {
+        font-size: 24px;
+        line-height: 1.45;
+        
+        letter-spacing: 0.3px;
+        
+        text-align: right;
+        
+        width: 100%;
+      }
     }
   }
   .journeyPage{
@@ -431,6 +551,8 @@ $redCol : #E53935;
       display : flex;
       flex-direction : column;
       gap : 20px;
+      align-items : start;
+      justify-content : center;
       
 
       h1, span{
@@ -521,6 +643,12 @@ $redCol : #E53935;
         border-radius : 20px;
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
         
+        transition : transform 0.5s ease;
+        
+        &:hover{
+          transform : scale(0.95);
+        }
+        
         span{
           text-align : left;
         }
@@ -554,37 +682,50 @@ $redCol : #E53935;
         display : none;
       }
       
-      .section2{
-        flex-direction : column;
-        gap : 12px;
-        align-items : center;
-        text-align : center;
+      .section2 {
         
-        .sec2F{
-          justify-content : flex-start;
-          align-items : flex-start;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+        text-align: center;
+        gap: 12px;
+        
+        .quote {
+          margin: 0;
+          font-size: 30px;
+          line-height: 1.15;
+          font-weight: 400;
+          letter-spacing: 0;
           
-          h2{
-            text-align : left;
-          }
-          
-          span, .toRight{
-            text-align : right;
-            width : 100%;
+          .redText {
+            color: $redCol;
           }
         }
         
-        .quote{
-          font-size : 30px;
-          line-height : 1.18;
+        .redLine {
+          width: 56px;
+          height: 3px;
+          margin: 4px 0;
+          background: $redCol;
+          border-radius: 10px;
         }
-
-        .redLine{
-          width : 56px;
+        
+        h3 {
+          margin: 0;
+          font-size: 20px;
+          line-height: 1.05;
+          font-weight: 700;
+          letter-spacing: 0;
         }
-
-        img{
-          width : 66%;
+        
+        .ceo {
+          margin: 0;
+          font-size: 11px;
+          line-height: 1;
+          font-weight: 400;
+          letter-spacing: 4px;
+          color: #666;
         }
       }
       
@@ -619,23 +760,90 @@ $redCol : #E53935;
     }
   }
   
-  .thirdPage{
-    justify-content : center;
-    align-items : center;
-    background-size : cover;
-    padding : 70px 10px;
-
-    .conSecTP{
-      width : 100%;
-      background: rgba(255, 255, 255, 0.1);
-      backdrop-filter : blur(5px);
-      border-radius : 10px;
-      padding : 24px 16px;
-      gap : 14px;
-
-      span, h2, h1{
-        text-align : center;
-        width : 100%;
+  .thirdPage {
+    
+    justify-content: center;
+    align-items: center;
+    
+    padding: 70px 10px;
+    
+    background-size: cover;
+    background-position: center;
+    
+    // Overall image veil
+    &::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      
+      background: rgba(255, 255, 255, 0.25);
+      
+      pointer-events: none;
+    }
+    
+    .conSecTP {
+      
+      position: relative;
+      z-index: 1;
+      
+      width: 100%;
+      
+      display: flex;
+      flex-direction: column;
+      
+      justify-content: center;
+      align-items: center;
+      
+      gap: 18px;
+      
+      padding: 28px 20px;
+      
+      // Transparent glass
+      background: rgba(255, 255, 255, 0.10);
+      
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      
+      border-radius: 18px;
+      
+      box-shadow:
+              0 8px 30px rgba(0, 0, 0, 0.08);
+      
+      span,
+      h2,
+      h1 {
+        width: 100%;
+        text-align: center;
+      }
+      
+      .textLeft {
+        
+        margin: 0;
+        
+        font-size: 19px;
+        line-height: 1.45;
+        
+        font-weight: 400;
+        
+        letter-spacing: 0.2px;
+        
+        text-align: center;
+      }
+      
+      h2 {
+        
+        margin: 0;
+        
+        font-size: 14px;
+        line-height: 1.4;
+        
+        text-align: center;
+        
+        span {
+          color: #666;
+        }
       }
     }
   }
@@ -660,10 +868,52 @@ $redCol : #E53935;
     left: 35px;
   }
   
-  .timelineItem{
+  .timelineItem {
+    
     margin-bottom: 60px;
     
     justify-content: flex-start !important;
+    
+    // Force BOTH left and right timeline items
+    // to animate from the left
+    &.left,
+    &.right {
+      --slideX: -200px;
+      
+      justify-content: flex-start !important;
+      
+      .timelineCard {
+        margin-left: 90px !important;
+        margin-right: 0 !important;
+      }
+    }
+    
+    .timelineCard {
+      
+      width: calc(100% - 110px);
+      
+      padding: 20px;
+      
+      text-align: left;
+      
+      .rightHead {
+        text-align: left !important;
+        
+        h2 {
+          text-align: left;
+        }
+      }
+      
+      h2 {
+        font-size: 18px;
+        margin-bottom: 10px;
+      }
+      
+      p {
+        font-size: 13px;
+        line-height: 1.6;
+      }
+    }
   }
   
   .year{
