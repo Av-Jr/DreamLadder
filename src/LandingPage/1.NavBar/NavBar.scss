@@ -1,4 +1,18 @@
 @use "../../mixins" as *;
+.navBtn {
+  -webkit-appearance: none;
+  appearance: none;
+  color: white;}
+
+.mobileBtn,
+.mobileSubBtn,
+.mobileThirdBtn,
+.backBtn,
+.dropB {
+  -webkit-appearance: none;
+  appearance: none;
+  color: black;
+}
 
 #NavBarMC {
   position: absolute;
