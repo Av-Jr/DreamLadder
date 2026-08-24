@@ -353,7 +353,7 @@ body{
 
 @include mediaDevice(mobile){
   #breakMob{
-    display : none;
+    display : block;
   }
   
   #AboutMC, #NavBar, #ReturnSliderMC, #CalculatorMC, #InsightsMC, #PowMC, #FooterMC{
@@ -362,6 +362,8 @@ body{
   
   #MFsMC, #PMSAIFMC, #BondsMC, #StructuredProductsMC, #LegacyEstatePlanningMC, #InsuranceMC, #bespokePage, #BlogsMC, #MediaMC, .calc-root, .connectPage, #DisclaimerMC, #DisclosureMC, #WwsMC, .blogsPageLayout, #PrivacyPolicyMC, #FaqsMC{
     .titleHeadZ{
+      background-size : 120%;
+      background-position : calc(50% - 10px);
       height : 150px;
       .titleZ{
         font-size :20px!important;

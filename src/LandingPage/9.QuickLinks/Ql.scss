@@ -1,6 +1,19 @@
 @use "../../mixins" as *;
 
 #QlMC {
+  .RU {
+    user-select: text;
+    -webkit-user-select: text;
+    
+    .items,
+    .linkItem,
+    .linkItem span {
+      user-select: text;
+      -webkit-user-select: text;
+    }
+  }
+}
+#QlMC {
   width: 100%;
   background: #ffffff;
   padding: 70px 80px;
