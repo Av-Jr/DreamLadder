@@ -9,7 +9,7 @@
 }
 
 
-$AWS_BUCKET: "https://dreamladder-assets.s3.ap-south-1.amazonaws.com/public";
+$AWS_BUCKET: "https://dlcassetscoin.s3.ap-south-1.amazonaws.com";
 
 @function img($name) {
   @return url("#{$AWS_BUCKET}/#{$name}.webp");

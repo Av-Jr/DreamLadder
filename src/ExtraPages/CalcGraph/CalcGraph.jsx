@@ -745,37 +745,58 @@ function OneTimeTab() {
 }
 
 function SWPTab() {
-  const [initial, setInitial] = useStoredState("calcGraph:swp:initial", 1000000);
+  const [initial, setInitial] = useStoredState(
+      "calcGraph:swp:initial",
+      1000000
+  );
 
-  const [withdrawal, setWithdrawal] = useStoredState("calcGraph:swp:withdrawal", 10000);
+  const [withdrawal, setWithdrawal] = useStoredState(
+      "calcGraph:swp:withdrawal",
+      10000
+  );
 
-  const [rate, setRate] = useStoredState("calcGraph:swp:rate", 8);
+  const [rate, setRate] = useStoredState(
+      "calcGraph:swp:rate",
+      8
+  );
 
-  const [years, setYears] = useStoredState("calcGraph:swp:years", 10);
+  const [years, setYears] = useStoredState(
+      "calcGraph:swp:years",
+      10
+  );
 
-  const [delay, setDelay] = useStoredState("calcGraph:swp:delay", 0);
+  const [delay, setDelay] = useStoredState(
+      "calcGraph:swp:delay",
+      0
+  );
 
   const calcSWP = useCallback(() => {
-    const r = Math.pow(1 + rate / 100, 1 / 12) - 1;
+    // XLSX:
+    // Monthly return = Annual Return / 12
+    const r = rate / 100 / 12;
 
     let corpus = initial;
-
     let totalWithdrawn = 0;
 
     const data = [];
 
+    // XLSX:
+    // Time Period is the TOTAL period.
+    // SWP starts after "delay" years.
     for (let y = 1; y <= years; y++) {
-      for (let mo = 0; mo < 12; mo++) {
-        corpus *= 1 + r;
+      for (let mo = 1; mo <= 12; mo++) {
+        // Absolute month number
+        const monthNumber = (y - 1) * 12 + mo;
 
-        if (y > delay) {
-          const actualWithdrawal = Math.min(withdrawal, corpus);
+        // Grow corpus first
+        corpus = corpus + corpus * r;
 
-          corpus -= actualWithdrawal;
-          totalWithdrawn += actualWithdrawal;
+        // XLSX:
+        // No withdrawal until delay * 12 months have passed.
+        if (monthNumber > delay * 12) {
+          corpus = corpus - withdrawal;
+          totalWithdrawn += withdrawal;
         }
-
-        if (corpus < 0) corpus = 0;
       }
 
       data.push({
@@ -791,102 +812,106 @@ function SWPTab() {
     };
   }, [initial, withdrawal, rate, years, delay]);
 
-  const { corpus, totalWithdrawn, data } = calcSWP();
+  const {
+    corpus,
+    totalWithdrawn,
+    data,
+  } = calcSWP();
 
   return (
-    <>
-      <div className="input-panel">
-        <Field
-          label="INITIAL INVESTMENT"
-          value={initial}
-          onChange={setInitial}
-          min={100000}
-          max={50000000}
-          step={10000}
-          prefix="₹"
-          minLabel="₹1,00,000"
-          maxLabel="₹5,00,00,000"
-        />
+      <>
+        <div className="input-panel">
+          <Field
+              label="INITIAL INVESTMENT"
+              value={initial}
+              onChange={setInitial}
+              min={100000}
+              max={50000000}
+              step={10000}
+              prefix="₹"
+              minLabel="₹1,00,000"
+              maxLabel="₹5,00,00,000"
+          />
 
-        <div className="input-divider" />
+          <div className="input-divider" />
 
-        <Field
-          label="MONTHLY WITHDRAWAL"
-          value={withdrawal}
-          onChange={setWithdrawal}
-          min={1000}
-          max={500000}
-          step={1000}
-          prefix="₹"
-          minLabel="₹1,000"
-          maxLabel="₹5,00,000"
-        />
+          <Field
+              label="MONTHLY WITHDRAWAL"
+              value={withdrawal}
+              onChange={setWithdrawal}
+              min={1000}
+              max={500000}
+              step={1000}
+              prefix="₹"
+              minLabel="₹1,000"
+              maxLabel="₹5,00,000"
+          />
 
-        <div className="input-divider" />
+          <div className="input-divider" />
 
-        <Field
-          label="EXPECTED RETURN (P.A)"
-          value={rate}
-          onChange={setRate}
-          min={4}
-          max={15}
-          suffix="%"
-        />
+          <Field
+              label="EXPECTED RETURN (P.A)"
+              value={rate}
+              onChange={setRate}
+              min={4}
+              max={15}
+              suffix="%"
+          />
 
-        <div className="input-divider" />
+          <div className="input-divider" />
 
-        <Field
-          label="TIME PERIOD"
-          value={years}
-          onChange={setYears}
-          min={1}
-          max={40}
-          suffix="yr"
-        />
+          <Field
+              label="TIME PERIOD"
+              value={years}
+              onChange={setYears}
+              min={1}
+              max={40}
+              suffix="yr"
+          />
 
-        <div className="input-divider" />
+          <div className="input-divider" />
 
-        <Field
-          label="SWP STARTS AFTER"
-          value={delay}
-          onChange={setDelay}
-          min={0}
-          max={10}
-          suffix="yr"
-        />
-      </div>
+          <Field
+              label="SWP STARTS AFTER"
+              value={delay}
+              onChange={setDelay}
+              min={0}
+              max={10}
+              suffix="yr"
+          />
+        </div>
 
-      <div className="right-panel">
-        <SummaryCards
-          cards={[
-            {
-              label: "INITIAL INVESTMENT",
-              value: fmtRupees(initial),
-            },
-            {
-              label: "TOTAL WITHDRAWN",
-              value: fmtRupees(totalWithdrawn),
-              green: true,
-            },
-            {
-              label: "REMAINING CORPUS",
-              value: fmtRupees(corpus),
-              dark: true,
-            },
-          ]}
-        />
+        <div className="right-panel">
+          <SummaryCards
+              cards={[
+                {
+                  label: "INITIAL INVESTMENT",
+                  value: fmtRupees(initial),
+                },
+                {
+                  label: "TOTAL WITHDRAWN",
+                  value: fmtRupees(totalWithdrawn),
+                  green: true,
+                },
+                {
+                  label: "REMAINING CORPUS",
+                  value: fmtRupees(corpus),
+                  dark: true,
+                },
+              ]}
+          />
 
-        <WealthChart
-          data={data}
-          lines={[
-            {
-              key: "corpus",
-              name: "Remaining Corpus",
-            },
-          ]}
-        />
-      </div>
-    </>
+          <WealthChart
+              data={data}
+              lines={[
+                {
+                  key: "corpus",
+                  name: "Remaining Corpus",
+                },
+              ]}
+          />
+        </div>
+      </>
   );
 }
 function RetirementTab() {
@@ -943,12 +968,12 @@ function RetirementTab() {
   }
 
   const existingGrown = hasSavings
-    ? existingSavings *
+      ? existingSavings *
       Math.pow(
-        1 + returnBefore / 100 / 12,
-        yearsToRetire * 12
+          1 + returnBefore / 100,
+          yearsToRetire
       )
-    : 0;
+      : 0;
 
   const additionalNeeded = Math.max(
     0,
@@ -965,20 +990,27 @@ function RetirementTab() {
 
   const data = [];
 
-  let corpus = hasSavings ? existingSavings : 0;
+  let existingCorpus = hasSavings ? existingSavings : 0;
+  let contributionCorpus = 0;
 
   const rMonthly = returnBefore / 100 / 12;
 
   for (
-    let y = currentAge + 1;
-    y <= retirementAge;
-    y++
+      let y = currentAge + 1;
+      y <= retirementAge;
+      y++
   ) {
+    // Existing savings: annual compounding
+    existingCorpus *= 1 + returnBefore / 100;
+
+    // Monthly savings: monthly compounding
     for (let mo = 0; mo < 12; mo++) {
-      corpus =
-          corpus * (1 + rMonthly) +
+      contributionCorpus =
+          contributionCorpus * (1 + rMonthly) +
           Math.max(0, monthlyNeeded);
     }
+
+    const corpus = existingCorpus + contributionCorpus;
 
     data.push({
       year: y,
