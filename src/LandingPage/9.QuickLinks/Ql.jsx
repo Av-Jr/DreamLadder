@@ -1,32 +1,44 @@
 import "./Ql.scss";
 import React from "react";
 import {img} from "../../utils/image.js"
+import {
+  FaYoutube,
+  FaLinkedin,
+  FaFacebook,
+  FaInstagram,
+  FaXTwitter
+} from "react-icons/fa6";
 
 const socialLinks = [
   {
     id: "youtube",
     ariaLabel: "Open YouTube",
-    link: "https://www.youtube.com/@DreamLadderCapital"
+    link: "https://www.youtube.com/@DreamLadderCapital",
+    icon: FaYoutube
   },
   {
     id: "linkedin",
     ariaLabel: "Open LinkedIn",
-    link: "https://www.linkedin.com/company/dreamladdercapital/"
+    link: "https://www.linkedin.com/company/dreamladdercapital/",
+    icon: FaLinkedin
   },
   {
     id: "facebook",
     ariaLabel: "Open Facebook",
-    link: "https://www.facebook.com/DreamLadderCapital"
+    link: "https://www.facebook.com/DreamLadderCapital",
+    icon: FaFacebook
   },
   {
     id: "instagram",
     ariaLabel: "Open Instagram",
-    link: "https://www.instagram.com/dreamladdercapital"
+    link: "https://www.instagram.com/dreamladdercapital",
+    icon: FaInstagram
   },
   {
-    id: "x",
+    id: "twitter",
     ariaLabel: "Open X",
-    link: "https://x.com/SadaySinha15"
+    link: "https://x.com/SadaySinha15",
+    icon: FaXTwitter
   }
 ];
 
@@ -223,18 +235,22 @@ export default function Ql() {
           </a>
 
           <div className="socialsEles">
+            {socialLinks.map((item) => {
+              const Icon = item.icon;
 
-            {socialLinks.map((item) => (
-              <a
-                key={item.id}
-                href={item.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label={item.ariaLabel}
-                className={`socialBtn ${item.id}`}
-              />
-            ))}
-
+              return (
+                  <a
+                      key={item.id}
+                      href={item.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={item.ariaLabel}
+                      className={`socialBtn ${item.id}`}
+                  >
+                    <Icon size={21} strokeWidth={2} />
+                  </a>
+              );
+            })}
           </div>
 
           <div className="heroActions pas">

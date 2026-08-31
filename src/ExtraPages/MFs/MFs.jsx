@@ -20,7 +20,7 @@ export default function MFs() {
 const MFHeroData = {
   title: "Mutual Funds",
 
-  image: "MFpg1",
+  image: "Calcthree",
 
 description: [
   {

@@ -63,37 +63,42 @@
       &.pas{width : auto}
     }
   }
-
+  
   .socialsEles {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
     gap: 14px;
-
+    
     .socialBtn {
       width: 42px;
       height: 42px;
       border-radius: 12px;
       background-color: #f7f7f7;
-      background-position: center;
-      background-size: 30px;
-      background-repeat: no-repeat;
+      
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      
+      color: #808080;
+      text-decoration: none;
+      
       transition:
-        transform 0.25s ease,
-        background-color 0.25s ease;
+              transform 0.25s ease,
+              background-color 0.25s ease,
+              color 0.25s ease;
+      
       cursor: pointer;
-
+      
+      svg {
+        width: 27px;
+        height: 27px;
+      }
+      
       &:hover {
         transform: translateY(-3px);
         background-color: #efefef;
-      }
-    }
-
-    $icons: youtube, linkedin, facebook, instagram, x;
-
-    @each $icon in $icons {
-      .#{$icon} {
-        background-image: img("#{$icon}L");
+        color: #555;
       }
     }
   }

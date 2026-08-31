@@ -174,7 +174,7 @@ export default function About() {
             name: "Saday Sinha",
             description:
                 "Saday Sinha is the Founder and CEO of DreamLadder Capital, a wealth management firm dedicated to helping clients achieve financial independence through tailored investment solutions. His approach is rooted in transparency and goal-oriented growth.",
-            image: img("AboutFifthPgSaday")
+            image: img("AboutSaday")
         },
 
         {
